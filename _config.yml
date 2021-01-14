@@ -30,7 +30,7 @@ url: "https://microbinfie.github.io" # the base hostname & protocol for your sit
 github_username:  microbinfie
 
 # Build settings
-theme: jekyll-theme-tactile
+theme: jekyll-theme-minimal
 #remote_theme: tactile
 plugins:
   - jekyll-feed
