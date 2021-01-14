@@ -1,6 +1,6 @@
 ---
 title:  Episodes
-layout: page
+layout: default
 ---
 
 This is a test page to see if the soundcloud plugin works

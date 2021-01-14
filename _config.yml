@@ -31,7 +31,7 @@ github_username:  microbinfie
 
 # Build settings
 #theme: jekyll-theme-minimal
-theme: jekyll-theme-minimal
+theme: minima
 plugins:
   - jekyll-feed
 
