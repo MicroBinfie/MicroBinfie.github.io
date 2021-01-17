@@ -12,9 +12,15 @@ Microbial Bioinformatics is a rapidly changing field marrying computer science a
 
 ## Nabil-Fareed Alikhan
 
+Bioinformatician with @andrewjpage
+
 ## Lee Katz
 
+Public health bioinformatics scientist. Author of Mashtree, Lyve-SET, Fasten, and others. Podcaster. Statements here are my only voice and not of my employer.
+
 ## Andrew Page
+
+Head of Informatics at @theQuadram, currently doing SARS-CoV-2 genomics/bioinformatics. Wrote Roary/Gubbins/SNP-sites etc.Views my own.
 
 <!--
 This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](https://jekyllrb.com/)
