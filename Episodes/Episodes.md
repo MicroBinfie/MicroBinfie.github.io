@@ -1,6 +1,6 @@
 ---
 title:  Episodes
-layout: page
+layout: default
 ---
 
 Through the magic of `iframe`!
