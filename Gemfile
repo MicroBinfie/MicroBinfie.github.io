@@ -16,6 +16,29 @@ gem "jekyll-theme-tactile"
 #gem "jekyll-sound_cloud"
 gem "kramdown-parser-gfm"
 gem "jekyll-embeds"
+
+# jekyll-text-theme and deps
+gem "jekyll-text-theme"
+group :development do
+  gem 'appraisal'
+  gem 'bundler'
+  gem 'rake'
+end
+# jekyll-text-theme and deps
+group :test do
+  gem 'commonmarker', '~> 0.16', require: false
+  gem 'email_reply_parser', '~> 0.5', require: false
+  gem 'gemoji', '~> 3.0', require: false
+  gem 'minitest'
+  gem 'RedCloth',           '~> 4.2.9', require: false
+  gem 'rinku',              '~> 1.7',   require: false
+  gem 'sanitize',           '~> 4.6', require: false
+
+  gem 'escape_utils', '~> 1.0', require: false
+  gem 'rouge', '~> 3.1', require: false
+  gem 'minitest-focus', '~> 1.1'
+end
+
 #gem "github-pages", group: :jekyll_plugins
 # If you want to use GitHub Pages, remove the "gem "jekyll"" above and
 # uncomment the line below. To upgrade, run `bundle update github-pages`.

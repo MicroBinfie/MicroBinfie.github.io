@@ -32,8 +32,11 @@ github_username:  microbinfie
 # Build settings
 #theme: jekyll-theme-minimal
 theme: minima
+#theme: jekyll-text-theme
 plugins:
   - jekyll-feed
+#text_skin: default
+#highlight_theme: default
 
 # Exclude from processing.
 # The following items will not be processed, by default.

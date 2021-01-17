@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: article
 title:  "Hello world!"
 date:   2021-01-17 08:11:42 -0500
 categories: website

@@ -1,16 +1,36 @@
 GEM
   remote: https://rubygems.org/
   specs:
+    RedCloth (4.2.9)
+    activesupport (6.0.3.4)
+      concurrent-ruby (~> 1.0, >= 1.0.2)
+      i18n (>= 0.7, < 2)
+      minitest (~> 5.1)
+      tzinfo (~> 1.1)
+      zeitwerk (~> 2.2, >= 2.2.2)
     addressable (2.7.0)
       public_suffix (>= 2.0.2, < 5.0)
+    appraisal (2.3.0)
+      bundler
+      rake
+      thor (>= 0.14.0)
     colorator (1.1.0)
+    commonmarker (0.21.0)
+      ruby-enum (~> 0.5)
     concurrent-ruby (1.1.7)
+    crass (1.0.6)
     em-websocket (0.5.2)
       eventmachine (>= 0.12.9)
       http_parser.rb (~> 0.6.0)
+    email_reply_parser (0.5.10)
+    escape_utils (1.2.1)
     eventmachine (1.2.7)
     ffi (1.14.2)
     forwardable-extended (2.6.0)
+    gemoji (3.0.1)
+    html-pipeline (2.14.0)
+      activesupport (>= 2)
+      nokogiri (>= 1.4)
     http_parser.rb (0.6.0)
     i18n (0.9.5)
       concurrent-ruby (~> 1.0)
@@ -31,10 +51,19 @@ GEM
       jekyll
     jekyll-feed (0.15.1)
       jekyll (>= 3.7, < 5.0)
+    jekyll-paginate (1.1.0)
     jekyll-sass-converter (1.5.2)
       sass (~> 3.4)
     jekyll-seo-tag (2.7.1)
       jekyll (>= 3.8, < 5.0)
+    jekyll-sitemap (1.4.0)
+      jekyll (>= 3.7, < 5.0)
+    jekyll-text-theme (2.2.6)
+      jekyll (>= 3.6, < 5.0)
+      jekyll-feed (~> 0.1)
+      jekyll-paginate (~> 1.1)
+      jekyll-sitemap (~> 1.0)
+      jemoji (~> 0.8)
     jekyll-theme-minimal (0.1.1)
       jekyll (~> 3.5)
       jekyll-seo-tag (~> 2.0)
@@ -43,6 +72,10 @@ GEM
       jekyll-seo-tag (~> 2.0)
     jekyll-watch (2.2.1)
       listen (~> 3.0)
+    jemoji (0.12.0)
+      gemoji (~> 3.0)
+      html-pipeline (~> 2.2)
+      jekyll (>= 3.0, < 5.0)
     kramdown (2.3.0)
       rexml
     kramdown-parser-gfm (1.1.0)
@@ -56,32 +89,67 @@ GEM
       jekyll (>= 3.5, < 5.0)
       jekyll-feed (~> 0.9)
       jekyll-seo-tag (~> 2.1)
+    minitest (5.14.3)
+    minitest-focus (1.2.1)
+      minitest (>= 4, < 6)
+    nokogiri (1.11.1-x86_64-linux)
+      racc (~> 1.4)
+    nokogumbo (1.5.0)
+      nokogiri
     pathutil (0.16.2)
       forwardable-extended (~> 2.6)
     public_suffix (4.0.6)
+    racc (1.5.2)
+    rake (13.0.3)
     rb-fsevent (0.10.4)
     rb-inotify (0.10.1)
       ffi (~> 1.0)
     rexml (3.2.4)
+    rinku (1.7.3)
     rouge (3.26.0)
+    ruby-enum (0.8.0)
+      i18n
     safe_yaml (1.0.5)
+    sanitize (4.6.6)
+      crass (~> 1.0.2)
+      nokogiri (>= 1.4.4)
+      nokogumbo (~> 1.4)
     sass (3.7.4)
       sass-listen (~> 4.0.0)
     sass-listen (4.0.0)
       rb-fsevent (~> 0.9, >= 0.9.4)
       rb-inotify (~> 0.9, >= 0.9.7)
+    thor (1.0.1)
+    thread_safe (0.3.6)
+    tzinfo (1.2.9)
+      thread_safe (~> 0.1)
+    zeitwerk (2.4.2)
 
 PLATFORMS
   x86_64-linux
 
 DEPENDENCIES
+  RedCloth (~> 4.2.9)
+  appraisal
+  bundler
+  commonmarker (~> 0.16)
+  email_reply_parser (~> 0.5)
+  escape_utils (~> 1.0)
+  gemoji (~> 3.0)
   jekyll (~> 3.9.0)
   jekyll-embeds
   jekyll-feed (~> 0.12)
+  jekyll-text-theme
   jekyll-theme-minimal
   jekyll-theme-tactile
   kramdown-parser-gfm
   minima (~> 2.5)
+  minitest
+  minitest-focus (~> 1.1)
+  rake
+  rinku (~> 1.7)
+  rouge (~> 3.1)
+  sanitize (~> 4.6)
   tzinfo (~> 1.2)
   tzinfo-data
   wdm (~> 0.1.1)
