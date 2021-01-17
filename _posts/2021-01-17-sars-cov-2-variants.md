@@ -1,5 +1,5 @@
 ---
-layout: article
+layout: post
 title:  "Explaining the naming of SARS-CoV-2 new variants"
 date:   2021-01-17 08:46:42 -0500
 categories: episode
