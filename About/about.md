@@ -1,7 +1,9 @@
 ---
-layout: default
+layout: page
 title: About
-permalink: /about/
+sidebar:
+  nav: header
+#permalink: /about/
 ---
 
 # The podcast

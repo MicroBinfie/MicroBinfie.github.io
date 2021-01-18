@@ -1,13 +1,16 @@
 ---
 title:  Multimedia
-layout: default
+layout: page
+sidebar:
+  nav: header
+lightbox: true
 ---
 
 # Artwork
 
-* [Bacterium with a microphone]({% link /assets/artwork/microbinfie-bacterium-microphone.jpg %})
-* [Cover art v1]({% link /assets/artwork/COVERART.v1.png %})
-* [Cover art v2]({% link /assets/artwork/COVERART.v2.png %})
+ <a href="/assets/artwork/microbinfie-bacterium-microphone.jpg"><img class="image--xs" src="/assets/artwork/microbinfie-bacterium-microphone.jpg" alt="bacterium with a microphone" /></a>
+ <a href="/assets/artwork/COVERART.v1.png"><img class="image--xs" src="/assets/artwork/COVERART.v1.png" alt="cover art v1" /></a>
+ <a href="/assets/artwork/COVERART.v2.png"><img class="image--xs" src="/assets/artwork/COVERART.v2.png" alt="cover art v2" /></a>
 
 # Music
 

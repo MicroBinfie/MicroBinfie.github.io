@@ -30,13 +30,23 @@ twitter_username: microbinfie
 github_username:  microbinfie
 
 # Build settings
-#theme: jekyll-theme-minimal
-theme: minima
-#theme: jekyll-text-theme
+#theme: minima
+theme: jekyll-text-theme
 plugins:
   - jekyll-feed
-#text_skin: default
-#highlight_theme: default
+text_skin: default
+highlight_theme: default
+
+# author and social options from jekyll-TeXt-theme
+author:
+  type      : "organization"
+  name      : "Micro Binfie"
+  bio       : "The Micro Binfie podcast"
+  twitter   : microbinfie
+  github    : microbinfie
+
+repository     : microbinfie/microbinfie.github.io
+repository_tree: main
 
 # Exclude from processing.
 # The following items will not be processed, by default.
