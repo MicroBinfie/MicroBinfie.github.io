@@ -18,7 +18,7 @@ gem "kramdown-parser-gfm"
 gem "jekyll-embeds"
 
 # jekyll-text-theme and deps
-gem "jekyll-text-theme"
+#gem "jekyll-text-theme"
 group :development do
   gem 'appraisal'
   gem 'bundler'

@@ -31,7 +31,7 @@ github_username:  microbinfie
 
 # Build settings
 #theme: minima
-theme: jekyll-text-theme
+#theme: jekyll-text-theme
 plugins:
   - jekyll-feed
 text_skin: default
