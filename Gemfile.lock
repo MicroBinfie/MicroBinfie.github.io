@@ -94,8 +94,8 @@ GEM
       minitest (>= 4, < 6)
     nokogiri (1.11.1-x86_64-linux)
       racc (~> 1.4)
-    nokogumbo (1.5.0)
-      nokogiri
+    nokogumbo (2.0.4)
+      nokogiri (~> 1.8, >= 1.8.4)
     pathutil (0.16.2)
       forwardable-extended (~> 2.6)
     public_suffix (4.0.6)
@@ -110,10 +110,10 @@ GEM
     ruby-enum (0.8.0)
       i18n
     safe_yaml (1.0.5)
-    sanitize (4.6.6)
+    sanitize (5.2.3)
       crass (~> 1.0.2)
-      nokogiri (>= 1.4.4)
-      nokogumbo (~> 1.4)
+      nokogiri (>= 1.8.0)
+      nokogumbo (~> 2.0)
     sass (3.7.4)
       sass-listen (~> 4.0.0)
     sass-listen (4.0.0)
@@ -149,7 +149,7 @@ DEPENDENCIES
   rake
   rinku (~> 1.7)
   rouge (~> 3.1)
-  sanitize (~> 4.6)
+  sanitize (>= 5.2.1)
   tzinfo (~> 1.2)
   tzinfo-data
   wdm (~> 0.1.1)

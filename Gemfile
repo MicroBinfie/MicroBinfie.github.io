@@ -17,6 +17,10 @@ gem "jekyll-theme-tactile"
 gem "kramdown-parser-gfm"
 gem "jekyll-embeds"
 
+# dependabot alerts
+gem "sanitize", ">= 5.2.1"
+#gem "redcloth", ">= 4.3.0"
+
 # jekyll-text-theme and deps
 gem "jekyll-text-theme"
 group :development do
@@ -32,7 +36,7 @@ group :test do
   gem 'minitest'
   gem 'RedCloth',           '~> 4.2.9', require: false
   gem 'rinku',              '~> 1.7',   require: false
-  gem 'sanitize',           '~> 4.6', require: false
+  #gem 'sanitize',           '~> 4.6', require: false
 
   gem 'escape_utils', '~> 1.0', require: false
   gem 'rouge', '~> 3.1', require: false
