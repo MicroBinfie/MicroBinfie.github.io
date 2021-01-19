@@ -23,3 +23,7 @@ lightbox: true
 * Incompetech - [Scheming Weasle (faster)](https://incompetech.com/music/royalty-free/index.html?isrc=USUAN1100085), under creative commons
 * Scheming Weasel (faster version) Kevin MacLeod (incompetech.com) Licensed under Creative Commons: By Attribution 3.0 License http://creativecommons.org/licenses/by/3.0/ 
 
+# Episodes
+
+Check out [our episodes page](/pages/Episodes.html)
+
