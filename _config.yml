@@ -48,6 +48,12 @@ author:
 repository     : microbinfie/microbinfie.github.io
 repository_tree: main
 
+analytics:
+  provider: "google"
+  google:
+    tracking_id:  "G-DNGPHBXC86"
+    anonymize_ip: false
+
 # Exclude from processing.
 # The following items will not be processed, by default.
 # Any item listed under the `exclude:` key here will be automatically added to
