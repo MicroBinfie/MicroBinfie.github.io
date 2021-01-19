@@ -5,5 +5,11 @@ header:
     url:   /Multimedia/Multimedia.html
   - title: About
     url:   /About/about.html
+  - title: testtesttest
+    url:   /test.html
 
+sidebar:
+  - title: this is a sidebar
+  - title: <a class="twitter-timeline" data-dnt="true" href="https://twitter.com/microbinfie?ref_src=twsrc%5Etfw">Tweets by microbinfie</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+  - title: <a class="twitter-timeline" data-dnt="true" href="https://twitter.com/lskatz?ref_src=twsrc%5Etfw">Tweets by lskatz</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
