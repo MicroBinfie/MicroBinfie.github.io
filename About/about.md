@@ -22,6 +22,7 @@ Public health bioinformatics scientist. Author of Mashtree, Lyve-SET, Fasten, an
 
 ## Andrew Page
 
+![Image](/assets/images/AndrewPage.jpg){:.rounded.border.shadow.image--xs}
 Head of Informatics at @theQuadram, currently doing SARS-CoV-2 genomics/bioinformatics. Wrote Roary/Gubbins/SNP-sites etc.Views my own.
 
 <!--
