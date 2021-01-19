@@ -14,6 +14,7 @@ Microbial Bioinformatics is a rapidly changing field marrying computer science a
 
 ## Nabil-Fareed Alikhan
 
+![Image](/assets/images/NabilFareedAlikhan.jpg){:.rounded.border.shadow.image--xs}
 Bioinformatician with @andrewjpage
 
 ## Lee Katz
