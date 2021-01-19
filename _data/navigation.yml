@@ -5,8 +5,6 @@ header:
     url:   /Multimedia/Multimedia.html
   - title: About
     url:   /About/about.html
-  - title: testtesttest
-    url:   /test.html
 
 sidebar:
   - title: this is a sidebar
