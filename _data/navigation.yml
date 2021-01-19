@@ -1,10 +1,10 @@
 header:
   - title: Episodes
-    url:   /Episodes/Episodes.html
+    url:   /pages/Episodes.html
   - title: Multimedia
-    url:   /Multimedia/Multimedia.html
+    url:   /pages/Multimedia.html
   - title: About
-    url:   /About/about.html
+    url:   /pages/about.html
 
 sidebar:
   - title: this is a sidebar
