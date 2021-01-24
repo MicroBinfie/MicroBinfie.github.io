@@ -53,6 +53,9 @@ analytics:
   google:
     tracking_id:  "G-DNGPHBXC86"
     anonymize_ip: false
+  provider2: "facebook"
+  facebook:
+    pixel_id: 320448182683705
 
 # Exclude from processing.
 # The following items will not be processed, by default.

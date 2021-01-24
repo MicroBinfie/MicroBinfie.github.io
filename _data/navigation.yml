@@ -1,11 +1,13 @@
 header:
-  - title: Episodes
-    url:   /pages/Episodes.html
+#  - title: Episodes
+#    url:   /pages/Episodes.html
   - title: Multimedia
     url:   /pages/Multimedia.html
   - title: About
     url:   /pages/about.html
 
+# sidebar can be used in a different page as navigation
+# instead of header but for now this is just a test.
 sidebar:
   - title: this is a sidebar
   - title: <a class="twitter-timeline" data-dnt="true" href="https://twitter.com/microbinfie?ref_src=twsrc%5Etfw">Tweets by microbinfie</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
