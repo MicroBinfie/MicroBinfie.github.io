@@ -1,8 +1,8 @@
 ---
 layout: page
 title: About
-sidebar:
-  nav: header
+#sidebar:
+#  nav: header
 #permalink: /about/
 ---
 
