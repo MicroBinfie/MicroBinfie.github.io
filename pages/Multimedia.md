@@ -1,8 +1,8 @@
 ---
 title:  Multimedia
 layout: page
-sidebar:
-  nav: header
+#sidebar:
+#  nav: header
 lightbox: true
 ---
 
