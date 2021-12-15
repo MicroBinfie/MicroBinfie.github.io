@@ -1,6 +1,6 @@
 ---
 title:  Blog
-layout: home
+layout: page
 ---
 
 <ul>
