@@ -1,6 +1,8 @@
 header:
 #  - title: Episodes
 #    url:   /pages/Episodes.html
+  - title: Posts
+    url:   /pages/Blog.html
   - title: Multimedia
     url:   /pages/Multimedia.html
   - title: About
