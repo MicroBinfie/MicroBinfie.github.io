@@ -7,7 +7,7 @@ lightbox: true
 {% assign sortedPerson = site.data.profiles | sort: 'last' %}
 <ul>
   {% for person in sortedPerson %}
-  {% assign imgPath = "/assets/images/" | append: person.first | append: "\_" | append: person.last | append: ".jpg" | replace: " ", "" %}
+  {% assign imgPath = "/assets/images/" | append: person.first | append: "_" | append: person.last | append: ".jpg" | replace: " ", "" %}
     <li>
       {{ person.title }} {{ person.first }} {{ person.last }}
       <br />
