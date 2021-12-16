@@ -4,7 +4,7 @@ layout: page
 lightbox: true
 ---
 
-{% assign sortedPerson = site.data.profiles | sort: 'last' }
+{% assign sortedPerson = site.data.profiles | sort: 'last' %}
 <ul>
   {% for person in sortedPerson %}
   {% assign imgPath = "/assets/images/" | append: person.first | append: person.last | append: ".jpg" %}
