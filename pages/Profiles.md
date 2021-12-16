@@ -4,9 +4,8 @@ layout: page
 lightbox: true
 ---
 
-# Guests
-
 <ul>
+  <li> test test test </li>
   {% for person in site.profiles %}
     <li>
       {{ person.title }} {{ person.first }} {{ person.last }}
