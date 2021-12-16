@@ -1,10 +1,9 @@
-profiles:
-  - first: Mark 
-    last: Pallen
-    title: Professor
-  - first: Phil 
-    last: Hugenholtz
-    title: Professor
-  - first: Iain
-    last: Sutcliffe
-    title: Professor
+- first: Mark 
+  last: Pallen
+  title: Professor
+- first: Phil 
+  last: Hugenholtz
+  title: Professor
+- first: Iain
+  last: Sutcliffe
+  title: Professor
