@@ -9,7 +9,8 @@ lightbox: true
     <li>
       {{ person.title }} {{ person.first }} {{ person.last }}
       <br />
-      ![Image of {{ person.first }} {{ person.last }}](/assets/images/{{ person.first }}_{{ person.last }}.jpg)
+      <!-- image of this profile will be at /assets/images/first_last.jpg -->
+      <img src="/assets/images/{{ person.first }}_{{ person.last }}.jpg" alt="{{ person.first }} {{ person.last }}" />
     </li>
   {% endfor %}
 </ul>
