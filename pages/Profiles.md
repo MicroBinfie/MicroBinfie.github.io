@@ -12,7 +12,6 @@ lightbox: true
     <li>
       {{ person.title }} {{ person.first }} {{ person.last }}
       <br />
-      {{ imgPath }} <br />
       <img src="{{ imgPath }}" alt="{{ person.first }} {{ person.last }}" />
     </li>
   {% endfor %}
