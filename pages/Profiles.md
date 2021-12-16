@@ -7,9 +7,9 @@ lightbox: true
 # Guests
 
 <ul>
-  {% for person in data.profiles %}
+  {% for person in site.profiles %}
     <li>
-      {{ data.title }} {{ data.first }} {{ data.last }}
+      {{ person.title }} {{ person.first }} {{ person.last }}
     </li>
   {% endfor %}
 </ul>
