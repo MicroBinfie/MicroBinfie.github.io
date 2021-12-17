@@ -1,3 +1,9 @@
+---
+layout: page
+title:  "Episode 67"
+date:   2021-11-25 08:11:42 -0500
+---
+
 # 67 Bacterial Taxonomy: what is a species, what is a strain?
 
 We’re navigating the twisted world of bacterial taxonomy. We have some excellent guides to help us!

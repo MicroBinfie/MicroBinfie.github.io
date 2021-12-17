@@ -1,3 +1,9 @@
+---
+layout: page
+title:  "Episode 68"
+date:   2021-12-09 08:11:42 -0500
+---
+
 # 68  Bacterial Taxonomy: what is a species, what is a strain? part 2
 
 Bacterial Taxonomy: what is a species, what is a strain? part 2 
