@@ -26,7 +26,7 @@ group :development do
 end
 # jekyll-text-theme and deps
 group :test do
-  gem 'commonmarker', '~> 0.16', require: false
+  gem 'commonmarker', '~> 0.23', require: false
   gem 'email_reply_parser', '~> 0.5', require: false
   gem 'gemoji', '~> 3.0', require: false
   gem 'minitest'

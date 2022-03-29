@@ -9,9 +9,8 @@ GEM
       rake
       thor (>= 0.14.0)
     colorator (1.1.0)
-    commonmarker (0.21.0)
-      ruby-enum (~> 0.5)
-    concurrent-ruby (1.1.7)
+    commonmarker (0.23.4)
+    concurrent-ruby (1.1.10)
     crass (1.0.6)
     em-websocket (0.5.2)
       eventmachine (>= 0.12.9)
@@ -85,8 +84,6 @@ GEM
     rexml (3.2.5)
     rinku (1.7.3)
     rouge (3.26.0)
-    ruby-enum (0.8.0)
-      i18n
     safe_yaml (1.0.5)
     sanitize (5.2.3)
       crass (~> 1.0.2)
@@ -106,7 +103,7 @@ DEPENDENCIES
   RedCloth (~> 4.3.0)
   appraisal
   bundler
-  commonmarker (~> 0.16)
+  commonmarker (~> 0.23)
   email_reply_parser (~> 0.5)
   escape_utils (~> 1.0)
   gemoji (~> 3.0)
