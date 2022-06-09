@@ -7,11 +7,12 @@ tags:
   - microbinfie
   - podcast
 ---
+
 We finish our discussion on bacterial taxonomy, this time looking at
 new approaches of naming the multitudes of unnamed uncultured
 organisms and the controversial renaming of phyla. With guests
 Professor Phil Hugenholtz, Professor Iain Sutcliffe and Professor Mark
-Pallen.  Selective bibliography:  https://github.com/MicroBinfie/Micro
+Pallen. Selective bibliography: https://github.com/MicroBinfie/Micro
 Binfie.github.io/blob/45db8eb57d732176449073065dbdacc88a288fe9/assets/
 Taxonomy_Selective_bibliography.pdf
 
