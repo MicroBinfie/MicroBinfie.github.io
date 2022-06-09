@@ -10,8 +10,9 @@ tags:
 
 Mark Pallen explains how exciting it was to be in microbial
 bioinformatics around the turn of the millennium, as we gained genomes
-for the first time from model organisms and fearsome pathogens. He
-recounts working with his hero David Relman on the genome sequencing
+for the first time from model organisms and fearsome pathogens.
+
+He recounts working with his hero David Relman on the genome sequencing
 of the strange slow-growing organism called Tropheryma whipplei in
 competition with a French team. Mark moved to Belfast in late 1999
 collaborating with another Englishman working on the island of
