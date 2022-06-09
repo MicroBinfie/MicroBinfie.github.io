@@ -10,7 +10,9 @@ tags:
 
 In this episode we talk to Professor Mark Pallen, who discusses the
 highlights from his long career as a medical microbiologist turned
-bioinformatician. His bioinformatics journey began in 1977, the year
+bioinformatician.
+
+His bioinformatics journey began in 1977, the year
 Fred Sanger invented DNA sequencing-as-we know-it, when Mark was
 tasked with assembling some amino acid sequences under exam
 conditions. Mark explains how little was know about sequences at the
