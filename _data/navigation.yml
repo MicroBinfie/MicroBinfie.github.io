@@ -5,6 +5,8 @@ header:
     url:   /pages/Episodes.html
   - title: Multimedia
     url:   /pages/Multimedia.html
+  - title: Open Art
+    url:   /pages/open_art.html
   - title: About
     url:   /pages/about.html
 
