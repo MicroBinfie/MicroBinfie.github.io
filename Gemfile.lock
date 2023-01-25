@@ -9,7 +9,7 @@ GEM
       rake
       thor (>= 0.14.0)
     colorator (1.1.0)
-    commonmarker (0.23.6)
+    commonmarker (0.23.7)
     concurrent-ruby (1.1.10)
     crass (1.0.6)
     em-websocket (0.5.2)
