@@ -10,7 +10,12 @@ lightbox: true
 
 ### Previous artwork
 
-![Microbinfie Bacterium Microphone]({{ '/assets/artwork/microbinfie-bacterium-microphone.jpg' | relative_url }})
+{% picture '/assets/artwork/microbinfie-bacterium-microphone.jpg', 
+    alt: 'Microbinfie Bacterium Microphone', 
+    width: 300,
+    height: 300,
+    class: 'my-custom-class' %}
+
 
  <a href="/assets/artwork/microbinfie-bacterium-microphone.jpg"><img class="image--xs" src="/assets/artwork/microbinfie-bacterium-microphone.jpg" alt="bacterium with a microphone" /></a>
  <a href="/assets/artwork/COVERART.v1.png"><img class="image--xs" src="/assets/artwork/COVERART.v1.png" alt="cover art v1" /></a>

@@ -13,4 +13,3 @@ If you wish to contribute, please send a [pull request](https://github.com/Micro
    * acknowledgement that your images will be licensed under creative commons.
 
 {% include image-gallery.html folder="/assets/images" %}
-

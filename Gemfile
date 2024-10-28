@@ -16,6 +16,7 @@ gem "jekyll-theme-tactile"
 #gem "jekyll-sound_cloud"
 gem "kramdown-parser-gfm"
 gem "jekyll-embeds"
+gem 'jekyll_picture_tag'
 
 # jekyll-text-theme and deps
 #gem "jekyll-text-theme"
