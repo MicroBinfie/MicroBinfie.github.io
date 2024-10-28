@@ -11,12 +11,14 @@ lightbox: true
 ### Previous artwork
 
 <img src="{{ '/assets/artwork/microbinfie-bacterium-microphone.jpg' | relative_url }}"
-     alt="Microbinfie Bacterium Microphone"
-     style="width: 300px; height: 300px;">
-
- <a href="/assets/artwork/microbinfie-bacterium-microphone.jpg"><img class="image--xs" src="/assets/artwork/microbinfie-bacterium-microphone.jpg" alt="bacterium with a microphone" /></a>
- <a href="/assets/artwork/COVERART.v1.png"><img class="image--xs" src="/assets/artwork/COVERART.v1.png" alt="cover art v1" /></a>
- <a href="/assets/artwork/COVERART.v2.png"><img class="image--xs" src="/assets/artwork/COVERART.v2.png" alt="cover art v2" /></a>
+    alt="bacterium with a microphone"
+    style="width: 300px; height: 300px;">
+<img src="{{ '/assets/artwork/COVERART.v1.png' | relative_url }}"
+    alt="cover art v1"
+    style="width: 300px; height: 300px;">
+<img src="{{ '/assets/artwork/COVERART.v2.png' | relative_url }}"
+    alt="cover art v2"
+    style="width: 300px; height: 300px;">
 
 ## Music
 
