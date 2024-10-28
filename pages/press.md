@@ -13,13 +13,13 @@ If you use them, please let us know so that we can include that material here!
 
 ### Current artwork
 
-<img src="{{ '/assets/artwork/microbinfie-logo-2024' | relative_url }}"
+<img src="{{ '/assets/artwork/microbinfie-logo-2024.png' | relative_url }}"
     alt="yellow bacterium"
     style="width: 100px; height: 100px;">
-<img src="{{ '/assets/artwork/microbinfie-logo-mascot-only-2024' | relative_url }}"
+<img src="{{ '/assets/artwork/microbinfie-logo-mascot-only-2024.png' | relative_url }}"
     alt="yellow bacterium, mascot only"
     style="width: 100px; height: 100px;">
-<img src="{{ '/assets/artwork/microbinfie-logo-mascot-only-qr-2024' | relative_url }}"
+<img src="{{ '/assets/artwork/microbinfie-logo-mascot-only-qr-2024.png' | relative_url }}"
     alt="yellow bacterium, qr code"
     style="width: 100px; height: 100px;">
 
@@ -28,7 +28,7 @@ If you use them, please let us know so that we can include that material here!
 <img src="{{ '/assets/artwork/microbinfie-bacterium-microphone.jpg' | relative_url }}"
     alt="bacterium with a microphone"
     style="width: 100px; height: 100px;">
-<img src="{{ '/assets/artwork/microbinfie.qr.jpg' | relative_url }}"
+<img src="{{ '/assets/artwork/microbinfie.qr.png' | relative_url }}"
     alt="bacterium with a microphone, with a QR code"
     style="width: 100px; height: 100px;">
 <img src="{{ '/assets/artwork/COVERART.v1.png' | relative_url }}"
