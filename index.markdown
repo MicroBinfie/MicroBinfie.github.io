@@ -32,4 +32,5 @@ Microbial Bioinformatics is a rapidly changing field marrying computer science a
 
 ## MORE!
 
-[![Image](/assets/artwork/COVERART.v2.png){:.circle.border.shadow.image--md}  https://soundcloud.com/microbinfie/tracks](https://soundcloud.com/microbinfie/tracks)
+[![Image](/assets/artwork/microbinfie-logo-2024.png){:.circle.border.shadow.image--md}  
+https://soundcloud.com/microbinfie/tracks](https://soundcloud.com/microbinfie/tracks)
