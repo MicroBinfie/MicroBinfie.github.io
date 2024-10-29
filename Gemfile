@@ -7,7 +7,7 @@ source "https://rubygems.org"
 #
 # This will help ensure the proper Jekyll version is running.
 # Happy Jekylling!
-gem "jekyll", "~> 3.9.0"
+gem "jekyll", "~> 3.10.0"
 #gem "jekyll"
 # This is the default theme for new Jekyll sites. You may change this to anything you like.
 gem "minima", "~> 2.5"
@@ -36,7 +36,7 @@ group :test do
   gem 'sanitize',           '~> 5.2.1', require: false
 
   gem 'escape_utils', '~> 1.0', require: false
-  gem 'rouge', '~> 3.1', require: false
+  gem 'rouge', '~> 3.30', require: false
   gem 'minitest-focus', '~> 1.1'
 end
 
@@ -46,7 +46,7 @@ end
 # gem "github-pages", group: :jekyll_plugins
 # If you have any plugins, put them here!
 group :jekyll_plugins do
-  gem "jekyll-feed", "~> 0.12"
+  gem "jekyll-feed", "~> 0.17"
 end
 
 # Windows and JRuby does not include zoneinfo files, so bundle the tzinfo-data gem
