@@ -7,7 +7,7 @@ lightbox: true
 ---
 
 The following multimedia is free for the public to use.
-If you use them, please let us know so that we can include that material here!
+If you invite us or use our multimedia, please let us know, so that we might link to your work from this page!
 
 ## Podcast metrics
 
