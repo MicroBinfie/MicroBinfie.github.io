@@ -28,8 +28,3 @@ Public health bioinformatics scientist.
 
 ![Image](/assets/images/AndrewPage.jpg){:.rounded.border.shadow.image--xs}
 Director of Technical Innovation, Theiagen Genomics
-
-## The disclaimer
-
-Statements here are our opinions and not necessarily those of our employers.
-
