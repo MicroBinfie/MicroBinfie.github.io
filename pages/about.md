@@ -21,7 +21,7 @@ Senior Bioinformatician - CGPS, University of Oxford
 ### Lee Katz
 
 ![Image](/assets/images/LeeKatz.jpg){:.rounded.border.shadow.image--xs}
-Public health bioinformatics scientist at Centers for Disease Control and Prevention.
+Public health bioinformatics scientist.
 <https://lskatz.github.io>
 
 ### Andrew Page
