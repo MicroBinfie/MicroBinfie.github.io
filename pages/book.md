@@ -45,13 +45,13 @@ following years demolished, the wrong version is still there and the correction 
 
 | Format | Best for | Size |
 |---|---|---|
-| [EPUB]({{ '/assets/book/nobody-wrote-this-down.epub' | relative_url }}) | E-readers, phones and tablets; Apple Books, Kobo, Google Play Books, and Kindle via Send to Kindle | 333 KB |
-| [PDF, paperback layout]({{ '/assets/book/nobody-wrote-this-down-6x9.pdf' | relative_url }}) | Reading on screen exactly as printed (6 × 9 in, 188 pages) | 980 KB |
-| [PDF, A4]({{ '/assets/book/nobody-wrote-this-down-a4.pdf' | relative_url }}) | Printing at home, or annotating | 960 KB |
-| [PDF, phone]({{ '/assets/book/nobody-wrote-this-down-phone.pdf' | relative_url }}) | A narrow page sized for a phone screen | 1.1 MB |
-| [PDF, large print]({{ '/assets/book/nobody-wrote-this-down-large-print.pdf' | relative_url }}) | 17-point type for easier reading | 1.1 MB |
-| [Web page]({{ '/assets/book/nobody-wrote-this-down.html' | relative_url }}) | Reading in a browser, one long page | 530 KB |
-| [Plain text]({{ '/assets/book/nobody-wrote-this-down.txt' | relative_url }}) | Anything at all; screen readers, slow connections | 500 KB |
+| [EPUB]({{ '/assets/book/nobody-wrote-this-down.epub' | relative_url }}) | E-readers, phones and tablets; Apple Books, Kobo, Google Play Books, and Kindle via Send to Kindle | 333&nbsp;KB |
+| [PDF, paperback layout]({{ '/assets/book/nobody-wrote-this-down-6x9.pdf' | relative_url }}) | Reading on screen exactly as printed (6 × 9 in, 188 pages) | 980&nbsp;KB |
+| [PDF, A4]({{ '/assets/book/nobody-wrote-this-down-a4.pdf' | relative_url }}) | Printing at home, or annotating | 960&nbsp;KB |
+| [PDF, phone]({{ '/assets/book/nobody-wrote-this-down-phone.pdf' | relative_url }}) | A narrow page sized for a phone screen | 1.1&nbsp;MB |
+| [PDF, large print]({{ '/assets/book/nobody-wrote-this-down-large-print.pdf' | relative_url }}) | 17-point type for easier reading | 1.1&nbsp;MB |
+| [Web page]({{ '/assets/book/nobody-wrote-this-down.html' | relative_url }}) | Reading in a browser, one long page | 530&nbsp;KB |
+| [Plain text]({{ '/assets/book/nobody-wrote-this-down.txt' | relative_url }}) | Anything at all; screen readers, slow connections | 500&nbsp;KB |
 
 ## Buy the paperback
 
