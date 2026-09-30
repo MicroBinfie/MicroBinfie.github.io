@@ -1,0 +1,160 @@
+{
+  "episode": "009",
+  "headline": "Nobel prize or contamination? Checking microbial sequence data",
+  "description": "How to spot contamination in microbial sequencing with taxonomic checks, assembly metrics and controls, and recognise short- and long-read failures.",
+  "summary": "Lee Katz, Andrew Page and Nabil-Fareed Alikhan discuss how to distinguish an interesting microbial sequencing result from contamination or a technical failure. They compare taxonomic classifiers, assembly checks, single-copy markers and visual inspection, then work through short- and long-read problems. Their central advice is to check the sample’s identity and build controls into the experiment before interpreting unusual biology.",
+  "people": [
+    {
+      "name": "Lee Katz",
+      "role": "host",
+      "affiliation": "Centers for Disease Control and Prevention; University of Georgia (adjunct member)"
+    },
+    {
+      "name": "Andrew Page",
+      "role": "host",
+      "affiliation": "Quadram Institute, Norwich, UK"
+    },
+    {
+      "name": "Nabil-Fareed Alikhan",
+      "role": "host",
+      "affiliation": "Quadram Institute, Norwich, UK"
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Check what is actually in the sample",
+      "body": "For a supposed single isolate, Nabil starts with Kraken for taxonomic classification or Mash to find the closest reference genome. The result should match the expected species, rather than simply accepting the sample label. He gives a rough example of one in 100 samples returning something unexpected, such as Proteus mirabilis or Citrobacter when Salmonella was expected.\n\nReference databases matter for plate sweeps and metagenomic samples too. Other options discussed include GTDB, MiniKraken, MIDAS, Torsten’s MLST tool and RefSeq Masher. Lee describes gradually building a custom Kalamari database with advice from subject-matter experts at CDC about expected organisms and common contaminants. He favours complete or nearly complete genomes to avoid questionable contigs entering the reference set. At the time of recording, the underlying genomes were not all online, but a compiled database was available to try."
+    },
+    {
+      "heading": "Assembly checks and single-copy markers",
+      "body": "Contamination checks need not begin with a database. For Salmonella sequenced with the Illumina workflows discussed, Nabil expects roughly 200 or fewer contigs and about 4.5 Mb of assembled sequence; 20 Mb or 2,000 contigs would be warning signs. GC plots and k-mer histograms provide checks for inconsistent sequence composition or coverage. Lee describes multiple k-mer peaks as a rapid warning of different sequenced components, not a way to identify them.\n\nFastQC and fastp provide useful read-quality plots. Single-copy markers offer another check: BUSCO, CheckM and MLST with ARIBA are discussed as ways to detect extra copies or mixed allele calls. Lee expects seven alleles at seven loci in his routine MLST checks and mentions beginning similar work with the gp60 gene in Cryptosporidium."
+    },
+    {
+      "heading": "Look beyond read-quality scores",
+      "body": "Andrew recommends inspecting raw FASTQ files or mapping reads to a reference and viewing them in IGV or Artemis. Good Q-scores and an adequate total number of reads can coexist with large coverage gaps. Without inspecting the alignments, missing sequence could be mistaken for an interesting biological property of a strain.\n\nThe hosts also discuss coverage that tracks GC content as a sign of bias. Nabil adds a tip about coverage sloping down away from the origin of replication. Lee stresses that recognising these patterns is a trained skill: visual inspection can reveal problems that a collection of automated QC results does not fully explain."
+    },
+    {
+      "heading": "Carryover, short reads and barcode problems",
+      "body": "Carryover from earlier sequencing runs and neighbouring experiments can introduce unexpected organisms. Fixed-tip robots may transfer material between samples despite washing. Human material and Staphylococcus aureus from a person’s skin are other examples. Distinguishing ancient human DNA from DNA belonging to the person handling it illustrates how difficult same-species contamination can be.\n\nOn Illumina, the discussion covers over-clustering, reagent failures, broad fragment-size distributions and Ns in the middle of reads. Fragment-size variation can complicate assembly: older mate-pair libraries could contain roughly 3–5 kb fragments alongside a 100–200 bp shadow library. Picard and samtools stats are suggested for inspecting insert-size distributions after mapping. Barcode similarity, sequencing errors and contaminated indexes can cause bleed-through during demultiplexing. The hosts discuss Hamming distance and dual indexing, and recommend examining the report from bcl2fastq when barcode problems are suspected."
+    },
+    {
+      "heading": "Long reads still depend on the input",
+      "body": "Andrew stresses that a long-read library made from 50-base fragments cannot yield long reads. He also cautions against expecting informatics to repair every underlying error: good input material remains essential.\n\nHe describes a PacBio run using an early chemistry version in which about 90% of reads were truncated. Diagnosing the failure took time, and the problem was attributed to chemistry rather than wet-lab mistakes. He also discusses overloading wells, which can produce mixed signals, and underloading, which wastes sequencing capacity. A further practical reminder concerns runs requiring refuelling: somebody needs to be on site at the right time."
+    },
+    {
+      "heading": "Build controls into the experiment",
+      "body": "Positive and negative controls belong throughout the workflow, not in a separate run months later. Examples include sequencing a blank, extracting sterile media, checking media by growth, and putting a known organism into a plate well. For an external provider, Andrew recommends placing a control randomly without disclosing its position. Deliberately mixing sequence types, serovars or species across a plate can also reveal a rotation or sample mix-up.\n\nIn low-biomass samples, kit-derived contamination can overwhelm the biological signal. Nabil recalls blanks returning more DNA or taxa than the intended samples; the placenta microbiome is raised as a cautionary example. The hosts warn against confounding comparison groups with sequencing runs, technicians or reagent batches. They recommend mixing groups across batches and processing controls alongside cases from the outset, rather than treating controls as an afterthought."
+    }
+  ],
+  "highlights": [
+    {
+      "time": "00:01:30",
+      "topic": "Checking isolate identity with Kraken and Mash"
+    },
+    {
+      "time": "00:04:20",
+      "topic": "Testing the single-isolate assumption with database-driven classification"
+    },
+    {
+      "time": "00:06:20",
+      "topic": "Reference-free checks using assembly size and contig counts"
+    },
+    {
+      "time": "00:11:15",
+      "topic": "Single-copy genes, BUSCO, CheckM and mixed MLST alleles"
+    },
+    {
+      "time": "00:13:47",
+      "topic": "Inspecting raw reads and reference alignments by eye"
+    },
+    {
+      "time": "00:16:53",
+      "topic": "Carryover between experiments and contamination from fixed-tip robots"
+    },
+    {
+      "time": "00:20:29",
+      "topic": "Over-clustering and short-read signal quality"
+    },
+    {
+      "time": "00:27:42",
+      "topic": "Barcode similarity, Hamming distance and contaminated indexes"
+    },
+    {
+      "time": "00:31:28",
+      "topic": "Why short DNA fragments cannot produce long reads"
+    },
+    {
+      "time": "00:32:22",
+      "topic": "A PacBio chemistry failure that truncated about 90% of reads"
+    },
+    {
+      "time": "00:34:50",
+      "topic": "Positive and negative controls throughout the workflow"
+    },
+    {
+      "time": "00:37:19",
+      "topic": "Placenta microbiome claims and batch effects in low-biomass work"
+    }
+  ],
+  "quotes": [
+    {
+      "text": "Well, the most fundamental thing is that you can't make long reads if you only have very short DNA fragments.",
+      "time": "00:31:28",
+      "speaker": "Andrew Page"
+    }
+  ],
+  "tools": [
+    "Kraken",
+    "Mash",
+    "GTDB",
+    "MiniKraken",
+    "MIDAS",
+    "Torsten’s MLST tool",
+    "RefSeq Masher",
+    "Kalamari",
+    "FastQC",
+    "fastp",
+    "BUSCO",
+    "CheckM",
+    "ARIBA",
+    "MLST",
+    "IGV",
+    "Artemis",
+    "Picard",
+    "samtools stats",
+    "bcl2fastq",
+    "Illumina",
+    "PacBio",
+    "Hamming distance",
+    "dual indexing"
+  ],
+  "topics": [
+    "sequencing contamination",
+    "taxonomic classification",
+    "genome assembly",
+    "quality control",
+    "short-read sequencing",
+    "long-read sequencing",
+    "experimental controls",
+    "low-biomass samples",
+    "batch effects"
+  ],
+  "faq": [
+    {
+      "q": "How can I check whether a bacterial isolate is contaminated?",
+      "a": "Compare its taxonomic profile with the expected organism using Kraken or a nearest-reference approach with Mash. The hosts also recommend checking assembly size and contig counts, GC and k-mer patterns, and mixed calls in genes expected to be single-copy."
+    },
+    {
+      "q": "What does a second peak in a k-mer histogram tell me?",
+      "a": "In the episode, multiple peaks are treated as a warning that different components may have been sequenced at different coverages. Lee describes the histogram as a rapid screening tool, not a way to identify the organisms involved."
+    },
+    {
+      "q": "Can good read-quality scores rule out sequencing problems?",
+      "a": "No. The hosts describe samples with acceptable Q-scores and read totals but large coverage gaps, and recommend inspecting mapped reads in IGV or Artemis."
+    },
+    {
+      "q": "What controls are useful for low-biomass sequencing?",
+      "a": "The episode discusses negative controls such as blanks and sterile-media extractions, alongside known positive controls. Controls should be processed with the samples, because kit-derived contamination and batch effects can overwhelm the signal in low-biomass work."
+    }
+  ]
+}

@@ -1,0 +1,163 @@
+{
+ "episode": "032",
+ "headline": "Majora: linking SARS-CoV-2 genomes across COG-UK",
+ "description": "Nick Loman, Sam Nicholls and Radosław Popławski explain how Majora links SARS-CoV-2 genomes and metadata across COG-UK.",
+ "summary": "Nick Loman, Sam Nicholls and Radosław Popławski discuss building Majora and the surrounding infrastructure for COG-UK’s SARS-CoV-2 genomic surveillance. They follow data from local sequencing sites through shared quality control and phylogenetic analysis, explaining the database design, API and deployment choices. The conversation also covers the human work of agreeing metadata standards and keeping a distributed sequencing network running during a pandemic.",
+ "people": [
+  {
+   "name": "Lee Katz",
+   "role": "host",
+   "affiliation": "Centers for Disease Control and Prevention; University of Georgia"
+  },
+  {
+   "name": "Nick Loman",
+   "role": "guest",
+   "affiliation": "Institute of Microbiology and Infection, University of Birmingham"
+  },
+  {
+   "name": "Sam Nicholls",
+   "role": "guest",
+   "affiliation": "Nick Loman's lab, University of Birmingham"
+  },
+  {
+   "name": "Radosław Popławski",
+   "role": "guest",
+   "affiliation": "CLIMB, University of Birmingham"
+  },
+  {
+   "name": "Anthony Underwood",
+   "role": "mentioned",
+   "affiliation": "CGPS"
+  }
+ ],
+ "sections": [
+  {
+   "heading": "Connecting a rapidly assembled sequencing network",
+   "body": "COG-UK brought together roughly 13 or 14 sequencing sites using different platforms, protocols and bioinformatics approaches. Nick explains that the challenge was to combine their sequence data and sample metadata for central analysis and submission to public databases, without waiting months or years for a new infrastructure project. Majora connected those distributed contributions.\n\nThe team was not starting from nothing: CLIMB already provided established computing infrastructure, and Sam had begun designing a laboratory information management system for faecal metagenomics. Sam recalls working with Radosław through the second weekend of March to build the first virtual machine, and by the Monday there was bare-bones infrastructure to build on. Sam says Majora’s first deployed job was user management, rather than managing laboratory records: people needed accounts so they could start supplying genomes. The first user arrived on the Monday."
+  },
+  {
+   "heading": "From uploaded files to phylogenetic analysis",
+   "body": "Contributors send sequence data to CLIMB through mechanisms such as rsync, while contextual metadata goes through Majora’s API. An inbound distribution pipeline called Elan asks Majora which sequences it should expect, then searches contributors’ directories to match files with their metadata. This separates the contributor’s upload work from the processing behind the scenes.\n\nElan checks that the submitted data looks sensible, including whether BAM files contain alignments, and returns quality-control information to Majora. A subsequent publishing step makes the data available to analysts, allowing phylogenetic pipelines to process new sequences. Majora therefore records what happens across the system, while other components perform file handling, quality control and downstream analysis."
+  },
+  {
+   "heading": "Database models, workflow languages and testing",
+   "body": "Sam’s core model treats everything as either an artefact, such as a biological sample or file, or a process acting on an artefact. Those concepts predated the pandemic and were deliberately generic rather than tied to COVID-19. That flexibility helped while the consortium’s metadata requirements were still changing.\n\nMajora is a Python application built with Django. Sam credits Django’s object-relational mapper and web-development framework with making rapid prototyping easier. Elan uses Nextflow, which he learnt for COG-UK after using Snakemake; his practical warning is that resuming a workflow requires -resume, not --resume. Testing centres on integration tests against a separate, bright-pink Majora instance called Magenta, where uploads and other changes are tried before reaching production."
+  },
+  {
+   "heading": "An API that other teams could build on",
+   "body": "The API is Majora’s principal interface, not an optional addition to a website. Some contributors, including the Sanger, use API clients directly. Anthony Underwood and colleagues built a web uploader that converts CSV metadata into JSON requests, giving laboratory users an alternative to command-line tools. Nick argues that this division lets other teams add functionality without making Sam responsible for every interface.\n\nValidation happens during submission. Django treats incoming API data much like a completed web form, applying validators to individual fields. A collection date in the future, for example, produces an error returned through the API and displayed by the uploader. Contributors can correct rejected records immediately rather than discovering problems during later analysis."
+  },
+  {
+   "heading": "Metadata Friday and growing datasets",
+   "body": "Early in the consortium, sequences and metadata had a weekly submission deadline, Metadata Friday. A preliminary pipeline run exposed missing files or metadata, followed by a scramble to fix problems. Majora’s integration with the consortium’s Slack workspace made this a shared, social occasion for tackling work that Nick describes as tedious. Upload music, automated comments and other small touches helped give the software a personality.\n\nThe pipeline later ran twice weekly and then daily, ending the need for Metadata Friday. At the time of the discussion, Sam expected the total to reach 75,000 sequences that day. Nick also reports a phylogenetic analysis with 100,000 tips, including GISAID sequences, while warning that another order of magnitude of scaling would be needed."
+  },
+  {
+   "heading": "Expansion, practical limits and lessons for others",
+   "body": "Nick’s proposed next steps include supporting groups outside the UK and adding more central bioinformatics capability. Better international sampling would help investigate importations versus local transmission. Reprocessing the full dataset through unified pipelines could also support questions about mixed positions in sequences. He notes that mixed positions have helped clarify transmission direction in other viruses, rather than claiming this has already been demonstrated here for SARS-CoV-2.\n\nThe preprint, *Continuous integration supporting decentralised sequencing for SARS-CoV-2 genomic surveillance*, explains the design choices and trade-offs. The software is open source, but the team does not present the complete infrastructure as an off-the-shelf installation. Sam highlights the internal processing model: analysis can begin without first waiting for ENA accessions and downloading deposited data again. Equally important are agreed metadata standards and the legal work needed to collect information across public-health agencies. Their advice is to reuse useful ideas and prioritise a working response over a perfect system delivered too late."
+  }
+ ],
+ "highlights": [
+  {
+   "time": "00:01:54",
+   "topic": "Why COG-UK needed to connect a distributed SARS-CoV-2 sequencing network"
+  },
+  {
+   "time": "00:06:13",
+   "topic": "Majora’s origins in a LIMS for faecal metagenomics"
+  },
+  {
+   "time": "00:10:27",
+   "topic": "Modelling samples, files and operations as artefacts and processes"
+  },
+  {
+   "time": "00:13:23",
+   "topic": "How uploaded metadata and sequence files move through the CLIMB workflow"
+  },
+  {
+   "time": "00:14:47",
+   "topic": "Building Majora with Django and Elan with Nextflow"
+  },
+  {
+   "time": "00:17:38",
+   "topic": "Integration testing in the bright-pink Magenta instance"
+  },
+  {
+   "time": "00:19:04",
+   "topic": "Making the API the main interface and enabling independent upload tools"
+  },
+  {
+   "time": "00:24:06",
+   "topic": "Metadata Friday’s weekly deadline and shared troubleshooting"
+  },
+  {
+   "time": "00:29:10",
+   "topic": "Sequencing milestones and a 100,000-tip tree including GISAID data"
+  },
+  {
+   "time": "00:30:08",
+   "topic": "Possible uses for other surveillance and extending support internationally"
+  },
+  {
+   "time": "00:34:53",
+   "topic": "Using the Majora preprint as a guide rather than an installation recipe"
+  },
+  {
+   "time": "00:36:54",
+   "topic": "Why internal processing allowed rapid analysis before public deposition"
+  }
+ ],
+ "quotes": [
+  {
+   "text": "So I switched from Snakemake just for the occasion.",
+   "time": "00:14:47",
+   "speaker": "Sam Nicholls"
+  },
+  {
+   "text": "There's no point spending a year getting the perfect infrastructure together.",
+   "time": "00:36:15",
+   "speaker": "Nick Loman"
+  }
+ ],
+ "tools": [
+  "Majora",
+  "CLIMB",
+  "Elan",
+  "Django",
+  "Nextflow",
+  "Snakemake",
+  "rsync",
+  "GISAID",
+  "ENA",
+  "Slack",
+  "GitHub",
+  "Swagger"
+ ],
+ "topics": [
+  "sars-cov-2",
+  "genomic surveillance",
+  "cog-uk",
+  "sample metadata",
+  "distributed sequencing",
+  "api design",
+  "workflow automation",
+  "phylogenetics"
+ ],
+ "faq": [
+  {
+   "q": "What does Majora do for COG-UK?",
+   "a": "Majora connects distributed sequencing sites by recording sample metadata and information about processing. It works with CLIMB pipelines that match uploaded files to metadata, perform quality control and make data available for downstream analysis."
+  },
+  {
+   "q": "What software frameworks are used for Majora and Elan?",
+   "a": "Majora is a Python web application built with Django. Elan, the inbound distribution pipeline, is written in Nextflow."
+  },
+  {
+   "q": "What was Metadata Friday?",
+   "a": "It was the consortium’s weekly deadline for submitting sequences and metadata, with a preliminary pipeline run revealing problems to fix. Slack helped participants troubleshoot together; the event ended as processing became daily."
+  },
+  {
+   "q": "Can another surveillance project reuse Majora?",
+   "a": "The software is open source, and its core models are not specific to COVID-19. However, the guests recommend treating the preprint as a source of reusable design ideas rather than expecting an off-the-shelf infrastructure, and stress the need to establish metadata standards and legal arrangements."
+  }
+ ]
+}

@@ -1,0 +1,149 @@
+{
+  "episode": "069",
+  "headline": "Bacterial taxonomy: history, naming rules and genomes",
+  "description": "Why bacterial names change: Linnaean classification, phylogeny, naming rules and the case for genome-based taxonomy.",
+  "summary": "Andrew Page and Nabil-Fareed Alikhan discuss the background to bacterial taxonomy with Phil Hugenholtz, Iain Sutcliffe and Mark Pallen. Prompted by debate over changes to bacterial phyla, the panel distinguishes classification from naming rules and examines how genomes could simplify species descriptions. They also disagree over the usefulness of the term prokaryotes and discuss why culture requirements create difficulties for naming organisms discovered through metagenomics.",
+  "people": [
+    {
+      "name": "Andrew Page",
+      "role": "host",
+      "affiliation": "Quadram Institute"
+    },
+    {
+      "name": "Nabil-Fareed Alikhan",
+      "role": "host",
+      "affiliation": "Quadram Institute"
+    },
+    {
+      "name": "Lee Katz",
+      "role": "host",
+      "affiliation": "Centers for Disease Control and Prevention; University of Georgia"
+    },
+    {
+      "name": "Phil Hugenholtz",
+      "role": "guest",
+      "affiliation": "Australian Centre for Ecogenomics, University of Queensland"
+    },
+    {
+      "name": "Iain Sutcliffe",
+      "role": "guest",
+      "affiliation": "Northumbria University"
+    },
+    {
+      "name": "Mark Pallen",
+      "role": "guest",
+      "affiliation": "University of East Anglia; Quadram Institute"
+    }
+  ],
+  "sections": [
+    {
+      "heading": "From Linnaeus to evolutionary classification",
+      "body": "Mark Pallen separates two achievements of Linnaeus: arranging organisms into nested groups and establishing binomial names, illustrated by *Homo sapiens* and *Escherichia coli*. Darwin subsequently supplied an evolutionary explanation for those groups: common descent. Classification should therefore reflect genealogy, rather than simply collect organisms with similar appearances or habits.\n\nPallen describes Hennig's later emphasis on branches of the evolutionary tree rather than grades of complexity. Fish illustrate the distinction: a classification containing all fish would also have to include humans and other terrestrial vertebrates. He then credits Carl Woese with bringing molecular approaches into bacterial classification, initially through RNA fragments and later sequence-based comparisons. Mycoplasmas appearing as a small branch within the Gram-positive group illustrate how molecular evidence can challenge classifications based on conspicuous traits."
+    },
+    {
+      "heading": "Is prokaryotes still a useful term?",
+      "body": "Pallen argues that grouping bacteria and archaea as prokaryotes conflicts with phylogenetic classification because eukaryotes are closer to archaea than to bacteria. He objects particularly when teaching materials use prokaryotes while actually describing mechanisms specific to bacteria, citing questions about DNA and RNA replication that he challenged as an external examiner.\n\nIain Sutcliffe accepts the historical baggage but sees value in a vernacular term for organisms without nuclei. Another panellist similarly distinguishes convenient shorthand for bacteria and archaea from inaccurate use meaning bacteria alone. Sutcliffe says his formal writing increasingly uses archaea and bacteria, while arguing that the ICSP has more pressing questions than changing its name."
+    },
+    {
+      "heading": "Naming rules are not a compulsory taxonomy",
+      "body": "Sutcliffe explains that the International Committee on Systematics of Prokaryotes, or ICSP, primarily oversees the International Code of Nomenclature of Prokaryotes, or ICNP. It also helps oversee the journal of record for nomenclature. These responsibilities do not mean that the committee dictates a single classification: the code protects freedom of taxonomic thought.\n\nHis example is *Rhodococcus*: GTDB can treat it as one genus while he considers that it should be divided into several genera. The distinction is between classification decisions and rules for assigning names. Under the code described here, valid naming requires cultured organisms deposited in culture collections—a substantial limitation for organisms recovered through metagenomics."
+    },
+    {
+      "heading": "Replacing the species-description assembly line",
+      "body": "Asked how taxonomy can catch up with genomics, Sutcliffe argues that genomes contain the information needed for robust classification. Drawing on editorial work between 2009 and 2019 involving more than 800 bacterial species descriptions, he criticises repetitive papers built around checklists of biochemical and phenotypic tests.\n\nHe describes a one-colony, one-species, one-paper workflow: find an isolate with a sufficiently different 16S rRNA sequence, perform a battery of tests, and write a six-page description. Each paper then requires an editor and two reviewers. His objection is not to studying organisms, but to the human effort spent producing routine descriptions whose individual findings are often unremarkable. He sees changing publication expectations as central to modernisation."
+    },
+    {
+      "heading": "A shorter route to describing cultured species",
+      "body": "Pallen distinguishes the code's requirements from conventions imposed by editors and reviewers. In work on the chicken gut microbiome, his group wanted to name uncultured organisms alongside 30 cultured organisms. For the cultured organisms, they used terse descriptions identifying the type strain and setting a 95% ANI boundary for membership of the species.\n\nThose descriptions passed peer review, but culture deposition and its validation remained a separate obstacle: more than a year after sending strains to collections, the process was still being completed. Pallen argues that taxonomists can satisfy requirements for descriptions, circumscription and name derivations without reproducing every traditional test or lengthy linguistic explanation."
+    },
+    {
+      "heading": "Diagnosis, genomes and horizontal gene transfer",
+      "body": "Sutcliffe points to a paper advocating a return to Linnaeus's focus on diagnosis rather than description, using DNA characters in formal species naming. For him, genomic evidence can establish a taxon's position and distinctiveness while the accompanying naming description remains brief.\n\nPallen recalls clinical colleagues dismissing genomically distinct *Acinetobacter* species because they could not distinguish them in the laboratory. He argues for genomic classification, but qualifies what that means: horizontal gene transfer makes it important to use a suitable subset of genes rather than treat every gene as an equivalent evolutionary signal. His lorry analogy separates the cab from its cargo. Phil Hugenholtz closes positively, seeing current disagreements as growing pains towards a fuller account of microbial diversity."
+    }
+  ],
+  "highlights": [
+    {
+      "time": "00:00:47",
+      "topic": "The hosts introduce the panel and the debate over changes to bacterial phyla."
+    },
+    {
+      "time": "00:01:51",
+      "topic": "Pallen traces classification and naming from Linnaeus through evolutionary and molecular approaches."
+    },
+    {
+      "time": "00:08:33",
+      "topic": "Why Pallen objects to prokaryotes as a phylogenetic grouping."
+    },
+    {
+      "time": "00:09:45",
+      "topic": "Sutcliffe explains the historical terminology and defends its vernacular usefulness."
+    },
+    {
+      "time": "00:12:57",
+      "topic": "Culture requirements, the ICSP's responsibilities and freedom of taxonomic thought."
+    },
+    {
+      "time": "00:17:02",
+      "topic": "Sutcliffe makes the case for genomics and against repetitive phenotypic checklists."
+    },
+    {
+      "time": "00:19:30",
+      "topic": "Pallen distinguishes written rules from publishing conventions, using chicken gut species descriptions."
+    },
+    {
+      "time": "00:22:09",
+      "topic": "Diagnosis rather than lengthy description as a basis for naming species."
+    },
+    {
+      "time": "00:23:30",
+      "topic": "Genomically defined species and the complication of horizontal gene transfer."
+    },
+    {
+      "time": "00:24:57",
+      "topic": "Hugenholtz explains why he sees an encouraging future for microbial taxonomy."
+    }
+  ],
+  "quotes": [
+    {
+      "text": "There's no official taxonomy, there's no official approach to taxonomy.",
+      "time": "00:19:30",
+      "speaker": "Mark Pallen"
+    }
+  ],
+  "tools": [
+    "GTDB",
+    "NCBI",
+    "ANI",
+    "cladistics",
+    "phylogenetic analysis"
+  ],
+  "topics": [
+    "bacterial taxonomy",
+    "nomenclature",
+    "phylogenetics",
+    "genomics",
+    "archaea",
+    "prokaryotes",
+    "species descriptions",
+    "culture collections",
+    "horizontal gene transfer"
+  ],
+  "faq": [
+    {
+      "q": "What is the difference between bacterial taxonomy and nomenclature?",
+      "a": "The panel distinguishes classification decisions from rules governing names. Sutcliffe explains that the nomenclatural code protects freedom of taxonomic thought, so it does not impose one compulsory classification."
+    },
+    {
+      "q": "Why do some microbiologists avoid the term prokaryotes?",
+      "a": "Pallen argues that it groups bacteria and archaea despite eukaryotes being closer to archaea, and can encourage inaccurate generalisations about bacterial biology. Sutcliffe still considers it useful as vernacular shorthand for organisms without nuclei."
+    },
+    {
+      "q": "Do bacterial species descriptions require long lists of biochemical tests?",
+      "a": "Pallen argues that many such expectations are publishing conventions rather than explicit code requirements. He describes accepted chicken gut species descriptions based on a type strain and a 95% ANI boundary."
+    },
+    {
+      "q": "Why are uncultured organisms difficult to name under the code discussed?",
+      "a": "Sutcliffe explains that valid naming under the ICNP described in this episode requires organisms to be cultured and deposited in culture collections. That requirement excludes many organisms found through metagenomics."
+    }
+  ]
+}

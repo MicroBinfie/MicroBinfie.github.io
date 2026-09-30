@@ -1,0 +1,144 @@
+{
+ "episode": "097",
+ "headline": "Sequencing advances: Nanopore, PacBio and Illumina",
+ "description": "The hosts compare Nanopore Q20, adaptive sequencing, PacBio HiFi and Illumina long-read plans, and consider the implications for microbial software.",
+ "summary": "Lee Katz, Andrew Page and Nabil-Fareed Alikhan compare sequencing developments they have heard about at conferences and meetings. They discuss Nanopore Q20 chemistry and adaptive sequencing, increased PacBio HiFi throughput, and Illumina’s long-read announcements and longer paired-end reads. The conversation connects these developments to microbial genome assembly, computing requirements and software assumptions that may not accommodate changing read lengths.",
+ "people": [
+  {
+   "name": "Lee Katz",
+   "role": "host",
+   "affiliation": "Centers for Disease Control and Prevention; University of Georgia (adjunct member)"
+  },
+  {
+   "name": "Andrew Page",
+   "role": "host",
+   "affiliation": "Quadram Institute, Norwich, UK"
+  },
+  {
+   "name": "Nabil-Fareed Alikhan",
+   "role": "host",
+   "affiliation": "Quadram Institute, Norwich, UK"
+  }
+ ],
+ "sections": [
+  {
+   "heading": "New instruments and Nanopore Q20",
+   "body": "Nabil describes encountering an instrument from Element Biosciences that he had not previously heard about. Its apparent ability to address his needs made him curious but also suspicious, and he asks whether listeners have used it. This is a conference roundup rather than a tested comparison: the hosts distinguish promising announcements from equipment and chemistry they have used themselves.\n\nAndrew highlights Nanopore’s Q20 chemistry as a development he wants to try properly. Nabil says published papers suggest that the improvement is real, rather than just promotional claims, but reports that they have not yet got their hands on it."
+  },
+  {
+   "heading": "Adaptive sequencing for pathogen enrichment",
+   "body": "Andrew explains Nanopore adaptive sequencing as a way to accept or reject reads during sequencing. A reference database can guide selection: a run might retain human reads, reject human host contamination, or enrich for pathogens such as Listeria and Campylobacter in an uncultured sample.\n\nIn his description, the instrument might read the first 500 bases, identify what it is reading and then accept the molecule or reverse the pore’s polarity to reject it. He cites reported target enrichment of roughly 3–10×, which could make the difference between detecting a pathogen with some genome coverage and barely seeing it. Lee raises the prospect of reducing unwanted data storage, but Andrew clarifies that some sequence is still read before rejection."
+  },
+  {
+   "heading": "Gaming hardware and integrated computers",
+   "body": "The computing needed alongside sequencing leads to a discussion of gaming hardware. Andrew describes using powerful Alienware desktops in the sequencing laboratory. Lee recalls academic labs picking up PS3s for heavy computing; the hosts recall them being stitched together into grid clusters, and Andrew remembers reliability problems associated with memory lacking error correction.\n\nThe hosts also discuss Nanopore’s P2 and P2 Solo offerings. Andrew is cautious about computers supplied with sequencers: he recalls earlier Nanopore and PacBio systems whose accompanying computers quickly became underpowered. His laboratory’s plan is to run a P2 Solo using an existing gaming machine with upgrades. Lee notes that the computers his laboratory uses for Nanopore work have capable GPU cards."
+  },
+  {
+   "heading": "PacBio HiFi and microbial read lengths",
+   "body": "Nabil reports that PacBio was emphasising increased HiFi throughput at the meetings he attended. Andrew describes the method as circularising DNA with hairpins and repeatedly reading the same fragment, combining those passes into a higher-quality consensus. Nabil sees the offering as strongly directed towards human genomes, while Andrew contrasts it with the flexibility of stopping a Nanopore run, washing a flow cell and returning to it later.\n\nFor microbial assembly, the hosts discuss the practical value of reads several kilobases long. Andrew describes a 96-isolate E. coli Nanopore experiment: an initial attempt averaging about 1.5 kb did not work well, whereas moving towards roughly 5 kb made assembly much more successful. They still acknowledge difficult structures such as tandem phage repeats."
+  },
+  {
+   "heading": "Illumina announcements and longer paired-end reads",
+   "body": "Nabil reports advertised figures for Illumina’s Complete Long Read solution: a read N50 of 6–7 kb and read lengths potentially exceeding 30 kb. He considers around 6 kb useful for many of his E. coli assembly problems. The hosts also discuss NovaSeq announcements, sequencing chemistry changes and easier reagent shipping.\n\nSeparately, Andrew describes longer-read NextSeq kits, including discussion of 300-base paired-end reads and the possibility of going further. The hosts compare this with MiSeq and consider potential benefits for covering more 16S hypervariable regions. They recall people pushing sequencing kits beyond their intended lengths, but stress the risk of declining base quality. Lee asks whether longer Illumina reads would require much longer runs; the discussion leaves that question unresolved."
+  },
+  {
+   "heading": "Read categories and software assumptions",
+   "body": "The hosts question whether “short” and “long” remain useful categories as read lengths change. Andrew suggests a possible medium-read category, while Nabil argues that naming the technology might be clearer. Lee’s “fourth generation” and “5G” suggestions are jokes, not proposed technical standards.\n\nAndrew raises a practical compatibility concern: much long-read software does not support paired-end data, while software written for Illumina may assume an upper read-length limit. Lee asks whether SPAdes or SKESA might contain such constants. Andrew suggests that memory allocations, stack sizes or other optimisations could encode assumptions about maximum lengths. They do not inspect either program or establish a specific limit; the point is that longer paired-end reads may require software changes."
+  }
+ ],
+ "highlights": [
+  {
+   "time": "00:01:14",
+   "topic": "Nabil describes an unfamiliar Element Biosciences instrument and asks for user experience."
+  },
+  {
+   "time": "00:01:55",
+   "topic": "Andrew discusses Nanopore Q20 chemistry, followed by adaptive sequencing."
+  },
+  {
+   "time": "00:03:25",
+   "topic": "Lee recalls PS3 computing clusters and the use of gaming hardware in laboratories."
+  },
+  {
+   "time": "00:05:00",
+   "topic": "Andrew questions how well computers supplied with sequencers age."
+  },
+  {
+   "time": "00:06:15",
+   "topic": "Adaptive sequencing reads an initial stretch before rejection, with reported 3–10× enrichment."
+  },
+  {
+   "time": "00:06:49",
+   "topic": "PacBio’s emphasis on HiFi sequencing and increased throughput."
+  },
+  {
+   "time": "00:08:31",
+   "topic": "Illumina’s Complete Long Read announcement and changes to its sequencing offering."
+  },
+  {
+   "time": "00:09:27",
+   "topic": "Andrew describes how longer reads improved a 96-isolate E. coli experiment."
+  },
+  {
+   "time": "00:10:31",
+   "topic": "Longer-read NextSeq kits and possible applications to 16S sequencing."
+  },
+  {
+   "time": "00:12:11",
+   "topic": "Lee raises base-quality concerns and asks about the runtime cost of longer reads."
+  },
+  {
+   "time": "00:13:40",
+   "topic": "The hosts debate terminology for short, medium and long reads."
+  },
+  {
+   "time": "00:15:18",
+   "topic": "Longer paired-end reads may challenge assumptions in existing sequencing software."
+  }
+ ],
+ "quotes": [],
+ "tools": [
+  "Nanopore Q20 chemistry",
+  "Nanopore adaptive sequencing",
+  "Nanopore P2",
+  "Nanopore P2 Solo",
+  "PacBio HiFi sequencing",
+  "Illumina Complete Long Read",
+  "Illumina NovaSeq",
+  "Illumina NextSeq",
+  "Illumina MiSeq",
+  "454",
+  "SPAdes",
+  "SKESA"
+ ],
+ "topics": [
+  "microbial bioinformatics",
+  "sequencing technologies",
+  "adaptive sequencing",
+  "pathogen enrichment",
+  "long reads",
+  "paired-end reads",
+  "genome assembly",
+  "sequencing quality",
+  "gpu computing",
+  "software compatibility"
+ ],
+ "faq": [
+  {
+   "q": "How can Nanopore adaptive sequencing enrich pathogens?",
+   "a": "Andrew describes reading an initial stretch of a molecule, deciding whether it matches a target and rejecting unwanted molecules by reversing the pore’s polarity. He cites reported enrichment of roughly 3–10× and gives Listeria and Campylobacter as examples of possible pathogen targets."
+  },
+  {
+   "q": "What read lengths helped with E. coli assembly in the episode?",
+   "a": "Andrew describes a 96-isolate Nanopore experiment in which reads averaging about 1.5 kb performed poorly, while moving towards roughly 5 kb improved the results. The hosts consider reads around 5–6 kb useful for many E. coli assembly problems, while noting that tandem phage repeats can remain difficult."
+  },
+  {
+   "q": "What Illumina long-read figures were discussed?",
+   "a": "Nabil reports advertised figures of a 6–7 kb read N50 and read lengths potentially exceeding 30 kb for the Complete Long Read solution. The hosts separately discuss 300-base paired-end NextSeq reads; they do not present an independent benchmark of the long-read offering."
+  },
+  {
+   "q": "Did the hosts identify a hard-coded read-length limit in SPAdes or SKESA?",
+   "a": "No. Lee asks whether such a constant might exist, and Andrew explains how memory allocations, stack sizes or optimisations could impose assumptions about read length. They do not inspect the source code or verify a particular limit in either assembler."
+  }
+ ]
+}

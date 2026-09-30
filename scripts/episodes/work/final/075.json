@@ -1,0 +1,150 @@
+{
+ "episode": "075",
+ "headline": "Reviewing bioinformatics papers in 10 days or less",
+ "description": "How to review bioinformatics papers efficiently: check methods, results, code and data, recognise fatal flaws and write useful feedback.",
+ "summary": "Lee Katz, Andrew Page and Nabil-Fareed Alikhan discuss how to make peer review faster without overlooking fundamental problems. Lee says reviewing a manuscript can take him up to 10 days; Andrew and Nabil explain how they screen invitations, assess methods and results, and decide whether a detailed review is worthwhile. They also discuss code availability, accessible data and ways authors can make manuscripts easier to review.",
+ "people": [
+  {
+   "name": "Lee Katz",
+   "role": "host",
+   "affiliation": "Centers for Disease Control and Prevention; University of Georgia (adjunct member)"
+  },
+  {
+   "name": "Andrew Page",
+   "role": "host",
+   "affiliation": "Quadram Institute, Norwich, UK"
+  },
+  {
+   "name": "Nabil-Fareed Alikhan",
+   "role": "host",
+   "affiliation": "Quadram Institute, Norwich, UK"
+  }
+ ],
+ "sections": [
+  {
+   "heading": "Screen requests before committing",
+   "body": "Andrew starts with the abstract and a quick scan. If a manuscript is fundamentally unsound, he asks the editor to consider a desk rejection rather than spending reviewers’ time on a full report. Where a review is needed, being upfront about a few fatal problems can be enough, with no need to go through every nitty-gritty detail.\n\nHe also screens invitations by available time, publisher and who the authors are. He says he declines unpaid Elsevier reviews, offering instead to review at the full economic cost of his time—around $1,000 in his example. Difficult login systems are another deterrent. His practical rule is not to accept a review and then leave it unfinished."
+  },
+  {
+   "heading": "Review against the journal’s criteria",
+   "body": "The hosts distinguish technical soundness from novelty. Andrew uses PLOS ONE as an example where solid science, including negative results, need not offer novelty; other journals explicitly require an assessment of originality and relevance to the field.\n\nNabil advises declaring limits to your expertise rather than struggling through an assessment you cannot support. Laboratory experiments or an unfamiliar organism such as E. coli might need another reviewer’s judgement. He also warns against rejecting work simply because you would have used a different tool or experiment. Andrew describes going back to editors to challenge other reviewers who lacked expert knowledge, asked for silly things or would impose unnecessary extra work."
+  },
+  {
+   "heading": "Separate the first read from detailed checking",
+   "body": "Lee normally reads a paper straight through, then returns for a slower second pass that includes checking software and accession numbers. Nabil instead starts with the introduction’s final paragraph to establish the aim, reads the figures, skims the results and consults the methods where necessary. If the terminology is unfamiliar, he reads more of the introduction.\n\nNabil describes spending roughly half an hour to an hour on this first pass, taking a break, then returning for the detailed review. Andrew also makes a first pass before deciding whether to proceed to an in-depth review. The shared priority is to establish whether methods and results hold together before assessing interpretation, structure and presentation."
+  },
+  {
+   "heading": "Look for methodological failures",
+   "body": "Andrew treats the methods as a place where vague or impressive-sounding prose cannot conceal unsuitable analysis. His examples include applying a long-read assembler to short-read data, using Nanopore software for PGM data, or ignoring sequencing error rates. He describes a 16S paper lacking controls and replicates, and challenges its species-level identification claims.\n\nNabil gives a subtler example: assembly, alignment and figures appeared reasonable, but claims linking hosts, genes and operons lacked an explained analytical basis. Gene presence and association needed definitions, and the word significant needed statistical support. Conversely, he would not dwell on a routine assembly step using Shovill if it did not affect the result under review."
+  },
+  {
+   "heading": "Inspect code, accessions and earlier versions",
+   "body": "Andrew says he reviews supplied code, recalling a roughly 300-line Bash pipeline dominated by print statements. Nabil describes a purported new algorithm that instead ran another tool with customised parameters and altered its output. For software papers, he regards missing code as grounds for rejection.\n\nData checks include whether accession numbers are real and accessible, and whether supplementary material supports the manuscript. Andrew also sometimes checks bioRxiv or medRxiv for earlier versions. Comparing a preprint with the submission can raise questions about whether authors have revised the work or incorporated earlier feedback, although these checks can become time-consuming rabbit holes."
+  },
+  {
+   "heading": "Make feedback and manuscripts easier to use",
+   "body": "Andrew separates major, potentially blocking comments from optional minor comments and typos. Feedback can also identify strengths: an important result buried deep in the paper may deserve prominence in the abstract. Lee recalls struggling with a three-figure limit for a Haiti cholera paper.\n\nNabil reserves presentation checks for a later pass: figure legends, table references, accession codes and supplementary files. He asks for strain tables as Excel sheets rather than PDFs converted from Word, so accession numbers are easier to extract. He also wants figures sized consistently with A4 manuscript pages, not enormous pages requiring constant zoom changes. Page numbers help too. Clear scientific writing should state the finding rather than build suspense."
+  }
+ ],
+ "highlights": [
+  {
+   "time": "00:00:00",
+   "topic": "Lee introduces peer review and his struggle with reviews taking up to 10 days."
+  },
+  {
+   "time": "00:01:28",
+   "topic": "Andrew explains initial screening and when to ask an editor for a desk rejection."
+  },
+  {
+   "time": "00:07:18",
+   "topic": "Nabil screens out unsuitable invitations, then prioritises results and methods."
+  },
+  {
+   "time": "00:08:42",
+   "topic": "Andrew separates major comments, minor comments and typos before deeper checks."
+  },
+  {
+   "time": "00:12:06",
+   "topic": "Match the review to the journal’s scope and declare gaps in your expertise."
+  },
+  {
+   "time": "00:14:16",
+   "topic": "Nabil distinguishes objective flaws from a reviewer’s preferred way of doing the work."
+  },
+  {
+   "time": "00:17:38",
+   "topic": "Andrew discusses inspecting code, including a 300-line Bash pipeline."
+  },
+  {
+   "time": "00:18:50",
+   "topic": "Nabil explains his figures-first reading strategy, starting from the introduction’s last paragraph."
+  },
+  {
+   "time": "00:23:25",
+   "topic": "Andrew explains why methods reveal unsuitable software and sequencing assumptions."
+  },
+  {
+   "time": "00:24:44",
+   "topic": "A rejection report can identify major technical failures, illustrated with a 16S paper."
+  },
+  {
+   "time": "00:25:31",
+   "topic": "Custom methods add review work, while association claims need an analytical basis."
+  },
+  {
+   "time": "00:27:43",
+   "topic": "Nabil orders review stages: methods and results, interpretation, then presentation checks."
+  }
+ ],
+ "quotes": [
+  {
+   "text": "I might make comments about the manuscript, but I will always reject a paper without code for software.",
+   "time": "00:17:48",
+   "speaker": "Nabil-Fareed Alikhan"
+  },
+  {
+   "text": "It's like a film you have to watch twice because you don't catch everything the first time around.",
+   "time": "00:18:50",
+   "speaker": "Nabil-Fareed Alikhan"
+  }
+ ],
+ "tools": [
+  "Shovill",
+  "Bash",
+  "bioRxiv",
+  "medRxiv",
+  "PGM",
+  "Inkscape",
+  "Illustrator",
+  "PowerPoint",
+  "Excel"
+ ],
+ "topics": [
+  "peer review",
+  "bioinformatics",
+  "microbial genomics",
+  "research methods",
+  "software review",
+  "data availability",
+  "scientific writing",
+  "statistical evidence"
+ ],
+ "faq": [
+  {
+   "q": "What should I read first when reviewing a bioinformatics paper?",
+   "a": "Nabil starts with the introduction’s final paragraph, then figures, results and relevant methods. Lee describes reading straight through first, and Andrew makes a quick first pass before deciding how deep to go. All three discuss establishing technical soundness before spending time on detailed presentation feedback."
+  },
+  {
+   "q": "Do I need to review every detail of a fundamentally flawed manuscript?",
+   "a": "The hosts say a review can focus on clearly explained major problems when those invalidate the work. Andrew also suggests asking the editor to consider a desk rejection when an initial scan reveals glaring, irredeemable problems."
+  },
+  {
+   "q": "What code and data checks do the hosts recommend?",
+   "a": "Inspect supplied code, test software where appropriate, and check that accession numbers are real and accessible. Nabil says he rejects software papers that do not provide code."
+  },
+  {
+   "q": "How can authors make a manuscript easier to review?",
+   "a": "State the main finding clearly, explain the analytical basis of claims and make supporting data easy to access. The hosts also recommend usable spreadsheet tables, consistently sized figures, informative legends and page numbers."
+  }
+ ]
+}

@@ -1,0 +1,160 @@
+{
+  "episode": "151",
+  "headline": "Deacon: why removing host reads is harder than it looks",
+  "description": "Bede Constantinides explains why host read removal is difficult, where alignment and Kraken2 fall short, and why he moved from Hostile to Deacon.",
+  "summary": "Lee Katz, Andrew Page and Nabil-Fareed Alikhan talk with Bede Constantinides, a research fellow at the University of Birmingham, about removing host DNA from metagenomic sequencing data. They discuss the tension between retaining microbial reads and removing human sequences, alongside the memory and cost implications of using human pangenomes. This first part establishes the motivation for Deacon and its predecessor, Hostile; the next episode will examine Deacon's method in more detail.",
+  "people": [
+    {
+      "name": "Lee Katz",
+      "role": "host",
+      "affiliation": ""
+    },
+    {
+      "name": "Andrew Page",
+      "role": "host",
+      "affiliation": "Origin Sciences; University of East Anglia"
+    },
+    {
+      "name": "Nabil-Fareed Alikhan",
+      "role": "host",
+      "affiliation": "Center for Genomic Pathogen Surveillance, University of Oxford"
+    },
+    {
+      "name": "Bede Constantinides",
+      "role": "guest",
+      "affiliation": "University of Birmingham"
+    },
+    {
+      "name": "Stephen Bush",
+      "role": "mentioned",
+      "affiliation": ""
+    },
+    {
+      "name": "Sarah Walker",
+      "role": "mentioned",
+      "affiliation": ""
+    },
+    {
+      "name": "Martin Hunt",
+      "role": "mentioned",
+      "affiliation": "EBI"
+    }
+  ],
+  "sections": [
+    {
+      "heading": "The practical problem Deacon addresses",
+      "body": "Bede introduces Deacon as a tool for removing human DNA sequences from FASTA or FASTQ input, including compressed files and streams. More generally, it searches for sequences matching a gene, genome or pangenome and lets users retain or discard matches. Its potential uses extend beyond humans to hosts such as mice and plants. One motivation is microbial sequencing where users lack permission to store or process human DNA.\n\nAndrew describes a practical example: rectal mucus samples containing roughly half human material and half gut microbiome. His team needs to analyse both components. Their workflow uses nf-core taxprofiler for initial mapping-based removal, followed by Kraken2, yet human sequences remain detectable even among unclassified reads. Simply filtering harder risks losing microbial signal."
+    },
+    {
+      "heading": "Sensitivity depends on what must be preserved",
+      "body": "Bede's Kraken2 benchmarks show how strongly host-removal performance depends on the database and its parameters. Large databases with dense minimiser sampling can classify human reads very sensitively, but can also remove bacterial and viral reads. Shared sequences introduce another complication: reads matching multiple genomes may receive a taxonomic assignment that does not identify them as human. A human-only database addresses that ambiguity, but not excessive classification of microbial reads as human.\n\nThe acceptable trade-off depends on the biological question. Bede uses Mycobacterium tuberculosis as an example with little sequence overlap with humans, allowing aggressive filtering at relatively little cost. Broad metagenomics is harder: viruses may share sequence with endogenous retroviral elements in the human genome. A filter suitable for one bacterium may therefore be destructive when looking for an unknown range of pathogens."
+    },
+    {
+      "heading": "Larger references bring costs and unexpected behaviour",
+      "body": "Mapping against a single human reference can leave genuine human reads unmapped because genomes differ. Conversely, error-tolerant mapping can align bacterial or viral reads to the host reference. Bede argues that broader reference diversity is desirable so that human reads from different ethnicities are removed equally well, but conventional linear-reference mappers do not scale easily to large, redundant pangenomes.\n\nRecalling an earlier Human Pangenome Reference Consortium release, he describes roughly 50 diploid genomes: about 100 haploid assemblies at three gigabases each. Andrew puts this scale into operational terms. His team sequences around 60 gigabases per sample, and larger-memory AWS machines make expanded references expensive.\n\nMore reference sequence does not automatically improve removal. When Bede tested an index containing 20 human genomes, he initially mapped fewer reads. He traced this to a minimap2 default that ignored what he recalls as the most abundant 1% of minimisers. Collapsing redundant reference sequence might help, but would require additional design choices and would not remove the need to contend with mapper heuristics."
+    },
+    {
+      "heading": "Why Hostile was built for local processing",
+      "body": "Hostile grew out of Bede's work on a cloud platform for microbial genomics. The aim was to decontaminate private data locally and offline before uploading it. He describes legal as well as privacy concerns about sending human sequence data over the internet. Existing approaches could be difficult to install, require more memory than a laptop offered, or remove microbial reads that users wanted to retain.\n\nBede also cites work led by Stephen Bush and supervised by Sarah Walker, which found human contamination carrying sensitive information, including disease predisposition, in bacterial datasets. That work identified benefits from using two complementary aligners, but running both was not feasible for Hostile's intended use case. Hostile instead uses minimap2 for long reads and Bowtie2 for short reads, chosen for their sensitivity–specificity balance on the expected samples."
+    },
+    {
+      "heading": "A prototype is not a reliable wrapper",
+      "body": "Andrew asks how quickly Hostile could be rebuilt using AI coding tools. Bede thinks a basic prototype could be produced very quickly, perhaps in a single attempt, but distinguishes that from software incorporating years of practical lessons.\n\nThe difficult work includes subtle edge cases when general-purpose tools are used outside their original purpose: handling standard input and output, single and paired reads, multiple aligners, and retrieving indexes in different formats from cloud storage. GitHub issues and accumulated experience reveal requirements that a working demonstration may miss. Bede is nevertheless cautious about predicting limits as coding agents improve."
+    },
+    {
+      "heading": "From alignments to a simpler search problem",
+      "body": "Bede describes Hostile's SAM-stream workflow as convenient but wasteful: it spends effort aligning human reads that will immediately be discarded. Using minimap2's C API, as Martin Hunt at the EBI did for a host-depletion tool, might reduce some overhead, but still leaves the constraints of an alignment-based approach.\n\nDeacon's motivation is to ask how well a faster, simpler approach based on storing minimisers can perform. Bede explains that k-mers and deterministic subsets such as minimisers can represent pangenome diversity compactly by retaining differences rather than repeatedly storing shared sequence. The episode ends at this design shift, leaving the detailed method for part two."
+    }
+  ],
+  "highlights": [
+    {
+      "time": "00:02:12",
+      "topic": "What Deacon searches, which input formats it accepts, and who might use it"
+    },
+    {
+      "time": "00:03:16",
+      "topic": "Andrew's rectal mucus samples and the difficulty of separating human and microbial reads"
+    },
+    {
+      "time": "00:05:01",
+      "topic": "How Kraken2 database size and minimiser sampling affect host removal"
+    },
+    {
+      "time": "00:06:59",
+      "topic": "Human-only Kraken2 databases and why specificity depends on the pathogens being sought"
+    },
+    {
+      "time": "00:09:55",
+      "topic": "Why mapping misses human reads, removes microbial reads and struggles with pangenomes"
+    },
+    {
+      "time": "00:11:42",
+      "topic": "The scale of early human pangenome reference assemblies"
+    },
+    {
+      "time": "00:12:47",
+      "topic": "Processing 60 gigabases per sample and the cost of larger AWS machines"
+    },
+    {
+      "time": "00:13:58",
+      "topic": "Compact references and the unexpected effects of minimap2 heuristics"
+    },
+    {
+      "time": "00:15:42",
+      "topic": "Hostile's origins in local, offline decontamination before cloud upload"
+    },
+    {
+      "time": "00:18:07",
+      "topic": "Fast AI-assisted prototypes versus the edge cases needed for reliable software"
+    },
+    {
+      "time": "00:20:38",
+      "topic": "Why alignment wastes work and why Deacon instead stores minimisers"
+    }
+  ],
+  "quotes": [
+    {
+      "text": "you're spending all this effort aligning human reads that you're about to throw away",
+      "time": "00:20:38",
+      "speaker": "Bede Constantinides"
+    }
+  ],
+  "tools": [
+    "Deacon",
+    "Hostile",
+    "nf-core taxprofiler",
+    "Nextflow",
+    "Kraken2",
+    "Bowtie2",
+    "minimap2"
+  ],
+  "topics": [
+    "host read removal",
+    "metagenomics",
+    "human contamination",
+    "sequence alignment",
+    "human pangenomes",
+    "minimisers",
+    "sensitivity and specificity",
+    "genomic privacy",
+    "cloud computing costs"
+  ],
+  "faq": [
+    {
+      "q": "What is Deacon used for?",
+      "a": "Deacon removes human DNA sequences from FASTA or FASTQ data, including compressed files and streams. It can also search for other genes, genomes or pangenomes and either retain or discard matching sequences, including sequences from non-human hosts."
+    },
+    {
+      "q": "Why can host read removal discard microbial sequences?",
+      "a": "Error-tolerant alignment can map bacterial or viral reads to a human reference, while sensitive Kraken2 configurations can also classify microbial reads as human. Bede highlights viruses sharing sequence with endogenous retroviral elements as a reason broad metagenomic filtering requires particular care."
+    },
+    {
+      "q": "Why not just add more human genomes to the mapping reference?",
+      "a": "Larger references increase memory requirements and computing costs, and mapper heuristics can produce unexpected results. Bede describes testing 20 human genomes and initially mapping fewer reads because of minimap2's treatment of highly abundant minimisers."
+    },
+    {
+      "q": "How does Deacon differ from Hostile?",
+      "a": "Hostile uses Bowtie2 for short reads and minimap2 for long reads, filtering their alignment output. Deacon takes a simpler minimiser-based search approach intended to avoid unnecessary alignment work and represent pangenome diversity more compactly; its detailed method is reserved for the next episode."
+    }
+  ]
+}

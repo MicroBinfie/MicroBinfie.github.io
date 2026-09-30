@@ -1,0 +1,139 @@
+{
+ "episode": "120",
+ "headline": "Scaling metagenomic search with Sourmash and Branchwater",
+ "description": "Titus Brown explains Sourmash sketches, Branchwater searches across a million metagenomes, and the limits of these tools for public health.",
+ "summary": "Titus Brown joins Lee Katz and Andrew Page to discuss how Sourmash makes large-scale metagenomic comparisons practical. They explore Branchwater’s search across roughly a million Sequence Read Archive metagenomes, examples from microbial biogeography and outbreak investigation, and potential public health applications. Brown distinguishes rapid discovery of candidate matches from the follow-up needed to establish what those matches mean.",
+ "people": [
+  {
+   "name": "Titus Brown",
+   "role": "guest",
+   "affiliation": "UC Davis"
+  },
+  {
+   "name": "Lee Katz",
+   "role": "host",
+   "affiliation": "Centers for Disease Control and Prevention"
+  },
+  {
+   "name": "Andrew Page",
+   "role": "host",
+   "affiliation": ""
+  }
+ ],
+ "sections": [
+  {
+   "heading": "What Sourmash keeps in a sketch",
+   "body": "Sourmash is a Python command-line package built on a Rust library. It makes compact, lossy representations of k-mer datasets for comparing DNA or RNA samples, estimating overlap and searching databases. Brown gives a concrete example: a five-megabase E. coli genome becomes about 5,000 hashes in a JSON file of roughly 30 KB.\n\nUnlike Mash’s fixed number of retained hashes, Sourmash uses a fixed sampling rate. At the standard rate, a three-gigabase human genome would produce about three million hashes. Larger datasets therefore produce larger sketches, but the approach supports containment analysis directly from sketches: asking which genomes are represented within a metagenome. Brown contrasts this with Mash Screen’s need to return to the raw data."
+  },
+  {
+   "heading": "Software reuse and publication thresholds",
+   "body": "Katz describes building a genomic epidemiology platform with a University of Georgia student. Sourmash made the implementation compact enough to fit into fewer than 1,000 lines of code. He reports that JOSS desk-rejected the submission because it fell below that size, leading them to add more features.\n\nBrown discusses pyOpenSci’s package review process, including coding standards and tests, and its route to expedited JOSS review. He questions judging software primarily by whether it is sufficiently different from existing tools, while acknowledging that accepting more diversity increases the review burden."
+  },
+  {
+   "heading": "From threaded searches to a browser interface",
+   "body": "Branchwater began as a multithreaded Rust front end to Sourmash. Brown describes scaling it to roughly 30–40 threads before the filesystem became the bottleneck. Searching around 500,000 SRA metagenomes then took about 18 hours on one compute node.\n\nA later RocksDB-based inverted index brought searches across roughly a million metagenomes into near-real time. Brown describes the collection as approximately 10 petabases of sequence, reduced to about 14 terabytes of sketches before indexing. In the browser interface, a WebAssembly version of Sourmash sketches the query locally and sends that sketch to the Branchwater server; the results can be displayed on a map.\n\nThe software is free and open source, and Brown says the same approach can be deployed for private metagenomic collections. Documentation was still being developed at the time of recording."
+  },
+  {
+   "heading": "Marine microbes, Antarctic genomes and an outbreak",
+   "body": "The live demonstration searches for SAR11, a ubiquitous marine microbe, and returns roughly 9,000 SRA accession IDs. Its geographical distribution largely reflects ocean sampling deposited in the archive. Looking through sample labels also raises questions about apparent matches in bovine gut, human gut and oral metagenomes, including whether contamination might explain some results.\n\nBrown describes two research applications. One outbreak investigation, which he recalls as involving Klebsiella, found a metagenomic match alongside genome-database matches and traced an origin to Greece, where insufficient sampling limited further investigation. Another project searched five Antarctic cyanobacterial metagenome-assembled genomes across the SRA. Some appeared restricted to cold environments, others were cosmopolitan, and others were associated with extreme environments beyond cold habitats. Brown presents that study as both a biogeographical result and validation of Branchwater’s matches."
+  },
+  {
+   "heading": "Public health questions worth testing",
+   "body": "The hosts suggest searching for the origins of extensively drug-resistant typhoid, following antimicrobial resistance genes, and checking whether organisms found locally also occur elsewhere. Katz connects the approach to CDC wastewater work: tracking pathogen presence, changing abundance and the distribution of species or lineages.\n\nBrown welcomes these applications but separates plausible uses from demonstrated performance. Strain-level specificity still needs conclusive testing, and exploratory validation needs funding. The discussion therefore presents source tracking and wastewater surveillance as promising directions, not established capabilities with fully characterised performance."
+  },
+  {
+   "heading": "A search result is a lead, not a sequence",
+   "body": "Brown identifies two important limits. With the current parameters, queries shorter than about 10 kb begin to produce false negatives. Changing the sampling parameters could reduce this problem, but resketching the entire SRA collection would take a couple of months.\n\nThe search also returns candidate datasets rather than the matching sequences themselves. Users must retrieve and analyse the underlying data to investigate a hit. Katz describes sketches as a way to narrow the work, rather than the final analytical step.\n\nBrown also discusses published work connecting sketch statistics to ANI and characterising where the method retains or loses signal. His emphasis is on defining when Sourmash is useful and when another tool is needed. The show notes provide further reading labelled Spacegraphcats, Sourmash and IBD exploration."
+  }
+ ],
+ "highlights": [
+  {
+   "time": "00:01:05",
+   "topic": "Sourmash sketches, k-mer comparisons and the five-megabase E. coli example"
+  },
+  {
+   "time": "00:02:57",
+   "topic": "Fixed-rate sampling versus Mash’s fixed-size sketches"
+  },
+  {
+   "time": "00:04:21",
+   "topic": "A compact epidemiology platform and its JOSS desk rejection"
+  },
+  {
+   "time": "00:06:59",
+   "topic": "Introducing the Branchwater browser demonstration"
+  },
+  {
+   "time": "00:08:29",
+   "topic": "About 9,000 SAR11 matches and their geographical distribution"
+  },
+  {
+   "time": "00:10:09",
+   "topic": "The collaborator behind Sourmash’s development and the origins of Branchwater"
+  },
+  {
+   "time": "00:19:06",
+   "topic": "Proposed searches for drug-resistant typhoid and geographical distributions"
+  },
+  {
+   "time": "00:20:42",
+   "topic": "AMR source tracking and CDC wastewater surveillance questions"
+  },
+  {
+   "time": "00:21:20",
+   "topic": "False negatives below 10 kb and why sketch matches require follow-up"
+  },
+  {
+   "time": "00:22:56",
+   "topic": "Connecting sketch statistics to ANI and defining the method’s limits"
+  }
+ ],
+ "quotes": [
+  {
+   "text": "So we don't think sourmash is the thing that everybody should use.",
+   "time": "00:22:56",
+   "speaker": "Titus Brown"
+  }
+ ],
+ "tools": [
+  "Sourmash",
+  "Branchwater",
+  "Mash",
+  "Mash Screen",
+  "Sequence Read Archive",
+  "GenBank",
+  "RocksDB",
+  "WebAssembly",
+  "Jaccard similarity",
+  "ANI"
+ ],
+ "topics": [
+  "metagenomics",
+  "k-mer sketching",
+  "containment estimation",
+  "large-scale search",
+  "microbial biogeography",
+  "source tracking",
+  "antimicrobial resistance",
+  "wastewater surveillance",
+  "public health"
+ ],
+ "faq": [
+  {
+   "q": "How does Sourmash differ from Mash?",
+   "a": "Brown explains that Sourmash retains hashes at a fixed sampling rate, whereas Mash retains a fixed number. Sourmash sketches grow with dataset size, but allow containment comparisons between genomes and metagenomes without returning to the raw sequence data."
+  },
+  {
+   "q": "How much metagenomic data could Branchwater search in this episode?",
+   "a": "Brown describes an index covering roughly a million SRA metagenomes, representing approximately 10 petabases of sequence. The browser demonstration searches for SAR11 and returns about 9,000 accession IDs within seconds."
+  },
+  {
+   "q": "Can Branchwater track antimicrobial resistance genes?",
+   "a": "The hosts propose AMR source tracking as a public health application, but Brown stresses the need for validation. Queries below about 10 kb are susceptible to false negatives with the parameters described, making query size an important limitation."
+  },
+  {
+   "q": "Does a Sourmash match provide the underlying sequence?",
+   "a": "No. It identifies a metagenome likely to contain the query, providing a lead for follow-up rather than the matching sequence or a definitive conclusion. Further analysis of the underlying data is needed."
+  }
+ ]
+}

@@ -1,0 +1,157 @@
+{
+ "episode": "098",
+ "headline": "Nomadic bioinformatics: Frank Ambrosio on working remotely",
+ "description": "Frank Ambrosio on moving from CDC laboratory work to Theiagen, cloud bioinformatics, remote mentoring and a travelling working life.",
+ "summary": "Frank Ambrosio joins Lee Katz, Andrew Page and Nabil-Fareed Alikhan to discuss his transition from laboratory microbiology at CDC to bioinformatics with Theiagen, and his plans to work while travelling. He explains how cloud-based development, backup connectivity and deliberate scheduling support that lifestyle. The conversation also examines whether remote work can sustain mentoring, personal connections and effective collaboration across public health laboratories.",
+ "people": [
+  {
+   "name": "Frank Ambrosio",
+   "role": "guest",
+   "affiliation": "Theiagen"
+  },
+  {
+   "name": "Lee Katz",
+   "role": "host",
+   "affiliation": "Centers for Disease Control and Prevention; adjunct member, University of Georgia"
+  },
+  {
+   "name": "Andrew Page",
+   "role": "host",
+   "affiliation": "Quadram Institute"
+  },
+  {
+   "name": "Nabil-Fareed Alikhan",
+   "role": "host",
+   "affiliation": "Quadram Institute"
+  }
+ ],
+ "sections": [
+  {
+   "heading": "From the wet bench to bioinformatics",
+   "body": "Frank first encountered large-scale bioinformatics in CDC’s Division of Tuberculosis Elimination. Working as a laboratory technician and microbiologist, he was learning to sequence with a Nanopore device. Initially he handed data to bioinformaticians, but their encouragement led him to start analysing it himself on an available Linux computer. With his supervisor’s support, he undertook a master’s programme in bioinformatics at Georgia Tech while continuing to work at CDC.\n\nHis subsequent roles included biodefence research and development, where he developed BSL-2 microbiology skills, and a strep laboratory sequencing tens of thousands of isolates a year. That exposed him to surveillance-oriented production work as well as E-strips and MIC testing. He later became a direct CDC hire in the Division of HIV/AIDS Prevention. He explains that FTE, as used in this conversation, means full-time employee rather than contractor."
+  },
+  {
+   "heading": "Career entry and a portable development environment",
+   "body": "For early-career scientists interested in CDC, Frank recommends applying through contracting agencies rather than concentrating only on direct-hire positions. He says job advertisements may not make the CDC connection obvious, and some groups are composed entirely of contractors. His advice is to pursue relevant work and experience rather than treating FTE status as the immediate goal.\n\nHis technical advice has also changed. Previously, he would have recommended buying a powerful MacBook Pro and learning its terminal. After working at Theiagen, he favours a Google Cloud virtual machine connected to VS Code. Losing script edits when a laptop battery died prompted him to look for more reliable working arrangements. He values the ease of pushing commits to GitHub and recommends considering this setup before becoming settled in another development environment."
+  },
+  {
+   "heading": "International sequencing and the move to Theiagen",
+   "body": "During CDC’s COVID response, Frank worked on an international sequencing capacity dashboard. Seeing where sequencers were distributed, and realising that laboratories focused on one pathogen might not be doing all the sequencing they could, strengthened his interest in international bioinformatics. A later technical-assistance role brought him into contact with state laboratories using Terra.bio, developed by the Broad Institute of MIT and Harvard.\n\nTerra appealed to him as a graphical interface for open-source bioinformatics pipelines. Discussions with Theiagen introduced him to Docker containers and their use in connecting tools that otherwise struggled to work together. He contrasts that approach with his own experience of installing 15 versions of a tool to resolve dependencies. Developing public health workflows that laboratories could run through a web interface was the work he wanted to do, leading him to join Theiagen."
+  },
+  {
+   "heading": "Travelling without taking time off",
+   "body": "Frank’s plan is to sell possessions he no longer needs, store others in Atlanta and move between Airbnbs. Van life interests him, but he wants to travel beyond land-connected regions. The attraction is not simply working somewhere different: after seven weeks of remote collaboration with colleagues in Mozambique, he felt they bonded more during one week together in person.\n\nHis first working trip with Theiagen was to New York during his first week in the job. A single-room Airbnb, his laptop and accessories were enough to hold meetings without taking time off. He also worked from local cafés and a pizza place. He stresses redundancy: alongside local Wi-Fi, he had hotspots on work and personal phones. For calls, he keeps headphones, earbuds and a microphone available, both as alternatives when equipment fails and to vary what he wears during long stretches of Zoom meetings."
+  },
+  {
+   "heading": "Routines, social contact and remote mentoring",
+   "body": "Rather than preserving one permanent routine, Frank uses Google Calendar to fit work, food, time outside and social contact into changing locations. Living alone during lockdown had been difficult, and he sees travel as a way to increase contact rather than lose it. He schedules informal conversations with friends and colleagues, explaining that these meetings have no agenda and can be declined or rearranged.\n\nFor mentoring, his approach is to find a shared project with regular milestones. He describes working with a collaborator at the Nevada State Public Health Lab on a *Candida* outbreak, despite living about 2,500 miles apart. Weekly meetings made it a particularly rewarding mentor–mentee relationship. At the time of the conversation, they had not met in person and planned to do so at ASM NGS. Conferences, in his account, complement relationships already built through remote work."
+  },
+  {
+   "heading": "A team model rather than a lone freelancer",
+   "body": "Asked whether bioinformatics is moving towards an agency-style working model, Frank emphasises the team behind him: bioinformatics scientists, genomic epidemiologists and project coordinators. He describes Theiagen’s approach as practitioner-led research and development, with collaborators’ needs directing development. Work requested by one laboratory can then benefit others.\n\nHe contrasts this with a single bioinformatician developing analyses in isolation. Involving genomic epidemiologists throughout development avoids leaving interpretation until the pipeline is finished. Looking five years ahead, Frank says he has no intention of leaving Theiagen and anticipates a more supervisory or management role. His immediate priority remains building international public health connections and helping groups learn the cloud-based and Docker-based technologies his team uses."
+  }
+ ],
+ "highlights": [
+  {
+   "time": "00:01:31",
+   "topic": "Frank’s CDC laboratory roles and transition into analysing sequencing data"
+  },
+  {
+   "time": "00:05:18",
+   "topic": "Applying through contracting agencies as a route into CDC work"
+  },
+  {
+   "time": "00:06:26",
+   "topic": "Choosing a development environment: laptops, Google Cloud VMs and VS Code"
+  },
+  {
+   "time": "00:08:31",
+   "topic": "International sequencing capacity work, Terra.bio and the move to Theiagen"
+  },
+  {
+   "time": "00:13:02",
+   "topic": "From improving a home office to meeting public health collaborators in person"
+  },
+  {
+   "time": "00:15:18",
+   "topic": "Using Google Calendar instead of relying on a permanent travel routine"
+  },
+  {
+   "time": "00:16:45",
+   "topic": "Van life versus Airbnbs, followed by practical lessons from working in New York"
+  },
+  {
+   "time": "00:20:38",
+   "topic": "Lockdown isolation, intentional check-ins and visiting family"
+  },
+  {
+   "time": "00:24:52",
+   "topic": "A long-standing ambition for location-independent work and the influence of laboratory automation"
+  },
+  {
+   "time": "00:33:28",
+   "topic": "Maintaining mentoring relationships through shared projects and weekly meetings"
+  },
+  {
+   "time": "00:36:42",
+   "topic": "Team-based, practitioner-led development for public health laboratories"
+  },
+  {
+   "time": "00:40:47",
+   "topic": "Frank’s five-year outlook at Theiagen and plans for international collaboration"
+  }
+ ],
+ "quotes": [
+  {
+   "text": "I don't need to worry about what I'm doing that day because my calendar will tell me.",
+   "time": "00:15:18",
+   "speaker": "Frank Ambrosio"
+  },
+  {
+   "text": "And for me, forming relationships is much easier if we have a common goal and something to work on every week and milestones to achieve.",
+   "time": "00:33:28",
+   "speaker": "Frank Ambrosio"
+  }
+ ],
+ "tools": [
+  "Nanopore device",
+  "MacBook Pro",
+  "Google Cloud",
+  "VS Code",
+  "GitHub",
+  "Vim",
+  "Terra.bio",
+  "Docker",
+  "Google Calendar",
+  "Zoom"
+ ],
+ "topics": [
+  "nomadic bioinformatics",
+  "remote working",
+  "public health bioinformatics",
+  "cloud computing",
+  "bioinformatics careers",
+  "laboratory automation",
+  "remote mentoring",
+  "international collaboration",
+  "genomic epidemiology"
+ ],
+ "faq": [
+  {
+   "q": "How did Frank Ambrosio move from laboratory microbiology into bioinformatics?",
+   "a": "While sequencing in CDC’s Division of Tuberculosis Elimination, Frank became interested in analysing his own data. The bioinformaticians he worked with encouraged him to do the analyses himself, which he began on an old Linux computer in the division, and he later completed a master’s programme in bioinformatics at Georgia Tech while working at CDC."
+  },
+  {
+   "q": "What development setup does Frank recommend for learning bioinformatics?",
+   "a": "He recommends becoming familiar with a Google Cloud virtual machine connected to VS Code. He highlights the convenience of GitHub commits and contrasts this with his earlier advice to buy a powerful MacBook Pro and focus on its terminal."
+  },
+  {
+   "q": "How does Frank maintain connectivity while working and travelling?",
+   "a": "He combines local Wi-Fi with backup hotspots on work and personal phones rather than relying on one connection. He also carries several audio options for calls: headphones, earbuds and a microphone."
+  },
+  {
+   "q": "Can remote bioinformatics work support mentoring?",
+   "a": "Frank’s approach is to maintain relationships through shared projects, weekly meetings and milestones. He describes a rewarding remote collaboration on a Candida outbreak with a colleague at the Nevada State Public Health Lab, with their first in-person meeting planned for ASM NGS."
+  }
+ ]
+}

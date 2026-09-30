@@ -1,0 +1,154 @@
+{
+ "episode": "068",
+ "headline": "Bacterial taxonomy: genomes, strains and public health",
+ "description": "How GTDB, ANI and GenomeRxiv classify bacteria, and why species names, strains and lineages matter for diagnostics and public health.",
+ "summary": "Lee Katz, a fellow host and two returning guests, including Leighton Pritchard, examine the practical problems of bacterial taxonomy. They compare genome-based classification with the names used in laboratories, epidemiology and public health, asking how better biological definitions can support rather than disrupt practical decisions.",
+ "people": [
+  {
+   "name": "Lee Katz",
+   "role": "host",
+   "affiliation": "Centers for Disease Control and Prevention; adjunct member at the University of Georgia"
+  },
+  {
+   "name": "Andrew Page",
+   "role": "host",
+   "affiliation": "Quadram Institute, Norwich, UK"
+  },
+  {
+   "name": "Nabil-Fareed Alikhan",
+   "role": "host",
+   "affiliation": "Quadram Institute, Norwich, UK"
+  },
+  {
+   "name": "Leighton Pritchard",
+   "role": "guest",
+   "affiliation": ""
+  }
+ ],
+ "sections": [
+  {
+   "heading": "GTDB and genome-based ranks",
+   "body": "The Genome Taxonomy Database, GTDB, provides a working example of classification built around genomes rather than biochemical characteristics. A guest describes constructing a tree from shared core proteins, then normalising taxonomic ranks using positions within that tree. Many existing genera and families fit this framework, suggesting that earlier classifications often captured genuine phylogenetic structure.\n\nClassification and nomenclature are not the same problem. One guest reports that about 80% of GTDB taxa lack valid names and argues that naming rules should not govern which classifications are useful. The panel also questions whether traditional ranks capture natural biological divisions: the formal definition of genus places it between species and family without specifying a universal biological criterion."
+  },
+  {
+   "heading": "ANI thresholds need coverage and context",
+   "body": "Average nucleotide identity, ANI, is presented as a common starting point for comparing a new genome with existing species. One guest gives 95% as a usual species threshold, with a working range of 94–96%, and mentions 98% for subspecies while noting that this is not consistently applied. These are practical conventions, not a complete account of species boundaries.\n\nCoverage matters alongside identity. Two genomes can have high ANI across the regions that align while sharing relatively little aligned sequence overall. A guest discusses group-dependent coverage values around 30–50% for distinguishing same-genus from same-species comparisons, and uses 50% as a conservative rule of thumb. The same guest favours combining evidence, including alignment fraction, biological characteristics and agreement among individual gene trees, rather than relying on one numerical cutoff."
+  },
+  {
+   "heading": "Strains, isolates, variants and lineages",
+   "body": "The guests describe inconsistent usage below species level, distinguishing formal species and subspecies ranks from informal terms such as variant and lineage. Their working distinction treats an isolate as the physical material obtained from a sample, and a strain as the cultured material or descendant lineage associated with it. They explicitly acknowledge that other researchers use these words differently.\n\nVariant is particularly troublesome because it can refer both to a mutation and to an organism carrying changes. COVID-19 illustrates how variants of interest, variants of concern and named lineages acquire different meanings for researchers and the public. One guest prefers a lineage to have a monophyletic grouping plus a relevant biological distinction, such as virulence, host range or environment, rather than merely a list of SNPs."
+  },
+  {
+   "heading": "When classification meets regulation",
+   "body": "The split of mycobacteria into five genera provides a concrete example of taxonomic change with practical consequences. A guest describes challenging that split, noting that GTDB retained one genus. The discussion includes a genus-boundary method combining ANI and alignment fraction for bidirectional best hits, with comparisons against type species. Renaming also raises questions about diagnostic product claims and regulatory documentation.\n\nLee Katz describes Listeria as having about 92% ANI across four lineages, with lineages one and two more associated with human disease and three and four with animals. His example contrasts numerical species thresholds with the practical aim of keeping disease-causing organisms out of food. A guest extends this concern to plant pathovars and legislation: distinctions important for disease control may not coincide with large genomic differences."
+  },
+  {
+   "heading": "Choosing comparison and identification tools",
+   "body": "Different ANI implementations can place a comparison on opposite sides of a threshold. The guest contrasts BLAST-based ANIB, which fragments genomes into sections of roughly 1,000 nucleotides, with ANIM, which identifies maximal homologous regions. Differences become more important below the high-identity range commonly used for species comparisons.\n\nDigital DNA–DNA hybridisation models laboratory hybridisation measurements, but the guest cautions that the relationship between those measurements and genome identity contains substantial variation. FastANI offers rapid approximation using k-mer approaches and MinHash, while retaining inspectable alignments can be valuable for smaller studies.\n\nFor routine work, the question is often simpler: which existing label belongs to this sample? Centrifuge, Mash and MLST are discussed in that context. Reliable identification depends on the quality of the classifications and labels supplied upstream."
+  },
+  {
+   "heading": "GenomeRxiv as a shared reference",
+   "body": "The discussion connects taxonomy with epidemiological clustering, including SNP addresses and cgMLST. Both organise samples into groups whose definitions need to be consistent and useful for decisions.\n\nThe proposed GenomeRxiv framework would provide hierarchical identifiers for genome space, compared with map grid references. Increasingly detailed identifiers would locate increasingly similar groups. Multiple nomenclatures and biological annotations could attach to the same reference framework, allowing different definitions to coexist without requiring one naming system to replace every other system.\n\nA technical challenge is spanning the whole range of relatedness. The project aims to combine measures such as AAI for deeper divisions and split k-mer comparisons near outbreak-level resolution. It also aims to support local browser processing rather than requiring exact genome uploads, with privacy, intellectual property and indigenous rights among the considerations."
+  }
+ ],
+ "highlights": [
+  {
+   "time": "00:03:01",
+   "topic": "How GTDB uses core-protein trees and rank normalisation"
+  },
+  {
+   "time": "00:07:59",
+   "topic": "ANI thresholds for species and subspecies, and their limitations"
+  },
+  {
+   "time": "00:09:13",
+   "topic": "Why alignment coverage matters alongside ANI"
+  },
+  {
+   "time": "00:10:32",
+   "topic": "Testing genus boundaries through the mycobacterial split"
+  },
+  {
+   "time": "00:13:38",
+   "topic": "Working definitions of strain, isolate, variant and lineage"
+  },
+  {
+   "time": "00:19:47",
+   "topic": "Listeria lineages and the public-health case for pragmatic grouping"
+  },
+  {
+   "time": "00:21:59",
+   "topic": "Classification, nomenclature and identification meet legislation"
+  },
+  {
+   "time": "00:25:41",
+   "topic": "Differences between ANI implementations and digital DNA–DNA hybridisation"
+  },
+  {
+   "time": "00:28:42",
+   "topic": "Practical taxonomy as applying existing labels to samples"
+  },
+  {
+   "time": "00:31:00",
+   "topic": "Epidemiological clusters, SNP addresses and cgMLST as classification systems"
+  },
+  {
+   "time": "00:32:40",
+   "topic": "GenomeRxiv and hierarchical identifiers for genome space"
+  }
+ ],
+ "quotes": [
+  {
+   "text": "But epidemiology is just a public health version of taxonomy.",
+   "time": "00:31:00",
+   "speaker": "a guest"
+  }
+ ],
+ "tools": [
+  "GTDB",
+  "average nucleotide identity (ANI)",
+  "average amino acid identity (AAI)",
+  "FastANI",
+  "ANIB",
+  "ANIM",
+  "BLAST",
+  "digital DNA–DNA hybridisation",
+  "MinHash",
+  "Centrifuge",
+  "Mash",
+  "MLST",
+  "cgMLST",
+  "SNP address system",
+  "GenomeRxiv",
+  "split k-mer comparisons"
+ ],
+ "topics": [
+  "bacterial taxonomy",
+  "genome classification",
+  "average nucleotide identity",
+  "species boundaries",
+  "strain terminology",
+  "nomenclature",
+  "public health",
+  "genomic epidemiology",
+  "GenomeRxiv"
+ ],
+ "faq": [
+  {
+   "q": "What ANI threshold defines a bacterial species?",
+   "a": "A guest describes 95% ANI as a common working threshold, with a 94–96% range. The discussion stresses that coverage, the ANI implementation and other biological evidence also matter."
+  },
+  {
+   "q": "What is the difference between a bacterial strain and an isolate?",
+   "a": "The guests offer a working distinction between the physical material obtained from a sample and the cultured material or descendant lineage associated with it. They emphasise that strain and isolate are not used consistently across researchers."
+  },
+  {
+   "q": "Why can bacterial name changes affect public health?",
+   "a": "Diagnostic claims, regulations and legislation may refer to particular organism names. The episode uses the proposed split of mycobacteria into five genera to illustrate how reclassification can create work beyond biological analysis."
+  },
+  {
+   "q": "What is GenomeRxiv intended to provide?",
+   "a": "It is presented as a proposed hierarchical reference framework for locating genomes at different levels of similarity. Multiple names and biological annotations could attach to that framework, helping translate between classification systems."
+  }
+ ]
+}

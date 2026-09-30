@@ -1,0 +1,162 @@
+{
+  "episode": "encore-what-language-should-i-learn",
+  "headline": "What programming language should you learn for bioinformatics?",
+  "description": "Python, R or Perl? The hosts compare first languages, established libraries, programming fundamentals and SQL skills for bioinformatics.",
+  "summary": "Lee Katz, Andrew Page and Nabil-Fareed Alikhan revisit their episode 13 discussion about which programming languages to learn for bioinformatics. They broadly favour Python as a starting point, while weighing local support, project requirements and the value of established libraries. Their own learning histories show why becoming proficient takes years, and why database concepts and programming fundamentals matter beyond any single language.",
+  "people": [
+    {
+      "name": "Lee Katz",
+      "role": "host",
+      "affiliation": "Centers for Disease Control and Prevention; University of Georgia, US (adjunct member)"
+    },
+    {
+      "name": "Andrew Page",
+      "role": "host",
+      "affiliation": "Quadram Institute, Norwich, UK"
+    },
+    {
+      "name": "Nabil-Fareed Alikhan",
+      "role": "host",
+      "affiliation": "Quadram Institute, Norwich, UK"
+    }
+  ],
+  "sections": [
+    {
+      "heading": "A starting language depends on the work and the support",
+      "body": "Andrew Page proposes learning Python first, then R, followed by a statically typed language such as C++, C#, Java or C. His reasoning separates three needs: scripting, statistics and figures, and heavier-duty programming. He recommends developing substantial proficiency before branching into other languages.\n\nNabil-Fareed Alikhan puts more weight on the learner’s environment: which languages do nearby colleagues use, and who is willing to help? Conditionals, loops and other fundamentals transfer between languages, even when syntax changes. Lee Katz also favours Python for general-purpose collaborative work, despite his personal affection for Perl. The intended project matters too: statistical analysis points towards R, while web applications may point towards JavaScript."
+    },
+    {
+      "heading": "Learning syntax is not the same as becoming proficient",
+      "body": "Lee began with C in a college course, moved into PHP and LAMP for web development, and was taught Perl in graduate school in 2004. Andrew’s software engineering background included C++, Java and several other languages before work involving Perl, PHP and Ruby with Rails. Nabil’s undergraduate teaching concentrated on Java; his first bioinformatics research project then required a year of Perl because that was what the laboratory used, before he moved to Python.\n\nThese histories span at least a decade, not a few short courses. Andrew suggests that learning a language deeply can take a year or two even for an experienced programmer. Lee estimates that becoming really good at Perl took him about five years after PHP."
+    },
+    {
+      "heading": "Established libraries save beginners from difficult parsing",
+      "body": "The hosts caution against choosing a language simply because it is fashionable. Andrew names Rust, Haskell, Go and Ruby in this discussion, while Lee stresses that the objection is not that newer languages are bad: beginners need established code and bioinformatics libraries. Changing versions can also make tutorials difficult to follow when learners cannot yet diagnose the incompatibility.\n\nLee uses FASTA, FASTQ, SAM and VCF parsing to illustrate the work that libraries save. Andrew distinguishes reading a file you produced from supporting files made by thousands of people: a FASTQ parser might encounter a million-base Nanopore read or files that break a four-line assumption. Nabil has written GenBank parsers in three languages, but says they were task-specific rather than general solutions."
+    },
+    {
+      "heading": "Python’s consistency and R’s useful but frustrating libraries",
+      "body": "Python appeals to the hosts because its conventions support readable, collaborative code without Java’s verbosity. Nabil particularly values it for teaching how to break a task into steps, with linting and a style guide helping beginners develop maintainable habits. They also discuss list comprehensions and the competing approaches to string formatting, so the praise for consistency is not unqualified.\n\nR prompts more mixed feelings. Nabil values ggplot2 and ggtree, but finds the differing conventions and approaches across R libraries difficult to keep track of. Andrew uses R infrequently enough that he feels he must relearn it each time. For quick scripts he prefers Perl, choosing Python when he expects reuse; Lee also answers Perl when asked about his immediate choice for a task."
+    },
+    {
+      "heading": "Shell scripts, web development and hardware",
+      "body": "The conversation extends beyond the main language shortlist. Lee defends shell scripting as a legitimate programming language, with system calls as its priority. The hosts distinguish JavaScript from Java and discuss web tools including jQuery, Prototype and React. Nabil describes becoming more comfortable with newer JavaScript after finding earlier work with it confusing.\n\nAndrew gives a practical example of Python’s accessibility: a laboratory technician programmed an Opentrons liquid-handling robot within a few hours. That does not make Python suitable for everything. Nabil finds multithreading frustrating, and Andrew discusses the specialist knowledge needed to get maximum performance from machines, extending to GPU programming with CUDA."
+    },
+    {
+      "heading": "SQL and thinking clearly about data",
+      "body": "Nabil argues that understanding primary keys, unique fields and relationships between tables is useful even when a project does not require writing SQL directly. Lee describes continuing to use SQL after graduate school and favours SQLite for portability, while acknowledging speed concerns. He also finds the dominance of SQL across database systems reassuring.\n\nAndrew recalls building a social-network search engine during his PhD, with tens of millions of rows in each table and a small, inexpensive server. Multi-table joins and indexing required careful optimisation so lookups could work in milliseconds rather than seconds. Nabil connects these ideas to everyday searching and cross-checking: understanding how to navigate and compare collections of data is a transferable skill, not merely a database-specific technique."
+    }
+  ],
+  "highlights": [
+    {
+      "time": "00:01:04",
+      "topic": "Andrew proposes Python, then R, then a statically typed language."
+    },
+    {
+      "time": "00:03:18",
+      "topic": "Nabil recommends considering local expertise, available help and project goals."
+    },
+    {
+      "time": "00:07:49",
+      "topic": "Knowing basic syntax differs from mastering a language and its libraries."
+    },
+    {
+      "time": "00:09:34",
+      "topic": "Lee explains shell scripting’s emphasis on system calls."
+    },
+    {
+      "time": "00:12:47",
+      "topic": "Andrew discusses relearning R and choosing Perl or Python for scripts."
+    },
+    {
+      "time": "00:13:52",
+      "topic": "R’s valuable plotting libraries come with frustratingly varied conventions."
+    },
+    {
+      "time": "00:17:37",
+      "topic": "A laboratory technician uses Python to program an Opentrons robot."
+    },
+    {
+      "time": "00:19:01",
+      "topic": "Nabil favours Python for teaching programming fundamentals and maintainable code."
+    },
+    {
+      "time": "00:20:15",
+      "topic": "Lee advises beginners to prioritise established bioinformatics libraries."
+    },
+    {
+      "time": "00:24:59",
+      "topic": "SQL introduces useful concepts for structuring and relating data."
+    },
+    {
+      "time": "00:26:36",
+      "topic": "Andrew describes optimising SQL tables containing tens of millions of rows."
+    }
+  ],
+  "quotes": [
+    {
+      "text": "If you know the fundamentals, you can program in any language.",
+      "time": "00:19:01",
+      "speaker": "Nabil-Fareed Alikhan"
+    },
+    {
+      "text": "you don't want to be the one to write the first FASTA parser in this language",
+      "time": "00:20:15",
+      "speaker": "Lee Katz"
+    }
+  ],
+  "tools": [
+    "Python",
+    "R",
+    "Perl",
+    "C",
+    "C++",
+    "C#",
+    "Java",
+    "JavaScript",
+    "PHP",
+    "Ruby",
+    "Rails",
+    "Rust",
+    "Haskell",
+    "Go",
+    "SQL",
+    "SQLite",
+    "Bash",
+    "LAMP",
+    "ggplot2",
+    "ggtree",
+    "jQuery",
+    "Prototype",
+    "React",
+    "Opentrons",
+    "CUDA"
+  ],
+  "topics": [
+    "bioinformatics programming",
+    "learning to code",
+    "python",
+    "r",
+    "perl",
+    "software libraries",
+    "sql databases",
+    "query optimisation"
+  ],
+  "faq": [
+    {
+      "q": "What programming language should I learn first for bioinformatics?",
+      "a": "The hosts broadly favour Python for general-purpose work and learning programming fundamentals. Nabil also recommends considering which languages colleagues use and who can help, while Andrew proposes following Python with R and then a statically typed language."
+    },
+    {
+      "q": "Why do the hosts hesitate to recommend R as a first language?",
+      "a": "They recognise R’s value for statistics and visualisation, particularly through ggplot2 and ggtree. Their reservations concern unfamiliar syntax, inconsistent library conventions and the difficulty of developing good programming habits without clearer guidance."
+    },
+    {
+      "q": "Why choose a language with established bioinformatics libraries?",
+      "a": "The hosts argue that beginners should not have to build robust file parsers before tackling their biological work. FASTA, FASTQ, SAM, VCF and GenBank examples illustrate how apparently simple parsing tasks become harder when handling varied files from other people."
+    },
+    {
+      "q": "Is SQL worth learning for bioinformatics?",
+      "a": "The hosts find SQL useful, but emphasise that database concepts matter even without direct SQL use. Primary keys, table relationships, joins and indexing help with organising data and understanding why some queries run much faster than others."
+    }
+  ]
+}

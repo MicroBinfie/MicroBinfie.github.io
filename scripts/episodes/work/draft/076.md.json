@@ -1,0 +1,164 @@
+{
+  "episode": "076",
+  "headline": "AMR genomics in the clinic: accuracy, reporting and trust",
+  "description": "A panel examines clinical AMR genomics: prediction accuracy, mixed infections, accreditation, reporting, costs and infection control.",
+  "summary": "Andrew Page chairs a panel, supported by Lee Katz, at the 7th Microbial Bioinformatics Hackathon, run with JPIAMR, PHA4GE and CLIMB. Mark Pallen, Finlay Maguire, Anthony Underwood and Clement Tsui discuss what prevents antimicrobial resistance genomics from becoming routine clinical practice. They distinguish predicting resistance for individual treatment from using genomes for surveillance and infection control, and examine the evidence, reporting and laboratory systems each requires.",
+  "people": [
+    {
+      "name": "Andrew Page",
+      "role": "host",
+      "affiliation": "Quadram Institute, Norwich, UK"
+    },
+    {
+      "name": "Lee Katz",
+      "role": "host",
+      "affiliation": "Centers for Disease Control and Prevention; University of Georgia, US"
+    },
+    {
+      "name": "Mark Pallen",
+      "role": "panellist",
+      "affiliation": "University of East Anglia; Quadram Institute Bioscience, UK"
+    },
+    {
+      "name": "Finlay Maguire",
+      "role": "panellist",
+      "affiliation": "Dalhousie University, Canada"
+    },
+    {
+      "name": "Anthony Underwood",
+      "role": "panellist",
+      "affiliation": "Centre for genomic pathogen surveillance, UK"
+    },
+    {
+      "name": "Clement Tsui",
+      "role": "panellist",
+      "affiliation": "Weill Cornell Medicine, Qatar"
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Resistance prediction depends on the organism",
+      "body": "Anthony Underwood identifies trust in genotype-based resistance predictions as an immediate barrier. TB is the clearest example of clinical adoption: genomic testing is already implemented in the UK, and its speed is particularly valuable for a slow-growing organism. He describes comparatively good agreement between genomic and phenotypic results for Salmonella, Klebsiella and some other Enterobacteriaceae, but more discordance for Pseudomonas and Acinetobacter.\n\nThe panel separates producing a resistance-gene result from interpreting it. Different beta-lactamase alleles can have different implications, and much of that interpretative knowledge remains in experts’ heads. Anthony argues for gathering the relevant metadata and encoding rules that others can use, rather than treating pipeline output as a finished clinical answer."
+    },
+    {
+      "heading": "Mixed infections can defeat simple pipelines",
+      "body": "Mark Pallen describes work on roughly 200-year-old TB genomes from Hungarian mummies. An initial SNP-calling pipeline required 70% representation and obscured mixtures containing two genotypes at approximately 50:50. He also recalls evidence of mixed TB infection in around one in four patients in KwaZulu-Natal.\n\nThis matters for resistance prediction because a small resistant population may become dominant after antibiotic treatment. Picking a single colony can remove biological diversity before sequencing; taking a sweep or analysing a sample metagenomically raises different analytical demands. Mark distinguishes resistance evolving within a host from infection with separate strains. Closely related strains are particularly difficult to disentangle, and he cautions that the transmission bottleneck for mixed TB infections remains poorly understood."
+    },
+    {
+      "heading": "More information does not guarantee a treatment change",
+      "body": "Mark questions whether additional genomic information will change prescribing. Clinicians may continue broad-spectrum treatment even when narrower options appear possible. In an intensive-care gut microbiome study, his group found samples dominated by a resistant clone, sometimes accounting for roughly 80–95% of the metagenome. Yet the evidence that screening such carriage was cost-effective was not well established even for conventional microbiology.\n\nClement Tsui offers a contrasting example: sequencing detected the mcr-1 gene in two bacteria, alerting physicians to colistin resistance they had not recognised. He notes that confirmatory microdilution testing requires capabilities many hospitals lack. His broader point is that sequencing can supply useful additional evidence, but clinicians often already have sufficient phenotypic information to make an initial decision."
+    },
+    {
+      "heading": "Accreditation, reporting and everyday laboratory work",
+      "body": "Finlay Maguire describes helping Sunnybrook seek accreditation for pathogen genomics and finding uncertainty among the accreditation organisations he dealt with about how to assess it. He argues that informative but complicated results need reports designed around clinical decisions, not an indiscriminate handover of bioinformatics output.\n\nClement describes a laboratory culturing around 6,000 bacteria per month from specimens including skin swabs, urine and blood cultures. He estimates that 10% or fewer are multidrug-resistant. Sequencing must fit established protocols, staffing and costs, with physicians deciding which isolates warrant further investigation. He also questions how library-preparation expertise fits existing technician licensing arrangements.\n\nData access is another obstacle. Phenotypic results may sit in hospital systems unavailable to the sequencing scientist, leaving paper or PDF reports to transcribe. Clement connects this separation to missing MIC information in GenBank submissions."
+    },
+    {
+      "heading": "Infection control offers value beyond prescribing",
+      "body": "Mark describes a prolonged multidrug-resistant Acinetobacter outbreak in which genomic comparisons helped identify transmission through a burns operating theatre. In the intensive-care study, closely related vancomycin-resistant enterococci also exposed otherwise unrecognised transmission between patients. These examples show how genomics can support AMR control without directly selecting an antibiotic.\n\nOne of the hosts recalls a UK hospital using Clostridioides difficile sequencing to distinguish community acquisition from hospital transmission when facing financial penalties. That leads into questions about liability and institutional incentives. Clement recounts a Pseudomonas investigation involving babies where the isolates belonged to different sequence types, but further work and reporting were blocked. The panel discusses how reputational concerns can discourage investigation or disclosure, while Mark also describes hospital studies he was able to publish."
+    },
+    {
+      "heading": "Competing on usefulness and demonstrating agreement",
+      "body": "Mark contrasts the difficulties of introducing Illumina or Nanopore sequencing with the rapid clinical uptake of MALDI-TOF. Its appeal was practical: fast, inexpensive organism identification. Sequencing needs to demonstrate usefulness within comparable operational constraints, not simply offer richer data.\n\nAnthony closes with cautious optimism about progress in genomic AMR prediction, while pointing to a paper in Microbial Genomics reporting substantial discordance between bioinformatic prediction methods. He argues for better benchmarking and agreement across software and databases, linking this directly to the hackathon’s benchmarking work. The panel sees public health surveillance and infection control as settings where experience can help build confidence for wider diagnostic use."
+    }
+  ],
+  "highlights": [
+    {
+      "time": "00:04:29",
+      "topic": "Why confidence in genomic resistance prediction differs between TB, Salmonella, Klebsiella and other bacteria."
+    },
+    {
+      "time": "00:05:35",
+      "topic": "Ancient TB samples reveal mixed infections that a SNP-calling threshold initially obscured."
+    },
+    {
+      "time": "00:10:24",
+      "topic": "Interpreting complex results, obtaining accreditation and designing useful clinical reports."
+    },
+    {
+      "time": "00:12:49",
+      "topic": "Why detecting resistance in an intensive-care gut microbiome may not lead to clinical action."
+    },
+    {
+      "time": "00:15:17",
+      "topic": "Which sequencing results matter to physicians, with mcr-1 examples and barriers to accessing MIC data."
+    },
+    {
+      "time": "00:19:45",
+      "topic": "Whether direct-from-sample sequencing would change treatment, followed by infection-control examples."
+    },
+    {
+      "time": "00:23:38",
+      "topic": "Fitting culture-free sequencing into clinical workflows, costs, staffing and licensing."
+    },
+    {
+      "time": "00:28:32",
+      "topic": "Using Clostridioides difficile genomes to distinguish hospital transmission from community acquisition."
+    },
+    {
+      "time": "00:28:57",
+      "topic": "Learning through public health surveillance and turning expert interpretation into reusable rules."
+    },
+    {
+      "time": "00:33:30",
+      "topic": "Hospital transparency and reputational concerns, followed by lessons from MALDI-TOF adoption."
+    },
+    {
+      "time": "00:39:42",
+      "topic": "Progress in AMR prediction and the need to benchmark software and databases against each other."
+    }
+  ],
+  "quotes": [
+    {
+      "text": "Even minority populations are important in this setting, but it is certainly not well defined.",
+      "time": "00:05:35",
+      "speaker": "Mark Pallen"
+    },
+    {
+      "text": "There's a huge amount to do in terms of actually somehow distilling that intelligence and writing down a series of rules.",
+      "time": "00:28:57",
+      "speaker": "Anthony Underwood"
+    }
+  ],
+  "tools": [
+    "CARD",
+    "GenBank",
+    "Phoenix",
+    "PCR",
+    "MALDI-TOF",
+    "Illumina",
+    "Nanopore"
+  ],
+  "topics": [
+    "antimicrobial resistance",
+    "clinical genomics",
+    "genotype–phenotype concordance",
+    "mixed infections",
+    "metagenomics",
+    "laboratory accreditation",
+    "clinical reporting",
+    "infection control",
+    "benchmarking"
+  ],
+  "faq": [
+    {
+      "q": "What are the main barriers to using AMR genomics in clinical care?",
+      "a": "The panel identifies variable agreement with phenotypic testing, difficult interpretation, accreditation uncertainty, costs and workflow constraints. Results also need to arrive in a form that clinicians can understand and act on."
+    },
+    {
+      "q": "Which organisms are closest to routine genomic resistance prediction?",
+      "a": "Anthony Underwood identifies TB as the clearest example, with clinical implementation already occurring in the UK. He also describes relatively good agreement for Salmonella and Klebsiella, while highlighting difficulties with Pseudomonas and Acinetobacter."
+    },
+    {
+      "q": "Why do mixed infections complicate genomic AMR testing?",
+      "a": "A pipeline may miss minority genotypes, while sequencing a single colony can exclude variation present in the original sample. Mark Pallen explains that a resistant minority can become important under antibiotic treatment, so a dominant susceptible strain does not tell the whole story."
+    },
+    {
+      "q": "How can genomics help control AMR without changing antibiotic treatment?",
+      "a": "Genomic comparisons can reveal transmission routes and support infection-control measures. Mark describes tracing an Acinetobacter outbreak through a burns theatre and identifying otherwise unrecognised transmission of vancomycin-resistant enterococci in intensive care."
+    },
+    {
+      "q": "Why are phenotypic resistance data difficult to combine with genomes?",
+      "a": "Clement Tsui describes MIC results held in hospital systems that sequencing scientists may not be authorised to access. Receiving those results as paper or PDF reports creates manual transcription work and can prevent phenotypic metadata from accompanying sequence submissions."
+    }
+  ]
+}

@@ -1,0 +1,132 @@
+{
+  "episode": "130",
+  "headline": "Tim Dallman on pangenomes and public health prediction",
+  "description": "Tim Dallman discusses Shiga toxin-producing E. coli, pangenome-based machine learning and the metadata needed to predict disease risk.",
+  "summary": "Andrew Page speaks with Tim Dallman at the 10th Bioinformatics Hackathon in Bethesda, Maryland, about his work at Utrecht University and the WHO Pandemic and Epidemic Intelligence Hub. They discuss how pangenome graphs, structured surveillance data and clinical metadata might support predictions of disease risk and severity. Shiga toxin-producing E. coli provides a challenging example, with complex prophage variation but also known virulence factors against which to check predictions.",
+  "people": [
+    {
+      "name": "Andrew Page",
+      "role": "host",
+      "affiliation": "Theogen, Cambridge, UK"
+    },
+    {
+      "name": "Tim Dallman",
+      "role": "guest",
+      "affiliation": "Utrecht University; WHO Pandemic and Epidemic Intelligence Hub"
+    },
+    {
+      "name": "Lee Katz",
+      "role": "host",
+      "affiliation": "Centers for Disease Control and Prevention"
+    },
+    {
+      "name": "Nabil-Fareed Alikhan",
+      "role": "mentioned",
+      "affiliation": "Center for Genomic Pathogen Surveillance, University of Oxford"
+    }
+  ],
+  "sections": [
+    {
+      "heading": "From genomic services to research at Utrecht",
+      "body": "Tim Dallman describes splitting his work between Utrecht University in the Netherlands and the WHO Pandemic and Epidemic Intelligence Hub in Berlin. At Utrecht, he is based in the veterinary faculty, where he says he has been for three years. Andrew asks how someone working on gastrointestinal infections ended up in a veterinary setting. Tim explains that foodborne disease research often sits in veterinary schools because of its connections to animals and veterinary food safety.\n\nThe university role gives him time to pursue questions he could not fully explore while running a genomic service at UKHSA: how to turn large genome collections with good metadata into actionable predictions of disease risk or severity."
+    },
+    {
+      "heading": "Connecting people through the WHO hub",
+      "body": "Tim describes the Berlin hub as an extension of WHO's capabilities, with an emphasis on innovation and collaborative surveillance. Part of its purpose is to bring together people who do not commonly work together, using both physical and digital spaces.\n\nIPSN is a network hosted by the hub. Tim says it brings together actors interested in pathogen genomics, including national public health organisations, academic centres, the private sector and philanthropic organisations. Its role is to provide forums and opportunities for the right people to talk, innovate and support sustainable capacity. Andrew compares this with finding expertise through Twitter and Slack during a pandemic; Tim sees value in formalising those connections."
+    },
+    {
+      "heading": "Clinical metadata is a partnership problem",
+      "body": "Andrew asks whether metadata quality is the main obstacle to predicting clinical outcomes from genomes. Tim emphasises getting the right metadata and establishing the partnerships needed to use it. Clinical severity information exists for some pathogens, but connecting it to genomic research requires more than assembling files.\n\nHe describes much of the work as joining networks of people, navigating governance and involving data custodians in solving the research question. Andrew jokes about persuading people to release their data, while Tim keeps the emphasis on collaboration. The discussion makes clear that usable genome collections depend on relationships and access arrangements as well as the genomic analysis itself."
+    },
+    {
+      "heading": "Putting pangenomes into machine learning",
+      "body": "Andrew and Tim discuss their collaboration on Predict and Prevent. Tim has been exploring how genomic variation can enter machine-learning models without losing the genome's functional relationships. Rather than treating variation as disconnected features, the work aims to make pangenomes part of the model input.\n\nAndrew points out that graphs can become extremely complex even for relatively small genome collections. Tim identifies graph sub-selection, pruning and feature selection as important challenges: which parts of the graph are informative, and which graph properties help prediction?\n\nThey also discuss the uncertainty introduced when one machine-learning method predicts gene function and another uses those predictions. Tim says they are trying to use as much real data from structured surveillance as possible. Andrew contrasts this with using miscellaneous data found in RefSeq. Tim is interested in the prevalence of variation as a feature, alongside variation that may be selected for in different phenotypes."
+    },
+    {
+      "heading": "Shiga toxin-producing E. coli as a test case",
+      "body": "The project focuses on Shiga toxin-producing E. coli. Tim describes its pangenome as particularly difficult because of prophage complexity. The team has undertaken substantial long-read sequencing to help resolve paralogous regions and improve the genomic representation used for the work.\n\nDespite that complexity, the organism offers useful reference points. Shiga toxin is a clear virulence factor, and some genomic variation is already associated with clinical outcomes. These known relationships give the researchers things their models should recover. Tim presents an association between Shiga toxin and poor clinical outcomes as an expected finding, rather than a new discovery from the project.\n\nHe is also interested in other prophages that work in partnership across the E. coli genome and may help explain the phenotypes under study. The longer-term aim is to use genomic predictions to assess risk and prioritise resources in public health or food safety. The discussion presents this as ongoing research, not an established prediction service."
+    }
+  ],
+  "highlights": [
+    {
+      "time": "00:00:48",
+      "topic": "Andrew introduces Tim Dallman at the hackathon in Bethesda."
+    },
+    {
+      "time": "00:01:12",
+      "topic": "Tim describes his move to Utrecht University in the Netherlands."
+    },
+    {
+      "time": "00:01:53",
+      "topic": "The WHO hub's emphasis on innovation and collaborative surveillance."
+    },
+    {
+      "time": "00:02:30",
+      "topic": "IPSN brings public health, academic, private-sector and philanthropic organisations together."
+    },
+    {
+      "time": "00:03:39",
+      "topic": "Why foodborne disease research fits within Utrecht's veterinary faculty."
+    },
+    {
+      "time": "00:04:53",
+      "topic": "Obtaining clinical metadata through partnerships, governance and collaboration with data custodians."
+    },
+    {
+      "time": "00:06:49",
+      "topic": "Preserving genomic relationships when building machine-learning inputs."
+    },
+    {
+      "time": "00:07:42",
+      "topic": "Pruning pangenome graphs and selecting informative graph features."
+    },
+    {
+      "time": "00:08:39",
+      "topic": "Using the prevalence of genomic variation as a predictive feature."
+    },
+    {
+      "time": "00:10:19",
+      "topic": "Shiga toxin and clinical outcome as an expected association for the models to recover."
+    }
+  ],
+  "quotes": [
+    {
+      "text": "Because obviously, evolution works on function, not on random variation in the genome.",
+      "time": "00:06:49",
+      "speaker": "Tim Dallman"
+    }
+  ],
+  "tools": [
+    "RefSeq",
+    "graph theory"
+  ],
+  "topics": [
+    "pathogen genomics",
+    "genomic surveillance",
+    "machine learning",
+    "pangenome graphs",
+    "clinical metadata",
+    "shiga toxin-producing e. coli",
+    "prophages",
+    "disease risk prediction",
+    "public health collaboration"
+  ],
+  "faq": [
+    {
+      "q": "Why use pangenome graphs in machine-learning models?",
+      "a": "Tim wants model inputs to preserve relationships and functional connections within genomes rather than represent variation only as disconnected features. The challenges discussed include graph complexity, pruning and selecting graph properties that are useful for prediction."
+    },
+    {
+      "q": "Why is clinical metadata difficult to use for genomic prediction?",
+      "a": "Tim says relevant clinical severity data exists for some pathogens, but researchers need the right partnerships to access and connect it. Navigating governance and involving data custodians in the research question are central parts of that work."
+    },
+    {
+      "q": "Why study Shiga toxin-producing E. coli for disease-risk prediction?",
+      "a": "Its prophages make the pangenome difficult to analyse, but it also has clear virulence factors and known variation associated with clinical outcomes. Those relationships provide checks on what a model should find, while researchers investigate additional genomic features."
+    },
+    {
+      "q": "What does IPSN do at the WHO Pandemic and Epidemic Intelligence Hub?",
+      "a": "Tim describes IPSN as a network hosted by the Berlin hub that connects organisations interested in pathogen genomics. It provides opportunities for public health, academic, private-sector and philanthropic participants to collaborate on innovation and sustainable capacity."
+    }
+  ]
+}

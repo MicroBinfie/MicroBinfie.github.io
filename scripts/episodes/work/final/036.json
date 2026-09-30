@@ -1,0 +1,161 @@
+{
+ "episode": "036",
+ "headline": "Roary: bacterial pangenomes, scaling and the importance of QC",
+ "description": "Andrew Page explains Roary’s origins, fast pangenome comparisons, annotation requirements and why quality control matters.",
+ "summary": "Andrew Page discusses Roary with his co-hosts, explaining why it was developed to compare thousands of bacterial genomes. The conversation covers core and accessory genes, the computational shortcuts that make Roary fast, and the importance of consistent annotation and quality control. It also explores the software’s name, hidden cluster support, unusually candid FAQ and statistical follow-up with Scoary.",
+ "people": [
+  {
+   "name": "Lee Katz",
+   "role": "host",
+   "affiliation": "Centers for Disease Control and Prevention; University of Georgia (adjunct member)"
+  },
+  {
+   "name": "Andrew Page",
+   "role": "host",
+   "affiliation": "Quadram Institute, Norwich, UK"
+  },
+  {
+   "name": "Nabil-Fareed Alikhan",
+   "role": "host",
+   "affiliation": "Quadram Institute, Norwich, UK"
+  }
+ ],
+ "sections": [
+  {
+   "heading": "The problem Roary was built to solve",
+   "body": "Roary creates bacterial pangenomes: comparisons that identify genes shared across a collection and genes that vary between its members. Andrew distinguishes the conserved core genome from accessory variation, including plasmids, phages and integrons. Using Salmonella as an illustration, he asks which collection of genes defines the organism and which additional genes help it survive in particular environments.\n\nThe practical motivation came from large sample collections at the Sanger Institute. Researchers wanted to extract core and accessory information, but the literature contained pangenomes of only around 80–100 bacteria. Tools discussed include PanOCT, LS-BSR, GET_HOMOLOGUES and OrthoMCL. An early attempt to adapt OrthoMCL ran into complexity, particularly its MySQL database requirements. Roary’s goal was to make collections of thousands or tens of thousands of bacterial genomes tractable."
+  },
+  {
+   "heading": "A family name and a short paper",
+   "body": "Development began around 2013, with publication following in 2015 as a two-page Bioinformatics application note. Andrew recalls roughly 30 pages of supplementary material. Colleagues within the Sanger Institute were using the software internally, providing rapid feedback about what they needed and which features were unnecessary.\n\nInternally, it was simply the pangenome pipeline, with similarly functional script names. Opening it up to others prompted the search for a distinctive name. Roary references the children’s programme Roary the Racing Car and Andrew’s son, whose name is spelt differently. Lee remembers Andrew showing him a photograph of the original Roary. Andrew stresses the practical benefit of a unique software name that people can find easily."
+  },
+  {
+   "heading": "Pre-clustering and hidden cluster support",
+   "body": "Andrew describes the underlying comparison as an all-against-all BLAST of genes. Roary first uses CD-HIT to pre-cluster the data, greatly reducing the number of comparisons required. Within a bacterial species, repeatedly encountering similar genes means that adding genomes need not produce the same growth in work as comparing every sequence against every other sequence. Andrew also describes memory use as scaling linearly and reports that others have successfully used Roary on about 20,000 genomes.\n\nThe software was designed as scripts connected by job runners, allowing work to be distributed across an HPC cluster. That support remains hidden rather than prominently advertised and works with LSF. In practice, users often preferred a single machine with, for example, 64 threads instead of distributing thousands of jobs across a cluster."
+  },
+  {
+   "heading": "Why annotation consistency matters",
+   "body": "Roary was deliberately designed to take output from Prokka rather than accommodate arbitrary GFF or annotation files. Andrew explains that supporting one straightforward annotation tool removed many input-handling problems. Downloading a mixture of genomes from GenBank or EMBL can instead combine annotations made by different tools and gene predictors, which may call genes differently and distort the comparison.\n\nOne of the hosts points out the trade-off: painstakingly curated GenBank annotations may be discarded in favour of consistent automated annotations from Prokka or RefSeq. Useful detail can disappear, but consistency is particularly important for analysis at scale. Andrew’s advice is to process the bacterial collection consistently from the outset and analyse it together, rather than combine independently prepared inputs and assume they are equivalent."
+  },
+  {
+   "heading": "Core-gene thresholds and quality control",
+   "body": "The FAQ grew out of real support requests, ranging from attempts to run Perl scripts with Python to requests for someone else to analyse the data. It also explains substantive issues. A core-gene threshold allowing presence in 99% of genomes produces step changes at each hundred genomes because gene presence is counted in whole numbers. Requiring presence in every genome avoids that particular threshold effect, but incomplete assemblies and contig breaks make some tolerance useful.\n\nAndrew repeatedly returns to quality control. A result containing only about 150 core genes could reflect contamination or an excessively broad comparison, such as trying to build a pangenome of everything Gram-negative. He uses Roary as a quick contamination check himself. His wider warning is that running complex analytical software without understanding the inputs and methods leaves users unable to interpret the results reliably."
+  },
+  {
+   "heading": "Packaging, maintenance and follow-up analysis",
+   "body": "Roary’s availability through Debian and Ubuntu, Homebrew and Conda is another practical advantage discussed. Andrew describes a Perl codebase using Moose, with extensive automated unit tests and a structure intended to be readable by other Perl programmers. The hosts briefly compare their experiences of Perl and Python.\n\nAt the time of recording, Andrew reports well over 1,000 citations and use in public health laboratories and analysis pipelines. He says he has not updated Roary for years after moving jobs and projects, but welcomes changes and additions through GitHub. PopPUNK and Panaroo are mentioned as newer alternatives to investigate if Roary does not meet a user’s needs; the discussion does not establish a single best tool.\n\nScoary is recommended for statistical follow-up to Roary output, using information such as case and control labels. The episode closes by returning to the same practical priority: quality-control the data before trusting the pangenome."
+  }
+ ],
+ "highlights": [
+  {
+   "time": "00:01:15",
+   "topic": "What bacterial pangenomes capture, and why Sanger needed larger analyses"
+  },
+  {
+   "time": "00:06:02",
+   "topic": "Roary’s spelling, racing-car connection and distinctive software name"
+  },
+  {
+   "time": "00:06:48",
+   "topic": "Development around 2013, publication in 2015 and the original HPC design"
+  },
+  {
+   "time": "00:08:23",
+   "topic": "LSF cluster support and CD-HIT pre-clustering to reduce BLAST comparisons"
+  },
+  {
+   "time": "00:09:47",
+   "topic": "Why Roary was designed around Prokka rather than arbitrary annotations"
+  },
+  {
+   "time": "00:11:01",
+   "topic": "The trade-off between consistent annotation and detailed GenBank curation"
+  },
+  {
+   "time": "00:14:37",
+   "topic": "The FAQ’s warning about pangenomes generated without sequencing QC"
+  },
+  {
+   "time": "00:15:41",
+   "topic": "Why a 99% core-gene threshold creates steps every hundred genomes"
+  },
+  {
+   "time": "00:17:22",
+   "topic": "Community uptake, maintenance and newer tools including PopPUNK and Panaroo"
+  },
+  {
+   "time": "00:18:50",
+   "topic": "Scoary for statistical analysis of Roary output using cases and controls"
+  },
+  {
+   "time": "00:19:41",
+   "topic": "Over-broad pangenomes, contamination and the need to check input data"
+  }
+ ],
+ "quotes": [
+  {
+   "text": "And I would expect people to have a baseline knowledge and not just try and randomly run pieces of complex analytical software because they won't be able to interpret the results properly.",
+   "time": "00:14:50",
+   "speaker": "Andrew Page"
+  }
+ ],
+ "tools": [
+  "Roary",
+  "PanOCT",
+  "LS-BSR",
+  "GET_HOMOLOGUES",
+  "OrthoMCL",
+  "MySQL",
+  "CD-HIT",
+  "BLAST",
+  "LSF",
+  "Prokka",
+  "GenBank",
+  "EMBL",
+  "RefSeq",
+  "Perl",
+  "Moose",
+  "Python",
+  "Debian",
+  "Ubuntu",
+  "Homebrew",
+  "Conda",
+  "GitHub",
+  "PopPUNK",
+  "Panaroo",
+  "Scoary"
+ ],
+ "topics": [
+  "bacterial pangenomes",
+  "core genome",
+  "accessory genome",
+  "gene annotation",
+  "sequence clustering",
+  "high-performance computing",
+  "quality control",
+  "contamination",
+  "bioinformatics software"
+ ],
+ "faq": [
+  {
+   "q": "What problem does Roary solve?",
+   "a": "Roary compares bacterial genomes to identify shared core genes and variable accessory genes. It was developed to make pangenome analysis feasible for thousands or tens of thousands of genomes, rather than the roughly 80–100-genome collections Andrew was seeing in the literature."
+  },
+  {
+   "q": "How does Roary make large pangenome comparisons faster?",
+   "a": "It uses CD-HIT to pre-cluster genes before all-against-all BLAST comparisons, reducing the number of comparisons required. Andrew also describes LSF-based cluster support, although users often preferred running on one machine with many threads."
+  },
+  {
+   "q": "Why should Roary inputs be annotated consistently?",
+   "a": "Different annotation tools and gene predictors can call genes differently, making a mixed collection difficult to compare reliably. Andrew designed Roary around Prokka output and recommends processing the whole collection consistently rather than mixing downloaded annotations."
+  },
+  {
+   "q": "Why can core-genome size jump every hundred genomes?",
+   "a": "Andrew explains that a 99% presence threshold produces steps because the permitted number of missing genomes changes in whole numbers. Requiring genes in every genome removes that threshold effect, but assembly gaps and contig breaks are reasons to allow some tolerance."
+  },
+  {
+   "q": "What is Scoary used for alongside Roary?",
+   "a": "The hosts recommend Scoary for statistical follow-up to Roary output. Andrew describes supplying case and control information to obtain further statistical results."
+  }
+ ]
+}

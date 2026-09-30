@@ -1,0 +1,150 @@
+{
+ "episode": "142",
+ "headline": "GenomeQC, now qualibact: species-specific bacterial genome QC",
+ "description": "Nabil-Fareed Alikhan explains species-specific genome QC thresholds, machine-learning outlier removal and the limits of Illumina-based assemblies.",
+ "summary": "Nabil-Fareed Alikhan discusses GenomeQC with hosts Lee Katz and Andrew Page: a resource for interpreting bacterial assembly quality using species-specific thresholds. The conversation covers its underlying data, outlier filtering, example ranges and planned reporting software. The show notes clarify that the project was subsequently renamed qualibact.",
+ "people": [
+  {
+   "name": "Lee Katz",
+   "role": "host",
+   "affiliation": ""
+  },
+  {
+   "name": "Andrew Page",
+   "role": "host",
+   "affiliation": "Origin Sciences; University of East Anglia"
+  },
+  {
+   "name": "Nabil-Fareed Alikhan",
+   "role": "host",
+   "affiliation": "Centre for Genomic Pathogen Surveillance, University of Oxford"
+  }
+ ],
+ "sections": [
+  {
+   "heading": "Why assembly metrics need reference ranges",
+   "body": "GenomeQC, now called qualibact, is presented primarily as a process for generating reference thresholds rather than a finished standalone program. Nabil describes a familiar problem: someone runs QUAST, obtains an N50 or contig count, and still cannot tell whether their assembly is any good. Comparing samples within a project helps identify outliers, but cannot establish quality if the whole dataset is poor.\n\nSpecies-specific expectations provide a starting point. The hosts discuss variation within Salmonella, including the host-adapted serovar Typhi and other serovars such as Dublin that are adapted in different ways, and differences between species in the same genus. Nabil notes that a one-megabase difference in a five-megabase genome represents 20% variation—enough to make a universal genome-size threshold misleading."
+  },
+  {
+   "heading": "Reusing AllTheBacteria assemblies",
+   "body": "The analysis builds on AllTheBacteria, avoiding the need for Nabil to assemble 1.2 million genomes himself. It also reuses that dataset's taxonomic assignments from sylph, described in the episode as a fast approximation of GTDB classification. Recalculating assembly metrics such as GC content took roughly half a day to a day on a compute cluster.\n\nSpecies are the initial grouping, not a requirement of the method. Nabil says the same approach could generate thresholds for sequence types, subspecies or broader groups such as families. He contrasts the reproducible workflow with existing in-house ranges, NCBI genome-size expectations, earlier EnteroBase thresholds and KlebNET's Klebsiella-specific numbers."
+  },
+  {
+   "heading": "Removing outliers before setting thresholds",
+   "body": "Nabil found that conventional statistical approaches, including treating metric distributions as normal, struggled with extreme outliers in Sequence Read Archive-derived data. He gives the example of a Klebsiella assembly with a total length of only 0.3 megabases. His approach instead removes anomalies using machine learning, then trims the remaining extremes at the 0.5th and 99.5th percentiles.\n\nAlthough the website illustrates results with two-dimensional plots, the filtering uses multiple metrics together, including N50, total assembly length, contig count and GC content. The analysis is written in Python using scikit-learn and statistical libraries. Taxonomic mixtures remain a limitation: the combined E. coli and Shigella analysis retains a visible Shigella sub-distribution after filtering."
+  },
+  {
+   "heading": "Example ranges and rounded numbers",
+   "body": "Lee identifies Neisseria meningitidis as his original area of work, and Nabil asks him to assess these example expectations:\n\n- Genome size: 2.0–2.4 megabases.\n- Coding sequences: 1,900–2,500.\n- Contigs with Shovill: no more than around 300.\n- GC content: 51–53%.\n\nLee questions how neatly rounded the values are. Nabil explains that the displayed thresholds are rounded for readability and recall; detailed summary tables retain the underlying statistics, including quartiles, means and medians. The discussion also gives genome-size ranges of 1.6–2.2 megabases for Campylobacter coli and 1.5–2.0 megabases for Campylobacter jejuni, illustrating why related species should not automatically share thresholds."
+  },
+  {
+   "heading": "Limits imposed by sequencing and assembly",
+   "body": "These thresholds come from Illumina data and are not presented as interchangeable with long-read expectations. Nabil expects Nanopore assemblies to shift some genome-size distributions because they can recover sequence missing or collapsed in short-read assemblies. He notes discrepancies between the AllTheBacteria assemblies and RefSeq, and invites suitable Oxford Nanopore or PacBio datasets for equivalent analyses.\n\nContig counts and N50 also depend on the assembler. The examples here are tied to Shovill; Nabil says Velvet would have higher expected contig counts. The hosts discuss the idea of separating reference values in future, such as an N50 for Illumina and an N50 for PacBio."
+  },
+  {
+   "heading": "Using the thresholds in pipelines",
+   "body": "The website offers species pages, supporting plots, detailed statistics and a summary CSV covering the included species. Nabil hopes users will download the thresholds and incorporate them into their own pipelines. This separates the reference data from any particular reporting interface.\n\nAt the time of recording, he was also developing a Python companion tool to consume outputs from programs such as QUAST and CheckM and produce CSV or HTML reports. The intended interface resembles MultiQC, with traffic-light assessments; Conda and PyPI distribution were planned, not yet available. He invites expert feedback, especially where mixed populations make thresholds too lenient. The aim is to refine the initial ranges through critique rather than present them as final limits for every organism."
+  }
+ ],
+ "highlights": [
+  {
+   "time": "00:01:17",
+   "topic": "Why N50 and contig counts need species-specific reference values"
+  },
+  {
+   "time": "00:04:32",
+   "topic": "Species classification and the option to analyse other taxonomic groupings"
+  },
+  {
+   "time": "00:05:54",
+   "topic": "Reusing 1.2 million assemblies and recalculating assembly metrics"
+  },
+  {
+   "time": "00:06:40",
+   "topic": "Accessing website thresholds and plans for a reporting tool"
+  },
+  {
+   "time": "00:08:50",
+   "topic": "EnteroBase experience and the push to define useful expected values"
+  },
+  {
+   "time": "00:10:54",
+   "topic": "Example quality thresholds for Neisseria meningitidis"
+  },
+  {
+   "time": "00:11:41",
+   "topic": "Rounded display values versus detailed statistical summaries"
+  },
+  {
+   "time": "00:12:53",
+   "topic": "Why Illumina-derived thresholds depend on sequencing and assembly choices"
+  },
+  {
+   "time": "00:15:19",
+   "topic": "Existing QC ranges and the case for reproducible threshold generation"
+  },
+  {
+   "time": "00:18:53",
+   "topic": "Python implementation of the reporting tool and threshold analysis"
+  },
+  {
+   "time": "00:22:46",
+   "topic": "Filtering across multiple metrics and dealing with mixed populations"
+  }
+ ],
+ "quotes": [
+  {
+   "text": "The algorithm or method that I'm using is not dependent on these classifications.",
+   "time": "00:04:32",
+   "speaker": "Nabil-Fareed Alikhan"
+  }
+ ],
+ "tools": [
+  "GenomeQC",
+  "qualibact",
+  "AllTheBacteria",
+  "sylph",
+  "GTDB",
+  "QUAST",
+  "CheckM",
+  "MultiQC",
+  "Shovill",
+  "Velvet",
+  "EnteroBase",
+  "RefSeq",
+  "Sequence Read Archive (SRA)",
+  "Python",
+  "scikit-learn",
+  "Conda",
+  "PyPI"
+ ],
+ "topics": [
+  "bacterial genome quality",
+  "assembly quality control",
+  "species-specific thresholds",
+  "outlier detection",
+  "machine learning",
+  "genome size",
+  "n50",
+  "short-read assemblies",
+  "long-read sequencing"
+ ],
+ "faq": [
+  {
+   "q": "Are GenomeQC and qualibact the same project?",
+   "a": "Yes. The episode uses GenomeQC, but the show notes state that the project was renamed qualibact."
+  },
+  {
+   "q": "How were the bacterial genome QC thresholds calculated?",
+   "a": "The analysis reuses AllTheBacteria assemblies and species assignments, recalculates assembly metrics, and applies machine-learning outlier removal across multiple metrics. Nabil then trims the filtered distributions at the 0.5th and 99.5th percentiles."
+  },
+  {
+   "q": "Can these thresholds be applied directly to long-read assemblies?",
+   "a": "The episode cautions against treating them as technology-independent: they were derived from Illumina assemblies, with contiguity expectations tied to Shovill. Nanopore or PacBio assemblies may need separate reference ranges."
+  },
+  {
+   "q": "Was the traffic-light QC reporting tool available when this episode was recorded?",
+   "a": "No; Nabil described it as unfinished. The website already provided thresholds and a summary CSV, while the planned companion tool would read other tools' outputs and generate CSV or HTML reports."
+  }
+ ]
+}

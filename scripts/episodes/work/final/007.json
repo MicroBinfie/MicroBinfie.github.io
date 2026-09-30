@@ -1,0 +1,183 @@
+{
+ "episode": "007",
+ "headline": "SAM, BAM and CRAM: alignment formats, tools and trade-offs",
+ "description": "How SAM, BAM and CRAM store read alignments, with samtools workflows, clipping, genome viewers and the case for long-term software support.",
+ "summary": "Lee Katz, Andrew Page and Nabil-Fareed Alikhan discuss how SAM became a common format for read alignments, and how BAM and CRAM support different storage needs. They cover practical samtools operations, clipping, quality checks and alignment viewers, alongside the history of the formats. Andrew draws on his experience at Sanger to explain why shared libraries, institutional support and competing implementations helped make the ecosystem durable.",
+ "people": [
+  {
+   "name": "Lee Katz",
+   "role": "host",
+   "affiliation": "Centers for Disease Control and Prevention; University of Georgia"
+  },
+  {
+   "name": "Andrew Page",
+   "role": "host",
+   "affiliation": "Quadram Institute"
+  },
+  {
+   "name": "Nabil-Fareed Alikhan",
+   "role": "host",
+   "affiliation": "Quadram Institute"
+  },
+  {
+   "name": "Heng Li",
+   "role": "mentioned",
+   "affiliation": "Sanger"
+  },
+  {
+   "name": "Richard Durbin",
+   "role": "mentioned",
+   "affiliation": "Sanger"
+  },
+  {
+   "name": "John Marshall",
+   "role": "mentioned",
+   "affiliation": ""
+  },
+  {
+   "name": "James Bonfield",
+   "role": "mentioned",
+   "affiliation": "Sanger Institute"
+  },
+  {
+   "name": "Tim Carver",
+   "role": "mentioned",
+   "affiliation": "Sanger"
+  }
+ ],
+ "sections": [
+  {
+   "heading": "Why a shared alignment format was needed",
+   "body": "Nabil introduces Sequence Alignment Map (SAM) as a tab-delimited representation of how reads align to a reference, carrying metadata and quality information alongside the alignment. He dates its publication to 2009 and credits Heng Li, working for Richard Durbin at Sanger, with putting it together. The discussion connects its early use with the short-read aligner BWA.\n\nAndrew describes the pressure that made a reusable format necessary: carefully maintained, bespoke genomics databases could not keep pace with Illumina’s 37-base single-ended reads. Lee and Nabil contrast SAM with older workflows involving Consed and ACE files, including the ACE variant used by 454. Their recollections emphasise awkward parsing and project setup, against a background of rapidly appearing assemblers and read aligners."
+  },
+  {
+   "heading": "An intermediate result that tools can share",
+   "body": "The hosts distinguish plain-text SAM, binary BAM and compressed CRAM. For Lee, the important change was having an explicit stopping point between mapping reads and asking downstream questions such as which SNPs were present. An alignment file preserved the mapped reads for subsequent analysis rather than treating the journey from reads to variants as one indivisible operation.\n\nNabil values streaming operations and extracting selected regions without loading an entire five-gigabyte file into memory. He describes pipelines connecting samtools view, samtools sort and bcftools. Andrew highlights bitwise flags for selecting unmapped or unpaired reads and filtering secondary alignments. Mapping qualities and CIGAR strings supply further information about the alignment, including clipping and indels. Together, these features make the format useful for both broad processing and focused inspection."
+  },
+  {
+   "heading": "Clipping and alignment quality checks",
+   "body": "Nabil explains soft and hard clipping as ways to represent reads that do not align along their entire length. Soft-clipped bases remain in the read sequence stored in the alignment file but are excluded from the alignment. Hard-clipped bases are removed from that stored sequence as well. Andrew notes the resulting file-size advantage, while the discussion considers long reads, chimeras, repeats and alignments spanning different contigs or chromosomes.\n\nFor a quick assessment of an alignment file, Andrew recommends samtools stats with plot-bamcheck. He describes summary information on mapped reads and mapping qualities, alongside insert-size distributions and other patterns that can be plotted. The attraction is a fast overview of what the file contains, rather than having to inspect every alignment manually."
+  },
+  {
+   "heading": "Viewing reads in terminals and graphical tools",
+   "body": "Andrew credits Tim Carver’s work on BamView and its integration into Artemis. He describes viewing reads against an annotated reference and recalls Artemis adopting CRAM support very early. Lee had also used Artemis to examine genome homology, rather than solely for read mapping.\n\nLee favours the samtools text viewer because it is readily available, lean and fast, including when opening a specified region. He also discusses Tablet and IGV from the Broad Institute. IGV’s tracks, imported gene regions and simultaneous display of multiple mapped genomes are particularly useful; Nabil notes that when IGV came out, it was the only way to view 10 or 20 genomes mapped to one reference. Lee additionally points to ASCIIGenome, whose article he dates to 2017, as an alternative to the samtools text viewer."
+  },
+  {
+   "heading": "CRAM compression, adoption and long reads",
+   "body": "Andrew presents CRAM as a response to sequencing data growing faster than storage becomes cheaper. His example is a bacterial genome at 200× coverage, with many reads matching the reference. He distinguishes optional lossy storage from lossless compression, which he says most users choose. CRAM reorganises data into more compressible groups, including sequences and quality scores, and compresses blocks while retaining access without decompressing the entire file. He reports space savings of roughly 40–50% compared with BAM.\n\nAdoption is not just about file size. At the time of the discussion, Andrew sees limited tool support and archive distribution practices as obstacles to replacing BAM outright. The hosts also discuss failures caused by BAM’s CIGAR-length limitations with very long, noisy Nanopore reads. Andrew describes the frustration of a single problematic read breaking a workflow and suggests CRAM for workflows affected by that limitation, rather than converting through BAM."
+  },
+  {
+   "heading": "The maintenance behind a lasting format",
+   "body": "The hosts repeatedly return to institutional support. Andrew credits John Marshall with extracting alignment-format processing from samtools into HTSlib, allowing other software to reuse the implementation and benefit from shared fixes. He also describes bcftools being separated from the growing codebase and James Bonfield’s continuing development work. Bonfield’s win in the 2011 Sequence Squeeze competition is another part of the compression history discussed.\n\nSeparate CRAM implementations in Java at EBI and C at Sanger helped expose issues quickly through both collaboration and competition. Alongside Sanger, EBI and GA4GH involvement, the hosts value public development on GitHub. Their closing argument is that sustained maintenance and common specifications prevent every research project or sequencing vendor from creating another incompatible mapping format."
+  }
+ ],
+ "highlights": [
+  {
+   "time": "00:01:08",
+   "topic": "What SAM records, its origins with Heng Li, and the SAM, BAM and CRAM representations"
+  },
+  {
+   "time": "00:02:17",
+   "topic": "How early Illumina reads overwhelmed bespoke genomics databases"
+  },
+  {
+   "time": "00:08:14",
+   "topic": "Tools that read alignment files, including samtools, Picard and CRAMtools"
+  },
+  {
+   "time": "00:11:01",
+   "topic": "Lee’s view of SAM as a stopping point between mapping and downstream analysis"
+  },
+  {
+   "time": "00:11:52",
+   "topic": "Streaming BAM operations and connecting samtools commands in pipelines"
+  },
+  {
+   "time": "00:14:00",
+   "topic": "Read-level information and quality checks with samtools stats and plot-bamcheck"
+  },
+  {
+   "time": "00:16:10",
+   "topic": "What soft clipping and hard clipping retain or remove"
+  },
+  {
+   "time": "00:18:53",
+   "topic": "Tim Carver’s BamView work, Artemis integration and early CRAM support"
+  },
+  {
+   "time": "00:19:53",
+   "topic": "Lee’s preference for the fast, widely available samtools text viewer"
+  },
+  {
+   "time": "00:22:27",
+   "topic": "CRAM compression and the pressure created by growing sequencing data volumes"
+  },
+  {
+   "time": "00:30:07",
+   "topic": "Diagnosing BAM failures caused by an individual long read"
+  },
+  {
+   "time": "00:31:28",
+   "topic": "Long-term maintenance and international backing as a model for bioinformatics software"
+  }
+ ],
+ "quotes": [
+  {
+   "text": "this is a model for how we should be developing all bioinformatics software moving forward.",
+   "time": "00:31:28",
+   "speaker": "Andrew Page"
+  }
+ ],
+ "tools": [
+  "BWA",
+  "Bowtie",
+  "Bowtie2",
+  "minimap2",
+  "SMALT",
+  "Stampy",
+  "Consed",
+  "samtools",
+  "bcftools",
+  "HTSlib",
+  "pysam",
+  "Picard",
+  "GATK",
+  "CRAMtools",
+  "cram-js",
+  "plot-bamcheck",
+  "Artemis",
+  "BamView",
+  "Tablet",
+  "IGV",
+  "ASCIIGenome"
+ ],
+ "topics": [
+  "sam",
+  "bam",
+  "cram",
+  "read alignment",
+  "alignment visualisation",
+  "soft and hard clipping",
+  "data compression",
+  "long reads",
+  "software maintenance"
+ ],
+ "faq": [
+  {
+   "q": "What is the difference between SAM, BAM and CRAM?",
+   "a": "The episode describes SAM as a plain-text, tab-delimited alignment format, BAM as its binary representation and CRAM as a compressed binary format. CRAM supports lossless storage as well as optional lossy settings; Andrew says most users choose lossless compression."
+  },
+  {
+   "q": "What is the difference between soft clipping and hard clipping?",
+   "a": "Soft clipping excludes bases from the alignment but retains them in the stored read sequence. Hard clipping removes those bases from the stored sequence as well."
+  },
+  {
+   "q": "Which tools do the hosts recommend for checking and viewing alignments?",
+   "a": "Andrew recommends samtools stats with plot-bamcheck for summary statistics and plots. The viewing discussion covers Artemis and BamView, the samtools text viewer, Tablet, IGV and ASCIIGenome."
+  },
+  {
+   "q": "Why were the hosts not using CRAM instead of BAM everywhere?",
+   "a": "Andrew describes CRAM’s origins as an archive format and says broader tool support was still needed at the time of the episode. He also sees archives as important: CRAM will have won once NCBI provides everything in it, and handing users back FASTQ files instead of CRAM rather defeats the purpose."
+  }
+ ]
+}

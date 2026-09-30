@@ -1,0 +1,161 @@
+{
+ "episode": "079",
+ "headline": "StaPH-B containers for stable public health bioinformatics",
+ "description": "Erin Young and Kelsey Florek explain StaPH-B containers, workflow validation and simpler ways to run public health bioinformatics.",
+ "summary": "Erin Young and Kelsey Florek join Lee Katz and Nabil-Fareed Alikhan to discuss the StaPH-B Docker repository and toolkit. They explain how shared containers reduce installation work across public health laboratories, why stable software environments matter for validation, and how simpler interfaces help laboratories concentrate on biological questions.",
+ "people": [
+  {
+   "name": "Lee Katz",
+   "role": "host",
+   "affiliation": "Centers for Disease Control and Prevention; University of Georgia (adjunct member)"
+  },
+  {
+   "name": "Nabil-Fareed Alikhan",
+   "role": "host",
+   "affiliation": "Quadram Institute"
+  },
+  {
+   "name": "Erin Young",
+   "role": "guest",
+   "affiliation": "Utah Department of Health"
+  },
+  {
+   "name": "Kelsey Florek",
+   "role": "guest",
+   "affiliation": "Wisconsin State Laboratory of Hygiene"
+  }
+ ],
+ "sections": [
+  {
+   "heading": "Containers as controlled environments",
+   "body": "Erin introduces containers through an experimental analogy. Using the software already available in a computing environment resembles citizen science; a conda environment offers more control, like a laboratory bench with pipettes and fume hoods. A container takes that control further, like an experiment on a space shuttle. Everything needed should be inside it, working together and capable of being optimised together.\n\nThe practical benefit is shared installation work. Rather than 50 laboratories independently resolving dependencies, a few contributors can package a tool for everyone. Erin gives installing Perl libraries as an example of something laboratories then do not each need to learn."
+  },
+  {
+   "heading": "A shared repository for public health laboratories",
+   "body": "Kelsey describes the repository's origins in efforts to run workflows on a university high-performance computing cluster. Containers developed in Wisconsin could also serve colleagues in Colorado and Virginia. Collecting them in one place would spare other laboratories from repeating dependency installation and resolving conflicting Python versions. SPAdes provides a straightforward example: install Docker and use the existing container rather than assembling the tool's environment yourself.\n\nErin highlights the pangolin containers used for SARS-CoV-2 lineage determination, praising their ease of use and prompt updates. Kelsey also mentions containerising a SARS coronavirus dataset repository with a substantial dependency list.\n\nContributions are open beyond the StaPH-B community. Contributors fork the repository, organise files by tool and version, provide a Dockerfile and README, and include a way to test the container. Accepted contributions reach Docker Hub and Quay."
+  },
+  {
+   "heading": "Stability, provenance and validation",
+   "body": "A host asks why StaPH-B should maintain its own collection when BioContainers and Bioconda already provide related resources. Kelsey's answer centres on state public health laboratories and their need to validate workflows, pipelines and tools. A host also reports finding StaPH-B containers more dependable than some automatically assembled alternatives; this is a user experience, not a comparative benchmark.\n\nKelsey recommends retrieving an image by its hash rather than relying only on a tag, so laboratories know exactly which image they are obtaining. Other approaches discussed include secured or locked images and multi-stage builds incorporating test datasets and validation checks.\n\nThe pandemic delayed plans for a publication. Maintaining the containers remained the priority, with broader continuous integration and continuous testing identified as work to advance before publishing."
+  },
+  {
+   "heading": "What the StaPH-B Toolkit simplifies",
+   "body": "The StaPH-B Toolkit is a Python-based utility originally developed to support training. Running a container directly requires knowledge of images, Linux mounts and file systems—details that can distract from analysing sequence data. The toolkit provides a help menu and a simpler interface to the Docker images, then extends that approach to workflows, including Nextflow workflows.\n\nKelsey describes being able to install the toolkit with pip and access a collection of resources. It is useful beyond introductory training: Kelsey sometimes uses it for a one-off samtools task simply to avoid constructing the Docker command. Erin adds that the toolkit curates workflows with a public health focus, helping users navigate an otherwise overwhelming choice."
+  },
+  {
+   "heading": "Workflow packaging and long-term use",
+   "body": "A host compares the toolkit with earlier package-management approaches such as Homebrew and BrewSci, and with the module system in nf-core. The question is whether container interfaces represent another turn in a recurring cycle: packaging software, then building a friendlier layer over the package.\n\nKelsey is cautious about predicting the toolkit's lifespan, but says continued downloads and requests to retain older software demonstrate its usefulness. Erin notes a maintenance challenge when a workflow exists both independently and inside the toolkit: the two versions can drift out of sync. A host also argues that containers become particularly valuable when moving workflows between laptops and computing clusters."
+  },
+  {
+   "heading": "Web interfaces without abandoning the command line",
+   "body": "Terra and Nextflow Tower enter the discussion as ways to make workflows accessible to laboratories with limited resources or computing environments. Erin argues that making workflows easier for non-bioinformaticians to use improves their prospects for long-term survival, whether they are written in Snakemake or Nextflow.\n\nKelsey sees room for both web applications and command-line work. A cloud-based web tool can suit a laboratory that lacks local capacity, while laboratories developing genomic analysis expertise still need flexibility when handling many files, different file systems and networked resources.\n\nThe closing goal is not simply easier installation. With more accessible tools and workflows, attention can shift from training people to install tools towards the analytical questions the tools can answer—and the group can spend more time doing biology."
+  }
+ ],
+ "highlights": [
+  {
+   "time": "00:01:16",
+   "topic": "Erin compares ordinary environments, conda and containers using an experimental analogy."
+  },
+  {
+   "time": "00:02:41",
+   "topic": "Kelsey explains how the shared public health container repository began."
+  },
+  {
+   "time": "00:05:56",
+   "topic": "Pangolin containers support SARS-CoV-2 lineage determination."
+  },
+  {
+   "time": "00:08:15",
+   "topic": "How to contribute a Dockerfile, documentation and tests."
+  },
+  {
+   "time": "00:09:36",
+   "topic": "Public health validation needs distinguish StaPH-B's container collection."
+  },
+  {
+   "time": "00:13:08",
+   "topic": "Publication plans follow container maintenance and continuous testing priorities."
+  },
+  {
+   "time": "00:14:03",
+   "topic": "The Python-based toolkit simplifies container use and incorporates workflows."
+  },
+  {
+   "time": "00:17:28",
+   "topic": "Kelsey considers the toolkit's lifespan as web-based workflow access develops."
+  },
+  {
+   "time": "00:21:38",
+   "topic": "Erin discusses keeping toolkit workflows and standalone repositories updated."
+  },
+  {
+   "time": "00:24:15",
+   "topic": "Web tools can help resource-limited laboratories without replacing command-line flexibility."
+  },
+  {
+   "time": "00:26:44",
+   "topic": "Simpler installation leaves more time for analytical questions and biology."
+  }
+ ],
+ "quotes": [
+  {
+   "text": "I think there's always been things quote-unquote threatening the command line and it's stood the test of time.",
+   "time": "00:24:15",
+   "speaker": "Kelsey Florek"
+  }
+ ],
+ "tools": [
+  "StaPH-B Toolkit",
+  "StaPH-B Docker repository",
+  "Docker",
+  "Docker Hub",
+  "Quay",
+  "conda",
+  "SPAdes",
+  "pangolin",
+  "samtools",
+  "Bioconda",
+  "BioContainers",
+  "Singularity",
+  "Galaxy",
+  "Nextflow",
+  "Snakemake",
+  "nf-core",
+  "Terra",
+  "Nextflow Tower",
+  "Homebrew",
+  "BrewSci",
+  "Python",
+  "pip",
+  "Perl",
+  "CPAN"
+ ],
+ "topics": [
+  "public health bioinformatics",
+  "software containers",
+  "workflow validation",
+  "software provenance",
+  "dependency management",
+  "bioinformatics training",
+  "workflow interfaces",
+  "sars-cov-2"
+ ],
+ "faq": [
+  {
+   "q": "What is the StaPH-B Docker repository for?",
+   "a": "It provides shared containers for tools used by public health laboratories. Laboratories can reuse packaged environments instead of independently installing dependencies and resolving software conflicts."
+  },
+  {
+   "q": "How does the StaPH-B Toolkit differ from running Docker directly?",
+   "a": "The toolkit is a Python-based interface that simplifies access to containers and workflows. It reduces the need for users to handle Docker commands, mounts and file-system details themselves."
+  },
+  {
+   "q": "Why use an image hash rather than a container tag?",
+   "a": "Kelsey recommends using the image hash so laboratories know exactly which image they retrieve each time. This supports the discussion's emphasis on stable environments for validated public health workflows."
+  },
+  {
+   "q": "Can people outside StaPH-B contribute containers?",
+   "a": "Yes. Erin describes forking the repository, following its tool-and-version layout, supplying a working Dockerfile and a way to test it, and submitting a pull request for checks."
+  }
+ ]
+}

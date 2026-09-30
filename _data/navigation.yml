@@ -1,8 +1,8 @@
 header:
-#  - title: Episodes
-#    url:   /pages/Episodes.html
-  - title: Posts
+  - title: Episodes
     url:   /pages/Episodes.html
+  - title: Book
+    url:   /pages/book.html
   - title: Press
     url:   /pages/Press.html
   - title: About

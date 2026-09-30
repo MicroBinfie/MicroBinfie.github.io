@@ -1,0 +1,125 @@
+{
+ "episode": "081",
+ "headline": "Building SARS-CoV-2 benchmark datasets: mining and QC",
+ "description": "Lingzi Xiaoli and Jill Hagey explain how they mined SARS-CoV-2 data, checked SRA metadata and selected benchmark samples against CDC references.",
+ "summary": "Lingzi Xiaoli and Jill Hagey return for the second part of a conversation about building SARS-CoV-2 benchmark datasets. They describe sourcing assemblies and reads, automating metadata checks, and selecting representative sequences using quality-control metrics and CDC internal references. The discussion shows why inconsistent primer labels and sequencing metadata required scrutiny alongside the sequences themselves.",
+ "people": [
+  {
+   "name": "Lingzi Xiaoli",
+   "role": "guest",
+   "affiliation": ""
+  },
+  {
+   "name": "Jill Hagey",
+   "role": "guest",
+   "affiliation": ""
+  },
+  {
+   "name": "Lee Katz",
+   "role": "host",
+   "affiliation": "Centers for Disease Control and Prevention; University of Georgia (adjunct member)"
+  },
+  {
+   "name": "Andrew Page",
+   "role": "host",
+   "affiliation": "Quadram Institute"
+  },
+  {
+   "name": "Nabil-Fareed Alikhan",
+   "role": "host",
+   "affiliation": "Quadram Institute"
+  }
+ ],
+ "sections": [
+  {
+   "heading": "Automating searches and metadata checks",
+   "body": "Jill describes an early challenge: finding SARS-CoV-2 sequences and downloading them in bulk. Bulk downloading from GISAID was difficult at the time, so she experimented with Selenium, a Python package for interacting with web browsers. She used it to search through a list of identifiers, while a colleague pursued a different download approach. Other participants recognised Selenium from website and continuous integration testing.\n\nAlthough the team ultimately used the alternative download route, Jill reused Selenium to extract sample information from NCBI. The aim was to give Lingzi a filtered list of samples meeting three requirements: Illumina sequencing, paired-end reads and ARTIC primers. This avoided checking every sample manually."
+  },
+  {
+   "heading": "Why SRA metadata needed scrutiny",
+   "body": "The team initially relied on metadata in the Sequence Read Archive (SRA), but processing exposed oddities. Jill recalls running some data through the wrong pipeline, finding no reads in R2, and questioning why Nanopore data had an R2 file at all. Such cases prompted a closer look at the relationship between the declared sequencing method and the files being processed.\n\nPrimer descriptions were another obstacle. Information was not always entered in the same place or expressed consistently: ARTIC v3 could appear as version 3, v3 or other wording. Jill had to inspect what individual pages actually said when automated extraction did not retrieve the expected information. One of the hosts notes that the use of v4 would make distinguishing primer versions even more important."
+  },
+  {
+   "heading": "Quality control before selection",
+   "body": "Jill outlines a workflow combining FastQC, SAMtools and the TITAN pipeline. FastQC provided basic quality information. SAMtools was used to examine coverage at nucleotide positions, including average depth and standard deviation. TITAN supplied further metrics, including the number of Ns, Pangolin lineage assignments, amino-acid insertions, deletions and substitutions, and sequencing depth across the assembly.\n\nThese checks determined whether candidate samples met the team's quality criteria. Sequence similarity alone was not enough: the associated reads also had to pass quality control, and the spike mutations needed to agree with the expected lineage profile."
+  },
+  {
+   "heading": "Choosing representative variants",
+   "body": "Lingzi explains that CDC internal references provided the starting point for each lineage. The team searched available GISAID assemblies for candidates with few SNP differences and few ambiguous Ns, then used a linking table to find their corresponding SRA data. Those reads went through the quality-control workflow. Jill also describes using Snippy to compare SNPs against the internal references and checking spike mutations separately.\n\nFor variants of interest (VOIs) and variants of concern (VOCs), the team required the spike mutations described on the CDC website. Asked whose variant definitions guided inclusion, Lingzi says they used the CDC-defined VOIs and VOCs available when the project began; WHO naming was not yet available at that point.\n\nThe show notes identify the project repository as CDCgov/datasets-sars-cov-2 and point listeners to an earlier paper on bacterial benchmark datasets and the preceding episode for part one of the conversation."
+  }
+ ],
+ "highlights": [
+  {
+   "time": "00:00:47",
+   "topic": "Introducing part two: how the SARS-CoV-2 benchmark datasets were assembled"
+  },
+  {
+   "time": "00:01:25",
+   "topic": "Finding sequences, bulk-download difficulties and experimenting with Selenium"
+  },
+  {
+   "time": "00:02:11",
+   "topic": "Using Selenium to automate searches through a list of sample identifiers"
+  },
+  {
+   "time": "00:04:38",
+   "topic": "Distinguishing ARTIC primer versions as v4 comes into use"
+  },
+  {
+   "time": "00:05:20",
+   "topic": "Checking candidate sequences with FastQC, SAMtools and TITAN"
+  },
+  {
+   "time": "00:06:56",
+   "topic": "Starting from CDC internal references and linking GISAID assemblies to SRA reads"
+  },
+  {
+   "time": "00:07:52",
+   "topic": "Deciding which lineages and variant definitions to include"
+  },
+  {
+   "time": "00:08:28",
+   "topic": "Using the CDC-defined VOIs and VOCs available when the project began"
+  }
+ ],
+ "quotes": [],
+ "tools": [
+  "Selenium",
+  "GISAID",
+  "NCBI Sequence Read Archive (SRA)",
+  "FastQC",
+  "SAMtools",
+  "TITAN",
+  "Snippy",
+  "Pangolin",
+  "ARTIC primer schemes (v3 and v4)"
+ ],
+ "topics": [
+  "sars-cov-2",
+  "benchmark datasets",
+  "data mining",
+  "metadata quality",
+  "sequence quality control",
+  "primer schemes",
+  "variant selection",
+  "public health bioinformatics"
+ ],
+ "faq": [
+  {
+   "q": "Where did the SARS-CoV-2 benchmark sequences and reads come from?",
+   "a": "The team searched GISAID assemblies and used a linking table to locate corresponding reads in the SRA. Candidate reads then went through quality-control checks before selection."
+  },
+  {
+   "q": "How did Selenium help build the benchmark datasets?",
+   "a": "Jill Hagey used Selenium to automate browser searches by identifier, then reused it to extract sample metadata from NCBI. This helped filter for Illumina, paired-end samples using ARTIC primers without checking each page manually."
+  },
+  {
+   "q": "How were representative SARS-CoV-2 variant samples selected?",
+   "a": "The team compared candidates with CDC internal lineage references, looking for few SNP differences and few ambiguous Ns. They also checked read quality and required the expected spike mutations for the relevant VOI or VOC."
+  },
+  {
+   "q": "Why was ARTIC primer metadata difficult to filter?",
+   "a": "Submitters used different wording and metadata locations for primer information, including version 3 and v3. The discussion also flags the need to distinguish v3 from v4 as primer schemes change."
+  }
+ ]
+}

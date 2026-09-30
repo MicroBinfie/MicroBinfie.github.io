@@ -1,0 +1,163 @@
+{
+  "episode": "026",
+  "headline": "SARS-CoV-2 contextual data for open genomic epidemiology",
+  "description": "PHA4GE panellists explain a SARS-CoV-2 metadata specification, repository submissions and how contextual data supports public health surveillance.",
+  "summary": "Lee Katz talks with Emma Griffiths, Ruth Timme, Duncan MacCannell, Andrew Page and Nabil-Fareed Alikhan about PHA4GE’s SARS-CoV-2 contextual data specification. They explain how a shared structure for sample, host, sequencing and analysis information can make genomic surveillance more interoperable. The discussion covers practical collection templates, public repository submissions, privacy and the distinction between organising data and choosing to share it.",
+  "people": [
+    {
+      "name": "Lee Katz",
+      "role": "host",
+      "affiliation": ""
+    },
+    {
+      "name": "Emma Griffiths",
+      "role": "guest",
+      "affiliation": "University of British Columbia"
+    },
+    {
+      "name": "Ruth Timme",
+      "role": "guest",
+      "affiliation": "FDA Center for Food Safety and Applied Nutrition"
+    },
+    {
+      "name": "Duncan MacCannell",
+      "role": "guest",
+      "affiliation": "CDC Office of Advanced Molecular Detection"
+    },
+    {
+      "name": "Andrew Page",
+      "role": "panellist",
+      "affiliation": "Quadram Institute"
+    },
+    {
+      "name": "Nabil-Fareed Alikhan",
+      "role": "panellist",
+      "affiliation": "Quadram Institute"
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Why public health needs interoperable data",
+      "body": "At the time of recording, Lee reports more than 16 million COVID-19 cases and 600,000 deaths worldwide, with about 12,000 SARS-CoV-2 genomes uploaded to INSDC and 75,000 to GISAID. Those sequence collections do not automatically come with consistent, usable metadata. Duncan describes a wider problem: public health laboratories often lack dedicated bioinformaticians, system administrators or access to cloud resources, making reproducible analysis across laboratories difficult to sustain.\n\nPHA4GE—the Public Health Alliance for Genomic Epidemiology—was established to address openness, interoperability and sustainability in public health bioinformatics. Its working-group structure follows the model of the Global Alliance for Genomics and Health, GA4GH. Eight groups cover areas including data structures, infrastructure, pipelines, training, repositories, users, validation and ethical data sharing. COVID-19 gives that emerging collaboration a concrete problem to tackle."
+    },
+    {
+      "heading": "Inside the contextual data specification",
+      "body": "Ruth describes a data structures working group with 22 members from about nine countries, including participants in SPHERES, the Canadian COVID Genomics Network and COG-UK. Emma explains that information is distributed across sample collectors, sequencing laboratories, bioinformaticians and public health decision-makers. Different formats, privacy concerns and limited staff time make bringing it together difficult.\n\nThe specification provides a spreadsheet-based collection template with fields for sample information and processing, sequence identifiers and repository accession numbers, host and exposure information, sequencing and bioinformatics methods, and contributor attribution. Fields are colour-coded as essential or required, highly recommended, or optional, with controlled-vocabulary picklists to support consistency. The package also includes a reference guide, an SOP with instructions and examples, and repository submission protocols on protocols.io. The aim is to organise the information from the outset, rather than reconstruct it when an analysis or submission becomes urgent."
+    },
+    {
+      "heading": "Building on standards without requiring disclosure",
+      "body": "Emma stresses that the specification incorporates existing standards rather than replacing them. Broad, pathogen-agnostic standards do not necessarily supply the SARS-CoV-2 detail or public health guidance the group needs. The package maps its fields to existing standards, including MIxS and MIGS, while the show notes describe it as an extension to the INSDC pathogen package.\n\nThe reference guide addresses sharing concerns, including re-identification. Emma explains date jitter: adding or subtracting a day or several days from a collection date. Ruth distinguishes INSDC’s unrestricted data usage from GISAID’s usage restrictions and says the specification maps to both submission formats.\n\nNabil emphasises that adopting the specification does not require publishing every field. Users can keep information private, exchange it with trusted collaborators or release selected information publicly. The purpose is to make data consistently structured before those sharing decisions arise."
+    },
+    {
+      "heading": "What context adds to genomic surveillance",
+      "body": "Andrew explains why a genome alone is insufficient for many surveillance questions. Collection location and date, host age and exposure information can help investigate introductions into an area or relationships with disease severity. Context turns a sequence collection into something that can support public health decisions.\n\nFor COG-UK, he describes weekly uploads to a central UK repository from about 16 sequencing centres. Combining the data allows teams to examine which lineages are circulating in hospitals, care facilities and the community. Multiple lineages can suggest several introductions rather than one expanding outbreak. Shared lineages across geographically separated care facilities can also reveal possible links worth investigating, such as people moving between sites. These are leads for contact tracing, not explanations established by the sequences alone. Andrew frames rapid detection and returning information to contact tracers as important preparation for further infections."
+    },
+    {
+      "heading": "Beyond clinical samples",
+      "body": "Clinical data is the specification’s first priority because it represents most available samples, but Nabil describes a broader scope. Environmental contexts include sewage, door handles and air ventilation shafts. Host information can cover pets, livestock and wild animals, while specimen information can distinguish tissues and materials such as breast milk, saliva and blood. Recording those details supports investigations into viral persistence, environmental contamination and diagnostic sampling.\n\nRuth adds a museum use case: a global consortium of curators is developing a specification for broad coronavirus surveillance in museum specimens. Historical animal specimens could help researchers investigate background reservoirs. The panel presents this as work being developed, rather than a completed surveillance dataset."
+    },
+    {
+      "heading": "Extending the vocabulary and starting work",
+      "body": "Emma explains that users are not restricted to the vocabulary terms already supplied. The SOP includes instructions for finding new standardised terms in relevant ontologies, recognising that the group cannot anticipate every investigation. Duncan reports adoption by the Canadian sequencing initiative and many US SPHERES laboratories, with implementation being considered in Australia and circulation through SANBI and Africa CDC.\n\nThe materials are available through the project’s GitHub repository, including the template, mappings, reference material and links to submission protocols for NCBI, EBI and GISAID. Duncan recommends downloading the package, reading the preprint and following the SOP. The group wants feedback on unclear instructions, missing documentation and practical obstacles. The show notes provide the preprint alongside the specification and protocols."
+    }
+  ],
+  "highlights": [
+    {
+      "time": "00:02:07",
+      "topic": "Duncan explains the public health bioinformatics gaps that led to PHA4GE."
+    },
+    {
+      "time": "00:07:00",
+      "topic": "PHA4GE’s eight working groups and its GA4GH-inspired structure."
+    },
+    {
+      "time": "00:10:32",
+      "topic": "Emma introduces the data structures group’s focus on interoperability."
+    },
+    {
+      "time": "00:12:50",
+      "topic": "Andrew explains what contextual data adds to genome analysis."
+    },
+    {
+      "time": "00:16:11",
+      "topic": "Ruth walks through the template, field priorities, guidance and submission protocols."
+    },
+    {
+      "time": "00:19:02",
+      "topic": "How the specification builds on existing standards with a public health focus."
+    },
+    {
+      "time": "00:24:58",
+      "topic": "Nabil separates structured data collection from decisions about sharing."
+    },
+    {
+      "time": "00:26:25",
+      "topic": "Andrew describes weekly COG-UK surveillance and lineage-based outbreak investigations."
+    },
+    {
+      "time": "00:29:27",
+      "topic": "Environmental samples, animal hosts and specimen types beyond clinical surveillance."
+    },
+    {
+      "time": "00:31:23",
+      "topic": "Emma explains how users can source additional controlled-vocabulary terms."
+    },
+    {
+      "time": "00:32:20",
+      "topic": "Duncan reports adoption and international review of the specification."
+    },
+    {
+      "time": "00:36:12",
+      "topic": "Getting started with the materials and providing practical feedback."
+    }
+  ],
+  "quotes": [
+    {
+      "text": "I mean, the real goal is to get different types of information into a single format structured in a standardized way.",
+      "time": "00:24:58",
+      "speaker": "Nabil-Fareed Alikhan"
+    },
+    {
+      "text": "You know, most labs just don't have access to a dedicated team of bioinformaticians.",
+      "time": "00:02:07",
+      "speaker": "Duncan MacCannell"
+    }
+  ],
+  "tools": [
+    "GitHub",
+    "protocols.io",
+    "GISAID",
+    "INSDC",
+    "BioSample",
+    "date jitter"
+  ],
+  "topics": [
+    "sars-cov-2",
+    "contextual data",
+    "metadata standards",
+    "genomic epidemiology",
+    "public health surveillance",
+    "data interoperability",
+    "controlled vocabularies",
+    "ethical data sharing",
+    "sequence repositories"
+  ],
+  "faq": [
+    {
+      "q": "What does the PHA4GE SARS-CoV-2 contextual data specification contain?",
+      "a": "It includes a collection template for sample, host, exposure, sequencing, bioinformatics and attribution information. Supporting materials include vocabulary guidance, mappings, an SOP and public repository submission protocols."
+    },
+    {
+      "q": "Does using the specification require sharing all my data?",
+      "a": "No. Nabil explains that users can keep data private, share it with trusted partners or submit selected information publicly; the specification provides a consistent structure for those choices."
+    },
+    {
+      "q": "Is the specification limited to clinical SARS-CoV-2 samples?",
+      "a": "Clinical samples are the first priority, but the specification also accommodates environmental sampling, animal hosts and different specimen types. The panel discusses sewage, surfaces and museum animal specimens as examples."
+    },
+    {
+      "q": "What if a controlled-vocabulary term is missing?",
+      "a": "The SOP includes a protocol for sourcing new standardised terms from relevant ontologies. Emma says this is intended to accommodate investigations beyond the examples already covered."
+    }
+  ]
+}

@@ -1,0 +1,161 @@
+{
+ "episode": "105",
+ "headline": "Mobile genetic elements, XDR typhoid and resistance testing",
+ "description": "A live panel on mobile genetic elements, XDR typhoid in Pakistan, staphylococcal resistance and why sequencing still needs laboratory validation.",
+ "summary": "Guest chair Muhammad Yasir joins Andrew Page, Emma Waters and Heather Felgate to discuss mobile genetic elements, antimicrobial resistance and bacterial outbreaks. Recorded before PhD students at the Quadram Institute in Norwich, the panel connects investigations of extensively drug-resistant typhoid with staphylococcal research, diagnostic sequencing and laboratory validation.",
+ "people": [
+  {
+   "name": "Muhammad Yasir",
+   "role": "host",
+   "affiliation": "Quadram Institute"
+  },
+  {
+   "name": "Andrew Page",
+   "role": "host",
+   "affiliation": "Quadram Institute"
+  },
+  {
+   "name": "Emma Waters",
+   "role": "panellist",
+   "affiliation": "Quadram Institute"
+  },
+  {
+   "name": "Heather Felgate",
+   "role": "panellist",
+   "affiliation": "Mark Webber's group"
+  },
+  {
+   "name": "Lee Katz",
+   "role": "host",
+   "affiliation": "Centers for Disease Control and Prevention; University of Georgia"
+  },
+  {
+   "name": "Nabil-Fareed Alikhan",
+   "role": "mentioned",
+   "affiliation": "Quadram Institute"
+  }
+ ],
+ "sections": [
+  {
+   "heading": "Following XDR typhoid through Pakistan",
+   "body": "Yasir introduces Page's work with scientists in Pakistan on extensively drug-resistant (XDR) Salmonella Typhi, reported in 2018. Page describes combining antibiotic susceptibility measurements with genome sequences from XDR and non-XDR isolates. The comparison revealed a plasmid carrying additional antimicrobial resistance genes in an already resistant H58 background; some resistance genes were integrated into the chromosome.\n\nPublic archives linked the plasmid to one found in E. coli from cattle through CDC surveillance. Waters then describes samples sent by a hospital in Lahore after clinicians noticed increasing failures of their usual antibiotics. Sequencing supported spread of the southern outbreak strain northwards. The panel connects these investigations with surveillance and vaccination programmes."
+  },
+  {
+   "heading": "Why a resistance gene is not the whole answer",
+   "body": "Felgate explains why staphylococcal sequencing and phenotypic testing need to work together. A resistance gene may be present without resistance appearing in a laboratory test. Growth conditions can affect its expression, while a sequence match may represent a truncated gene rather than an intact one. Conversely, resistant isolates may lack the genes researchers already know to search for.\n\nHer examples include changes in temperature, salt and calcium requirements during testing. She also distinguishes carriage isolates from isolates recovered from normally sterile sites, such as blood or cerebrospinal fluid. Comparing carriage and disease-associated bacteria can help identify candidate virulence factors, but interpreting whether staphylococci represent infection or contamination remains difficult."
+  },
+  {
+   "heading": "Core genomes depend on the comparison",
+   "body": "Page describes the core genome as dependent on which organisms enter an analysis. He contrasts seven-gene MLST with core genome MLST schemes and study-specific pangenomes. Waters separates shared genetic history from genes essential for survival in a particular environment: different conditions may impose different requirements.\n\nFelgate challenges treating non-aureus staphylococci as one uniform group. She says the coagulase-negative staphylococci grouped together in clinical discussions encompassed 83 species when she last checked. Staphylococcus haemolyticus and Staphylococcus epidermidis illustrate that diversity. Finding a core within individual species is a different problem from finding one across the entire group, and their growth and biofilm behaviours also differ."
+  },
+  {
+   "heading": "Putting mobile DNA to work",
+   "body": "The discussion moves beyond harmful resistance transfer. Page notes that many mobile elements appear to do nothing, and that researchers do not know what advantage cryptic plasmids give their bacterial hosts. Felgate explains how transposons—jumping pieces of DNA—can generate populations of bacteria carrying different gene disruptions. Growing those populations under selected conditions helps identify genes that cannot tolerate disruption and may therefore be essential in that setting.\n\nWaters describes using phages to attack bacteria as a possible alternative treatment for infection. The panel also discusses CRISPR-mediated resistance to phages, while noting that not all bacteria have that system. Yasir gives insulin and industrial enzyme production as beneficial uses of plasmids."
+  },
+  {
+   "heading": "Sequencing can reveal—and hide—mobile elements",
+   "body": "Asked about MinION and long-read sequencing, Page warns that analysis choices can make mobile elements disappear. Some early correction algorithms used shorter fragments, including those below 3,000 bases, to correct longer reads. Small plasmids could consequently be lost from the results. A missing element is not necessarily a biological absence.\n\nThe panel also sees promise in culture-free diagnostics. Waters describes methods with a potential six-hour turnaround from patient sampling to identifying an organism and what it carries. Tuberculosis provides another example: Page contrasts six weeks of culture with sequencing results in a week or two, allowing treatment to be selected more appropriately."
+  },
+  {
+   "heading": "Better data, responsible prescribing and global capacity",
+   "body": "Page is cautious about claims that AI or machine learning will solve antimicrobial resistance. He argues that useful analysis requires high-quality data; Felgate adds that predictions still need laboratory testing. The panel treats computational and experimental work as complementary rather than interchangeable.\n\nSequencing can monitor spread and inform action, but the discussion returns to responsible antibiotic use, vaccination and sanitation. Felgate describes limited testing resources during work in Uganda. Page points to equipment and training established during the COVID pandemic, including at a national reference laboratory in Zimbabwe, as capacity that can support subsequent work on Salmonella Typhimurium and Typhi."
+  }
+ ],
+ "highlights": [
+  {
+   "time": "00:00:47",
+   "topic": "Muhammad Yasir introduces the live panel and its mobile genetic elements theme."
+  },
+  {
+   "time": "00:06:40",
+   "topic": "Andrew Page explains the plasmid evidence behind Pakistan's XDR typhoid investigation."
+  },
+  {
+   "time": "00:10:06",
+   "topic": "Emma Waters describes investigating suspected spread to a hospital in Lahore."
+  },
+  {
+   "time": "00:12:35",
+   "topic": "Heather Felgate explains discrepancies between resistance genes and laboratory results."
+  },
+  {
+   "time": "00:17:52",
+   "topic": "Core genomes, seven-gene MLST, core genome MLST and study-specific pangenomes."
+  },
+  {
+   "time": "00:20:34",
+   "topic": "The diversity hidden within the coagulase-negative staphylococci grouping."
+  },
+  {
+   "time": "00:25:45",
+   "topic": "Using transposons to build gene-disruption libraries and investigate essential genes."
+  },
+  {
+   "time": "00:29:53",
+   "topic": "Using phages to attack bacteria and potentially treat infections."
+  },
+  {
+   "time": "00:32:16",
+   "topic": "Why machine learning needs better data and realistic expectations."
+  },
+  {
+   "time": "00:34:51",
+   "topic": "Sequencing surveillance makes typhoid spread visible and supports vaccination responses."
+  },
+  {
+   "time": "00:36:34",
+   "topic": "How long-read correction algorithms can inadvertently lose small plasmids."
+  },
+  {
+   "time": "00:39:23",
+   "topic": "Redirecting pandemic-era sequencing equipment and training towards bacterial research."
+  }
+ ],
+ "quotes": [
+  {
+   "text": "Transposons are jumping bits of DNA.",
+   "time": "00:25:45",
+   "speaker": "Heather Felgate"
+  },
+  {
+   "text": "Although the solution is just a proper sanitation system.",
+   "time": "00:36:08",
+   "speaker": "Andrew Page"
+  }
+ ],
+ "tools": [
+  "MLST",
+  "core genome MLST",
+  "MinION"
+ ],
+ "topics": [
+  "mobile genetic elements",
+  "antimicrobial resistance",
+  "salmonella typhi",
+  "staphylococci",
+  "plasmids",
+  "transposons",
+  "core genomes",
+  "phage therapy",
+  "long-read sequencing",
+  "genomic surveillance"
+ ],
+ "faq": [
+  {
+   "q": "How did sequencing help investigate XDR typhoid in Pakistan?",
+   "a": "Combined with susceptibility testing, sequencing identified a plasmid carrying additional resistance genes in an already resistant Typhi background. Later samples from Lahore supported spread of the outbreak strain northwards."
+  },
+  {
+   "q": "Does finding a resistance gene mean an isolate is resistant?",
+   "a": "Not necessarily. Felgate describes effects of growth conditions, gene expression and gene truncation, and argues that sequence findings need phenotypic testing."
+  },
+  {
+   "q": "How can transposons help identify essential bacterial genes?",
+   "a": "The panel describes creating populations with different transposon insertions and growing them under selected conditions. Genes that cannot tolerate disruption can then be investigated as essential in those conditions."
+  },
+  {
+   "q": "Can long-read sequencing miss small plasmids?",
+   "a": "Yes. Page describes correction algorithms that used short fragments to improve longer reads, causing small plasmids to disappear from the resulting analysis."
+  }
+ ]
+}

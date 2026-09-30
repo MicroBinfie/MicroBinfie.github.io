@@ -9,6 +9,22 @@ layout: page
 
 Microbial Bioinformatics is a rapidly changing field marrying computer science and microbiology. Join us as we share some tips and tricks we’ve learnt over the years. If you’re student just getting to grips to the field, or someone who just wants to keep tabs on the latest and greatest - this podcast is for you.
 
+## The book: *Nobody Wrote This Down*
+
+<a href="{{ '/pages/book.html' | relative_url }}"><img src="{{ '/assets/book/cover-small.jpg' | relative_url }}" alt="Cover of Nobody Wrote This Down" width="150" style="float: left; margin: 0 1.5em 1em 0;"></a>
+
+Seven years of the podcast, rearranged into something you can read: the file formats nobody
+designed, the contamination that looked like a discovery, and why nobody can agree what a
+species is. **[Read it free as EPUB or PDF]({{ '/pages/book.html' | relative_url }})**, or buy
+the paperback.
+
+<div style="clear: both;"></div>
+
+## Every episode, written up
+
+**[Browse all episodes]({{ '/pages/Episodes.html' | relative_url }})** — each with an overview
+of what was discussed, timestamps to jump to, and a link to listen.
+
 ## Haven't heard us before?
 
 ### Check out our one minute trailer

@@ -1,0 +1,132 @@
+{
+ "episode": "117",
+ "headline": "Titus Brown: from maths to metagenomics and usable software",
+ "description": "Titus Brown on his route into bioinformatics, digital normalisation, khmer, sourmash and the practical barriers to scientific data reuse.",
+ "summary": "Titus Brown joins Lee Katz and Andrew Page to trace his career from maths and experimental developmental biology to metagenomics and software development. He explains how researchers’ practical problems shaped his work on khmer, digital normalisation and sourmash, and why documentation matters as much as implementation. The discussion closes with the organisational and legal obstacles to reusing scientific data.",
+ "people": [
+  {
+   "name": "Titus Brown",
+   "role": "guest",
+   "affiliation": "UC Davis, School of Veterinary Medicine"
+  },
+  {
+   "name": "Lee Katz",
+   "role": "host",
+   "affiliation": "Centers for Disease Control and Prevention"
+  },
+  {
+   "name": "Andrew Page",
+   "role": "host",
+   "affiliation": ""
+  }
+ ],
+ "sections": [
+  {
+   "heading": "From maths to experimental biology",
+   "body": "Brown studied maths at Reed College, where his undergraduate research covered digital evolution and physical meteorology. The latter involved estimating Earth’s albedo by using the Moon as a mirror: comparing the brightness of its dark and illuminated portions provided a measurement of sunlight reflected from Earth. Digital evolution drew him towards biology, a direction reinforced by three senior physicists who independently recommended it for graduate study.\n\nAt Caltech, Brown joined a developmental biology laboratory studying sea urchin gene regulatory networks and cis-regulatory elements. He spent six or seven years doing experiments, including PCR and microinjections, and later completed a short postdoctoral appointment working on chick neural crest."
+  },
+  {
+   "heading": "Software that colleagues could use independently",
+   "body": "As genome sequences accumulated in the late 1990s and early 2000s, Brown’s maths and open-source programming background made him useful to colleagues facing more data than they could handle. He began with large-scale BLAST searches, then developed comparative sequence analysis software, a graphical interface and a web server for computationally demanding work.\n\nOne tool helped researchers find conserved non-coding elements in large stretches of eukaryotic DNA. Brown wrote tutorials and documentation, then returned to his own experiments. At a subsequent sea urchin meeting, he discovered that eight colleagues had used it successfully without needing his support. That experience shaped his commitment to usable software and instructions that let others work independently."
+  },
+  {
+   "heading": "The sequencing boom and digital normalisation",
+   "body": "Brown arrived at Michigan State University in 2008 intending to combine embryology with large-scale gene expression analysis. As the Illumina GA2 became widely available, colleagues brought him transcriptome datasets they could not open in Excel. He shifted towards analysing non-model transcriptomes and metagenomes, with k-mers becoming central to his work on khmer and digital normalisation.\n\nThe digital normalisation idea crystallised while he was considering a single-cell E. coli dataset with roughly 400× coverage. Why retain that depth if 50–100× would suffice? He tried estimating each read’s coverage and discarding reads once coverage was high enough. A Python interface helped him produce a functioning implementation in about 30 minutes. It proved useful for RNA-seq and metagenomic datasets. Soil metagenomes became a demanding test case: Brown reasoned that tools able to handle their scale would be broadly applicable."
+  },
+  {
+   "heading": "UC Davis, MinHash and sourmash",
+   "body": "After moving to UC Davis, Brown combined his research programme with informal advice and collaborations in the veterinary school. He describes arriving exhausted and worrying that he would not be creative again. Two papers helped change that: MetaPalette, concerning k-mers and species-level specificity, and Mash, which applied MinHash to genomic sequences.\n\nWhile reviewing Mash, Brown implemented MinHash himself in a few lines of Python and became an advocate for the paper. Together, the papers prompted him to start sourmash, with a graduate student joining through GitHub pull requests. Brown describes sourmash as a MinHash-derived approach adapted for metagenomics: it discards 99.9% of k-mers, allowing much broader comparisons without the memory and disk demands of retaining them all. Looking back, he regards the period he had feared would be unproductive as one of his most creative."
+  },
+  {
+   "heading": "GAMBIT and targeted k-mers",
+   "body": "One of the hosts recommends GAMBIT as another way to avoid examining every k-mer. In the host’s description, it selects sequences using a particular prefix and examines the sequence after that prefix. The host relates this to start codons and approximately one k-mer per bacterial gene, highlighting its usefulness for typing. This is a brief recommendation rather than a detailed comparison with sourmash."
+  },
+  {
+   "heading": "Why data reuse needs more than infrastructure",
+   "body": "Brown also describes several years working on NIH data infrastructure, beginning with the Data Commons Pilot Phase Consortium and continuing into the Common Fund Data Ecosystem. He became one of two people running a large consortium, but left that coordination role in April of the year he was interviewed. The experience taught him about practical obstacles to reuse—and about his own limited appetite for meetings.\n\nHe frames FAIR data—findability, accessibility, interoperability and reusability—as a difficult problem requiring socio-technical solutions that account for how people actually work. One of the hosts adds that different national and state laws complicate sharing, and criticises spending that creates an appearance of data sharing without making data available. The episode ends before that discussion can develop further."
+  }
+ ],
+ "highlights": [
+  {
+   "time": "00:00:00",
+   "topic": "Lee Katz introduces Titus Brown and the interview."
+  },
+  {
+   "time": "00:01:33",
+   "topic": "Brown traces his background from maths, digital evolution and physical meteorology."
+  },
+  {
+   "time": "00:08:31",
+   "topic": "One of the hosts describes using khmer to downsample very high-coverage bacterial data."
+  },
+  {
+   "time": "00:08:50",
+   "topic": "A deeply sequenced single-cell E. coli dataset prompts the digital normalisation idea."
+  },
+  {
+   "time": "00:16:12",
+   "topic": "GAMBIT is recommended for prefix-targeted k-mers and bacterial typing."
+  },
+  {
+   "time": "00:17:11",
+   "topic": "Brown discusses NIH data infrastructure, consortium coordination and barriers to reuse."
+  },
+  {
+   "time": "00:19:07",
+   "topic": "Different legal jurisdictions and the gap between apparent and actual data sharing."
+  }
+ ],
+ "quotes": [
+  {
+   "text": "if you can analyze a soil metagenome, any other metagenome is easier.",
+   "time": "00:08:50",
+   "speaker": "Titus Brown"
+  }
+ ],
+ "tools": [
+  "BLAST",
+  "PCR",
+  "Illumina GA2",
+  "Excel",
+  "khmer",
+  "Digital normalisation",
+  "RNA-seq",
+  "Python",
+  "MetaPalette",
+  "Mash",
+  "MinHash",
+  "sourmash",
+  "GitHub",
+  "GAMBIT"
+ ],
+ "topics": [
+  "microbial bioinformatics",
+  "metagenomics",
+  "transcriptomics",
+  "k-mers",
+  "digital normalisation",
+  "minhash",
+  "software documentation",
+  "data reuse",
+  "fair data",
+  "career journeys"
+ ],
+ "faq": [
+  {
+   "q": "Why did Titus Brown move from experimental biology into bioinformatics?",
+   "a": "Growing volumes of sequence data created problems his programming background could help solve. At Michigan State, colleagues’ transcriptome datasets persuaded him to focus on analysis rather than generating more data, leading him towards non-model transcriptomics and metagenomics."
+  },
+  {
+   "q": "How does Brown describe digital normalisation?",
+   "a": "It estimates the coverage of each read and discards reads once coverage is high enough. Brown’s motivating example was a single-cell E. coli dataset with about 400× coverage, where he wondered whether 50–100× would be sufficient."
+  },
+  {
+   "q": "How does sourmash reduce the burden of working with k-mers?",
+   "a": "Brown describes a MinHash-derived approach adapted for metagenomics that throws away 99.9% of k-mers. This makes it possible to compare many genomes and metagenomes without retaining every k-mer in memory or on disk."
+  },
+  {
+   "q": "What makes scientific data reuse difficult beyond the technical work?",
+   "a": "Brown argues that solutions must account for how people work, not just provide infrastructure. The discussion also identifies differences in national and state laws, alongside efforts that appear to share data without actually making it available."
+  }
+ ]
+}

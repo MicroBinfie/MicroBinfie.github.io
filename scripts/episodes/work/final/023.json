@@ -1,0 +1,149 @@
+{
+ "episode": "023",
+ "headline": "CoronaHiT: multiplexing 94 SARS-CoV-2 genomes on Nanopore",
+ "description": "Justin O'Grady and David Baker explain CoronaHiT, a lower-cost method for multiplexing up to 94 SARS-CoV-2 samples on a Nanopore flow cell.",
+ "summary": "Justin O'Grady and David Baker join Nabil-Fareed Alikhan and Andrew Page to explain CoronaHiT, a method for sequencing up to 94 SARS-CoV-2 samples on one Oxford Nanopore MinION flow cell. They discuss how it combines ARTIC PCR with Nextera-based barcode preparation, reduces costs and fits existing analysis pipelines. This July 2020 episode also examines barcode design, uneven genome coverage and choosing between Nanopore and Illumina as sample numbers change.",
+ "people": [
+  {
+   "name": "Nabil-Fareed Alikhan",
+   "role": "host",
+   "affiliation": ""
+  },
+  {
+   "name": "Andrew Page",
+   "role": "host",
+   "affiliation": "Quadram Institute Bioscience"
+  },
+  {
+   "name": "Justin O'Grady",
+   "role": "guest",
+   "affiliation": "Quadram Institute Bioscience; University of East Anglia"
+  },
+  {
+   "name": "David Baker",
+   "role": "guest",
+   "affiliation": "Quadram Institute Bioscience"
+  }
+ ],
+ "sections": [
+  {
+   "heading": "More samples at a lower cost",
+   "body": "CoronaHiT was developed to increase throughput and reduce the cost of SARS-CoV-2 sequencing without losing Nanopore's rapid turnaround. The standard approach discussed handled 23 samples plus a negative control, costing close to £40 per sample depending on reagent sourcing. David Baker puts CoronaHiT at approximately £13–£18 per sample, depending on multiplexing.\n\nThe team tested 48 and 94 samples on a single flow cell. The 94-sample configuration uses 95 barcodes including the negative control: one of the original 96 did not work. The accompanying preprint is identified in the show notes by DOI: 10.1101/2020.06.24.162156."
+  },
+  {
+   "heading": "Keeping ARTIC PCR, changing barcode preparation",
+   "body": "CoronaHiT retains the initial RNA, cDNA and ARTIC PCR stages. ARTIC produces roughly 98 overlapping fragments of about 400 base pairs, covering the approximately 30 kb SARS-CoV-2 genome. Instead of adding native barcodes by ligation, CoronaHiT uses a modified low-input Nextera approach to introduce adapters, then PCR enrichment to add 24-base Nanopore barcodes.\n\nSwitching requires additional primers and a Nextera kit, but otherwise uses standard laboratory equipment. Tagmentation can remove sequence from amplicon ends; overlaps of up to about 100 bases help maintain coverage. The discussion also notes that Nextera XT was already being used for Illumina sequencing of COVID samples."
+  },
+  {
+   "heading": "From a PacBio experiment to Nanopore barcodes",
+   "body": "Andrew Page recalls discussing Baker's multiplexing idea during a flight to MRC Gambia. The initial work involved bacterial samples and PacBio sequencing. Baker subsequently tried leftover pooled material on a Nanopore flow cell and found that it performed well even without the size selection used for the PacBio preparation.\n\nEarly tests used 16-base PacBio barcodes, including a run with 158 samples, but demultiplexing was inadequate. Moving to 24-base Nanopore barcodes improved separation and compatibility with Guppy. Additional flanking sequence helped protect against losing barcode bases at fragment ends. Custom barcode designs required more work, such as configuring Porechop."
+  },
+  {
+   "heading": "Why total yield does not determine sample capacity",
+   "body": "The panel describes approximately 12 Gb from an ARTIC Nanopore run lasting 24–36 hours. In principle, that is ample data for many small viral genomes. In practice, the limiting factor is uneven amplification: different primer pairs can produce coverage differences of roughly a thousand-fold across the genome.\n\nConsequently, they describe needing at least 1,000-fold overall genome coverage to recover enough data from poorly covered regions. This constrains multiplexing despite the apparently generous total yield. Further primer optimisation can improve one region while worsening another. Splitting the multiplex PCR into more reactions might help, but would add cost and preparation time."
+  },
+  {
+   "heading": "Checking consensus sequences and selecting samples",
+   "body": "Andrew reports comparing the same samples using Illumina, standard ARTIC Nanopore sequencing and CoronaHiT. With comparable coverage, they obtained matching consensus sequences, checked every SNP and found consistent phylogenetic results. Despite tagmentation, primer masking remains essential: some synthetic primer sequence survives, and a false SNP matters when genomes differ at only a few positions.\n\nSample quality also affects multiplexing. A Ct below 30 is discussed as a possible selection threshold for easier samples; including harder samples may favour reducing a run to 48. An alternative is assessing ARTIC PCR success, with a suggested concentration threshold above 2 ng/µl. That preserves the opportunity to recover some higher-Ct samples, but incurs PCR costs before rejection."
+  },
+  {
+   "heading": "Matching the platform to changing demand",
+   "body": "For consistently large batches, Baker favours Illumina and describes obtaining up to 120 Gb from a high-output NextSeq run. Nanopore offers flexibility when only a few samples arrive: sequencing can be monitored in real time, stopped, and the flow cell washed for reuse with different barcodes.\n\nThat flexibility became more useful as local demand fell from hundreds to tens of samples per week. Waiting to fill an Illumina run could delay information about clusters and outbreaks. The panel also considers anticipated native 96-barcode kits from Oxford Nanopore, but cannot yet make a firm comparison: ligase requirements and workflow complexity would influence their cost and convenience."
+  }
+ ],
+ "highlights": [
+  {
+   "time": "00:01:37",
+   "topic": "CoronaHiT's aims: higher throughput and lower sequencing costs"
+  },
+  {
+   "time": "00:02:40",
+   "topic": "Using Nextera adapters and PCR to add Nanopore barcodes"
+  },
+  {
+   "time": "00:05:49",
+   "topic": "Testing 48 and 94 samples, barcode crosstalk and Guppy compatibility"
+  },
+  {
+   "time": "00:08:06",
+   "topic": "The multiplexing idea's origins in a conversation about PacBio"
+  },
+  {
+   "time": "00:12:59",
+   "topic": "How tagmentation affects the ends of overlapping ARTIC amplicons"
+  },
+  {
+   "time": "00:14:28",
+   "topic": "Why residual synthetic primer sequence still needs masking"
+  },
+  {
+   "time": "00:15:28",
+   "topic": "Uneven amplicon coverage limits the number of genomes per flow cell"
+  },
+  {
+   "time": "00:18:02",
+   "topic": "Choosing Illumina for large batches or Nanopore for flexible turnaround"
+  },
+  {
+   "time": "00:22:06",
+   "topic": "Comparing consensus sequences and SNPs across three sequencing approaches"
+  },
+  {
+   "time": "00:24:59",
+   "topic": "Using ARTIC PCR concentration as an alternative to a Ct cutoff"
+  },
+  {
+   "time": "00:25:59",
+   "topic": "Potential competition from native 96-barcode Nanopore kits"
+  }
+ ],
+ "quotes": [
+  {
+   "text": "So essentially being able to process more samples more quickly at a lower cost.",
+   "time": "00:01:37",
+   "speaker": "David Baker"
+  }
+ ],
+ "tools": [
+  "CoronaHiT",
+  "ARTIC protocol",
+  "Nextera",
+  "Nextera XT",
+  "Guppy",
+  "Porechop",
+  "Oxford Nanopore MinION",
+  "Illumina NextSeq",
+  "PacBio Sequel",
+  "TapeStation",
+  "Qubit"
+ ],
+ "topics": [
+  "sars-cov-2",
+  "covid-19",
+  "multiplexing",
+  "nanopore sequencing",
+  "amplicon sequencing",
+  "barcode design",
+  "demultiplexing",
+  "genome coverage",
+  "public health surveillance"
+ ],
+ "faq": [
+  {
+   "q": "How many SARS-CoV-2 samples can CoronaHiT sequence on one MinION flow cell?",
+   "a": "The episode describes testing up to 94 samples plus a negative control. Lower multiplexing, such as 48 samples, leaves more coverage available for difficult samples."
+  },
+  {
+   "q": "How much did CoronaHiT sequencing cost per sample?",
+   "a": "Baker quotes approximately £13–£18 per sample, depending on multiplexing, compared with close to £40 for the standard approach discussed. These are the costs reported in the July 2020 episode."
+  },
+  {
+   "q": "Does CoronaHiT replace the ARTIC PCR protocol?",
+   "a": "No. It retains the initial ARTIC amplification and changes the subsequent barcode preparation, using Nextera-based adapter insertion followed by PCR addition of Nanopore barcodes."
+  },
+  {
+   "q": "Does CoronaHiT still require primer masking?",
+   "a": "Yes. Although tagmentation removes some amplicon-end sequence, synthetic primer sequence can remain and must be masked to avoid misleading SNP calls."
+  }
+ ]
+}

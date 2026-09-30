@@ -1,0 +1,145 @@
+{
+ "episode": "030",
+ "headline": "How we built MicroBinfie: our first year of podcasting",
+ "description": "Lee, Andrew and Nabil explain how MicroBinfie began, from Slack discussions and a six-episode pilot season to microphones, Zoom and Audacity.",
+ "summary": "On MicroBinfie’s first birthday, Lee Katz, Andrew Page and Nabil-Fareed Alikhan explain how their online collaborations became a podcast about microbial bioinformatics. They discuss choosing an informal format, preparing their first six episodes, securing ethics approval and distributing recordings. Their production lessons cover microphones, quiet rooms, shared notes and editing workflows.",
+ "people": [
+  {
+   "name": "Lee Katz",
+   "role": "host",
+   "affiliation": "CDC; Center for Food Safety, University of Georgia (adjunct)"
+  },
+  {
+   "name": "Andrew Page",
+   "role": "host",
+   "affiliation": ""
+  },
+  {
+   "name": "Nabil-Fareed Alikhan",
+   "role": "host",
+   "affiliation": ""
+  }
+ ],
+ "sections": [
+  {
+   "heading": "Collaboration before meeting in person",
+   "body": "Andrew and Nabil first met at an MRC CLIMB hackathon, where Andrew also learnt to play Pandemic. Further hackathons and conferences kept them in contact, and a Slack group grew out of one of those events. Lee joined that group early. His connection with Nabil also involved email correspondence about EnteroBase and CDC data submissions to the short read archive.\n\nThe three had already collaborated closely on a paper in 2017 before they had all met in person. That paper began with a Slack discussion comparing MLST software: which implementations worked, which did not, and how they performed against one another. Andrew recalls the work moving so quickly that CDC clearance struggled to keep pace. This experience showed how an informal conversation could become a useful shared resource."
+  },
+  {
+   "heading": "Capturing the conversations between talks",
+   "body": "The podcast was intended to preserve practical knowledge exchanged over coffee, at bars and in Slack discussions. The hosts describe information scattered across Reddit, Biostars and other sources, alongside insider knowledge that newcomers might otherwise acquire only after spending considerable time in the community.\n\nThey considered a blog or a small magazine-style PDF, but drafting written material felt too formal and labour-intensive. Andrew and Lee had also chaired virtual lab talks over Zoom, recording presentations for YouTube. Those talks were useful, but polished seminars did not reproduce the casual conversations they wanted to capture.\n\nThey deliberately chose a narrow microbial bioinformatics focus rather than covering all microbiology or bioinformatics. Read mapping, for example, means different things in different organisms. Lee cites How I Built This, Planet Money and Science Friday as influences; Nabil watches a lot of topic-led YouTube videos, which reassured him that anyone with something interesting to say will find an audience."
+  },
+  {
+   "heading": "Testing the format with six episodes",
+   "body": "Lee gathered advice from podcast hosts and his brother, who works in social media. A podcasting blog helped the group compare formats, plan a pilot and outline a six-episode season. One practical suggestion was to keep shared notes or an instant-message conversation open while recording, giving them another way to communicate and something to read as they went.\n\nTheir first recording concerned FASTQ files. They chose it as a practice topic they could discard, but eventually released it later in the sequence. Andrew proposed the subject without speaking on that episode: the original plan used two speaking co-hosts, with a third person in the background. They subsequently found that three voices suited their differing perspectives and conversational style.\n\nPreparing six episodes established a manageable commitment and a release buffer. They led with two strong episodes and closed with a guest interview. Later, they became comfortable adding recordings continuously rather than organising everything into seasons."
+  },
+  {
+   "heading": "Ethics, hosting and shared files",
+   "body": "Lee describes spending roughly six months to a year working through CDC ethics requirements. The arrangement is documented, signed by him and his supervisor, and renewed annually. The disclaimer separating the podcast’s opinions from CDC’s is important, but he stresses that it does not remove the need to be careful about what he says.\n\nAndrew set up SoundCloud to host the audio and generate an RSS feed. They submitted that feed to services including Spotify and iTunes, then investigated additional services when listeners could not find the show in their preferred apps. Many apps picked it up through iTunes.\n\nA shared Google Drive folder holds episode subfolders, ideas and other material. Promotion included Twitter, Biostars, Reddit, Slack, Facebook, friends and institutional publicity. Shared Google Docs also support planning and communication during recording."
+  },
+  {
+   "heading": "Better microphones and quieter rooms",
+   "body": "The FASTQ recording exposed weaknesses in their early audio setup. Nabil’s advice is to experiment first, then buy a decent microphone once committed: poor source audio leaves little room for repair during editing. His USB microphone cost about £50. Lee estimates his microphone at $50–100 and credits support through his adjunct membership grant at the University of Georgia. Andrew uses a Blue Yeti recommended by Nabil, borrowed from his son.\n\nFinding a quiet recording room proved equally important. Fans, hums, tapping and toilets could become conspicuous through headphones even when barely noticed in person. Small offices introduced echoes, while larger meeting rooms worked better for them. Glass surfaces caused further reflections. For one recording, Nabil put a towel over his head and microphone, and it made an improvement.\n\nThey also note that imperfect sound did not prevent their early software discussions and a café-hallway guest recording from attracting listeners."
+  },
+  {
+   "heading": "Making recording and editing easier",
+   "body": "The hosts initially improved quality by recording separate tracks locally. By this episode, they were comfortable recording through Zoom without maintaining those separate local recordings. They edit in Audacity, and Nabil created a standard operating procedure with screenshots and suggested parameters to make the process more consistent.\n\nEditing taught them to slow down, leave pauses and restart a sentence when necessary. Interesting material becomes difficult to recover when delivered too quickly or tangled with other speech. They do not regard every hesitation as a fault, but Nabil routinely removes lip clicks because he finds them harsh through headphones.\n\nEditing time varies. Nabil recalls taking more than two hours per episode initially, compared with around an hour to an hour and a half later; Lee still reports about three hours. They sometimes record two or three episodes per session and generally aim for roughly half an hour per episode."
+  }
+ ],
+ "highlights": [
+  {
+   "time": "00:00:19",
+   "topic": "Andrew recalls meeting Nabil at an MRC CLIMB hackathon and keeping in touch through Slack."
+  },
+  {
+   "time": "00:02:37",
+   "topic": "A Slack discussion becomes a paper comparing MLST software."
+  },
+  {
+   "time": "00:03:06",
+   "topic": "The hosts explain why they wanted to preserve informal discussions and practical tips."
+  },
+  {
+   "time": "00:10:38",
+   "topic": "Lee shares podcasting advice, including shared notes and messages during recording."
+  },
+  {
+   "time": "00:11:31",
+   "topic": "Advice on editing and social media leads into Lee’s CDC ethics approval process."
+  },
+  {
+   "time": "00:14:30",
+   "topic": "A pilot and six-episode season help establish content, format and a release schedule."
+  },
+  {
+   "time": "00:17:09",
+   "topic": "Early audio problems prompt advice to invest in a decent microphone."
+  },
+  {
+   "time": "00:20:20",
+   "topic": "Andrew explains SoundCloud hosting, RSS feeds and podcast distribution."
+  },
+  {
+   "time": "00:29:37",
+   "topic": "The recording workflow moves from separate local tracks to Zoom."
+  },
+  {
+   "time": "00:30:33",
+   "topic": "Nabil describes the Audacity editing procedure, screenshots and suggested parameters."
+  },
+  {
+   "time": "00:32:46",
+   "topic": "Finding quiet recording rooms means avoiding fans, hums and other background noise."
+  }
+ ],
+ "quotes": [
+  {
+   "text": "I mean, basically, as long as your audio isn't sort of distractingly bad, you can get away with it, I think.",
+   "time": "00:19:29",
+   "speaker": "Nabil-Fareed Alikhan"
+  }
+ ],
+ "tools": [
+  "Slack",
+  "EnteroBase",
+  "Short Read Archive",
+  "MLST",
+  "Google Docs",
+  "Google Drive",
+  "Zoom",
+  "YouTube",
+  "Audacity",
+  "SoundCloud",
+  "Spotify",
+  "iTunes",
+  "Blue Yeti"
+ ],
+ "topics": [
+  "microbial bioinformatics",
+  "podcasting",
+  "science communication",
+  "online collaboration",
+  "audio recording",
+  "audio editing",
+  "podcast distribution",
+  "ethics approval"
+ ],
+ "faq": [
+  {
+   "q": "Why did MicroBinfie choose a podcast rather than a blog?",
+   "a": "The hosts wanted to capture informal practical discussions that were often missing from posters and seminars. Written formats felt more formal and demanding to produce, while a podcast allowed back-and-forth discussion and guests."
+  },
+  {
+   "q": "What software did the hosts use to record, edit and distribute MicroBinfie?",
+   "a": "By this episode they were comfortable recording through Zoom and editing in Audacity. SoundCloud hosted the audio and supplied an RSS feed for distribution through services including Spotify and iTunes."
+  },
+  {
+   "q": "Why did they record six episodes before launching?",
+   "a": "A six-episode season gave them a bounded commitment while they tested the workload and format. It also provided a release buffer, allowing them to assess feedback and prepare further recordings."
+  },
+  {
+   "q": "What helped improve the podcast’s audio quality?",
+   "a": "The hosts recommend a decent microphone and a genuinely quiet room, checked by listening back through headphones. Slower speech, pauses and restarting unclear sentences also made recordings easier to edit."
+  }
+ ]
+}

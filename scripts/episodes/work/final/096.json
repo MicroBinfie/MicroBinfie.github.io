@@ -1,0 +1,145 @@
+{
+ "episode": "096",
+ "headline": "IMMEM XIII and ASM NGS: wastewater, metadata and hybrid meetings",
+ "description": "Lee Katz, Andrew Page and Nabil-Fareed Alikhan compare hybrid conferences, real-time wastewater surveillance and genomic metadata.",
+ "summary": "Lee Katz, Andrew Page and Nabil-Fareed Alikhan reflect on IMMEM XIII and ASM NGS, comparing conference formats and the scientific themes running through both meetings. They discuss wastewater surveillance moving into routine public health use, the metadata needed to interpret millions of genomes, and the difficulty of sustaining genomic epidemiology platforms. Their discussion connects lessons from COVID sequencing with practical questions about accessibility, data quality and long-term software support.",
+ "people": [
+  {
+   "name": "Lee Katz",
+   "role": "host",
+   "affiliation": "Centers for Disease Control and Prevention; University of Georgia (adjunct member)"
+  },
+  {
+   "name": "Andrew Page",
+   "role": "host",
+   "affiliation": "Quadram Institute"
+  },
+  {
+   "name": "Nabil-Fareed Alikhan",
+   "role": "host",
+   "affiliation": "Quadram Institute"
+  }
+ ],
+ "sections": [
+  {
+   "heading": "Hybrid conferences and divided attention",
+   "body": "Andrew describes hybrid sessions in rooms of 200 or 400 people where switching to an online speaker disrupted the meeting. Audience members appeared to return to their Zoom habits, checking phones rather than engaging with the presentation. Remote speakers lacked visual feedback from the room, while technical barriers made questions and timekeeping difficult. Lee says smaller conferences of fewer than 200 people, with everyone in person, felt pretty nice.\n\nNabil agrees that some hybrid sessions worked poorly, but argues against losing the accessibility of virtual meetings. Online conferences had allowed researchers from distant places, who might otherwise have been unable to attend, to present strong science. He questions whether resistance reflects an inherently unworkable format or exhaustion after so much virtual participation."
+  },
+  {
+   "heading": "Different audiences, shared COVID lessons",
+   "body": "Nabil characterises ASM NGS as more focused on public health applications, with substantial attendance from US government and public health organisations. IMMEM had a more academic emphasis. He also noticed more formal introductions and use of professional titles at the US meeting, compared with the informal atmosphere at IMMEM in the UK.\n\nBoth meetings felt unusually friendly after a long gap in face-to-face conferences. COVID lineage plots and stacked abundance plots were recurring presentation features, but the programme was not entirely dominated by COVID. A repeated question was whether tools and lessons developed for COVID could transfer to other organisms, including whether something like UShER could be used beyond its existing application."
+  },
+  {
+   "heading": "Wastewater moves towards real-time surveillance",
+   "body": "Wastewater was a prominent theme at both meetings. The hosts mention uses beyond COVID, such as tracking polio and Salmonella Typhi, and Andrew recalls an older study of antibiotic resistance genes in wastewater at increasing distances from a hospital. Nabil asks how well approaches that distinguish COVID lineages will work for more nuanced questions or other organisms. The hosts also discuss a practical limitation: sampling centralised sewage cannot represent everyone where septic tanks, latrines or disconnected systems are common. Infrastructure and population density matter, not simply national wealth.\n\nThe novelty, they stress, is not wastewater sequencing itself. They recall earlier work using pyrosequencing and 454, including metagenomics of aircraft toilet samples. The change is from isolated academic snapshots to repeated analysis intended to inform public health in real time.\n\nDuring their COVID sequencing work, hospital samples could reflect infections from two or three weeks earlier. Wastewater surveillance might recover some of that reporting time, rather than waiting for people to become ill enough to enter hospital and have samples collected and sequenced."
+  },
+  {
+   "heading": "Millions of genomes still need context",
+   "body": "The discussion of roughly 14 million COVID genomes returns to a longstanding problem: sequence volume does not compensate for missing contextual metadata. Nabil calls for consistent standards and identifiable data stewards who can answer questions about records. Andrew jokingly proposes machine learning as a universal solution; Nabil says the attempts he has seen are not convincing substitutes for metadata.\n\nFor Salmonella, useful context includes collection circumstances, location, disease state, patient or animal outcomes, and sampling position within a factory. Nabil puts sequencing costs at £50–£100 per isolate, making neglected metadata a substantial wasted investment. The hosts also emphasise shared ontologies: collaborators need to agree, for example, where an animal carcass becomes a food product along a processing chain."
+  },
+  {
+   "heading": "Dates, coordinates and misleading precision",
+   "body": "Collection dates receive particular attention. A year-only date, an exact sampling date and a date deliberately shifted to protect privacy are not interchangeable. Excel conversions and US-style date ordering can create further ambiguity. The hosts recommend ISO 8601 formatting, while stressing that users also need to know the precision and provenance of a date.\n\nLee explains that metadata for rare organisms can risk identifying patients. His group sometimes mixes retrospective isolates into uploads so that upload dates cannot simply be treated as dates of infection.\n\nCoordinates can be equally misleading. A precise-looking location may be an automatically filled country midpoint, an assumed population centre or the address of a public health organisation receiving samples. The practical advice is to check what each field represents before using it for mapping or epidemiological interpretation."
+  },
+  {
+   "heading": "Who maintains public health platforms?",
+   "body": "An unnamed commercial provider ending support prompts a discussion about replacement platforms. Nabil reports interest in open-source, transparent systems that users can control, but asks who will pay for maintenance. Research funding tends to reward new findings rather than the continuing work of keeping infrastructure operational.\n\nThe hosts contrast a pipeline written quickly and shared on GitHub with an end-to-end genomic epidemiology platform requiring developers, documentation, technical support and a help desk. Public health deployment adds serious validation, change tracking and consistent results when the same sample is analysed again.\n\nNabil uses an imagined EnteroBase successor to illustrate the tension between accreditation and a bioinformatician’s wish to keep changing software. Commercial teams can support routine maintenance, but that work offers few academic rewards. Institutional support and public funding are discussed as possibilities; the episode leaves the long-term funding question unresolved."
+  }
+ ],
+ "highlights": [
+  {
+   "time": "00:01:05",
+   "topic": "Which parts of in-person, virtual and hybrid conference formats failed?"
+  },
+  {
+   "time": "00:03:42",
+   "topic": "Nabil defends the accessibility and wider participation offered by virtual meetings."
+  },
+  {
+   "time": "00:07:26",
+   "topic": "ASM NGS and IMMEM differ in audience, formality and public health emphasis."
+  },
+  {
+   "time": "00:10:18",
+   "topic": "Recurring COVID lineage plots and questions about transferring COVID tools to other organisms."
+  },
+  {
+   "time": "00:12:41",
+   "topic": "Wastewater surveillance attracts attention, alongside questions about its limits."
+  },
+  {
+   "time": "00:15:51",
+   "topic": "The shift from retrospective wastewater studies to real-time public health surveillance."
+  },
+  {
+   "time": "00:19:21",
+   "topic": "Millions of COVID genomes expose longstanding gaps in contextual metadata."
+  },
+  {
+   "time": "00:23:22",
+   "topic": "Defining sampling sites and food-production stages requires agreement between collaborators."
+  },
+  {
+   "time": "00:25:11",
+   "topic": "Collection dates need clear precision, provenance and protection against conversion errors."
+  },
+  {
+   "time": "00:29:22",
+   "topic": "A commercial platform ending support raises questions about replacements and maintenance funding."
+  },
+  {
+   "time": "00:31:16",
+   "topic": "Public health pipelines require validation, documentation and tracked changes."
+  }
+ ],
+ "quotes": [
+  {
+   "text": "a genome is only worth the contextual metadata that goes along with it",
+   "time": "00:19:40",
+   "speaker": "Nabil-Fareed Alikhan"
+  },
+  {
+   "text": "No, I don't want to support the same software for the next 20 years.",
+   "time": "00:32:48",
+   "speaker": "Nabil-Fareed Alikhan"
+  }
+ ],
+ "tools": [
+  "Zoom",
+  "UShER",
+  "454",
+  "pyrosequencing",
+  "Excel",
+  "GitHub",
+  "EnteroBase"
+ ],
+ "topics": [
+  "hybrid conferences",
+  "public health genomics",
+  "wastewater surveillance",
+  "covid-19",
+  "contextual metadata",
+  "data standards",
+  "genomic epidemiology",
+  "software sustainability",
+  "open source"
+ ],
+ "faq": [
+  {
+   "q": "What problems did the hosts encounter at hybrid conferences?",
+   "a": "They describe reduced audience engagement during remote talks, missing visual cues for speakers, difficult question sessions and overruns. Nabil nevertheless argues that virtual participation improves accessibility and should not simply be abandoned."
+  },
+  {
+   "q": "What was new about the wastewater surveillance discussed?",
+   "a": "The hosts distinguish established wastewater sequencing research from its growing use for regular, real-time public health reporting. They suggest it can provide an earlier signal than hospital sampling, which in their COVID work could lag infection by two or three weeks."
+  },
+  {
+   "q": "What metadata should accompany microbial genomes?",
+   "a": "The discussion emphasises collection date, location, sampling context and relevant patient, animal or food-production information. The hosts recommend consistent definitions and ISO 8601 dates, while warning that privacy adjustments and automatically assigned coordinates can make apparently precise values misleading."
+  },
+  {
+   "q": "Why is sustaining genomic epidemiology software difficult?",
+   "a": "Routine platforms need maintenance, user support, documentation and validation, but academic incentives favour new research and publications. Open-source availability does not resolve the funding problem, and the hosts leave the question of long-term support open."
+  }
+ ]
+}

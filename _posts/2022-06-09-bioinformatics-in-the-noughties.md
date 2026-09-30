@@ -1,12 +1,139 @@
 ---
-date: 2022-06-09 00:00:00
-title: MicroBinfie Podcast, 84 Bioinformatics in the noughties with Mark Pallen
-link: https://soundcloud.com/microbinfie/bioinformatics-in-the-noughties
 layout: page
+title: 'Episode 84: Bioinformatics in the noughties with Mark Pallen'
+date: '2022-06-09 00:00:00'
+link: https://soundcloud.com/microbinfie/bioinformatics-in-the-noughties
+episode: '84'
+soundcloud_track: '1241965861'
 tags:
-  - microbinfie
-  - podcast
+- microbinfie
+- podcast
+description: Mark Pallen recalls PSI-BLAST, sortases, ESAT-6 and E. coli, showing how early microbial genomes challenged assumptions about bacterial biology.
+excerpt: Mark Pallen recalls PSI-BLAST, sortases, ESAT-6 and E. coli, showing how early microbial genomes challenged assumptions about bacterial biology.
+headline: Mark Pallen on microbial bioinformatics in the noughties
+guests:
+- Mark Pallen
+topics:
+- microbial genomics
+- bioinformatics history
+- homology searches
+- sortases
+- type vii secretion
+- type iii secretion
+- escherichia coli
+- model organisms
+- bacterial evolution
+- reverse vaccinology
+faq:
+- q: How did Mark Pallen use PSI-BLAST to study sortases?
+  a: He used iterative homology searches to identify sortases and their substrates, initially in Staphylococcus aureus and then across other newly available genomes. The broader searches revealed multiple sortases, clustered substrate genes and roles in assembling Gram-positive fimbriae.
+- q: Why does the episode question E. coli K-12 as a representative model?
+  a: Pallen describes vestigial flagellar genes in K-12 and explains how long laboratory histories can complicate interpretation of model strains. He argues for comparing laboratory strains with fresh, minimally passaged isolates rather than treating K-12 as an idealised E. coli genome.
+- q: Was the biological function of ESAT-6 understood?
+  a: Pallen says its function was still not entirely clear at the time of the episode. Its recognition by T cells made it useful in a tuberculosis test, but did not explain everything it did for the bacterium or the roles of related proteins in other organisms.
+- q: How were the newly predicted E. coli type III secretion effectors tested?
+  a: Pallen and Scott Beatson used homology searches to identify dozens of new candidates. Collaborators then demonstrated secretion of many candidates experimentally, connecting the computational predictions with laboratory evidence in work published in PNAS.
 ---
+
+*Mark Pallen on microbial bioinformatics in the noughties*
+
+Professor Mark Pallen joins Lee Katz, Andrew Page and Nabil-Fareed Alikhan to revisit microbial bioinformatics around the turn of the millennium. He describes sequencing Tropheryma whipplei, using PSI-BLAST to discover protein families across newly available genomes, and finding unexpected complexity in secretion systems. These experiences challenged assumptions about model organisms and showed the value of combining comparative genomics, evolutionary thinking and laboratory experiments.
+
+<iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" title="Episode 84: Bioinformatics in the noughties with Mark Pallen" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1241965861&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=false"></iframe>
+
+[Listen to Episode 84: Bioinformatics in the noughties with Mark Pallen on SoundCloud](https://soundcloud.com/microbinfie/bioinformatics-in-the-noughties)
+
+## In this episode
+
+### First genomes and the race to sequence Tropheryma whipplei
+
+Pallen recalls the excitement of seeing complete microbial genomes for the first time. Even for E. coli, studied for roughly a century, he says half its genes had remained undiscovered until genome sequencing. Alongside work on Campylobacter, he became involved in sequencing Tropheryma whipplei, the unusual, slow-growing organism responsible for Whipple’s disease.
+
+The project brought him together with David Relman, whom he regarded as a scientific hero. Relman had established the organism’s distinct identity using a 16S sequence. A French group had managed to grow it in association with human cells, but a proposed collaboration did not proceed. Pallen recalls that the team working with Relman needed 18 months to grow sufficient biomass for sequencing—longer than the sequencing itself. The UK-led project finished ahead of a competing French effort.
+
+### PSI-BLAST reveals more than one sortase story
+
+After moving to Belfast in late 1999, Pallen approached Tim Foster in Dublin about cross-border research funding. Foster wanted to identify the full set of Staphylococcus aureus proteins targeted to the cell surface by sortase. These substrates carried an LPXTG motif. Pallen used PSI-BLAST, whose iterative searches build a model from homologues and use it to find more distant matches. He remembers the repeated discovery of unexpected matches as intensely addictive.
+
+The work identified roughly half a dozen or more new sortase substrates in S. aureus, followed by laboratory characterisation. Extending the searches across dozens of other genomes overturned the simple picture: substrate genes often clustered with sortase genes, and some organisms contained multiple sortases and substrate clusters. In some actinobacteria, sortases also helped assemble Gram-positive fimbriae rather than simply attach individual proteins to the surface. Pallen connects this experience to Alfred North Whitehead’s advice to seek simplicity while distrusting it.
+
+### ESAT-6, WXG100 and unanswered questions about function
+
+A discussion about a tuberculosis T-cell test prompted another comparative search. Pallen asked what ESAT-6 did for the bacterium: being recognised as an antigen described its interaction with the host, not necessarily its biological function. Searches involving the protein family and an associated ATPase revealed a much wider distribution than the original Mycobacterium tuberculosis setting suggested.
+
+The WXG100 proteins and type VII secretion systems appeared in contexts including S. aureus, with related proteins also found in some Gram-negative bacteria. Pallen stresses that these unexpected distributions raised questions that remained unresolved. When Lee asks about reverse vaccinology, Pallen places that approach alongside the opportunities created by early genomes, but notes that ESAT-6 was discovered before the genome was sequenced. Despite its use in the tuberculosis ELISpot test, its function was still not entirely clear twenty years later.
+
+### E. coli K-12 is another strain, not a perfect model
+
+Work on E. coli exposed the limits of treating K-12 as an ideal representative of bacterial biology. Pallen describes ETT2, a type III secretion gene cluster that was widespread among the E. coli strains examined. In every case his group inspected, frameshifts and deletions suggested that it could not function as a type III secretion system.
+
+K-12 also contained a small remnant of a second flagellar gene cluster: two incomplete genes lacking start codons and promoters. When the group sequenced enteroaggregative E. coli, they found a complete cluster, Flag-2, at that position; only a small number of strains retain this ancestral state. Pallen compares these remnants with Darwin’s vestigial organs. Extensive gene degeneration was already familiar from Mycobacterium leprae, but finding such remnants in a revered model organism initially felt surprising. His retrospective lesson is straightforward: K-12 is simply another E. coli strain.
+
+### Fresh isolates and an ecological–evolutionary perspective
+
+Lee asks whether a more representative strain would have been preferable to K-12. Pallen explains that early sequencing projects often prioritised type strains and familiar laboratory strains. Long periods of subculture complicated their interpretation; he mentions Salmonella Typhimurium LT2 and notes irradiation in K-12’s ancestry. Gordon Dougan advocated sequencing fresh, minimally passaged isolates alongside laboratory strains to obtain a less laboratory-shaped view of bacterial genomes.
+
+Pallen and Brendan Wren developed the broader argument in a Nature review, emphasising an ecological–evolutionary, or eco-evo, perspective. A genome needs to be interpreted through both its evolutionary ancestry and its ecological setting. Features associated with virulence also occurred in commensal and environmental organisms. Pallen points out that bacteria interact with eukaryotes throughout soils and oceans, particularly unicellular eukaryotes. Against that background, amoebae and invertebrates were not merely artificial substitutes for studying interactions with human hosts.
+
+### From predicted effectors to laboratory confirmation
+
+Scott Beatson joined Pallen’s group after securing a Dorothy Hodgkin fellowship. Although Beatson had worked on Pseudomonas aeruginosa, Pallen persuaded him to investigate type III secretion in E. coli. The opportunity was to look beyond the assumption that the system’s effectors were all confined to one secretion-associated gene cluster.
+
+Homology searches instead identified dozens of new candidate effectors elsewhere in the chromosome. Working with collaborators at Imperial and in Japan, the team showed experimentally that many of these proteins were secreted by the system. The work culminated in a PNAS paper. Pallen describes this as especially rewarding because the project connected bioinformatics predictions with laboratory confirmation, rather than stopping at a list of sequence similarities.
+
+## Highlights
+
+- [00:00:47](https://soundcloud.com/microbinfie/bioinformatics-in-the-noughties#t=0:47) — Nabil introduces Mark Pallen and the return to bioinformatics around the turn of the millennium.
+- [00:01:17](https://soundcloud.com/microbinfie/bioinformatics-in-the-noughties#t=1:17) — Pallen recalls the first microbial genomes and the Tropheryma whipplei sequencing project.
+- [00:15:28](https://soundcloud.com/microbinfie/bioinformatics-in-the-noughties#t=15:28) — Lee asks whether E. coli K-12 is representative enough to serve as a model.
+- [00:15:47](https://soundcloud.com/microbinfie/bioinformatics-in-the-noughties#t=15:47) — Pallen explains the limitations of long-cultured laboratory strains and the case for fresh isolates.
+- [00:20:17](https://soundcloud.com/microbinfie/bioinformatics-in-the-noughties#t=20:17) — Lee asks whether the ESAT-6 discussion connects with reverse vaccinology.
+- [00:20:38](https://soundcloud.com/microbinfie/bioinformatics-in-the-noughties#t=20:38) — Pallen discusses reverse vaccinology, the tuberculosis T-cell test and uncertainty about ESAT-6 function.
+
+## In their own words
+
+> one of the great things about a career in academic life is you do get to meet your heroes and sometimes you can get to work with your heroes as time goes on
+>
+> — Mark Pallen, [00:01:17](https://soundcloud.com/microbinfie/bioinformatics-in-the-noughties#t=1:17)
+
+> But for me, that was one of the most rewarding things where we actually tied the bioinformatics predictions into laboratory confirmation in a very coherent way.
+>
+> — Mark Pallen, [00:15:47](https://soundcloud.com/microbinfie/bioinformatics-in-the-noughties#t=15:47)
+
+## Who is talking
+
+- **Mark Pallen** (guest, University of East Anglia; Quadram Institute)
+- **Lee Katz** (host)
+- **Andrew Page** (host)
+- **Nabil-Fareed Alikhan** (host)
+
+Also mentioned: David Relman, Tim Foster, Alfred North Whitehead, Gordon Dougan, Brendan Wren, Scott Beatson.
+
+## Tools and resources mentioned
+
+PSI-BLAST, BLAST, ELISpot, reverse vaccinology.
+
+## Questions this episode answers
+
+### How did Mark Pallen use PSI-BLAST to study sortases?
+
+He used iterative homology searches to identify sortases and their substrates, initially in Staphylococcus aureus and then across other newly available genomes. The broader searches revealed multiple sortases, clustered substrate genes and roles in assembling Gram-positive fimbriae.
+
+### Why does the episode question E. coli K-12 as a representative model?
+
+Pallen describes vestigial flagellar genes in K-12 and explains how long laboratory histories can complicate interpretation of model strains. He argues for comparing laboratory strains with fresh, minimally passaged isolates rather than treating K-12 as an idealised E. coli genome.
+
+### Was the biological function of ESAT-6 understood?
+
+Pallen says its function was still not entirely clear at the time of the episode. Its recognition by T cells made it useful in a tuberculosis test, but did not explain everything it did for the bacterium or the roles of related proteins in other organisms.
+
+### How were the newly predicted E. coli type III secretion effectors tested?
+
+Pallen and Scott Beatson used homology searches to identify dozens of new candidates. Collaborators then demonstrated secretion of many candidates experimentally, connecting the computational predictions with laboratory evidence in work published in PNAS.
+
+*This page was written from a machine transcript of the episode and checked against it. Listen to the episode for the whole conversation.*
+
+## Show notes
 
 Mark Pallen explains how exciting it was to be in microbial
 bioinformatics around the turn of the millennium, as we gained genomes
@@ -45,9 +172,9 @@ aeruginosa. The result was the discovery of dozens of new type III
 secretion effectors, tying together bioinformatics and lab work to
 culminate in a PNAS paper.
 
-<iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1241965861&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=false"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/microbinfie" title="Micro Binfie Podcast" target="_blank" style="color: #cccccc; text-decoration: none;">Micro Binfie Podcast</a> · <a href="https://soundcloud.com/microbinfie/40-a-crash-course-in-sars-cov-2-bioinformatics" title="84 Bioinformatics in the noughties with Mark Pallen" target="_blank" style="color: #cccccc; text-decoration: none;">40 A crash course in SARS-CoV-2 bioinformatics</a></div>
 
-# Selective bibliography
+
+### Selective bibliography
 
 - Konings, F, Perkins, MD, Kuhn, JH, Pallen, MJ, Alm, EJ, Archer, BN, Barakat, A, Bedford, T, Bhiman, JN, Caly, L, Carter, LL, Cullinane, A, de Oliveira, T, Druce, J, El Masry, I, Evans, R, Gao, GF, Gorbalenya, AE, Hamblion, E, Herring, BL, Hodcroft, E, Holmes, EC, Kakkar, M, Khare, S, Koopmans, MPG, Korber, B, Leite, J, MacCannell, D, Marklewitz, M, Maurer-Stroh, S, Rico, JAM, Munster, VJ, Neher, R, Munnink, BO, Pavlin, BI, Peiris, M, Poon, L, Pybus, O, Rambaut, A, Resende, P, Subissi, L, Thiel, V, Tong, S, van der Werf, S, von Gottberg, A, Ziebuhr, J, Van Kerkhove, MD (2021) SARS-CoV-2 Variants of Interest and Concern naming scheme conducive for global discourse Nature Microbiology 6 (7) 821 823
 - Pallen, MJ, Alikhan, NF (2021) Naming the Unnamed: Over 45,000 Candidatus Names for Unnamed Archaea and Bacteria in the Genome Taxonomy Database Preprints https://doi.org/10.20944/preprints2021110557v1

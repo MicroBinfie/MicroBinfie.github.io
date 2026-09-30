@@ -1,0 +1,150 @@
+{
+  "episode": "108",
+  "headline": "SeqCode: naming prokaryotes from genome sequence data",
+  "description": "Marike Palmer and Miguel Rodriguez explain SeqCode, genome quality standards and the debate over naming uncultivated prokaryotes.",
+  "summary": "Guests Marike Palmer and Miguel Rodriguez join hosts Lee Katz and Nabil-Fareed Alikhan to discuss SeqCode, a nomenclatural code that uses sequence data to name prokaryotes. They explain its relationship with the existing culture-based code, its genome quality requirements and disagreements over mass naming. The discussion shows why stable names matter for research and regulation, while distinguishing naming from the work of cultivating and understanding organisms.",
+  "people": [
+    {
+      "name": "Lee Katz",
+      "role": "host",
+      "affiliation": "Centers for Disease Control and Prevention; University of Georgia"
+    },
+    {
+      "name": "Nabil-Fareed Alikhan",
+      "role": "host",
+      "affiliation": "Quadram Institute, Norwich, UK"
+    },
+    {
+      "name": "Marike Palmer",
+      "role": "guest",
+      "affiliation": "School of Life Sciences, University of Nevada Las Vegas"
+    },
+    {
+      "name": "Miguel Rodriguez",
+      "role": "guest",
+      "affiliation": "University of Innsbruck, Departments of Microbiology and the Digital Science Center (DiSC)"
+    },
+    {
+      "name": "Mark Pallen",
+      "role": "mentioned",
+      "affiliation": ""
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Why a parallel nomenclatural code?",
+      "body": "SeqCode provides rules for naming prokaryotes using sequence data as nomenclatural types. The guests contrast this with the ICNP, which, as described in the episode, requires pure cultures deposited in two culture collections. A 2020 roadmap paper in Nature Microbiology outlined two routes: change the existing code to accept sequence data, or establish a parallel code.\n\nProposals to modify the ICNP were published in 2015 and 2016, but the International Committee on Systematics of Prokaryotes voted against the change in 2020. SeqCode followed further community workshops involving over 800 registrants from 42 countries. The guests emphasise compatibility rather than competition: cultivation remains valuable for physiology, and a future merger of the codes is an aspiration."
+    },
+    {
+      "heading": "Governance and routes to registration",
+      "body": "SeqCode has an executive board, committees and working groups, with elected and co-opted positions. The International Society for Microbial Ecology provides umbrella support, including hosting voting and discussion opportunities. Joining the SeqCode community does not require ISME membership.\n\nThe guests describe three validation routes. Their preferred route involves authors working with registry curators on names, descriptions and etymology while preparing a manuscript. A second allows registration after publication. A third, prospective route would coordinate nomenclatural review with partner journals’ manuscript review. SeqCode is not tied to one journal: a peer-reviewed manuscript in any journal can support registration, provided the naming and genome quality requirements are met."
+    },
+    {
+      "heading": "The debate over naming 65,000 taxa",
+      "body": "Miguel Rodriguez discusses a separate paper with Mark Pallen and Nabil-Fareed Alikhan proposing arbitrarily formed names for 65,000 taxa. At the time of recording, SeqCode required distinguishable linguistic roots, meaning many of those names could not be validated under it. Rodriguez argues that pronounceable invented words can be easier to remember than alphanumeric identifiers; OP9 and SAR11 also appear in the discussion as examples of identifier-based naming.\n\nMarike Palmer outlines objections to mass naming without presenting every objection as her own position. These include naming organisms from other researchers’ data before their studies are complete, the memorability of meaningful names, and whether names should follow active investigation. Alikhan stresses that their proposed names were not intended to claim priority over better names supplied by researchers studying those organisms."
+    },
+    {
+      "heading": "What genome quality is required?",
+      "body": "The starting thresholds discussed are more than 90% genome completeness and less than 5% contamination. A 16S rRNA gene sequence alone is not accepted as a nomenclatural type. Including 16S is recommended, rather than compulsory, because it helps connect genome-based and 16S-based taxonomies.\n\nPalmer explains that recovering the correct 16S sequence from a metagenome-assembled genome can be difficult. Making it mandatory could encourage authors to attach an incorrect sequence. Quality standards sit in an appendix and can be reviewed. Smaller sets of housekeeping genes are discussed only as a possible future option for difficult organisms, such as obligate intracellular parasites—not an accepted alternative at the time."
+    },
+    {
+      "heading": "When completeness estimates are misleading",
+      "body": "Rodriguez names CheckM, CheckM2 and MIGA when discussing estimates based on conserved genes. Such estimates can be problematic for deep-branching CPR organisms, endosymbionts with reduced genomes, and cells containing numerous non-identical chromosomes. He gives the striking example of an apparent 1,000% contamination estimate for a biologically valid genome representation.\n\nRegistry submissions still require completeness and contamination estimates. However, authors can explain why those estimates may be unsuitable for their organism. Curators can consider smaller exceptions, while substantial questions may go to the Reconciliation Commission and Standards Working Group. The approach combines conservative entry requirements with a mechanism for reviewing biological exceptions."
+    },
+    {
+      "heading": "Stable names and recognisable records",
+      "body": "The guests argue that regulated names for uncultivated organisms can help agencies refer consistently and uniquely to taxa with clinical or environmental significance. They also note that pathovars, serovars and biovars are not regulated by either SeqCode or the ICNP, although regulatory agencies already use genomic information to define relevant groups.\n\nSeqCode assigns accession numbers to registered lists containing one or more names and encourages authors to report them in publications. In ordinary use, a SeqCode name remains an italicised Latin or Latinised binomial. For formal references to nomenclatural types, Rodriguez describes a superscript capital TS, distinguishing it from the capital T used under the ICNP."
+    }
+  ],
+  "highlights": [
+    {
+      "time": "00:01:39",
+      "topic": "The community effort behind SeqCode and the need to name uncultivated organisms"
+    },
+    {
+      "time": "00:05:05",
+      "topic": "Governance, voting membership and elected versus co-opted positions"
+    },
+    {
+      "time": "00:09:44",
+      "topic": "Three routes for validating names through the SeqCode registry"
+    },
+    {
+      "time": "00:18:00",
+      "topic": "Plan A: modifying the existing culture-based nomenclatural code"
+    },
+    {
+      "time": "00:19:29",
+      "topic": "The proposals, the 2020 rejection and subsequent community workshops"
+    },
+    {
+      "time": "00:24:20",
+      "topic": "A separate proposal for arbitrarily formed names for 65,000 taxa"
+    },
+    {
+      "time": "00:26:01",
+      "topic": "Objections to mass naming using other researchers’ data"
+    },
+    {
+      "time": "00:33:44",
+      "topic": "Genome quality thresholds and the standards working group"
+    },
+    {
+      "time": "00:37:00",
+      "topic": "Why completeness and contamination estimates fail for some taxa"
+    },
+    {
+      "time": "00:38:33",
+      "topic": "Reporting quality estimates and explaining exceptions to curators"
+    },
+    {
+      "time": "00:40:09",
+      "topic": "Stable names for uncultivated taxa with regulatory significance"
+    },
+    {
+      "time": "00:42:30",
+      "topic": "Accession numbers for registered lists in publications"
+    }
+  ],
+  "quotes": [
+    {
+      "text": "And that's why we aimed for trying to keep that compatibility between the codes as far as we could.",
+      "time": "00:15:42",
+      "speaker": "Marike Palmer"
+    }
+  ],
+  "tools": [
+    "SeqCode registry",
+    "CheckM",
+    "CheckM2",
+    "MIGA"
+  ],
+  "topics": [
+    "seqcode",
+    "prokaryotic nomenclature",
+    "uncultivated microorganisms",
+    "microbial taxonomy",
+    "genome quality",
+    "metagenome-assembled genomes",
+    "16s rrna",
+    "scientific governance"
+  ],
+  "faq": [
+    {
+      "q": "Does SeqCode replace the ICNP?",
+      "a": "No. The guests describe it as a parallel code designed to remain compatible with the ICNP. They support continued cultivation efforts and hope the systems might eventually merge."
+    },
+    {
+      "q": "Can a prokaryote be named under SeqCode using only 16S?",
+      "a": "Not under the requirements discussed in this episode. SeqCode requires a high-quality genome; 16S is recommended within it but is not compulsory."
+    },
+    {
+      "q": "What are SeqCode’s genome quality thresholds?",
+      "a": "The episode gives thresholds of more than 90% completeness and less than 5% contamination. Authors must submit estimates, but can explain limitations or unusual biology for curator review."
+    },
+    {
+      "q": "Are automatically generated names accepted by SeqCode?",
+      "a": "At the time of recording, names required distinguishable linguistic roots. Many names in the discussed 65,000-taxon proposal therefore could not be validated without a change to the code."
+    }
+  ]
+}
