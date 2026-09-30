@@ -1,14 +1,137 @@
 ---
-date: 2020-10-29 00:00:00
-title: MicroBinfie Podcast, 33 The untrained monkey
-link: https://soundcloud.com/microbinfie/33-bioinformatics-training
 layout: page
+title: 'Episode 33: The untrained monkey'
+date: '2020-10-29 00:00:00'
+link: https://soundcloud.com/microbinfie/33-bioinformatics-training
+episode: '33'
+soundcloud_track: '911214574'
 tags:
-  - microbinfie
-  - podcast
+- microbinfie
+- podcast
+description: Lee Katz, Andrew Page and Finlay Maguire debate short bioinformatics courses, Galaxy, command-line skills and realistic research goals.
+excerpt: Lee Katz, Andrew Page and Finlay Maguire debate short bioinformatics courses, Galaxy, command-line skills and realistic research goals.
+headline: 'Bioinformatics training: what can you learn in a week?'
+guests:
+- Finlay Maguire
+topics:
+- bioinformatics training
+- command-line skills
+- galaxy workflows
+- research capacity
+- genome assembly
+- microbial eukaryotes
+- data visualisation
+- teaching mixed backgrounds
+- computational abstraction
+faq:
+- q: Can a one-week course make someone an expert in bioinformatics?
+  a: The panel says no. A short course can introduce tools, terminology and ways to find help, but independent expertise requires continued practice and stronger foundations.
+- q: Do you need programming skills to analyse microbial genomes?
+  a: Andrew describes wet-lab researchers using Galaxy for assemblies, BLAST searches and other established analyses without programming. Finlay argues that command-line skills become more important when research requires unusual workflows, troubleshooting or changes to tool behaviour.
+- q: Why can microbial eukaryote analysis need different training from bacterial analysis?
+  a: The discussion contrasts established bacterial workflows with eukaryote projects requiring more customisation, larger computing resources and custom-trained annotation models. Finlay’s Paramecium project illustrates how multiple nuclei, symbionts and associated organisms complicate analysis.
+- q: What should a beginner bioinformatics course teach beyond commands?
+  a: The panel highlights file systems, functions, documentation and how to ask useful questions. Practical examples should connect to learners’ goals, while prepared computing environments can reduce installation barriers.
 ---
+
+*Bioinformatics training: what can you learn in a week?*
+
+Lee Katz and Andrew Page talk with guest Finlay Maguire about what short bioinformatics courses can realistically achieve. Starting with a visitor who expected a Nature paper after four and a half days, they debate Galaxy, command-line training and the foundations needed to interpret results. The discussion connects teaching choices to learners’ backgrounds, biological questions and longer-term research goals.
+
+<iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" title="Episode 33: The untrained monkey" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/911214574&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=false"></iframe>
+
+[Listen to Episode 33: The untrained monkey on SoundCloud](https://soundcloud.com/microbinfie/33-bioinformatics-training)
+
+## In this episode
+
+### Four and a half days is not a foundation
+
+Andrew recalls a visitor with no bioinformatics background who expected to learn the field and produce a Nature paper in four and a half days. The story opens a discussion about the gap between completing a short course and becoming an independent researcher.
+
+Courses can move rapidly from an hour or two of command-line instruction to Artemis, mapping, assembly and RNA-seq. Participants may leave with extensive materials and a virtual machine, but that does not make them experts. Finlay identifies two frequently missing foundations: understanding file systems and understanding functions. Rather than promising mastery, intensive training can introduce the vocabulary, documentation and ways of finding help that support continued learning.
+
+### Galaxy versus the command line
+
+Andrew argues that Galaxy lets wet-lab researchers assemble genomes, run BLAST and build workflows without first learning shell commands. Many learners want SNPs, trees, metadata comparisons and figures, rather than lessons in sorting and indexing BAM files. He suggests that teaching visualisation in R may sometimes serve them better.
+
+Finlay asks what the learner wants to do afterwards. Galaxy may suit established analyses, but someone who wants to change an assembler’s behaviour or investigate an unusual failure may need command-line skills. He also questions whether abstraction reduces scrutiny of results. Andrew acknowledges that risk while arguing that automated workflows prevent basic mistakes, including mishandling overlapping paired-end reads or neglecting adapter trimming. Their disagreement is about where to invest limited teaching time, not whether everyone needs identical skills.
+
+### The organism changes the training problem
+
+The panel contrasts well-established bacterial workflows with less predictable microbial eukaryote analysis. Routine E. coli assembly is a different proposition from a project requiring substantial customisation. Andrew recalls groups handling about 50 eukaryotic worms and 20,000 bacteria, with bacterial assembly and annotation far more straightforward.
+
+Finlay describes his PhD work on Paramecium endosymbiosis. The system contained somatic and germline nuclei, green algal endosymbionts, bacterial DNA and a giant virus associated with the cell. He was attempting single-cell transcriptomics of that system. Such complexity makes the limits of standard workflows more apparent: annotation may need custom-trained models, and a convenient interface may not expose the changes a researcher needs.
+
+### Practical courses need usable environments and examples
+
+Andrew describes a course in The Gambia where each student received a preconfigured virtual machine on MRC CLIMB, with conda and assemblers available. Learners were then left to work through basic datasets, which seemed to work quite well. Lee recalls a CDC workshop around 2010 or 2011 using CMG BioTools: explicit commands and a prepared virtual machine helped beginners produce publication-ready figures.
+
+Example selection remains difficult. A Plasmodium falciparum assembly cannot simply be expected to finish in five minutes, while a small plasmid example may offer less biological insight. The panel argues that exercises can fail by being either too complicated or too simple; useful training needs a manageable task that still connects to the learner’s question.
+
+### Teach people how to ask the next question
+
+Finlay describes research-capacity workshops called Micro Research, which combine small amounts of seed funding, project development and mentoring. Participants often begin without research experience. He reports that roughly 70% remain involved in research five years later and that most groups obtain a PubMed publication.
+
+The two-week course does not attempt to teach every detail of statistics, ethics, grant review and knowledge translation. Instead, it gives participants terminology, resources and the ability to ask for appropriate help. Finlay applies a similar principle in computing practicals: rather than immediately supplying an answer, show learners how to find documentation, inspect an option and understand a default.
+
+### Mixed backgrounds need different routes
+
+Lee recalls entering a bioinformatics graduate programme from biology and finding computer science graduates much faster initially. Later, biological knowledge became important for understanding the purpose of the analysis. Finlay adds that computer science students are not automatically comfortable with command-line file handling, pipes or messy input data.
+
+The discussion returns to learning objectives. A PhD student bringing bacterial reads has a concrete problem to extend classroom exercises; an undergraduate exploring the field may not. Deep-learning boot camps provide another example of the abstraction problem: running a convolutional network quickly does not necessarily mean understanding it. Andrew describes asking interview candidates who list machine learning on their CVs to draw a three-layer neural network.
+
+## Highlights
+
+- [00:01:22](https://soundcloud.com/microbinfie/33-bioinformatics-training#t=1:22) — Andrew recalls a visitor expecting bioinformatics expertise and a Nature paper in four and a half days.
+- [00:03:16](https://soundcloud.com/microbinfie/33-bioinformatics-training#t=3:16) — Short courses should teach learners how to help themselves through documentation and help messages.
+- [00:07:15](https://soundcloud.com/microbinfie/33-bioinformatics-training#t=7:15) — Galaxy raises the question of whether programming is necessary for routine bioinformatics analysis.
+- [00:09:49](https://soundcloud.com/microbinfie/33-bioinformatics-training#t=9:49) — Finlay describes the biological complexity of his Paramecium transcriptomics project.
+- [00:11:47](https://soundcloud.com/microbinfie/33-bioinformatics-training#t=11:47) — Andrew explains his move towards Galaxy and a virtual-machine-based course in The Gambia.
+- [00:14:47](https://soundcloud.com/microbinfie/33-bioinformatics-training#t=14:47) — A learner’s longer-term goals determine whether command-line training is worth the initial effort.
+- [00:17:07](https://soundcloud.com/microbinfie/33-bioinformatics-training#t=17:07) — Lee recalls a CMG BioTools workshop that helped command-line beginners produce publication-ready figures.
+- [00:19:44](https://soundcloud.com/microbinfie/33-bioinformatics-training#t=19:44) — Micro Research workshops combine terminology, project development and continuing mentorship.
+- [00:24:43](https://soundcloud.com/microbinfie/33-bioinformatics-training#t=24:43) — Automated workflows can prevent basic mistakes that depend on otherwise undocumented practical knowledge.
+- [00:28:22](https://soundcloud.com/microbinfie/33-bioinformatics-training#t=28:22) — Lee reflects on the different strengths of biology and computer science graduates.
+- [00:31:55](https://soundcloud.com/microbinfie/33-bioinformatics-training#t=31:55) — Deep-learning boot camps illustrate the difference between running a method and understanding it.
+
+## In their own words
+
+> Approximately four and a half days. I jest.
+>
+> — Andrew Page, [00:01:22](https://soundcloud.com/microbinfie/33-bioinformatics-training#t=1:22)
+
+## Who is talking
+
+- **Lee Katz** (host)
+- **Andrew Page** (host)
+- **Finlay Maguire** (guest, Computer science department, Dalhousie University)
+
+## Tools and resources mentioned
+
+Galaxy, Artemis, BLAST, CARD, RGI, ResFinder, IRIDA, Nextflow, conda, MRC CLIMB, CMG BioTools, SPAdes, Prodigal, R, Bash, Perl, Java, Docker, RNA-seq, RT-PCR, logistic regression.
+
+## Questions this episode answers
+
+### Can a one-week course make someone an expert in bioinformatics?
+
+The panel says no. A short course can introduce tools, terminology and ways to find help, but independent expertise requires continued practice and stronger foundations.
+
+### Do you need programming skills to analyse microbial genomes?
+
+Andrew describes wet-lab researchers using Galaxy for assemblies, BLAST searches and other established analyses without programming. Finlay argues that command-line skills become more important when research requires unusual workflows, troubleshooting or changes to tool behaviour.
+
+### Why can microbial eukaryote analysis need different training from bacterial analysis?
+
+The discussion contrasts established bacterial workflows with eukaryote projects requiring more customisation, larger computing resources and custom-trained annotation models. Finlay’s Paramecium project illustrates how multiple nuclei, symbionts and associated organisms complicate analysis.
+
+### What should a beginner bioinformatics course teach beyond commands?
+
+The panel highlights file systems, functions, documentation and how to ask useful questions. Practical examples should connect to learners’ goals, while prepared computing environments can reduce installation barriers.
+
+*This page was written from a machine transcript of the episode and checked against it. Listen to the episode for the whole conversation.*
+
+## Show notes
+
 Someone shows up at your door wanting to get a nature paper in
 bioinformatics and they only have a week, where do you start? We talk
 bioinformatics training with Finlay Maguire.
-
-<iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/911214574&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=false"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/microbinfie" title="Micro Binfie Podcast" target="_blank" style="color: #cccccc; text-decoration: none;">Micro Binfie Podcast</a> · <a href="https://soundcloud.com/microbinfie/40-a-crash-course-in-sars-cov-2-bioinformatics" title="33 The untrained monkey" target="_blank" style="color: #cccccc; text-decoration: none;">40 A crash course in SARS-CoV-2 bioinformatics</a></div>

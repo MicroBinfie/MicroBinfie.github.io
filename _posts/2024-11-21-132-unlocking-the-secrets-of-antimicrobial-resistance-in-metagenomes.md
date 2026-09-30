@@ -1,0 +1,140 @@
+---
+layout: page
+title: 'Episode 132: Unlocking the Secrets of Antimicrobial Resistance in Metagenomes'
+date: '2024-11-21 00:00:00'
+link: https://soundcloud.com/microbinfie/132-unlocking-the-secrets-of-antimicrobial-resistance-in-metagenomes
+episode: '132'
+soundcloud_track: '1933425278'
+tags:
+- microbinfie
+- podcast
+description: David Mahoney discusses metagenomic assembly graphs, AMR gene transfer and the trade-off between gene recall and sequence context.
+excerpt: David Mahoney discusses metagenomic assembly graphs, AMR gene transfer and the trade-off between gene recall and sequence context.
+headline: Tracing antimicrobial resistance genes through assembly graphs
+guests:
+- David Mahoney
+topics:
+- antimicrobial resistance
+- metagenomics
+- assembly graphs
+- lateral gene transfer
+- one health
+- graph alignment
+- graph convolutional neural networks
+- food safety
+- pangenomes
+faq:
+- q: How can assembly graphs help detect AMR genes in metagenomes?
+  a: David describes graph queries as recovering more AMR genes than searches of contigs alone, while retaining some surrounding sequence context. Read-based methods still have higher recall in his account, and repeats mean some genes remain unresolved in the graph.
+- q: What graph evidence could suggest lateral gene transfer?
+  a: David proposes examining subgraph structure around a gene alongside mobile genetic elements, GC content differences and possible taxonomic assignments of neighbouring segments. He plans to combine these clues with existing methods for inferring lateral gene transfer.
+- q: Which environments does David Mahoney's project aim to compare?
+  a: The project aims to compare metagenomes from clinical, agricultural and food-production environments through collaborators in Canada's Genomics Research and Development Initiative. Its question is whether resistance genes are transferred more in some environments than others.
+- q: How might graph convolutional neural networks be used in this research?
+  a: David discusses converting subgraphs into adjacency matrices and feeding them into models, potentially graph convolutional neural networks. This is exploratory work, with an emphasis on whether machine learning helps answer the biological question.
+---
+
+*Tracing antimicrobial resistance genes through assembly graphs*
+
+Andrew Page speaks with David Mahoney, a PhD student at Dalhousie University, at the 10th Microbial Bioinformatics Hackathon in Bethesda, Maryland. They discuss using metagenomic assembly graphs to detect antimicrobial resistance (AMR) genes and investigate potential lateral gene transfer across clinical, agricultural and food-production settings. David explains what graph context can reveal, why short-read repeats remain difficult, and how graph-based machine learning might contribute.
+
+<iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" title="Episode 132: Unlocking the Secrets of Antimicrobial Resistance in Metagenomes" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1933425278&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=false"></iframe>
+
+[Listen to Episode 132: Unlocking the Secrets of Antimicrobial Resistance in Metagenomes on SoundCloud](https://soundcloud.com/microbinfie/132-unlocking-the-secrets-of-antimicrobial-resistance-in-metagenomes)
+
+## In this episode
+
+### Comparing resistance across environments
+
+David is starting the second year of his PhD, bringing a background in food safety microbiology. His interest in genomics grew from its public-health potential, including understanding what happens within food-production plants. His current project focuses on characterising AMR genes and their transfer in metagenomes, using assembly graphs.
+
+The project takes a One Health approach. Collaborators through Canada's Genomics Research and Development Initiative involve government departments sampling clinical, agricultural and food-production environments. David wants to compare which environments show more transfer of resistance genes. Some datasets already exist, and he collected some of the samples himself while working for Agriculture Canada before his PhD.
+
+### The trade-off between recall and context
+
+David describes assembly graphs as a way to recover resistance genes while retaining some genomic context. He reports higher AMR gene recall from graph queries than from contigs alone, but lower recall than from read-based approaches. The attraction is that a graph can retain information about the sequence surrounding a gene as well as the gene itself.
+
+This does not solve every ambiguity. Andrew asks how short reads can resolve repeats when an AMR gene occurs in several species or genomes within a sample. David acknowledges that repeats make graphs complex and that some genes will remain unresolved. He also describes the hurdles of finding shared genes through contig assembly and MAG binning: a gene must make it through those stages before researchers can compare its presence between species.
+
+### Testing graph structure as a clue to transfer
+
+The first phase of David's work is figuring out how to query assembly graphs, which he is presenting at ASMNGS. The next question is whether the topology, or structure, of a subgraph around a potentially transferred gene provides evidence of transfer. He plans to combine that evidence with existing methods for inferring lateral gene transfer.
+
+For an AMR gene of interest, he would inspect flanking graph regions for mobile genetic elements, differences in GC content and possible taxonomic assignments of individual segments. Segment length can affect the usefulness of those assignments. The aim is to bring together graph structure and information from surrounding sequences to identify potential transfers, rather than simply establish that a resistance gene is present.
+
+### Machine learning with a biological purpose
+
+Another possibility is to convert a subgraph into an adjacency matrix and feed these matrices into models, potentially graph convolutional neural networks. David presents this as an approach the project is exploring, not as a completed or validated solution.
+
+He describes working across computer science and microbiology at Dalhousie, with sharply different attitudes towards machine learning: enthusiasm for applying it broadly on one side, and scepticism on the other. His aim is to use it where it helps and to keep the analysis grounded in biology. He is concerned that some existing applications of machine learning have not been handled appropriately in a biological context.
+
+### Finding a gene in a graph
+
+David says many graph-alignment tools are designed for tasks such as aligning long reads to short-read assembly graphs for scaffolding. Searching for a particular gene is a different use case. Overlapping segments in assembly graphs introduce additional challenges that do not arise in the same way with pangenome graphs. He highlights GraphAligner as a tool that works well for his graph-querying work.
+
+Andrew connects this with his experience building pangenome software: he found graph outputs informative but underused because of their complexity. He points to bubbles in graphs as structures that might reflect recombination or incoming mobile genetic elements. The discussion returns to the value of examining graph information that can be missed when attention is restricted to assembled contigs.
+
+## Highlights
+
+- [00:00:48](https://soundcloud.com/microbinfie/132-unlocking-the-secrets-of-antimicrobial-resistance-in-metagenomes#t=0:48) — Andrew Page introduces the interview at the Bethesda hackathon
+- [00:00:58](https://soundcloud.com/microbinfie/132-unlocking-the-secrets-of-antimicrobial-resistance-in-metagenomes#t=0:58) — David Mahoney introduces his PhD on AMR genes in metagenomes
+- [00:02:06](https://soundcloud.com/microbinfie/132-unlocking-the-secrets-of-antimicrobial-resistance-in-metagenomes#t=2:06) — One Health sampling through Canada's Genomics Research and Development Initiative
+- [00:03:02](https://soundcloud.com/microbinfie/132-unlocking-the-secrets-of-antimicrobial-resistance-in-metagenomes#t=3:02) — Existing datasets and samples David collected while working for Agriculture Canada
+- [00:03:47](https://soundcloud.com/microbinfie/132-unlocking-the-secrets-of-antimicrobial-resistance-in-metagenomes#t=3:47) — Querying assembly graphs and examining structures around potentially transferred genes
+- [00:04:46](https://soundcloud.com/microbinfie/132-unlocking-the-secrets-of-antimicrobial-resistance-in-metagenomes#t=4:46) — Inspecting AMR gene flanks for mobile elements, GC content and taxonomy
+- [00:06:21](https://soundcloud.com/microbinfie/132-unlocking-the-secrets-of-antimicrobial-resistance-in-metagenomes#t=6:21) — The challenge of resolving repeats across genomes with short reads
+- [00:06:41](https://soundcloud.com/microbinfie/132-unlocking-the-secrets-of-antimicrobial-resistance-in-metagenomes#t=6:41) — Graph complexity, unresolved genes and the trade-off between recall and context
+- [00:08:57](https://soundcloud.com/microbinfie/132-unlocking-the-secrets-of-antimicrobial-resistance-in-metagenomes#t=8:57) — Graph bubbles as possible signs of recombination or mobile genetic elements
+- [00:09:16](https://soundcloud.com/microbinfie/132-unlocking-the-secrets-of-antimicrobial-resistance-in-metagenomes#t=9:16) — Graph-alignment tools and gene-of-interest searches, including GraphAligner
+
+## In their own words
+
+> I have one foot in the computer science department and I have one foot in the microbiology department.
+>
+> — David Mahoney, [00:04:46](https://soundcloud.com/microbinfie/132-unlocking-the-secrets-of-antimicrobial-resistance-in-metagenomes#t=4:46)
+
+## Who is talking
+
+- **Andrew Page** (host)
+- **David Mahoney** (guest, Dalhousie University, Halifax, Nova Scotia)
+
+## Tools and resources mentioned
+
+GraphAligner, graph convolutional neural networks.
+
+## Questions this episode answers
+
+### How can assembly graphs help detect AMR genes in metagenomes?
+
+David describes graph queries as recovering more AMR genes than searches of contigs alone, while retaining some surrounding sequence context. Read-based methods still have higher recall in his account, and repeats mean some genes remain unresolved in the graph.
+
+### What graph evidence could suggest lateral gene transfer?
+
+David proposes examining subgraph structure around a gene alongside mobile genetic elements, GC content differences and possible taxonomic assignments of neighbouring segments. He plans to combine these clues with existing methods for inferring lateral gene transfer.
+
+### Which environments does David Mahoney's project aim to compare?
+
+The project aims to compare metagenomes from clinical, agricultural and food-production environments through collaborators in Canada's Genomics Research and Development Initiative. Its question is whether resistance genes are transferred more in some environments than others.
+
+### How might graph convolutional neural networks be used in this research?
+
+David discusses converting subgraphs into adjacency matrices and feeding them into models, potentially graph convolutional neural networks. This is exploratory work, with an emphasis on whether machine learning helps answer the biological question.
+
+*This page was written from a machine transcript of the episode and checked against it. Listen to the episode for the whole conversation.*
+
+## Show notes
+
+In this episode of the Micro Binfie podcast, host Andrew Page is live from the 10th Microbial
+Bioinformatics Hackathon in Bethesda, Maryland. He sits down with David Mahoney, a PhD student
+from Dalhousie University in Halifax, Nova Scotia. David shares his research on characterizing
+antimicrobial resistance (AMR) genes and their transfer within metagenomes, focusing on
+metagenomic assembly graphs.
+
+They delve into David’s background in food safety microbiology and his interest in the public
+health implications of genomics. He explains his exciting work on analyzing how AMR genes
+transfer across different environments, such as food production plants and clinical settings,
+using both new and existing data from Canada’s Genomics Research and Development Initiative.
+
+David also highlights his use of innovative methods like assembly graphs and graph-based
+approaches to uncover AMR gene flow and lateral gene transfers, including the potential of
+machine learning techniques such as graph convolutional neural networks.
