@@ -34,6 +34,13 @@ github_username:  microbinfie
 #theme: jekyll-text-theme
 plugins:
   - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-redirect-from
+# The episode-page pipeline (scripts/episodes) and its working files are not part of the site.
+exclude:
+  - scripts/
+  - requirements.txt
+  - Gemfile.lock.bak
 text_skin: default
 highlight_theme: default
 
