@@ -1,0 +1,166 @@
+{
+  "episode": "042",
+  "headline": "SARS-CoV-2 analysis: metadata, training and validation",
+  "description": "A panel on SARS-CoV-2 metadata, within-host variation, public health sequencing and validation of ARTIC, Pangolin and Civet workflows.",
+  "summary": "Nick Loman chairs a panel with Andrew Page, Áine O'Toole, Will Rowe and Anna Price at the ARTICnetwork and CLIMB-BIG-DATA workshop held on 14–15 January 2021. They discuss practical barriers to SARS-CoV-2 genomic surveillance, from collecting usable metadata and securing government support to developing bioinformatics skills and validating software. The discussion distinguishes useful public health evidence from technical artefacts and explains why reproducibility requires tracking both software and changing lineage definitions.",
+  "people": [
+    {
+      "name": "Nick Loman",
+      "role": "panellist",
+      "affiliation": "University of Birmingham"
+    },
+    {
+      "name": "Andrew Page",
+      "role": "panellist",
+      "affiliation": "Quadram Institute"
+    },
+    {
+      "name": "Áine O'Toole",
+      "role": "panellist",
+      "affiliation": "University of Edinburgh"
+    },
+    {
+      "name": "Will Rowe",
+      "role": "panellist",
+      "affiliation": "University of Birmingham"
+    },
+    {
+      "name": "Anna Price",
+      "role": "panellist",
+      "affiliation": "MRC CLIMB and Cardiff University"
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Making sequencing useful locally",
+      "body": "Andrew Page describes working with about five hospitals and having sequenced nearly 10,000 SARS-CoV-2 samples. Direct contact with local public health teams and clinicians lets the sequencing team flag unusual clusters and investigate whether hospital cases might be linked. However, the samples clinicians most want investigated are sometimes unavailable or have high Ct values, leaving too little viral material to recover genomes.\n\nÁine O'Toole explains how Civet moved outbreak reporting away from repeated requests for manually prepared trees and into the hands of hospital users. Will Rowe describes the benefits—and bugs—of rapidly developing a shared ARTIC pipeline. Anna Price discusses analysing COG-UK metadata for lineage distributions and importation from England into Wales, highlighting Public Health Wales sequencing more than 2,000 samples in the preceding week."
+    },
+    {
+      "heading": "Metadata that people can actually supply",
+      "body": "Asked for example spreadsheets and sample identifier schemes, Andrew recommends requesting the minimum metadata needed for the investigation. Collection date and location are important; age, gender, healthcare-worker status or illness severity may also be relevant. Asking for hundreds of fields can produce missing information, shortcuts or boilerplate rather than richer evidence.\n\nThe administrative burden is substantial: Andrew describes supporting hospitals with around 150 different systems, and one processing change that left four people spending a couple of days tracking down metadata for 200 individuals. Nick points listeners towards two specifications: *The PHA4GE SARS-CoV-2 Contextual Data Specification for Open Genomic Epidemiology* and the metadata described in *MAJORA: Continuous integration supporting decentralised sequencing for SARS-CoV-2 genomic surveillance*. These offer starting points rather than a reason to collect every possible field."
+    },
+    {
+      "heading": "Within-host variation and technical noise",
+      "body": "Nick cautions that, as understood in January 2021, a typical short SARS-CoV-2 infection often provides little useful within-host diversity. Apparent mixed infections can instead reflect contamination or sample mixing. Longer infections offer a different opportunity: he discusses reports lasting up to about 150 days and the then-speculative suggestion that B.1.1.7 emerged during chronic infection. Multiple time points provide stronger evidence than a single sample because mutation frequencies can be tracked.\n\nARTIC amplicon sequencing can measure within-host variation, but PCR introduces sampling noise, especially at high Ct values with very few starting molecules. Nick describes improved agreement with metagenomics when PCR was repeated three times from the same RNA. He puts Nanopore's error rate at roughly 5% at the time, unevenly distributed across the genome and worse near homopolymers. It was less suitable for discovering variants at 1–3% frequency than for examining variation around 25–50%, particularly at already identified sites."
+    },
+    {
+      "heading": "Government support and early data-sharing agreements",
+      "body": "A participant from the International Livestock Research Institute describes being authorised to test for COVID-19 but facing delays in obtaining permission to sequence samples. The discussion stresses sustained relationships between academics, clinicians and public health authorities. Another participant reports that keeping sequencing local, without sending samples overseas, helped secure support in Trinidad.\n\nNick recommends establishing public data sharing at the outset, ideally in written sampling and sequencing protocols approved by government. Seeking permission only after sequencing can be harder, particularly when results have political consequences. Local analytical capacity also lets countries interpret their own data rather than depend on inferences from returning travellers. The panel recommends the WHO report *Genomic sequencing of SARS-CoV-2: a guide to implementation for maximum impact on public health* as material for making the case to policymakers."
+    },
+    {
+      "heading": "Training, workflow skills and specialist staff",
+      "body": "Will recommends Nextflow or Snakemake for learning to build and run workflows, Rosalind exercises for programming practice, and engagement with developers through GitHub issues and discussion channels. Áine recommends paid Edinburgh Genomics courses in Python and Linux, while emphasising that basic terminal skills—knowing your directory and finding files—make practical bioinformatics training much more productive.\n\nAndrew offers a complementary warning: a short course does not replace years of specialist experience. Hiring someone with established bioinformatics skills can avoid months spent struggling with unfamiliar problems. Nick encourages using existing, tested workflows under operational pressure rather than starting from scratch. Available resources discussed include ARTIC standard operating procedures covering laboratory work, sequencing and initial analysis, plus phylogenetic tutorials developed for Ebola training."
+    },
+    {
+      "heading": "Validation, releases and reproducible lineage assignments",
+      "body": "Áine describes Pangolin's manually curated sequence-to-lineage training labels and ten-fold cross-validation. She reports average assignment accuracy of about 98.6% at the time, while stressing that performance differs between lineages and is affected by missing data. Civet primarily matches sequences to a large tree and summarises information; its inputs come through the grapevine workflow, run daily on CLIMB, and it uses established tools including minimap2.\n\nNick argues for validating the whole laboratory-to-result process. Examples include positive and negative controls on every run, comparisons between Nanopore and Illumina sequencing, and comparisons between amplicon and metagenomic approaches. Cross-checking pipelines can reveal differences such as missed deletions. Will recommends regression checks, tagged releases, controlled environments and checking build-test results.\n\nReproducibility also requires recording Pangolin's lineage-model release, not just its software version: assignments made early in 2020 may differ from later ones. Old releases remain available, but freezing everything indefinitely is not a sound operational strategy in a rapidly changing field. The panel also warns that a polished commercial interface does not guarantee valid assumptions or correct results."
+    }
+  ],
+  "highlights": [
+    {
+      "time": "00:00:52",
+      "topic": "Andrew Page on nearly 10,000 sequences and working directly with hospitals and public health teams"
+    },
+    {
+      "time": "00:02:19",
+      "topic": "Áine O'Toole on Pangolin, Civet and moving outbreak reporting into hospitals"
+    },
+    {
+      "time": "00:08:28",
+      "topic": "Keeping metadata requests minimal enough for healthcare teams to complete"
+    },
+    {
+      "time": "00:18:16",
+      "topic": "Why a single sample's within-host variation may reveal artefacts rather than useful signal"
+    },
+    {
+      "time": "00:19:30",
+      "topic": "Obtaining government approval to sequence samples at the International Livestock Research Institute"
+    },
+    {
+      "time": "00:24:15",
+      "topic": "Establishing public data sharing before a sequencing programme begins"
+    },
+    {
+      "time": "00:28:37",
+      "topic": "Learning workflows, practising programming and engaging with software developers"
+    },
+    {
+      "time": "00:30:45",
+      "topic": "Andrew's case for hiring experienced bioinformaticians rather than relying on short courses"
+    },
+    {
+      "time": "00:35:36",
+      "topic": "How Pangolin's training data and lineage assignments are checked"
+    },
+    {
+      "time": "00:38:14",
+      "topic": "Validating the complete process with controls and comparisons between sequencing methods"
+    },
+    {
+      "time": "00:40:30",
+      "topic": "ARTIC regression checks, tagged software releases and controlled environments"
+    },
+    {
+      "time": "00:42:34",
+      "topic": "Tracking Pangolin software versions separately from lineage-model releases"
+    }
+  ],
+  "quotes": [
+    {
+      "text": "Once you've started sharing data it's kind of hard to stop.",
+      "time": "00:24:15",
+      "speaker": "Nick Loman"
+    }
+  ],
+  "tools": [
+    "ARTIC pipeline",
+    "ARTIC amplicon sequencing protocol",
+    "Pangolin",
+    "Civet",
+    "grapevine",
+    "pangoLEARN",
+    "MAJORA",
+    "Nextflow",
+    "Snakemake",
+    "Python",
+    "minimap2",
+    "Illumina",
+    "Oxford Nanopore MinION",
+    "Ten-fold cross-validation"
+  ],
+  "topics": [
+    "sars-cov-2",
+    "genomic surveillance",
+    "sample metadata",
+    "within-host variation",
+    "public health policy",
+    "data sharing",
+    "bioinformatics training",
+    "pipeline validation",
+    "reproducibility",
+    "lineage assignment"
+  ],
+  "faq": [
+    {
+      "q": "What metadata should a SARS-CoV-2 sequencing programme collect?",
+      "a": "The panel recommends collecting the minimum needed for the intended investigation, particularly collection date and location, with other fields chosen for the question being asked. PHA4GE and MAJORA provide specifications to consult rather than reinventing everything locally."
+    },
+    {
+      "q": "Can ARTIC sequencing be used to study within-host SARS-CoV-2 variation?",
+      "a": "Nick says it can, but a single PCR can give unreliable frequency estimates, especially with very little starting material. Repeating PCR three times from the same RNA improved agreement with metagenomics in the work he describes."
+    },
+    {
+      "q": "How can sequencing teams make the case to policymakers?",
+      "a": "The discussion recommends building clinical and public health relationships, explaining the value of local sequencing and analysis, and using the WHO implementation guide to frame the argument. Nick also recommends agreeing public data sharing in the programme's initial protocols."
+    },
+    {
+      "q": "What training does the panel recommend for bioinformatics beginners?",
+      "a": "Suggestions include Nextflow or Snakemake tutorials, Rosalind programming exercises, Edinburgh Genomics courses and basic terminal practice. Andrew cautions that short courses do not substitute for experienced staff when delivering operational analyses."
+    },
+    {
+      "q": "What must be recorded to reproduce a Pangolin lineage analysis?",
+      "a": "Record both the Pangolin software version and the dated lineage-model release. Áine explains that historical releases remain available, while updated models can assign different lineages to sequences analysed earlier."
+    }
+  ]
+}

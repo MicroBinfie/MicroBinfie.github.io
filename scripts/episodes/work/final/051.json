@@ -1,0 +1,155 @@
+{
+ "episode": "051",
+ "headline": "SARS-CoV-2 in Denmark: variants, sequencing and quality control",
+ "description": "Denmark's SARS-CoV-2 sequencing coverage, emerging variants, public health workflows and practical checks for contamination and sample swaps.",
+ "summary": "Lee Katz, Andrew Page and Nabil-Fareed Alikhan are joined by Mads Albertsen to discuss SARS-CoV-2 genomic surveillance in Denmark. Recorded on 9 March 2021, the conversation covers emerging variants, public health analysis tools, sequencing papers and the limits of automated lineage calls. Practical examples show why contamination checks, sample tracking and manual review remain important even in high-throughput sequencing programmes.",
+ "people": [
+  {
+   "name": "Lee Katz",
+   "role": "host",
+   "affiliation": "Centers for Disease Control and Prevention; adjunct member, University of Georgia"
+  },
+  {
+   "name": "Andrew Page",
+   "role": "host",
+   "affiliation": "Quadram Institute, Norwich, UK"
+  },
+  {
+   "name": "Nabil-Fareed Alikhan",
+   "role": "host",
+   "affiliation": "Quadram Institute, Norwich, UK"
+  },
+  {
+   "name": "Mads Albertsen",
+   "role": "guest",
+   "affiliation": "Center for Microbial Communities, Aalborg University"
+  }
+ ],
+ "sections": [
+  {
+   "heading": "Denmark's high-coverage surveillance",
+   "body": "At the time of recording, Denmark was attempting to sequence more than 90% of SARS-CoV-2 cases, with about 70% of cases producing genomes meeting its completeness criterion. Mads Albertsen describes watching B.1.1.7 rise to roughly 80% while previously circulating lineages declined. B.1.525, which carries E484K, represented a few per cent; the discussion mentions around 200 cases.\n\nDenmark was reopening after suppressing transmission, and Albertsen expected some other variants to continue circulating rather than B.1.1.7 necessarily reaching 100%. The surveillance programme aimed to support variant-specific interventions through extensive testing, sequencing and targeted testing around suspected community spread. Most other variants of concern had been associated with travel, although increasing imports were making containment harder. Denmark's public statistics page used an automatically generated R Markdown report: essentially the same breakdown supplied to government, published online a few days later."
+  },
+  {
+   "heading": "Variant terminology and analysis tools",
+   "body": "The panel distinguishes variants of concern, variants under investigation and variants of interest, while criticising inconsistent usage between countries and organisations. B.1.1.7, B.1.351 and P.1 frame the discussion, alongside newer lineages and recurring mutations. A central request is to release sequence data and coordinate lineage assignments before announcing a newly identified variant. The hosts also note the WHO's work on definitions.\n\nFor communicating surveillance results, the conversation covers Tableau, Microreact, Nextstrain and outbreak.info. The latter is described as a resource for geographically organised case information, doubling rates and downloadable metadata. A proposed Galaxy public health community prompts discussion of accessible, click-based analysis and the XML wrappers developers write to add tools. The panel also highlights a SARS-CoV-2 Nextflow pipeline on GitLab that extends processing beyond variant calls and consensus sequences to tree creation and visualisation."
+  },
+  {
+   "heading": "Sequencing protocols and pooled samples",
+   "body": "Andrew Page criticises the approach in A Comparison of Performance for Different SARS-Cov-2 Sequencing Protocols: assembling ARTIC amplicon data with SPAdes and then assessing the resulting poor assemblies. His warning is that archived reads cannot be interpreted sensibly without understanding how they were generated. For the amplicon workflow under discussion, the intended output is a consensus sequence rather than a conventional de novo assembly.\n\nThe panel then examines Before the Surge: Molecular Evidence of SARS-CoV-2 in New York City Prior to the First Report. The concern is that samples from ten patients were pooled to obtain consensus genomes, which were deposited in GISAID without a way to distinguish them from individual-sample genomes. Such data could mislead analyses of mixed variants or recombination. The speakers distinguish pooling for diagnostic screening from sequencing individual infections: pooled sequence data need explicit labelling and a repository that preserves that distinction."
+  },
+  {
+   "heading": "Within-host diversity and phylogenetic masking",
+   "body": "SARS-CoV-2 within-host diversity and transmission receives a positive assessment. The Oxford work used hybrid capture rather than the ARTIC protocol, allowing clearer examination of minority variants in the study. Page notes a limitation with high-Ct samples, but highlights observations of minority variants passing between people, sometimes alongside the dominant variant.\n\nA listener-style question asks about up-to-date masking strategies for SARS-CoV-2 phylogenetics. The discussion raises independently recurring mutations as a complication for tree interpretation; the show notes provide resources on problematic sites and a masking VCF. One of the panellists explains that they no longer build global trees. Instead, they assign lineages and construct smaller trees for particular lineages or questions of interest."
+  },
+  {
+   "heading": "Checking lineage assignments",
+   "body": "Page describes an apparent P.1 detection that did not withstand inspection. The genome came from an under-sequenced African setting and was 18 SNPs from its nearest observed ancestor. Only about one of the dozen mutations expected for P.1 was present. The example illustrates how incomplete geographical sampling can produce misleading lineage assignments and how much transmission may remain invisible between sampled genomes.\n\nFor important calls, the recommendation is to check the expected defining mutations rather than accept a label uncritically. Public Health England's machine-readable variant definitions provide one resource for doing this. Lee Katz and Page debate YAML versus VCF: YAML offers flexibility for expressing definitions, while Katz emphasises VCF's compatibility with existing pipelines and software such as BCFtools."
+  },
+  {
+   "heading": "Quality control at 100,000 samples",
+   "body": "Albertsen describes four negative controls per plate, checks for unexpectedly long branches and scrutiny of ambiguous base calls. In his experience, most apparent internal variation of this kind was contamination. An R Markdown report brings trees and SNP information together for manual review. Page likewise describes checking important or unusual samples by hand, including whether their mutation patterns make sense for the assigned lineage.\n\nHaving quality-controlled around 100,000 samples, Albertsen had encountered sample and plate mix-ups. Comparing sequencing success with the pattern of diagnostic Ct values could reveal swapped plates. In Denmark's setup, success began declining around Ct 32 and fell well below 50% above Ct 35, although Ct values were not directly comparable across testing setups.\n\nPage describes another check using residual human reads to assess whether recorded sex matched the sample layout, helping investigate plate rotations or swaps. Those reads were removed before public deposition. Expected empty wells and negative-control positions offered additional clues."
+  }
+ ],
+ "highlights": [
+  {
+   "time": "00:01:24",
+   "topic": "Why VOC, VUI and VOI terminology needs coordination"
+  },
+  {
+   "time": "00:05:40",
+   "topic": "Denmark attempts sequencing for more than 90% of cases"
+  },
+  {
+   "time": "00:06:13",
+   "topic": "B.1.1.7 reaches roughly 80% in Denmark as other lineages decline"
+  },
+  {
+   "time": "00:08:55",
+   "topic": "R Markdown powers Denmark's public and government reporting"
+  },
+  {
+   "time": "00:10:48",
+   "topic": "outbreak.info and a proposed Galaxy public health community"
+  },
+  {
+   "time": "00:13:40",
+   "topic": "A SARS-CoV-2 Nextflow pipeline adds tree creation and visualisation"
+  },
+  {
+   "time": "00:14:37",
+   "topic": "Criticism of assembling ARTIC amplicon data with SPAdes"
+  },
+  {
+   "time": "00:17:10",
+   "topic": "Pooled patient samples create interpretation problems in GISAID"
+  },
+  {
+   "time": "00:19:38",
+   "topic": "Hybrid capture reveals within-host diversity and transmission"
+  },
+  {
+   "time": "00:21:49",
+   "topic": "An apparent P.1 call exposes the risks of incomplete sampling"
+  },
+  {
+   "time": "00:26:04",
+   "topic": "Negative controls, ambiguous calls and contamination checks"
+  },
+  {
+   "time": "00:29:12",
+   "topic": "Using Ct patterns to detect sample and plate mix-ups"
+  }
+ ],
+ "quotes": [
+  {
+   "text": "This is a mix of ideas that just shouldn't have been mixed, pooling and genome sequencing.",
+   "time": "00:17:51",
+   "speaker": "Lee Katz"
+  }
+ ],
+ "tools": [
+  "Tableau",
+  "Microreact",
+  "outbreak.info",
+  "R Markdown",
+  "Nextstrain",
+  "Galaxy",
+  "Nextflow",
+  "ARTIC protocol",
+  "SPAdes",
+  "GISAID",
+  "BCFtools",
+  "ProblematicSites_SARS-CoV2"
+ ],
+ "topics": [
+  "sars-cov-2",
+  "denmark",
+  "genomic surveillance",
+  "variants of concern",
+  "sequencing protocols",
+  "within-host diversity",
+  "phylogenetics",
+  "lineage assignment",
+  "quality control",
+  "sample tracking"
+ ],
+ "faq": [
+  {
+   "q": "How much SARS-CoV-2 sequencing was Denmark doing in March 2021?",
+   "a": "At the 9 March recording, Mads Albertsen reported attempted sequencing for more than 90% of cases during most of the year so far. About 70% of cases produced genomes meeting the programme's completeness criterion."
+  },
+  {
+   "q": "Why did the panel criticise assembling ARTIC reads with SPAdes?",
+   "a": "Andrew Page argued that conventional assembly was inappropriate for the ARTIC amplicon data being assessed and explained the poor assembly metrics. He stressed understanding the sequencing protocol and generating consensus sequences for this workflow."
+  },
+  {
+   "q": "How should an unexpected SARS-CoV-2 lineage call be checked?",
+   "a": "The panel recommends checking whether the expected lineage-defining mutations are actually present. Page describes a misleading P.1 assignment and points to Public Health England's machine-readable variant definitions as a resource for validation."
+  },
+  {
+   "q": "How can sequencing teams detect plate swaps or rotations?",
+   "a": "The episode describes comparing sequencing success with diagnostic Ct patterns and checking expected empty wells or negative-control positions. Page also discusses using residual human reads to compare recorded sex with sample layout, with those reads removed before public deposition."
+  }
+ ]
+}

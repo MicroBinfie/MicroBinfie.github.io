@@ -1,0 +1,158 @@
+{
+  "episode": "003",
+  "headline": "FASTQ: quality scores, compression and parsing pitfalls",
+  "description": "FASTQ quality scores, compression, read ordering and parsing traps: the hosts discuss the everyday format behind microbial sequencing analysis.",
+  "summary": "Lee Katz and Nabil-Fareed Alikhan discuss how FASTQ stores sequence reads and quality scores, and why its conventions can catch out analysis scripts. They cover older encodings, compression, read ordering, Illumina headers and the gap between a familiar four-line layout and what the format actually permits.",
+  "people": [
+    {
+      "name": "Lee Katz",
+      "role": "host",
+      "affiliation": "Centers for Disease Control and Prevention; adjunct professor at the University of Georgia, US"
+    },
+    {
+      "name": "Nabil-Fareed Alikhan",
+      "role": "host",
+      "affiliation": "Quadram Institute, Norwich, UK"
+    },
+    {
+      "name": "Andrew Page",
+      "role": "host",
+      "affiliation": "Quadram Institute, Norwich, UK"
+    },
+    {
+      "name": "Brian Bushnell",
+      "role": "mentioned",
+      "affiliation": ""
+    },
+    {
+      "name": "Heng Li",
+      "role": "mentioned",
+      "affiliation": ""
+    }
+  ],
+  "sections": [
+    {
+      "heading": "What FASTQ stores",
+      "body": "FASTQ is introduced as a text format containing DNA sequences and the sequencing machine’s confidence in each base call. For the hosts, it is everyday working material: the data they exchange, retain and return to when someone asks how an analysis was performed. Its central role contrasts with the informal way its conventions developed.\n\nThe opening disagreement concerns keeping reads together in one file or separated into different files. One host prefers a single file per genome, while another finds separate files easier to analyse; SPAdes is mentioned as software that splits the combined input anyway. They also recall SFF files from 454 sequencing and the choice between SFF and FASTQ offered by Ion Torrent."
+    },
+    {
+      "heading": "Reading quality characters correctly",
+      "body": "The quality string represents scores using ASCII characters rather than a sequence of written-out integers. The hosts discuss how familiar those characters become after years of inspecting reads, including the punctuation that can make a poor-quality read look as though it is swearing.\n\nThat visual intuition depends on the encoding. Their explanation distinguishes Sanger Phred+33 from older Phred+64: the former includes special characters at low scores, while the latter starts at the @ symbol and proceeds into capital letters. A reader accustomed to one encoding could misinterpret the other. Speaking in 2019, they describe Phred+33 as the normal case and Phred+64 as chiefly a concern for much older sequencing data."
+    },
+    {
+      "heading": "Compression can change read order",
+      "body": "BAM and CRAM enter the conversation as alternatives to working solely with FASTQ. BAM carries alignment information, while CRAM is discussed for its compression potential: one host suggests that going fully down that route can reduce data to a tenth of the original size. Sharing remains a practical obstacle if the recipient does not know how to handle the format, so FASTQ remains their common exchange format.\n\nThey discuss compression levels from 1 to 9 and reordering reads to improve compression, including a tool associated with Brian Bushnell of BBMap. But ordering matters when another step takes only the beginning of a file. An ART simulation experiment provides a cautionary example: ambiguous N bases were concentrated at the beginning of the genome during a study of their effect on SNP calling, producing an unexpected subsampling bias."
+    },
+    {
+      "heading": "Headers, flow-cell bubbles and quality bins",
+      "body": "Illumina FASTQ headers can encode machine identity, positional information, channel and tile. The hosts find that detail both useful and cumbersome. They recall how a literal air bubble on a flow cell could cause locally poor sequencing quality, making tile information useful when deciding which reads to filter.\n\nThe discussion then turns to quality-score binning on newer machines, including NextSeq. Rather than retaining a continuous range of scores, binning groups values together. The hosts express reservations about the information lost, particularly because quality scores are already logarithmic. They describe trying to avoid binning in their own work, without settling on an exact set of bin boundaries."
+    },
+    {
+      "heading": "An informal format with parsing traps",
+      "body": "The hosts trace FASTQ to internal use at Sanger rather than an original formal specification. They describe a 2010 paper that documented the format after it was already established, and mention the BWA website as an earlier but incomplete source of description.\n\nThis history matters when writing parsers. The conversation names samtools and seqtk, but also describes home-written Perl scripts that assumed every record occupied four lines. FASTQ can instead contain line breaks within the sequence and quality strings. The plus line helps separate those parts, and the sequence and quality strings must have matching lengths.\n\nOne host recalls receiving multiline FASTQ from samtools and raising the issue online, where Heng Li pointed out that FASTQ was not necessarily a four-line format. The resulting workaround was a parser that normalised records into four lines before other scripts processed them."
+    },
+    {
+      "heading": "When software expects no score above Q40",
+      "body": "The final technical issue is software that rejects quality scores outside an expected range. The hosts discuss PacBio and Nanopore data, with PacBio offered as an example of scores reaching Q50 or higher while some programs are hard-coded to expect no more than Q40.\n\nThey disagree about how much those higher scores matter in practice. One host questions the value of distinguishing extremely low error rates; another values a claimed rate of one error in a million when considering a genome of five million bases. The exchange closes the discussion without pretending that every preference has been resolved."
+    }
+  ],
+  "highlights": [
+    {
+      "time": "00:01:24",
+      "topic": "Keeping reads in one FASTQ file versus separate files, and what SPAdes does with them"
+    },
+    {
+      "time": "00:01:56",
+      "topic": "Defining FASTQ through DNA sequences and per-read quality strings"
+    },
+    {
+      "time": "00:02:47",
+      "topic": "Earlier sequencing formats and the transition from 454 data to FASTQ"
+    },
+    {
+      "time": "00:04:59",
+      "topic": "Distinguishing Sanger Phred+33 from older Phred+64 quality encoding"
+    },
+    {
+      "time": "00:05:41",
+      "topic": "BAM, reference alignments and interest in CRAM"
+    },
+    {
+      "time": "00:06:27",
+      "topic": "FASTQ compression levels and sorting reads to improve compression"
+    },
+    {
+      "time": "00:07:23",
+      "topic": "An ART simulation experiment exposes bias from where ambiguous bases occur"
+    },
+    {
+      "time": "00:08:24",
+      "topic": "Decoding machine, position, channel and tile information in Illumina headers"
+    },
+    {
+      "time": "00:10:35",
+      "topic": "Concerns about information loss when logarithmic quality scores are binned"
+    },
+    {
+      "time": "00:11:02",
+      "topic": "FASTQ’s informal origins and a 2010 paper documenting the format"
+    },
+    {
+      "time": "00:12:39",
+      "topic": "Why four-line assumptions fail for multiline FASTQ records"
+    },
+    {
+      "time": "00:15:43",
+      "topic": "Programs expecting at most Q40 encounter higher PacBio quality scores"
+    }
+  ],
+  "quotes": [
+    {
+      "text": "I'd say it's a glorified text file that has the nucleotides that came off the machine and the confidence the machine has when they called it.",
+      "time": "00:02:10",
+      "speaker": "one of the hosts"
+    }
+  ],
+  "tools": [
+    "SPAdes",
+    "samtools",
+    "seqtk",
+    "BBMap",
+    "ART",
+    "BWA",
+    "NextSeq",
+    "Ion Torrent",
+    "454",
+    "Phred quality scoring",
+    "LZ compression"
+  ],
+  "topics": [
+    "fastq",
+    "quality scores",
+    "phred encoding",
+    "read compression",
+    "read ordering",
+    "subsampling bias",
+    "illumina headers",
+    "quality-score binning",
+    "file parsing"
+  ],
+  "faq": [
+    {
+      "q": "What does a FASTQ file contain?",
+      "a": "The episode describes FASTQ as a text format containing DNA sequence reads and quality strings representing the sequencing machine’s confidence in its base calls. Records also have identifiers and a plus line separating the sequence from its quality information."
+    },
+    {
+      "q": "Does every FASTQ record have exactly four lines?",
+      "a": "No. The hosts explain that sequences and quality strings can extend across multiple lines, so a parser that simply reads four lines at a time can fail. One host describes normalising multiline records into four-line records before running other scripts."
+    },
+    {
+      "q": "Why does Phred+33 versus Phred+64 matter?",
+      "a": "The offset changes which ASCII characters represent particular quality scores. The hosts warn that interpreting older Phred+64 data as Phred+33 can make the quality characters misleading; in this 2019 discussion, they treat Phred+33 as the usual encoding."
+    },
+    {
+      "q": "Can sorting FASTQ reads improve compression?",
+      "a": "The hosts discuss reordering reads to make them more amenable to compression. They also warn that taking only the first part of an ordered file can introduce subsampling bias, and describe an ART simulation experiment where the placement of ambiguous bases caused a related problem."
+    }
+  ]
+}

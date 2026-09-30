@@ -1,0 +1,138 @@
+{
+  "episode": "016",
+  "headline": "Bayesian phylogenetics: priors, MCMC and uncertainty",
+  "description": "Nabil-Fareed Alikhan, Conor Meehan and Leo Martins discuss Bayesian phylogenetics, MCMC, uncertainty and reproducible analyses.",
+  "summary": "Nabil-Fareed Alikhan joins guests Conor Meehan and Leo Martins to examine Bayesian inference in microbial phylogenetics. They explain priors and posterior distributions, distinguish statistical models from MCMC algorithms, and discuss why convergence and uncertainty need careful attention. Examples from tuberculosis, HIV and Ebola show how an analysis can investigate more than the shape of a tree.",
+  "people": [
+    {
+      "name": "Nabil-Fareed Alikhan",
+      "role": "host",
+      "affiliation": ""
+    },
+    {
+      "name": "Conor Meehan",
+      "role": "guest",
+      "affiliation": "University of Bradford"
+    },
+    {
+      "name": "Leo Martins",
+      "role": "guest",
+      "affiliation": "Quadram Institute Bioscience"
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Priors, likelihoods and posterior distributions",
+      "body": "The discussion introduces Bayesian inference as a class of models based on conditional probabilities, rather than a philosophy or belief system. A prior describes expectations about a parameter before examining the particular dataset. Combining that prior with the likelihood produces a posterior distribution: an updated description that still includes uncertainty.\n\nA mutation-rate example starts with an estimate of around 10^-7 for Mycobacterium tuberculosis. That knowledge could inform a broad prior for another Mycobacterium species, while allowing the new data to favour a different value. The panel stresses that prior information can come from previous, well-supported research. It is not simply permission to impose an arbitrary personal preference on an analysis."
+    },
+    {
+      "heading": "The tree need not be the final result",
+      "body": "A basic maximum-likelihood analysis in RAxML produces a phylogeny, but a Bayesian analysis can treat the tree as one component of a larger model. Sampling dates, locations, mutation rates and population processes can contribute to questions beyond topology.\n\nThe guests discuss a Stadler paper on the Ebola outbreak that used an existing tree to investigate reproductive number and incubation time. They describe it as a phylogenetic analysis whose paper contained no tree. The broader point is that researchers can supply some parts of a model and investigate others, rather than always treating tree reconstruction as the endpoint."
+    },
+    {
+      "heading": "Bayesian models and MCMC are different",
+      "body": "Leo distinguishes the statistical model from the algorithm used to obtain results. Some Bayesian models have analytical solutions; conjugate priors are discussed as a case where the posterior belongs to the same distribution family as the prior. More complex, hierarchical models often require computational sampling.\n\nMCMC is explained through a basket analogy: each cycle contributes a sample containing the current tree and other parameter values. A rejected proposal leaves the previous state in place, so it can appear repeatedly in the collection. The resulting samples are used to describe posterior distributions. Leo also introduces variational inference as an alternative that seeks an easier-to-calculate distribution resembling the posterior, while describing MCMC as phylogenetics’ workhorse."
+    },
+    {
+      "heading": "Convergence, thinning and computational cost",
+      "body": "The panel discusses discarding early samples as burn-in, because the starting tree and initial parameter values may be poor. Neighbouring MCMC states can be correlated, leading into thinning and effective sample size: a long chain does not automatically provide an equally large amount of independent information.\n\nConvergence is a recurring practical concern. Separate runs can produce similar best trees yet different distributions, leaving uncertainty about whether longer runs are needed. Conor contrasts his experience of HIV analyses using chains of roughly 10,000–20,000 steps with tuberculosis analyses normally requiring 40 million. These are examples from his work, not universal settings. Discovering a poorly specified parameter after a lengthy run can mean starting again."
+    },
+    {
+      "heading": "Assumptions matter more than statistical labels",
+      "body": "Flat-hunting and restaurant choices provide everyday analogies for updating expectations and exploring alternatives. A roulette question then prompts discussion of the gambler’s fallacy, independent observations and model assumptions. The guests resist treating such problems as failures unique to Bayesian inference.\n\nFor microbial applications, the underlying study design still matters. Population-size analysis is given as an example requiring a single population sampled randomly under the model being discussed. The panel also argues for choosing methods pragmatically: a good maximum-likelihood analysis may be sufficient when the goal is simply a tree. More elaborate models need justification, understandable assumptions and simple sanity checks."
+    },
+    {
+      "heading": "What a convincing analysis should report",
+      "body": "A reproducible Bayesian methods section should describe the model’s components, prior distributions and their settings, rather than merely name a program. Choices should be justified through relevant previous work or model comparison; marginal likelihood analysis is discussed in this context.\n\nFor software such as BEAST, the panel recommends sharing the configuration file containing the model settings, for example through FigShare. This is compared with publishing a laboratory standard operating procedure so others can repeat an experiment.\n\nResults should show distributions and uncertainty, not just a preferred tree or a single date. Credible intervals and highest posterior density are discussed, alongside convergence checks and testing whether the data are informative. An analysis can return a tree and a distribution even after an inadequate run; obtaining output is not itself evidence that the answer is dependable."
+    }
+  ],
+  "highlights": [
+    {
+      "time": "00:01:14",
+      "topic": "Bayesian inference as conditional-probability models, not a belief system"
+    },
+    {
+      "time": "00:05:22",
+      "topic": "How priors, likelihoods and posterior distributions relate"
+    },
+    {
+      "time": "00:16:34",
+      "topic": "Using an Ebola phylogeny to study reproductive number and incubation time"
+    },
+    {
+      "time": "00:18:13",
+      "topic": "Separating Bayesian models from MCMC and introducing variational inference"
+    },
+    {
+      "time": "00:21:12",
+      "topic": "A basket-of-samples explanation of MCMC cycles and proposals"
+    },
+    {
+      "time": "00:25:22",
+      "topic": "Correlated chain states, thinning and effective sample size"
+    },
+    {
+      "time": "00:28:52",
+      "topic": "Why convergence is difficult to establish for large phylogenetic analyses"
+    },
+    {
+      "time": "00:34:16",
+      "topic": "Coin tosses, roulette and the importance of model assumptions"
+    },
+    {
+      "time": "00:38:48",
+      "topic": "Reporting prior settings and justifying model choices"
+    },
+    {
+      "time": "00:44:20",
+      "topic": "Deciding whether Bayesian analysis is necessary for the research question"
+    }
+  ],
+  "quotes": [
+    {
+      "text": "I want to see the distribution of values because otherwise it's not Bayesian.",
+      "time": "00:41:24",
+      "speaker": "Leo Martins"
+    }
+  ],
+  "tools": [
+    "Bayesian inference",
+    "maximum likelihood",
+    "RAxML",
+    "bootstrapping",
+    "MCMC",
+    "variational inference",
+    "marginal likelihood analysis",
+    "BEAST",
+    "FigShare",
+    "parsimony"
+  ],
+  "topics": [
+    "bayesian inference",
+    "phylogenetics",
+    "priors",
+    "posterior distributions",
+    "mcmc",
+    "convergence",
+    "molecular epidemiology",
+    "reproducibility"
+  ],
+  "faq": [
+    {
+      "q": "What is a posterior distribution in Bayesian phylogenetics?",
+      "a": "It describes a parameter after combining prior information with the likelihood from the data. The episode discusses posterior distributions for trees and mutation rates, emphasising that they retain uncertainty rather than supplying only a single value."
+    },
+    {
+      "q": "Is Bayesian inference the same thing as MCMC?",
+      "a": "No. Bayesian inference defines the statistical model, while MCMC is an algorithm used to sample from its posterior distribution. The episode also discusses analytical solutions and variational inference."
+    },
+    {
+      "q": "What should a Bayesian phylogenetics paper report?",
+      "a": "The panel asks for explicit model and prior settings, justification of those choices, convergence checks and uncertainty distributions or credible intervals. Sharing a BEAST configuration file is suggested as a practical way to support reproducibility."
+    },
+    {
+      "q": "Do I need Bayesian inference just to reconstruct a tree?",
+      "a": "The panel suggests that a good maximum-likelihood analysis may be enough if the tree is the only goal. Bayesian analysis becomes more attractive when the research question involves other model components, such as mutation rates, dates or population processes."
+    }
+  ]
+}

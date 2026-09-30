@@ -1,0 +1,162 @@
+{
+  "episode": "027",
+  "headline": "SNP-sites: extracting variants from multi-FASTA alignments",
+  "description": "Andrew Page explains how SNP-sites extracts variants from alignments, why it reads files twice, and how testing and packaging keep it useful.",
+  "summary": "Andrew Page discusses SNP-sites with fellow hosts Lee Katz and Nabil-Fareed Alikhan in a software deep dive. He explains how the tool grew out of Gubbins, extracts variable positions from multi-FASTA alignments, and keeps memory use low by reading the input twice. The conversation also covers compressed inputs, VCF output, tree-building caveats, software packaging and the value of keeping a tool focused.",
+  "people": [
+    {
+      "name": "Lee Katz",
+      "role": "host",
+      "affiliation": "Centers for Disease Control and Prevention; University of Georgia"
+    },
+    {
+      "name": "Andrew Page",
+      "role": "host",
+      "affiliation": "Quadram Institute, Norwich, UK"
+    },
+    {
+      "name": "Nabil-Fareed Alikhan",
+      "role": "host",
+      "affiliation": "Quadram Institute, Norwich, UK"
+    },
+    {
+      "name": "Ben Taylor",
+      "role": "mentioned",
+      "affiliation": ""
+    },
+    {
+      "name": "Simon R. Harris",
+      "role": "mentioned",
+      "affiliation": ""
+    },
+    {
+      "name": "Torsten Seemann",
+      "role": "mentioned",
+      "affiliation": ""
+    },
+    {
+      "name": "Nick Waters",
+      "role": "mentioned",
+      "affiliation": ""
+    }
+  ],
+  "sections": [
+    {
+      "heading": "One task, spun out of Gubbins",
+      "body": "SNP-sites takes a multi-FASTA alignment and extracts the positions that vary between sequences. Page describes inputs ranging from reference-aligned consensus sequences to whole-genome and single-gene alignments. The aim is to retain the differences rather than carry every unchanged position into subsequent analysis, such as tree building or investigating recombination.\n\nThe tool began as part of Gubbins. During development, Simon R. Harris asked Page to turn the SNP-extraction component into a separate application. Page copied the relevant C code into a new project, with work starting around 2013. He says he still uses it once or twice a month because it performs that narrow task without fuss."
+    },
+    {
+      "heading": "Low memory use and the cost of writing C",
+      "body": "Page contrasts SNP-sites with approaches that load an entire alignment into memory. With tens of thousands of genomes, that can exceed the capacity of a laptop or desktop. SNP-sites instead reads the file twice, trading away streaming input to keep memory overhead low. He describes processing thousands of samples using only tens of megabytes of memory.\n\nThe implementation uses C with manually managed memory. Page spent considerable time keeping it fast and finding memory leaks with Valgrind. However, Ben Taylor demonstrated an alternative by producing a fast Cython implementation in a few hours. Page says that approach might have saved him weeks or months, although it had some quirks. The lesson is that developer time matters alongside runtime efficiency."
+    },
+    {
+      "heading": "Packaging, tests and compressed input",
+      "body": "Page emphasises that the C code has tests and uses Automake and Autoconf for a conventional build process. He describes the extra packaging work as worthwhile because it makes the software portable across Linux and Unix-type systems and supports straightforward compilation and installation.\n\nThat preparation also helped SNP-sites enter Debian Med. Page values the continuing maintenance available through that route, and mentions availability through Homebrew, Conda and Docker. Katz reports installing it immediately before the conversation and finding it particularly easy to run. Another practical feature is support for gzipped multi-FASTA alignments: users can supply compressed files without first creating an uncompressed copy."
+    },
+    {
+      "heading": "VCF output, quick trees and distance matrices",
+      "body": "Page frequently uses SNP-sites to create VCF files containing SNP coordinates and a matrix of variant calls across samples. The discussion also covers PHYLIP format and feeding SNP-only alignments into tree-building software such as RAxML. Reducing a large alignment to variable sites can make an otherwise slow analysis much quicker; Page uses a one-gigabyte input as an example of a file that may cause difficulties for tree-building programs.\n\nHe cautions that removing information has consequences: branch lengths will not be as good, even if the result gives a quick view of clustering. Torsten Seemann's snp-dists is discussed as a companion tool that produces pairwise distance matrices from SNP-sites output. One of the hosts notes that such a matrix could be used for neighbour joining."
+    },
+    {
+      "heading": "A publishable building block, not an expanding pipeline",
+      "body": "The accompanying paper, *SNP-sites: rapid efficient extraction of SNPs from multi-FASTA alignments*, appeared in Microbial Genomics 2(4) in 2016. Page initially treated publication as an experiment in whether such a small tool could justify a paper. The team carried out performance comparisons and wrote it up; at the time of recording, he says it was the journal's highest-cited paper.\n\nThe hosts connect its usefulness to the Unix approach of combining small programs. Page has seen SNP-sites adopted in many pipelines through papers citing it. They also discuss feature creep: apparently minor requests can greatly expand a codebase. Page does not anticipate major additions to SNP-sites, beyond possible output formats and bug fixes."
+    }
+  ],
+  "highlights": [
+    {
+      "time": "00:01:14",
+      "topic": "What SNP-sites extracts from a multi-FASTA alignment"
+    },
+    {
+      "time": "00:02:16",
+      "topic": "How the SNP-extraction component became a separate tool from Gubbins"
+    },
+    {
+      "time": "00:03:20",
+      "topic": "Reading the input twice to keep memory use low"
+    },
+    {
+      "time": "00:04:45",
+      "topic": "Why Page chose C for efficient implementation"
+    },
+    {
+      "time": "00:07:33",
+      "topic": "Reading gzipped alignments directly"
+    },
+    {
+      "time": "00:08:17",
+      "topic": "Creating VCF files with SNP coordinates and variant calls"
+    },
+    {
+      "time": "00:09:41",
+      "topic": "Testing whether a small, focused tool could become a journal paper"
+    },
+    {
+      "time": "00:10:19",
+      "topic": "Minimising memory use and tracking leaks with Valgrind"
+    },
+    {
+      "time": "00:10:55",
+      "topic": "The Unix approach of combining small tools into pipelines"
+    },
+    {
+      "time": "00:11:52",
+      "topic": "Keeping future SNP-sites development limited in scope"
+    },
+    {
+      "time": "00:12:45",
+      "topic": "Using a pairwise distance matrix for neighbour joining"
+    }
+  ],
+  "quotes": [
+    {
+      "text": "It's not trying to do every possible different thing.",
+      "time": "00:02:16",
+      "speaker": "Andrew Page"
+    }
+  ],
+  "tools": [
+    "SNP-sites",
+    "Gubbins",
+    "Cython",
+    "Valgrind",
+    "Automake",
+    "Autoconf",
+    "Debian Med",
+    "Homebrew",
+    "Conda",
+    "Docker",
+    "RAxML",
+    "snp-dists",
+    "neighbour joining"
+  ],
+  "topics": [
+    "snp extraction",
+    "multi-fasta alignments",
+    "memory efficiency",
+    "vcf output",
+    "phylogenetics",
+    "distance matrices",
+    "software packaging",
+    "software testing",
+    "feature creep"
+  ],
+  "faq": [
+    {
+      "q": "What input does SNP-sites need?",
+      "a": "It takes a multi-FASTA alignment and extracts variable positions. Page discusses whole-genome alignments, gene alignments and reference-aligned consensus sequences, and confirms that gzipped input is supported."
+    },
+    {
+      "q": "How does SNP-sites keep memory use low?",
+      "a": "It reads the input file twice rather than loading the whole alignment into memory. Page describes thousands of samples using only tens of megabytes of memory, with the trade-off that input cannot simply be streamed through."
+    },
+    {
+      "q": "Can SNP-sites output be used to build phylogenetic trees?",
+      "a": "Page describes using SNP-only alignments to make tree building quicker and obtain an initial view of clustering. He cautions that information is lost and branch lengths will not be as good. The hosts also discuss neighbour joining from pairwise distances produced by snp-dists."
+    },
+    {
+      "q": "How can SNP-sites be installed?",
+      "a": "The episode mentions Debian Med, Homebrew, Conda and Docker. Page also describes a conventional source-build process using Automake and Autoconf, while Katz reports finding installation particularly straightforward."
+    }
+  ]
+}

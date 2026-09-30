@@ -1,0 +1,156 @@
+{
+ "episode": "010",
+ "headline": "A history of bioinformatics file formats: FASTQ to BLAST",
+ "description": "Why bioinformatics has so many file formats: FASTQ, BAM, genome annotation, BLAST outputs and the practical headaches of parsing and conversion.",
+ "summary": "Lee Katz, Andrew Page and Nabil-Fareed Alikhan trace bioinformatics file formats through sequencing, genome annotation and sequence alignment. They compare proprietary outputs with community-supported formats, revisit awkward legacy files and explain why apparently small differences can break analysis pipelines. The recurring question is whether formats serve people reading results, software parsing them, or both.",
+ "people": [
+  {
+   "name": "Lee Katz",
+   "role": "host",
+   "affiliation": "Centers for Disease Control and Prevention; adjunct member at the University of Georgia, US"
+  },
+  {
+   "name": "Andrew Page",
+   "role": "host",
+   "affiliation": "Quadram Institute, Norwich, UK"
+  },
+  {
+   "name": "Nabil-Fareed Alikhan",
+   "role": "host",
+   "affiliation": "Quadram Institute, Norwich, UK"
+  }
+ ],
+ "sections": [
+  {
+   "heading": "Raw sequencing data and common formats",
+   "body": "FASTQ is presented as the de facto standard for sharing raw sequencing reads, even when instruments initially produce something proprietary. The hosts recall Sanger chromatograms before discussing PacBio’s use of HDF5 containers and its move to BAM. BAM makes existing tools such as samtools available; methylation information can be retained through additional key–value fields in the SAM representation.\n\nNanopore’s FAST5 files store raw signals, which base callers and tools such as Nanopolish can interrogate. The conversation also covers the term squiggles for those signals. Direct FASTQ output is welcomed because it lets users move into established pipelines without repeatedly handling instrument-specific formats."
+  },
+  {
+   "heading": "Legacy sequencers and difficult conversions",
+   "body": "The hosts remember working with 454 SFF files and ACE assemblies. ACE could describe assembled contigs and their underlying reads, but extracting that information from its multi-line structure was awkward. Lee Katz recalls asking how to convert between formats before discovering SAM as a more practical alternative.\n\nFor Illumina data, the familiar route is BCL to FASTQ using bcl2fastq. Revisiting BCL files is discussed mainly in connection with indexes, barcode bleed-through or an especially important run. The broader point is practical inertia: once good tools exist around a shared format, rebuilding them for another proprietary output is difficult to justify."
+  },
+  {
+   "heading": "Annotation formats and competing gene models",
+   "body": "GenBank and EMBL illustrate different approaches to presenting annotation. EMBL’s two-letter line codes identify record types, while fixed-width lines and wrapping recall older terminals. GFF introduces another compatibility problem: versions are not necessarily interchangeable. The hosts discuss Prokka’s GFF3 output with an appended FASTA sequence and the extra checks needed when other producers handle separators differently.\n\nContent can be harder than syntax. Zero-based versus one-based coordinates cause confusion, while gene, exon, CDS, mRNA and polypeptide features can form different hierarchies. E. coli K-12 is cited as an older complete genome with both gene and CDS features. The discussion distinguishes open reading frames from predicted coding sequences, particularly the difficulty of locating a start, and notes that choosing the wrong translation table can disrupt interpretation."
+  },
+  {
+   "heading": "BLAST’s many outputs",
+   "body": "BLAST offers 19 output formats in the discussion, although the hosts commonly use tabular format 6, formerly M8. Nabil-Fareed Alikhan describes choosing XML while developing BRIG because the documentation then recommended it as stable between versions. They also discuss customisable tabular columns, human-readable output, JSON and SAM.\n\nThe move from legacy BLAST to BLAST+ raises a separate reproducibility concern: changed matching behaviour could shift alignment coordinates and complicate comparisons with earlier analyses. There is also a complaint about BLAST’s single-dash options for full words. Despite these frustrations, the hosts praise the NCBI teams for maintaining the software over such a long period."
+  },
+  {
+   "heading": "Multiple alignments and restrictive names",
+   "body": "Andrew Page discusses Gubbins, which accepts a multiple-FASTA alignment, and Roary, which produces multiple sequence alignments. Mauve’s XMFA output provides another example of the formats users must accommodate.\n\nThe hosts recall strict ten-character taxon-name limits, relaxed variants and interleaved sequence layouts. PHYLIP remains relevant through programs such as RAxML and QuickTree, with Lee Katz mentioning its use for Mashtree. They trace PHYLIP back to 1980. Andrew favours multiple-FASTA alignments for their straightforward structure: they are simply FASTA files with multiple sequence entries, all aligned to the same length."
+  },
+  {
+   "heading": "Simple records and evolving standards",
+   "body": "Boulder IO, encountered through Primer3, receives a favourable assessment. Its key–value fields and equals-sign record delimiters make it straightforward to parse one entry at a time. Lee notes a 1996 copyright date in the Primer3 manual. PrimerSearch provides a contrasting example of multi-line output that Andrew finds awkward to process.\n\nThe conclusion is that formats are shaped by the software that reads and writes them, not just by specifications. GA4GH’s work on formats including VCF, SAM, BAM and CRAM is discussed as an attempt to formalise standards. The hope for fewer universal formats ends with a reference to the xkcd standards comic."
+  }
+ ],
+ "highlights": [
+  {
+   "time": "00:00:04",
+   "topic": "Why converting between file formats occupies so much bioinformatics work"
+  },
+  {
+   "time": "00:03:34",
+   "topic": "PacBio’s HDF5 files, BAM and the benefits of community-supported tools"
+  },
+  {
+   "time": "00:04:48",
+   "topic": "SAM key–value fields for methylation data, followed by Nanopore FAST5"
+  },
+  {
+   "time": "00:06:53",
+   "topic": "Falling back on established standards and memories of 454 SFF and ACE"
+  },
+  {
+   "time": "00:12:12",
+   "topic": "Illumina BCL output and immediate conversion to FASTQ"
+  },
+  {
+   "time": "00:15:13",
+   "topic": "Genome annotation in GenBank and EMBL formats"
+  },
+  {
+   "time": "00:17:10",
+   "topic": "GFF versions and compatibility between annotation parsers"
+  },
+  {
+   "time": "00:23:04",
+   "topic": "Distinguishing open reading frames from coding sequences"
+  },
+  {
+   "time": "00:25:13",
+   "topic": "BLAST output as a software-defined family of 19 formats"
+  },
+  {
+   "time": "00:28:26",
+   "topic": "Choosing XML for BRIG to avoid changing BLAST output conventions"
+  },
+  {
+   "time": "00:32:34",
+   "topic": "Multiple sequence alignments and their competing file formats"
+  },
+  {
+   "time": "00:35:54",
+   "topic": "Boulder IO records and their usefulness for parsing and pipelines"
+  }
+ ],
+ "quotes": [
+  {
+   "text": "Just like language, which is continuously evolving, if a popular software application introduces a variant of a format, then realistically, it is in common usage and is part of an unofficial format standard.",
+   "time": "00:38:11",
+   "speaker": "Lee Katz"
+  }
+ ],
+ "tools": [
+  "samtools",
+  "Nanopolish",
+  "bcl2fastq",
+  "GenBank",
+  "Artemis",
+  "Prokka",
+  "BLAST",
+  "BLAST+",
+  "BRIG",
+  "Biopython",
+  "BioPerl",
+  "Gubbins",
+  "Roary",
+  "Mauve",
+  "RAxML",
+  "PHYLIP",
+  "QuickTree",
+  "Mashtree",
+  "Primer3",
+  "PrimerSearch"
+ ],
+ "topics": [
+  "bioinformatics file formats",
+  "sequencing data",
+  "data interoperability",
+  "genome annotation",
+  "sequence alignment",
+  "file parsing",
+  "data standards",
+  "microbial bioinformatics"
+ ],
+ "faq": [
+  {
+   "q": "Why do bioinformaticians convert sequencing data to FASTQ or BAM?",
+   "a": "The hosts emphasise the existing tools and pipelines built around these formats. Conversion lets users work with sequencing data without depending entirely on bespoke tools for an instrument’s proprietary output."
+  },
+  {
+   "q": "Why are genome annotation files difficult to parse consistently?",
+   "a": "The episode identifies incompatible format versions, differing sequence separators, coordinate conventions and competing feature hierarchies. Even bacterial annotations can differ over whether they include gene features, CDS features or both."
+  },
+  {
+   "q": "Why was XML chosen for BLAST output in BRIG?",
+   "a": "Nabil-Fareed Alikhan says the documentation at the time recommended XML as an output that would not change between versions. That reduced the risk of having to rewrite BRIG’s parser after a BLAST update."
+  },
+  {
+   "q": "What is Boulder IO used for in this episode?",
+   "a": "The hosts discuss it as Primer3’s straightforward key–value format. They find its equals-sign delimiters convenient for parsing individual records and using the output in pipelines."
+  }
+ ]
+}

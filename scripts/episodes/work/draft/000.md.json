@@ -1,0 +1,84 @@
+{
+  "episode": "000",
+  "headline": "Trailer: microbial bioinformatics, software and guests",
+  "description": "Meet hosts Lee Katz, Andrew Page and Nabil-Fareed Alikhan, and hear plans for conversations about microbial bioinformatics.",
+  "summary": "Lee Katz introduces Micro Binfie and co-hosts Nabil-Fareed Alikhan and Andrew Page. The trailer explains the name and previews conversations about bacterial genotyping history, writing better software and what not to write, alongside guest appearances.",
+  "people": [
+    {
+      "name": "Lee Katz",
+      "role": "host",
+      "affiliation": ""
+    },
+    {
+      "name": "Andrew Page",
+      "role": "host",
+      "affiliation": ""
+    },
+    {
+      "name": "Nabil-Fareed Alikhan",
+      "role": "host",
+      "affiliation": ""
+    }
+  ],
+  "sections": [
+    {
+      "heading": "What Micro Binfie means",
+      "body": "Lee Katz explains that micro and binfie are shorthand for microbial and bioinformatics. He introduces the show as a place for conversations about microbial bioinformatics."
+    },
+    {
+      "heading": "Planned topics and guests",
+      "body": "The hosts promise the history of bacterial genotyping, how to write better software and what not to write. A brief guest clip includes a comment that having a paper does not mean much if nobody has cited it."
+    },
+    {
+      "heading": "Where to listen",
+      "body": "The trailer closes with an invitation to subscribe. The show notes list SoundCloud, iTunes and Spotify, as well as listeners’ preferred podcast software."
+    }
+  ],
+  "highlights": [
+    {
+      "time": "00:00:08",
+      "topic": "Lee Katz introduces the podcast and his co-hosts"
+    },
+    {
+      "time": "00:00:22",
+      "topic": "The meaning of Micro Binfie, followed by planned episode topics"
+    },
+    {
+      "time": "00:00:32",
+      "topic": "Guest appearances are promised"
+    },
+    {
+      "time": "00:00:33",
+      "topic": "A guest mentions a nickname and comments on paper citations"
+    },
+    {
+      "time": "00:00:43",
+      "topic": "An invitation to subscribe on iTunes or another podcast platform"
+    }
+  ],
+  "quotes": [
+    {
+      "text": "It's a shorthand for microbial and bioinformatics.",
+      "time": "00:00:22",
+      "speaker": "Lee Katz"
+    }
+  ],
+  "tools": [],
+  "topics": [
+    "microbial bioinformatics",
+    "bacterial genotyping",
+    "software development",
+    "research citations",
+    "podcast introduction"
+  ],
+  "faq": [
+    {
+      "q": "What does Micro Binfie mean?",
+      "a": "Lee Katz explains that it is shorthand for microbial and bioinformatics."
+    },
+    {
+      "q": "What topics does the trailer promise?",
+      "a": "The planned topics include the history of bacterial genotyping, how to write better software and what not to write. The hosts also promise guests."
+    }
+  ]
+}

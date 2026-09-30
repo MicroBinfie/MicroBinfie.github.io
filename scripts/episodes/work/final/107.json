@@ -1,0 +1,158 @@
+{
+ "episode": "107",
+ "headline": "SeqCode: naming prokaryotes from genome sequences",
+ "description": "Marike Palmer and Miguel Rodriguez explain SeqCode, genome-based nomenclatural types and stable names for cultivated and uncultivated prokaryotes.",
+ "summary": "Lee Katz and Nabil-Fareed Alikhan speak with Marike Palmer and Miguel Rodriguez about SeqCode, a nomenclatural code that allows genome sequences to serve as types for naming prokaryotes. They distinguish naming rules from taxonomic classification and explain how priority, nomenclatural types and a registry support stable names. The discussion also covers why culture-deposition requirements can prevent researchers from validating names, even when an organism has been cultivated.",
+ "people": [
+  {
+   "name": "Lee Katz",
+   "role": "host",
+   "affiliation": "Centers for Disease Control and Prevention; University of Georgia (adjunct member)"
+  },
+  {
+   "name": "Nabil-Fareed Alikhan",
+   "role": "host",
+   "affiliation": "Quadram Institute, Norwich, UK"
+  },
+  {
+   "name": "Marike Palmer",
+   "role": "guest",
+   "affiliation": "School of Life Sciences, University of Nevada Las Vegas"
+  },
+  {
+   "name": "Miguel Rodriguez",
+   "role": "guest",
+   "affiliation": "University of Innsbruck, departments of Microbiology and the Digital Science Center (DiSC)"
+  }
+ ],
+ "sections": [
+  {
+   "heading": "Systematics, taxonomy and naming",
+   "body": "Miguel distinguishes three terms: taxonomy concerns the classification of organisms; nomenclature supplies rules for naming those groups; systematics encompasses both. SeqCode addresses nomenclature rather than deciding how organisms should be classified. Its first principle explicitly protects freedom of taxonomic opinion and action, so it does not replace classification efforts such as GTDB or prescribe a single way to define a species.\n\nBoth guests approach the problem through microbial ecology. Marike describes work with cultivated soil organisms, including nitrogen-fixing rhizobia associated with legumes, alongside hot-spring archaea and viral DNA from extreme environments. Miguel studies environmental genomics and microbial communities, including freshwater Pelagibacteriales. For him, the practical problem is that researchers have learnt a great deal about organisms through their genomes without having stable names with which to discuss them."
+  },
+  {
+   "heading": "Why priority matters for stable names",
+   "body": "Stable naming does not mean freezing scientific classification. Marike explains that new evidence may justify moving a species into another genus or otherwise changing its taxonomic placement. The aim is to retain a dependable connection between names and the organisms being discussed while allowing those interpretations to change.\n\nMiguel introduces the principle of priority as a mechanism for managing competing names and parallel research. He explains that a validly and correctly assigned name is reserved for its taxon rather than being available for reuse elsewhere. The guests contrast this with *Candidatus* names, which lack that protection. Multiple names can accumulate for the same taxon, while a name can potentially be reused for different taxa. Marike also highlights higher-rank *Candidatus* names that lack an associated species, making their application difficult to track."
+  },
+  {
+   "heading": "A genome as the naming anchor",
+   "body": "A nomenclatural type provides an anchor for a name. Miguel explains that organisms judged sufficiently similar to that anchor can receive the same name, while the meaning of sufficiently similar remains a taxonomic decision. The anchor becomes particularly useful if a group is later split: without one, there is no objective basis for deciding which part retains the original name.\n\nSeqCode allows a genome to be the nomenclatural type of a species or subspecies, rather than requiring a pure culture deposited in culture collections in two different countries. Marike cautions that a type need not be the most typical or average representative of its group. She also recommends naming the intervening ranks when describing a sufficiently novel lineage: a new order would ideally have an associated family, genus and species, linked upwards to an existing class."
+  },
+  {
+   "heading": "Evidence and the SeqCode Registry",
+   "body": "The guests discuss several ways researchers can delimit taxa, including genealogical concordance, average nucleotide identity and a polyphasic approach that combines different kinds of evidence. Genome data can support comparisons of both cultivated and uncultivated organisms. SeqCode does not require everyone to agree on one delimitation method.\n\nBecause SeqCode is not tied to a single journal, the SeqCode Registry provides a central place to record naming proposals. Miguel describes taxon descriptions ranging from accounts of eco-physiology and metabolism to brief statements based on GTDB-RED indexes, average amino acid identity or average nucleotide identity. Marike distinguishes a conventional description paragraph, or protologue, from the evidence presented in the paper. The effective publication proposes the name and presents its scientific basis; it must be deposited in the registry before the naming process can be completed."
+  },
+  {
+   "heading": "Why cultivated organisms can still need SeqCode",
+   "body": "SeqCode applies to cultivated as well as uncultivated prokaryotes. Miguel gives examples of cultures that may be difficult to deposit: organisms requiring very high pressures, very low nutrient concentrations or years to double. Having grown an organism does not necessarily mean a culture collection can readily maintain and distribute it.\n\nThe guests also discuss differing national applications of the Nagoya Protocol, which concerns access to genetic resources and benefit sharing. Miguel names Brazil, South Africa and South Korea as examples where restrictions can complicate transferring material internationally. Marike adds that exporting a culture and depositing it may still leave restrictions on its subsequent distribution. Such restrictions can prevent validation under the ICNP, even when the culture has reached collections, because the code does not allow those distribution limitations."
+  },
+  {
+   "heading": "An evolutionary change for bacteria and archaea",
+   "body": "Miguel places genome-based types in historical context. He says that in 1966 the ICNP permitted a type strain or, in special cases, a description, preserved specimen, preparation or illustration. He also notes that major systematics journals already require genomes for new taxon proposals. Marike, borrowing a colleague's phrase, frames SeqCode as an evolutionary change that makes nomenclature fit information researchers already use.\n\nA hypothetical Jurassic Park question prompts clarification of scope: SeqCode currently accommodates bacteria and archaea, not eukaryotes. The guests contrast prokaryotic requirements for viable cultures with naming animals or plants. A new oak or tiger species does not require a living specimen to be maintained indefinitely."
+  }
+ ],
+ "highlights": [
+  {
+   "time": "00:01:42",
+   "topic": "Miguel distinguishes systematics, taxonomy and nomenclature."
+  },
+  {
+   "time": "00:02:38",
+   "topic": "Marike describes research on rhizobia, hot-spring archaea and extreme-environment viruses."
+  },
+  {
+   "time": "00:05:05",
+   "topic": "Microbial ecology needs stable names for organisms known through their genomes."
+  },
+  {
+   "time": "00:08:47",
+   "topic": "SeqCode protects freedom of taxonomic opinion rather than prescribing classification."
+  },
+  {
+   "time": "00:10:52",
+   "topic": "The principle of priority supports stability when taxonomic opinions change."
+  },
+  {
+   "time": "00:13:12",
+   "topic": "Candidatus naming lacks priority protection against competing or reused names."
+  },
+  {
+   "time": "00:15:37",
+   "topic": "Nomenclatural types anchor names, and SeqCode permits genomes to serve as those types."
+  },
+  {
+   "time": "00:19:42",
+   "topic": "The SeqCode Registry records naming proposals and taxon descriptions."
+  },
+  {
+   "time": "00:21:58",
+   "topic": "Effective publication connects a proposed name with its scientific evidence."
+  },
+  {
+   "time": "00:25:34",
+   "topic": "Historical ICNP provisions allowed alternatives to type strains in special cases."
+  },
+  {
+   "time": "00:27:43",
+   "topic": "SeqCode also covers cultivated prokaryotes that may be difficult to deposit."
+  },
+  {
+   "time": "00:30:48",
+   "topic": "SeqCode's current scope is bacteria and archaea."
+  }
+ ],
+ "quotes": [
+  {
+   "text": "It doesn't have to be a pure culture deposited in two different countries, in culture collections in two different countries. It can be just their genome.",
+   "time": "00:15:37",
+   "speaker": "Miguel Rodriguez"
+  },
+  {
+   "text": "So I can't just name something and validate it without an actual paper being published on the novelty of that organism.",
+   "time": "00:22:51",
+   "speaker": "Marike Palmer"
+  }
+ ],
+ "tools": [
+  "SeqCode Registry",
+  "GTDB",
+  "GTDB-RED indexes",
+  "Average nucleotide identity",
+  "Average amino acid identity",
+  "Genealogical concordance",
+  "Polyphasic approach"
+ ],
+ "topics": [
+  "seqcode",
+  "prokaryotic nomenclature",
+  "systematics",
+  "microbial taxonomy",
+  "genome-based naming",
+  "nomenclatural types",
+  "candidatus",
+  "culture collections",
+  "nagoya protocol"
+ ],
+ "faq": [
+  {
+   "q": "Does SeqCode decide how microbial species are classified?",
+   "a": "No. SeqCode governs naming and explicitly preserves freedom of taxonomic opinion. Researchers can use different evidence and methods to delimit taxa."
+  },
+  {
+   "q": "What is a nomenclatural type under SeqCode?",
+   "a": "It is an anchor that connects a name to a taxon. SeqCode allows a genome to serve as the type of a species or subspecies, and that genome need not represent the group's most typical member."
+  },
+  {
+   "q": "Can SeqCode be used for cultivated bacteria and archaea?",
+   "a": "Yes. The guests explain that difficult growth requirements or restrictions on transferring and distributing cultures can prevent ICNP validation even when an organism has been cultivated."
+  },
+  {
+   "q": "Why are Candidatus names not enough?",
+   "a": "The guests identify the absence of priority protection as a source of competing names and possible name reuse. Higher-rank Candidatus names may also lack a species-level anchor, making their application harder to maintain."
+  },
+  {
+   "q": "Can a SeqCode name be validated without a published paper?",
+   "a": "No. Marike states that an actual paper on the organism's novelty must be published. Miguel explains that the effective publication must also be deposited in the SeqCode Registry."
+  }
+ ]
+}

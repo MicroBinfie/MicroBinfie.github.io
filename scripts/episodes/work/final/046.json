@@ -1,0 +1,151 @@
+{
+ "episode": "046",
+ "headline": "SARS-CoV-2 genomics resources: variants, dashboards and training",
+ "description": "A February 2021 roundup of CoVariants, lineage reports, Microreact, training resources and faster ways to track and share SARS-CoV-2 genomes.",
+ "summary": "Recorded on 5 February 2021, this roundup brings hosts Lee Katz, Andrew Page and Nabil-Fareed Alikhan together with Leonardo de Oliveira Martins, introduced as head of phylogenomics at the Quadram Institute. They review resources for tracking SARS-CoV-2 variants, interpreting mutations, training analysts and submitting genomes. The discussion connects these tools to practical public health problems: uneven surveillance, rapidly changing variants and the pressure to share results quickly.",
+ "people": [
+  {
+   "name": "Lee Katz",
+   "role": "host",
+   "affiliation": "Centers for Disease Control and Prevention; University of Georgia"
+  },
+  {
+   "name": "Andrew Page",
+   "role": "host",
+   "affiliation": "Quadram Institute"
+  },
+  {
+   "name": "Nabil-Fareed Alikhan",
+   "role": "host",
+   "affiliation": "Quadram Institute"
+  },
+  {
+   "name": "Leonardo de Oliveira Martins",
+   "role": "guest",
+   "affiliation": "Quadram Institute"
+  },
+  {
+   "name": "Emma Hodcroft",
+   "role": "mentioned",
+   "affiliation": ""
+  },
+  {
+   "name": "Anthony Underwood",
+   "role": "mentioned",
+   "affiliation": "CGPS"
+  }
+ ],
+ "sections": [
+  {
+   "heading": "Variant catalogues and gaps in surveillance",
+   "body": "Nabil-Fareed Alikhan introduces CoVariants, with Emma Hodcroft leading the work. The website brings together variants, their mutations and literature about possible effects, including changes to antibody recognition or spike protein structure. It also plots variant distributions within and between countries using data submitted to GISAID. The panel stresses that there are thousands of variants, and their significance may only become apparent after they have spread.\n\nThe cov-lineages reports add another perspective, combining genomic observations with passenger numbers and reports from sources such as local newspapers. The discussion covers B.1.1.7, B.1.351 and P.1, associated in the episode with the UK, South Africa and northern Brazil respectively. Andrew Page describes a period when Poland had substantial passenger traffic from the UK but no recorded B.1.1.7 cases: a warning about surveillance gaps rather than reassurance that the variant was absent. More broadly, the panel cautions that countries doing more sequencing can appear disproportionately affected. They also discuss the tension between rapid public data sharing and researchers’ concerns about acknowledgement or being scooped."
+  },
+  {
+   "heading": "Microreact makes variant tracking easier",
+   "body": "Microreact combines a phylogenetic tree, timeline and geographical display. Nabil describes new shortcuts that let users jump directly to variants of interest, rather than navigate the full SARS-CoV-2 collection. Another update displays a lineage’s frequency as a proportion of all samples, not just its absolute count. That distinction matters when changing sample numbers make a lineage appear to decline. Anthony Underwood and colleagues at CGPS are credited with these developments.\n\nAndrew explains that Microreact regularly imports public COG-UK data, which can make its display more current than data available through GISAID. This is not privileged access to secret data. Users can also upload their own trees and metadata. The hosts are impressed by the scale: hundreds of thousands of genomes, approaching half a million in the discussion."
+  },
+  {
+   "heading": "Mutation nicknames and targeted screening",
+   "body": "The panel discusses N501Y, nicknamed Nelly, and E484K, nicknamed Eek. Andrew describes N501Y as present in the UK, South African and Brazilian variants of concern being discussed. E484K is discussed in connection with B.1.351, P.1 and P.2, and its detection in B.1.1.7. The concern is that these mutations are arising independently in different lineages, which Andrew expects will probably make things slightly worse.\n\nMultiplex PCR protocols offer a more accessible way to screen for variants, but Andrew questions how long lineage-specific assays will remain useful. He asks whether targeting mutations of concern would be more durable, while noting that this loses the broader genomic epidemiology available from whole genomes. Sanger sequencing of part of the spike gene is raised as another possibility. Nabil sees openly shared protocols as useful early progress, following the use of spike gene target failure to detect B.1.1.7. The panel expects RT-qPCR to remain important where sequencing resources are limited."
+  },
+  {
+   "heading": "Training for analysts and epidemiologists",
+   "body": "The CLIMB ARTIC workshop provides online videos, homework and assignments introducing analysis of ARTIC sequencing data. Andrew reports that the course ran for 133 people from more than 30 countries. It brings together developers involved in ARTIC and tools including pangolin, civet and llama, giving learners access to people building the methods used in SARS-CoV-2 analysis.\n\nLee introduces the CDC’s COVID-19 genomic epidemiology toolkit, a collection of introductory videos intended to help epidemiologists engage with genomic data. The panel mentions material on reading phylogenetic trees and applications in Arizona. They suggest combining this introductory material with the more practical workshop resources to develop well-rounded analysts. Training remains difficult to maintain because methods change quickly and the same experts are occupied with processing and analysing large numbers of samples."
+  },
+  {
+   "heading": "Scaling sequencing and automating submissions",
+   "body": "Denmark provides an example of rapidly expanding sequencing capacity. Andrew describes a compact laboratory running roughly 20–30 MinION instruments simultaneously, helping put Denmark among the leading countries for genomes generated per head of population. The resulting genomic surveillance tracks a rapidly increasing proportion of B.1.1.7. Nabil wonders whether the effort is now getting more support from SSI, which would formalise and amplify it.\n\nThe final resource update concerns GISAID’s new command-line/API submission tool. Previously, submitting genomes involved preparing an Excel or CSV metadata file and a separate multi-FASTA sequence file, then uploading them through a web page. Batch uploads were possible, but the process was not programmatic. The new interface allows submissions to be integrated with consensus-sequence generation. Nabil expects easier submission to shorten the delay before genomic information reaches the variant reports and visualisation resources discussed throughout the episode."
+  }
+ ],
+ "highlights": [
+  {
+   "time": "00:02:30",
+   "topic": "CoVariants catalogues variants, mutations and evidence about their possible effects."
+  },
+  {
+   "time": "00:04:45",
+   "topic": "Uneven sequencing between countries can distort the apparent distribution of variants."
+  },
+  {
+   "time": "00:05:39",
+   "topic": "The trade-off of open data sharing leads into cov-lineages reports and travel-based surveillance gaps."
+  },
+  {
+   "time": "00:10:17",
+   "topic": "Microreact adds variant shortcuts and lineage frequencies rather than absolute counts alone."
+  },
+  {
+   "time": "00:14:13",
+   "topic": "N501Y and E484K illustrate important mutations appearing across different lineages."
+  },
+  {
+   "time": "00:16:00",
+   "topic": "Further mutation nicknames precede an introduction to CLIMB ARTIC workshop resources."
+  },
+  {
+   "time": "00:17:02",
+   "topic": "Lee introduces the CDC’s COVID-19 genomic epidemiology training videos."
+  },
+  {
+   "time": "00:18:52",
+   "topic": "Variant-specific PCR raises questions about assay lifespan and lost genomic information."
+  },
+  {
+   "time": "00:19:34",
+   "topic": "Spike gene target failure and shared PCR protocols are discussed as practical early steps."
+  },
+  {
+   "time": "00:20:49",
+   "topic": "Denmark’s rapid sequencing expansion enables genomic tracking of B.1.1.7."
+  },
+  {
+   "time": "00:21:56",
+   "topic": "Possible SSI support for Danish sequencing precedes the update on GISAID API submissions."
+  }
+ ],
+ "quotes": [],
+ "tools": [
+  "CoVariants",
+  "cov-lineages reports",
+  "Microreact",
+  "GISAID",
+  "GISAID CLI/API submission tool",
+  "ARTIC",
+  "pangolin",
+  "civet",
+  "llama",
+  "Multiplex RT-qPCR",
+  "Sanger sequencing",
+  "Spike gene target failure",
+  "MinION"
+ ],
+ "topics": [
+  "sars-cov-2",
+  "variants of concern",
+  "genomic surveillance",
+  "genomic epidemiology",
+  "phylogenetic visualisation",
+  "sampling bias",
+  "bioinformatics training",
+  "targeted pcr",
+  "genomic data sharing"
+ ],
+ "faq": [
+  {
+   "q": "Which SARS-CoV-2 variant resources were recommended in February 2021?",
+   "a": "The panel highlights CoVariants for mutation summaries and country-level distributions, cov-lineages reports for variant spread and travel context, and Microreact for viewing trees, timelines and geographical patterns. These recommendations reflect the resources discussed on 5 February 2021."
+  },
+  {
+   "q": "What changed in Microreact to help track SARS-CoV-2 variants?",
+   "a": "New shortcuts let users jump directly to variants of interest. Microreact also added lineage frequencies as a proportion of samples, helping users distinguish changes in variant representation from changes in the number of samples sequenced."
+  },
+  {
+   "q": "What training resources does the episode recommend for SARS-CoV-2 genomic analysis?",
+   "a": "The CLIMB ARTIC workshop offers practical videos, homework and assignments on analysing ARTIC sequencing data. The CDC’s COVID-19 genomic epidemiology toolkit provides introductory material, including reading phylogenetic trees, which the panel suggests using alongside the workshop."
+  },
+  {
+   "q": "What are the limitations of variant-specific PCR screening?",
+   "a": "Andrew questions whether assays targeting particular lineages could become outdated within a week or two as variants change. Targeting individual mutations might help, but targeted screening does not provide the broader genomic epidemiology available from whole genomes; the panel nevertheless recognises PCR’s value where sequencing resources are limited."
+  }
+ ]
+}

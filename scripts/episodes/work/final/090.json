@@ -1,0 +1,156 @@
+{
+ "episode": "090",
+ "headline": "Terra.bio and WDL for public health bioinformatics in the cloud",
+ "description": "How public health labs use Terra.bio and WDL for SARS-CoV-2 analysis, data sharing and cloud computing without managing their own servers.",
+ "summary": "Lee Katz, Andrew Page and Nabil-Fareed Alikhan discuss Terra.bio with Joel Savinsky of Theogen Genomics and Danny Park of the Broad Institute of MIT and Harvard. They explain how browser-based access to workflows, cloud computing and data management helped public health laboratories analyse SARS-CoV-2 sequencing data. The conversation covers practical onboarding, collaboration, errors, costs and the platform’s development plans at the time of recording.",
+ "people": [
+  {
+   "name": "Lee Katz",
+   "role": "host",
+   "affiliation": "Centers for Disease Control and Prevention; University of Georgia"
+  },
+  {
+   "name": "Andrew Page",
+   "role": "host",
+   "affiliation": "Quadram Institute"
+  },
+  {
+   "name": "Nabil-Fareed Alikhan",
+   "role": "host",
+   "affiliation": "Quadram Institute"
+  },
+  {
+   "name": "Joel Savinsky",
+   "role": "guest",
+   "affiliation": "Theogen Genomics"
+  },
+  {
+   "name": "Danny Park",
+   "role": "guest",
+   "affiliation": "Broad Institute of MIT and Harvard"
+  }
+ ],
+ "sections": [
+  {
+   "heading": "Terra, WDL and Cromwell do different jobs",
+   "body": "Danny Park describes Terra as the web-facing layer through which users manage data, workflows and computing. WDL describes the workflow, while an execution engine such as Cromwell interprets it, starts cloud virtual machines and moves files. These components are modular: Cromwell can operate separately from Terra, and other engines can run WDL.\n\nFor a bench scientist with sequencing data and an existing pipeline, Terra removes much of the infrastructure configuration normally required before analysis. Users connect data and workflows within a workspace rather than buying servers or configuring a workflow manager themselves. It does not, however, replace the scientific work of interpreting results."
+  },
+  {
+   "heading": "Accessibility mattered as much as scale",
+   "body": "Park, who works at the Broad but not in Terra’s development group, describes its origins in human and cancer genomics. Growing computing requirements were outpacing local infrastructure, while large datasets were repeatedly copied. His own microbial work had different needs: making pipelines accessible to collaborators, particularly in West Africa through work associated with H3Africa. Once data were uploaded, cloud analysis could continue despite a local power outage, without laboratories maintaining server racks and backup power.\n\nSavinsky describes another barrier: command-line training was difficult to sustain when laboratory staff did not use those skills daily. Terra offered an open-source, browser-based process that could resemble a wet-laboratory SOP. For government approval, his deployments also relied on Google Cloud billing arrangements and assurances that uploaded data contained neither personally identifiable information nor protected health information."
+  },
+  {
+   "heading": "SARS-CoV-2 surveillance put the model to work",
+   "body": "Savinsky recalls public health laboratories initially concentrating on diagnostic testing in early 2020. By that summer, many had sequencing capability but lacked accessible bioinformatics for SARS-CoV-2 surveillance. Existing Nextflow workflows and shared containers provided starting points for WDL implementations; he also mentions the arrival of containers for tools such as Pangolin.\n\nCloning a prepared Terra workspace meant workflows could already be in place. Training then covered uploading data, creating a data table, selecting specimens and launching analysis. Savinsky reports getting laboratories running in 60–90 minutes. In his examples, batches of 10, 100 or 1,000 specimens produced results in about 40 minutes, and larger runs reached tens of thousands of specimens. He reports more than 40 laboratories using Terra nationally at the time."
+  },
+  {
+   "heading": "Data tables, permissions and audit trails",
+   "body": "Terra workspaces organise both inputs and results. A tab-separated file can establish the initial data table, with specimens represented as rows and results as columns. File entries can point to objects in Google Cloud Storage; Terra renders those addresses as downloadable links, including links to BAM alignment files. Results can also be exported as a tab-separated table.\n\nWorkspace permissions control who can view data, perform computations, add users or share access. Savinsky describes this as useful for projects involving state, county and industry partners. Behind the browser interface, execution directories and logs remain available. Bioinformaticians can inspect the actual commands and parameters used, while bench scientists work through the tables."
+  },
+  {
+   "heading": "Errors and the limits of cloud scale",
+   "body": "Spaces in filenames are a recurring problem, but shared workflows make faults easier to identify across laboratories. Savinsky describes fixes moving through GitHub, Dockstore and Terra as new versions. Earlier versions remain available, allowing laboratories to delay changes until they have completed their own verification requirements.\n\nCloud infrastructure does not eliminate resource limits or interference between workloads. Park distinguishes user mistakes, pipeline defects and infrastructure failures, while noting that responsibility can overlap. More resilient code can accommodate awkward filenames; better resource declarations can prevent memory failures. He also describes Terra’s option to retry with more memory. Public health brings its own scaling challenge: millions of small genomes rather than thousands of human genomes, with specimens arriving continuously."
+  },
+  {
+   "heading": "Getting started, costs and the roadmap",
+   "body": "The guests direct newcomers to Terra.bio, Dockstore and training materials from Terra, the Broad and Theogen. Access uses Google authentication, potentially a free Gmail account, alongside a billing arrangement; trial credits are mentioned as a way to experiment.\n\nSavinsky frames cloud computing as a consumable rather than capital equipment, with budgets tied to specimen throughput. He contrasts analysis costing a couple of dollars per specimen with data generation costing about a hundred dollars.\n\nThe roadmap discussion is explicitly time-dependent. At the time of recording, the established route was WDL on Google Cloud. Galaxy pipelines could run with additional effort, while Nextflow support and Azure-backed workspaces were still developing. Savinsky also wanted better public health data management, reporting and integration, rather than treating browser access alone as a complete solution."
+  }
+ ],
+ "highlights": [
+  {
+   "time": "00:02:45",
+   "topic": "Danny Park distinguishes Terra’s web interface from workflow languages and execution engines."
+  },
+  {
+   "time": "00:08:00",
+   "topic": "Terra’s human-genomics origins contrast with microbial needs for accessibility and portability."
+  },
+  {
+   "time": "00:11:35",
+   "topic": "Joel Savinsky explains command-line training, open-source requirements and government approval."
+  },
+  {
+   "time": "00:18:19",
+   "topic": "The pandemic creates demand for accessible SARS-CoV-2 analysis and rapid laboratory onboarding."
+  },
+  {
+   "time": "00:24:18",
+   "topic": "Tab-separated data tables connect browser-visible results to cloud files and execution logs."
+  },
+  {
+   "time": "00:26:34",
+   "topic": "Workspace permissions support data sharing across public health collaborators."
+  },
+  {
+   "time": "00:27:53",
+   "topic": "Filename errors, shared workflow fixes and versioning affect laboratory support."
+  },
+  {
+   "time": "00:33:14",
+   "topic": "Millions of small genomes expose different scaling needs and overlapping responsibilities for errors."
+  },
+  {
+   "time": "00:35:02",
+   "topic": "The roadmap at the time of recording includes Azure, Nextflow and broader backend support."
+  },
+  {
+   "time": "00:39:31",
+   "topic": "New users can start with Google authentication and available Terra and workflow training."
+  },
+  {
+   "time": "00:42:10",
+   "topic": "Cloud computing becomes a per-specimen consumable rather than locally maintained capital equipment."
+  }
+ ],
+ "quotes": [
+  {
+   "text": "You can budget for cloud resources based on the number of specimens that you're going to run through your lab in a week.",
+   "time": "00:42:10",
+   "speaker": "Joel Savinsky"
+  }
+ ],
+ "tools": [
+  "Terra.bio",
+  "WDL",
+  "Cromwell",
+  "Google Cloud",
+  "Google Cloud Storage",
+  "Dockstore",
+  "Nextflow",
+  "Galaxy",
+  "GitHub",
+  "BaseSpace",
+  "Pangolin",
+  "Microsoft Azure",
+  "AWS"
+ ],
+ "topics": [
+  "public health bioinformatics",
+  "cloud computing",
+  "sars-cov-2 surveillance",
+  "workflow management",
+  "containerisation",
+  "data sharing",
+  "laboratory capacity",
+  "reproducibility",
+  "compute costs"
+ ],
+ "faq": [
+  {
+   "q": "What is the difference between Terra, WDL and Cromwell?",
+   "a": "Terra provides the user-facing environment for managing data and running analyses. WDL describes workflows, while Cromwell is an execution engine that interprets those descriptions and orchestrates computing resources."
+  },
+  {
+   "q": "Do public health scientists need command-line skills to use Terra?",
+   "a": "The guests describe running existing workflows through a browser without routine command-line work. Users still need to learn data upload, table preparation, workflow inputs and specimen selection; pipeline development and troubleshooting remain areas for bioinformatics expertise."
+  },
+  {
+   "q": "How quickly could a laboratory start analysing data in Terra?",
+   "a": "Savinsky reports onboarding laboratories in 60–90 minutes using prepared, cloned workspaces. This covered the practical steps needed to upload data and launch an existing workflow, rather than building a new pipeline."
+  },
+  {
+   "q": "Did Terra support Azure and Nextflow when this episode was recorded?",
+   "a": "As described at the time of recording, the established setup was WDL on Google Cloud. Azure-backed workspaces and Nextflow support were still under development, while Galaxy pipelines could run with additional setup."
+  }
+ ]
+}

@@ -1,0 +1,170 @@
+{
+ "episode": "149",
+ "headline": "AI in biosciences: useful tools, trust and collaboration",
+ "description": "A live Bristol panel on AI in biosciences: microscopy, LLM-assisted research, data leakage, validation and interdisciplinary collaboration.",
+ "summary": "Kieren Sharma and Andrew Page chair a live panel at the Bridging AI & Biosciences Workshop at the University of Bristol, with Mark Basham, Elisa Pedone and James Thomas. They discuss where AI has changed biological research, how generative tools affect research workflows, and why scientific validation remains essential. The conversation connects practical applications in microscopy and software development with data security, environmental costs and collaboration between biologists and computer scientists.",
+ "people": [
+  {
+   "name": "Kieren Sharma",
+   "role": "host",
+   "affiliation": "Artificially Ever After podcast, University of Bristol"
+  },
+  {
+   "name": "Andrew Page",
+   "role": "host",
+   "affiliation": "Origin Sciences"
+  },
+  {
+   "name": "Mark Basham",
+   "role": "panellist",
+   "affiliation": "Rosalind Franklin Institute"
+  },
+  {
+   "name": "Elisa Pedone",
+   "role": "panellist",
+   "affiliation": "CellVoyant"
+  },
+  {
+   "name": "James Thomas",
+   "role": "panellist",
+   "affiliation": "Jean Golding Institute, University of Bristol"
+  },
+  {
+   "name": "Simon Willison",
+   "role": "mentioned",
+   "affiliation": ""
+  }
+ ],
+ "sections": [
+  {
+   "heading": "What has changed in biological image analysis?",
+   "body": "Mark Basham distinguishes the current AI investment cycle from advances that would remain useful even if enthusiasm faded. Since he began working on image processing around 2015–2016, deep learning and neural networks have changed microscopy analysis substantially, with transformers bringing further advances. His central example is the move from analysing individual images in detail to performing statistical analysis across large quantities of image data.\n\nElisa Pedone describes CellVoyant’s combination of computer vision, machine learning, label-free microscopy and other input data to understand and control cellular processes. James Thomas sees opportunities not only in developing new methods, but in transferring established tools into subjects that have not yet adopted them. He mentions computer vision and transformers for genomics. He also notes that some people want to use AI because it attracts funding, and says that using these systems well requires thinking about the problem in a structured way."
+  },
+  {
+   "heading": "LLMs as research and software assistants",
+   "body": "The panel separates AI used to analyse research data from AI used to help researchers work more quickly. Basham and Thomas report that coding assistants can be productive in experienced hands, but can cause problems when users lack the background needed to assess their output. Andrew Page places greater emphasis on prompt engineering and coordinating agents and models, describing work with VS Code and Copilot rather than manually writing every line.\n\nBasham also describes promising work translating plain-English questions into SQL queries, allowing colleagues to access data repositories without knowing SQL themselves. Pedone identifies literature reviews as another useful application when planning experiments. She describes experiments lasting weeks, with substantial manual work, annotation and data processing, and sees opportunities for AI support across those tasks and the preparation of quality-control logs and standard operating procedures."
+  },
+  {
+   "heading": "Generated papers still need scientific judgement",
+   "body": "Page describes a thought experiment combining about 200 patient metadata fields from a clinical study with genome sequencing data. He asked an AI-driven workflow to try combinations and write papers. It explored roughly 5,000 combinations and produced 40 papers he described as significant; the outputs included 20-page papers with statistics, figures and references. He thought they looked publishable, but explicitly says he did not publish them and did not intend to.\n\nBasham stresses that scientific accuracy remains the researcher’s responsibility: information returned by an LLM must be validated, and the worry begins when people excuse incorrect work by blaming the AI. Thomas compares the tools to junior staff whose work requires review. Page also distinguishes generating text or code from building a useful scientific model, noting the difficulties of noisy data, small patient samples and large numbers of metadata fields."
+  },
+  {
+   "heading": "Private data, reproducibility and inherited bias",
+   "body": "Thomas introduces Simon Willison’s lethal trifecta: untrusted input, access to private data and access to the internet. His concern is that an instruction hidden in the material an agent is analysing could redirect it and cause private information to be sent elsewhere. He distinguishes this from concerns about providers using submitted data to train models, and points to protected health-data environments without internet access as an important setting for these questions.\n\nPedone raises related concerns about tracing information from induced pluripotent stem cells, or iPSCs, back to donors, alongside the reproducibility of models used in biology. Page adds that models can inherit the biases of the research literature. His microbiome example concerns the emphasis on populations in the US and Europe, whose results may not represent the wider population."
+  },
+  {
+   "heading": "Collaboration starts with the biological problem",
+   "body": "Pedone identifies a mutual trust problem. Biologists may distrust a model presented as a black box and want experimental validation, while data scientists can underestimate biological complexity. Her advice is to find a collaborator in the other discipline and start by understanding the problem, rather than selecting a model first. The aim is an answer with biological meaning, not simply analysed data.\n\nBasham focuses on data preparation: researchers should not expect to arrive at a beautifully curated, labelled image collection ready for training. Domain experts are often needed to turn raw observations into useful information. Thomas explains why his team embeds data scientists within research groups rather than relying only on monthly progress meetings. Frequent communication helps establish shared language and clarify what counts as a useful result: model metrics alone may not answer the scientist’s question."
+  },
+  {
+   "heading": "Choosing models that fit the task",
+   "body": "Asked about environmental impact, Basham argues for benchmarking sophisticated models against simpler alternatives. He describes cases where large models perform only roughly half a per cent better than a random forest while using much more power. His group investigates whether better data representations can achieve useful results at lower computational cost, while recognising that some problems require larger models.\n\nThomas cautions that environmental comparisons also need to account for the time and resources a person would use to complete the task manually. He says a lack of transparent data makes that comparison difficult. In the final discussion, Pedone distinguishes prediction from mechanistic understanding: for translational and therapeutic applications, she considers pattern recognition and reaching a desired phenotype valuable even without fully explaining the mechanism. She does not dismiss mechanism-focused research, which can proceed in parallel."
+  }
+ ],
+ "highlights": [
+  {
+   "time": "00:06:21",
+   "topic": "Basham distinguishes AI hype from lasting advances in microscopy image analysis."
+  },
+  {
+   "time": "00:08:44",
+   "topic": "Thomas discusses transferring established AI tools between research subjects."
+  },
+  {
+   "time": "00:11:43",
+   "topic": "LLMs in software development, followed by plain-English access to SQL databases."
+  },
+  {
+   "time": "00:12:55",
+   "topic": "Pedone discusses literature reviews and support for lengthy experimental workflows."
+  },
+  {
+   "time": "00:15:50",
+   "topic": "Page describes prompt engineering, agent-assisted coding and a paper-generation experiment."
+  },
+  {
+   "time": "00:19:59",
+   "topic": "The lethal trifecta of untrusted input, private data and internet access."
+  },
+  {
+   "time": "00:23:22",
+   "topic": "Basham stresses scientific accuracy and checking AI-generated work."
+  },
+  {
+   "time": "00:24:35",
+   "topic": "Page explains how population biases in research can carry into AI models."
+  },
+  {
+   "time": "00:26:00",
+   "topic": "Pedone identifies mutual trust as a barrier to interdisciplinary work."
+  },
+  {
+   "time": "00:27:41",
+   "topic": "Close partnerships with domain experts are needed to make research data useful."
+  },
+  {
+   "time": "00:31:40",
+   "topic": "Environmental costs and benchmarking large models against random forests."
+  },
+  {
+   "time": "00:34:33",
+   "topic": "Pedone considers prediction versus mechanistic understanding in therapeutic research."
+  }
+ ],
+ "quotes": [
+  {
+   "text": "You should never start from the model. Never start from the model. Start from understanding the problem.",
+   "time": "00:26:00",
+   "speaker": "Elisa Pedone"
+  },
+  {
+   "text": "Understanding that maybe the best isn't what you need when you can run something that's much cheaper is a really important thing.",
+   "time": "00:31:40",
+   "speaker": "Mark Basham"
+  }
+ ],
+ "tools": [
+  "ChatGPT",
+  "Claude",
+  "VS Code",
+  "Copilot",
+  "SQL",
+  "random forests",
+  "transformers",
+  "label-free microscopy"
+ ],
+ "topics": [
+  "ai in biosciences",
+  "microscopy image analysis",
+  "generative ai",
+  "scientific software development",
+  "data privacy",
+  "scientific validation",
+  "research bias",
+  "interdisciplinary collaboration",
+  "environmental impact",
+  "predictive biology"
+ ],
+ "faq": [
+  {
+   "q": "How has AI changed microscopy analysis?",
+   "a": "Mark Basham describes a shift from studying individual images in detail to analysing large image collections statistically. He credits deep learning and neural networks with substantial changes, with transformers bringing further advances."
+  },
+  {
+   "q": "What research tasks can LLMs help with?",
+   "a": "The panel discusses coding assistance, literature reviews and translating plain-English questions into SQL queries. Basham and Thomas stress that users still need enough expertise to assess the results."
+  },
+  {
+   "q": "What is the lethal trifecta for AI agents handling research data?",
+   "a": "James Thomas describes the combination of untrusted input, private-data access and internet access. An injected instruction in the input could redirect an agent and cause private information to be leaked."
+  },
+  {
+   "q": "How can computer scientists collaborate effectively with biologists?",
+   "a": "Elisa Pedone advises finding a collaborator in the other discipline and defining the biological problem before choosing a model. The panel also recommends frequent communication, shared terminology and close work with domain experts on data preparation and validation."
+  },
+  {
+   "q": "Should researchers always use the most sophisticated AI model?",
+   "a": "Basham recommends comparing large models with simpler alternatives such as random forests. He describes situations where a small improvement in performance may not justify the additional power use, while acknowledging that some tasks need larger models."
+  }
+ ]
+}

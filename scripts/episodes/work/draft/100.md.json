@@ -1,0 +1,160 @@
+{
+  "episode": "100",
+  "headline": "100 episodes: five-year predictions for microbial bioinformatics",
+  "description": "The hosts mark 100 episodes with five-year predictions for sequencing, wastewater surveillance, data storage and personalised microbiome medicine.",
+  "summary": "Lee Katz, Andrew Page and Nabil-Fareed Alikhan celebrate their 100th episode by revisiting the podcast's origins and making five-year predictions. Recorded together in Lee's basement, the discussion spans clinical genomics, longer reads, wastewater surveillance, storage costs and personalised microbiome medicine. They distinguish technical possibilities from the expertise, interpretation and practical benefits needed to make them useful.",
+  "people": [
+    {
+      "name": "Lee Katz",
+      "role": "host",
+      "affiliation": "Centers for Disease Control and Prevention; University of Georgia (adjunct member)"
+    },
+    {
+      "name": "Andrew Page",
+      "role": "host",
+      "affiliation": "Quadram Institute, Norwich, UK"
+    },
+    {
+      "name": "Nabil-Fareed Alikhan",
+      "role": "host",
+      "affiliation": "Quadram Institute, Norwich, UK"
+    }
+  ],
+  "sections": [
+    {
+      "heading": "From a virtual lab group to episode 100",
+      "body": "Together in the same room for only the second time on the podcast, the hosts recall starting with a YouTube seminar series for an international virtual lab group. A podcast proved easier to organise and offered a way to capture practical knowledge that rarely reaches papers. They launched in September 2019 after preparing roughly ten episodes.\n\nSARS-CoV-2 subsequently dominated their working lives and podcast conversations, despite initial reluctance to spend their recording time on COVID-19 too. By this recording, 108 episodes had been recorded, with a space reserved for number 100. They discuss scheduling batches and editing with Descript, including listening at 1.5 times normal speed.\n\nThe celebration ends with Lee testing his visitors on Georgia place names, including Atlanta, Decatur, Vidalia and Dahlonega: payback for their corrections of his pronunciation of Norwich."
+    },
+    {
+      "heading": "Will genomics reach every doctor's surgery?",
+      "body": "Nabil-Fareed Alikhan predicts that genomics will become increasingly routine, with commercial products, automated pipelines and containerised software simplifying analyses that previously required substantial academic effort. However, he doubts that every small laboratory or doctor's surgery will have practical sequencing capacity within five years. Sending a MinION, MiSeq or laptop is easier than establishing the laboratory and bioinformatics expertise around it.\n\nThe hosts imagine sequencing informing antibiotic prescriptions, but distinguish desirable applications from likely deployment. Tuberculosis offers a particularly compelling case because slow growth makes conventional microbiology difficult. More generally, they ask whether a test changes treatment or public-health action. Outbreak investigation in hospitals is one setting where genomic information can support a concrete intervention."
+    },
+    {
+      "heading": "Longer reads, bigger datasets and more biology",
+      "body": "A central prediction is longer, more accurate reads: the hosts discuss 100 kb reads at Q30 quality and eventually reads spanning whole bacterial chromosomes. These could reduce assembly work and computational bottlenecks, while supporting MLST, in silico serotyping and phylogenetic analysis. They also imagine benefits for low-abundance organisms and metagenomics, without arguing that culture or conventional microbiology should disappear.\n\nData growth creates a separate challenge. They suggest bacterial sequence holdings could triple or quadruple in five years, making repeated downloads and exhaustive all-against-all comparisons increasingly impractical. Million-tip SARS-CoV-2 trees and incremental tree-building methods illustrate progress they hope will transfer to other organisms, with adaptations where necessary.\n\nThe hosts also stress interpretation: an automated result still needs scrutiny for contamination or misleading outbreak signals. In a deliberately playful aside, they imagine asking ChatGPT to complete a genome from its first short sequence."
+    },
+    {
+      "heading": "Wastewater surveillance and resistance genes",
+      "body": "Lee highlights wastewater sequencing as an application that might benefit from improved sequencing. The discussion immediately raises a constraint: wastewater DNA can be degraded into short fragments, so longer-read instruments alone may not solve the problem. The hosts consider adaptive sequencing and size selection, including separating fragments by length with SAGE ELF.\n\nThey describe sewage as an intrinsically pooled, anonymised sample that can represent thousands of homes without requiring additional sampling by busy clinicians. Estimating the population contributing to a sample also matters when interpreting prevalence.\n\nCould regional antimicrobial-resistance gene measurements guide antibiotic recommendations? The hosts find the idea attractive but caution against treating gene counts as direct clinical guidance. Resistance genes may come from environmental organisms rather than human-associated pathogens, and a gene's effect can depend on the species carrying it."
+    },
+    {
+      "heading": "When resequencing might cost less than storage",
+      "body": "The hosts predict that growing sequence collections will force changes in storage, compression or retention. They ask whether keeping every old dataset makes sense if resequencing becomes cheaper than continuing to store it. Old Illumina GA2 data and 36-base-pair reads provide examples of material that newer sequencing might improve upon.\n\nLee recalls a Haiti cholera genome sequenced repeatedly with different read types and platforms; Salmonella Typhi CT18 is another example of a repeatedly sequenced reference. The discussion also flags a complication: passaged material can lose genomic regions, so resequencing need not reproduce the original result.\n\nComparing consensus sequences before deleting older reads is suggested as one safeguard. The proposed cost crossover remains a prediction the hosts would like to plot, not a demonstrated threshold."
+    },
+    {
+      "heading": "Microbiomes, discovery and the future of the field",
+      "body": "The hosts imagine personalised recommendations based on a patient's microbiome, potentially including supplements chosen to supply missing microbial functions. They discuss possible benefits for infants and older people, alongside a joking prediction of a future sporting scandal involving microbiome doping. These are speculative scenarios rather than descriptions of established care.\n\nEnvironmental sequencing prompts another question: could finding novel species become harder as more diversity is sampled? Nabil recalls programmes where participants isolate and name phages; the show notes identify PhagesDB as the site he remembered after recording. Data dashboards are another prediction, reflecting the growing need to aggregate and visualise large collections rather than inspect individual genomes.\n\nFinally, the hosts debate whether increasingly routine sequencing and assembly will push bioinformatics closer to biology. If a finished genome simply emerges from the instrument, researchers can spend less time comparing assembly workflows and more time investigating genome structure, gene gain and gene loss."
+    }
+  ],
+  "highlights": [
+    {
+      "time": "00:00:00",
+      "topic": "The hosts gather in person to celebrate their 100th episode."
+    },
+    {
+      "time": "00:02:07",
+      "topic": "How a YouTube seminar series developed into a podcast."
+    },
+    {
+      "time": "00:05:05",
+      "topic": "Why SARS-CoV-2 became a major focus despite initial reluctance."
+    },
+    {
+      "time": "00:09:12",
+      "topic": "Five-year predictions begin with the growing use of genomics."
+    },
+    {
+      "time": "00:15:33",
+      "topic": "Longer, higher-quality reads could change microbial analysis."
+    },
+    {
+      "time": "00:17:21",
+      "topic": "Growing bacterial sequence collections demand different algorithms."
+    },
+    {
+      "time": "00:22:23",
+      "topic": "Wastewater surveillance as a potential beneficiary of better sequencing."
+    },
+    {
+      "time": "00:27:24",
+      "topic": "Storage limits raise the possibility of deleting and resequencing data."
+    },
+    {
+      "time": "00:31:48",
+      "topic": "Personalised recommendations based on microbiome composition."
+    },
+    {
+      "time": "00:35:06",
+      "topic": "Could environmental sequencing exhaust easy discoveries of new species?"
+    },
+    {
+      "time": "00:41:39",
+      "topic": "Whether bioinformatics will increasingly merge into biology."
+    },
+    {
+      "time": "00:43:23",
+      "topic": "Lee introduces a pronunciation quiz for his visiting co-hosts."
+    }
+  ],
+  "quotes": [
+    {
+      "text": "So you sequence it and the genome just falls out. I love that.",
+      "time": "00:41:15",
+      "speaker": "Nabil-Fareed Alikhan"
+    },
+    {
+      "text": "I definitely thought it was going to fizzle out.",
+      "time": "00:50:15",
+      "speaker": "Lee Katz"
+    }
+  ],
+  "tools": [
+    "Descript",
+    "Nanopore",
+    "MinION",
+    "MiSeq",
+    "HiSeq",
+    "Illumina GA2",
+    "PacBio",
+    "SAGE ELF",
+    "NCBI",
+    "ChatGPT",
+    "GPT-3",
+    "MLST",
+    "in silico serotyping",
+    "neighbour-joining",
+    "adaptive sequencing",
+    "size selection",
+    "PhagesDB"
+  ],
+  "topics": [
+    "microbial bioinformatics",
+    "clinical genomics",
+    "long-read sequencing",
+    "metagenomics",
+    "sars-cov-2",
+    "wastewater surveillance",
+    "antimicrobial resistance",
+    "sequence data storage",
+    "personalised microbiome medicine",
+    "podcast history"
+  ],
+  "faq": [
+    {
+      "q": "Do the hosts expect sequencing in every doctor's surgery within five years?",
+      "a": "Not unanimously. Nabil-Fareed Alikhan argues that distributing instruments is easier than establishing the laboratory and bioinformatics expertise needed to use them, so regional laboratories will remain important."
+    },
+    {
+      "q": "How could longer reads change microbial bioinformatics?",
+      "a": "The hosts predict that long, accurate reads could reduce assembly work and the computational burden of processing short reads. They imagine chromosome-length reads shifting attention towards biological questions such as genome structure, gene gain and gene loss."
+    },
+    {
+      "q": "Could wastewater resistance genes guide antibiotic prescribing?",
+      "a": "The hosts discuss regional antibiotic recommendations as a possible application, but caution that resistance-gene measurements need careful interpretation. Environmental sources and species-dependent resistance effects complicate any direct connection to treatment."
+    },
+    {
+      "q": "Why might researchers delete sequencing data and resequence samples?",
+      "a": "The hosts predict that sequencing costs could fall faster than storage costs, eventually making resequencing cheaper than long-term retention. They also note that newer platforms may produce better data, while warning that changed samples or different results make deletion risky."
+    }
+  ]
+}

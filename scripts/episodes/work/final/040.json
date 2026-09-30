@@ -1,0 +1,168 @@
+{
+ "episode": "040",
+ "headline": "SARS-CoV-2 bioinformatics: pipelines, QC and common traps",
+ "description": "How to analyse SARS-CoV-2 amplicon data: established pipelines, missing bases, contamination checks, metadata and public health interpretation.",
+ "summary": "Lee Katz, Andrew Page and Nabil-Fareed Alikhan discuss the practical pitfalls of SARS-CoV-2 bioinformatics, from processing amplicon reads to sharing genomes and interpreting outbreaks. Drawing on their public health sequencing work, they explain why a small viral genome still demands careful quality control. Recorded on 13 January 2021, the discussion captures the pipelines, thresholds and data-sharing challenges they were working with at that point in the pandemic.",
+ "people": [
+  {
+   "name": "Lee Katz",
+   "role": "host",
+   "affiliation": "Centers for Disease Control and Prevention; University of Georgia (adjunct member)"
+  },
+  {
+   "name": "Andrew Page",
+   "role": "host",
+   "affiliation": "Quadram Institute, Norwich, UK"
+  },
+  {
+   "name": "Nabil-Fareed Alikhan",
+   "role": "host",
+   "affiliation": "Quadram Institute, Norwich, UK"
+  }
+ ],
+ "sections": [
+  {
+   "heading": "A small genome with unforgiving errors",
+   "body": "Moving from roughly five-megabase bacterial genomes to a 30-kilobase SARS-CoV-2 genome initially sounded straightforward. The hosts explain why that expectation failed: viral sequencing, particularly targeted amplicon sequencing, introduces problems that familiar bacterial workflows do not necessarily handle. Coverage can jump from 10× in one region to 10,000× in another, causing difficulties for assemblers.\n\nSARS-CoV-2 also offers little room for casual errors. In the relatively stable genomes discussed here, a single SNP can affect whether samples appear to belong to the same cluster. Synthetic primer sequences must be trimmed or masked rather than allowed to contribute artificial, reference-like bases to the result. Blind assembly or mapping can therefore produce misleading epidemiological conclusions."
+  },
+  {
+   "heading": "Established pipelines and honest consensus sequences",
+   "body": "Andrew recommends starting with established workflows rather than writing another pipeline. ARTIC already had amplicon methods and Nanopore bioinformatics developed for Zika and Ebola, providing a foundation for SARS-CoV-2 analysis. For Illumina data, the hosts use the Connor lab workflow from Wales, linked in the show notes as ncov2019-artic-nf, and discuss its Nextflow implementation.\n\nNabil highlights ncov-tools for inspecting BAM files, extracting quality metrics and investigating the evidence behind variant calls. It supplied the base-heterogeneity report he had been preparing to write himself. Nabil sees more scope for bespoke reporting than for rebuilding core processing: lineage summaries, geographic displays and detailed sample comparisons serve different audiences.\n\nA central warning concerns missing sequence. Do not replace unsupported positions with reference bases, or simply mutate a reference at called variant sites while retaining everything else. Missing bases should remain placeholders, rather than becoming invented evidence."
+  },
+  {
+   "heading": "Viral material, coverage and incomplete genomes",
+   "body": "Incomplete genomes often reflect insufficient viral material in the original sample, not a bioinformatics problem that can be repaired afterwards. The hosts discuss using PCR cycle-threshold values to guide sequencing decisions. Nabil gives CT32–33 as a rough point beyond which recovering enough genome for reliable phylogenetic analysis becomes difficult, while explicitly noting that the cutoff depends on the protocol.\n\nFor public sharing and broad comparative analyses, the discussion uses 90% confidently called bases as a target, with at least 10× coverage at a site for Illumina and about 20× for Nanopore. These are the thresholds described in this January 2021 conversation, not a universal specification.\n\nPartial genomes can still help answer focused questions about reinfection, lineage identity or mutations during a long-term infection. The hosts distinguish those investigations from routine surveillance aimed at producing broadly usable genomes."
+  },
+  {
+   "heading": "Read filtering and controls that are actually examined",
+   "body": "Targeted amplification does not guarantee that every read is viral. The hosts stress removing human reads and checking that apparent SARS-CoV-2 matches are substantial: for 150-base Illumina reads, they want intact or nearly intact alignments, not tiny matching fragments. A sample can yield hundreds of thousands of reads without containing useful coronavirus sequence.\n\nNegative controls need investigation, not just inclusion. A blank may contain short primer-dimer fragments, whereas convincing full-length viral reads raise different concerns. Nabil recommends examining read lengths, mapping quality and the proportion mapping to the reference, then running the blank through variant calling. Called variants in a blank are a serious warning about contamination across the run.\n\nPractical safeguards include allowing zero Illumina barcode mismatches, requiring Nanopore barcodes at both ends and changing index sets between runs. Andrew also warns that a run in which every sample passes should prompt scrutiny rather than automatic celebration."
+  },
+  {
+   "heading": "Sharing data without losing context or privacy",
+   "body": "At recording, the COG-UK website offered about 176,000 genomes, a download of roughly five gigabytes, with minimal metadata and lineage assignments. Andrew describes approximately daily website releases and weekly GISAID uploads, arguing for continuous sharing rather than holding data back.\n\nThe hosts contrast GISAID's consensus-genome submissions and additional sharing protections with INSDC archives, which accept raw reads as well as genomes. They discuss the complexity of linked projects, samples, experiments, reads and assemblies, and point to submission walkthroughs in the PHA4GE SARS-CoV-2 metadata specification. Consistent metadata remains a major limitation.\n\nSample identifiers need equal care. COG-UK uses a sequencing-centre prefix, such as NORW for Norwich, plus a consortium-wide unique suffix. Identifiers should be readable, manageable in scripts and free of patient identifiers. The hosts warn against punctuation that breaks file formats and ambiguous characters that complicate manual transcription."
+  },
+  {
+   "heading": "Benchmarks and decisions in the real world",
+   "body": "Lee describes a draft simulated benchmark, linked as SARS-CoV-2-trueTree, containing about 3,500 simulated assemblies. Starting with a fixed tree and a Wuhan 1 anchor genome, the simulation introduces SNPs so that an ideal analysis would reconstruct the chosen tree. He cautions that those SNPs do not necessarily represent biological processes. Andrew proposes a complementary end-to-end test: send laboratories 12 physical samples and compare their sequencing results. The discussion identifies Wuhan 1, GenBank MN908947, as the established reference.\n\nFor operational surveillance, Andrew emphasises recent samples: the UK work described prioritises specimens collected within three weeks, ideally within one week. Hospital, prison and factory examples show how genomic evidence can distinguish multiple introductions from a shared outbreak and inform screening, ward closures or cleaning.\n\nThe limits matter too. Identical genomes cannot necessarily reveal who infected whom or identify the index case. Genomics can also provide reassurance by supporting separate community introductions rather than transmission within a ward."
+  }
+ ],
+ "highlights": [
+  {
+   "time": "00:02:36",
+   "topic": "Why moving from bacterial genomes to a 30 kb virus was not straightforward"
+  },
+  {
+   "time": "00:05:38",
+   "topic": "ARTIC's existing workflows and adapting analysis for Illumina data"
+  },
+  {
+   "time": "00:06:57",
+   "topic": "Why unsupported bases must not be backfilled from the reference"
+  },
+  {
+   "time": "00:11:05",
+   "topic": "Removing human reads from targeted amplicon sequencing data"
+  },
+  {
+   "time": "00:14:27",
+   "topic": "Nextflow workflows, ncov-tools and the remaining scope for bespoke reporting"
+  },
+  {
+   "time": "00:21:15",
+   "topic": "Insufficient viral material and choosing cycle-threshold cutoffs"
+  },
+  {
+   "time": "00:27:24",
+   "topic": "Interpreting primer fragments, viral reads and variant calls in negative controls"
+  },
+  {
+   "time": "00:32:26",
+   "topic": "Continuous COG-UK data releases rather than holding genomes back"
+  },
+  {
+   "time": "00:35:39",
+   "topic": "GISAID, INSDC and the need for consistent metadata"
+  },
+  {
+   "time": "00:39:49",
+   "topic": "Lee's draft simulated benchmark built around a known tree"
+  },
+  {
+   "time": "00:42:46",
+   "topic": "Designing readable, unique and anonymised sample identifiers"
+  },
+  {
+   "time": "00:49:57",
+   "topic": "Using genomes to investigate hospital and factory outbreaks"
+  }
+ ],
+ "quotes": [
+  {
+   "text": "The world has been doing this for a year and you don't need yet another pipeline.",
+   "time": "00:13:39",
+   "speaker": "Andrew Page"
+  },
+  {
+   "text": "if the base isn't supported, you just put a placeholder and you just leave it.",
+   "time": "00:06:57",
+   "speaker": "Nabil-Fareed Alikhan"
+  }
+ ],
+ "tools": [
+  "ARTIC pipelines",
+  "ncov2019-artic-nf",
+  "Nextflow",
+  "ncov-tools",
+  "BLAST",
+  "SAMtools",
+  "pangolin",
+  "Microreact",
+  "R",
+  "matplotlib",
+  "NumPy",
+  "SciPy",
+  "GISAID",
+  "INSDC",
+  "ENA",
+  "NCBI",
+  "GenBank",
+  "Illumina",
+  "Nanopore",
+  "PacBio",
+  "Ion Torrent",
+  "PCR"
+ ],
+ "topics": [
+  "sars-cov-2",
+  "amplicon sequencing",
+  "consensus sequences",
+  "quality control",
+  "cross-contamination",
+  "genomic epidemiology",
+  "metadata",
+  "data sharing",
+  "benchmarking"
+ ],
+ "faq": [
+  {
+   "q": "Which SARS-CoV-2 bioinformatics pipelines do the hosts recommend?",
+   "a": "They recommend established ARTIC workflows and the Connor lab's ncov2019-artic-nf workflow for Illumina data. Nabil also recommends ncov-tools for examining BAM files, quality metrics and evidence behind variant calls."
+  },
+  {
+   "q": "Should missing SARS-CoV-2 consensus bases be filled from the reference?",
+   "a": "No. The hosts say unsupported bases should remain placeholders, because reference backfilling introduces information that was not recovered from the sample and can distort comparisons."
+  },
+  {
+   "q": "What coverage thresholds are discussed for SARS-CoV-2 genomes?",
+   "a": "The episode describes a target of 90% confidently called bases, using at least 10× site coverage for Illumina and about 20× for Nanopore. These are the thresholds discussed in January 2021; the hosts also recognise uses for partial genomes in focused investigations."
+  },
+  {
+   "q": "What should be checked in a SARS-CoV-2 sequencing negative control?",
+   "a": "Examine read lengths, how many reads map to the viral reference and how well they align, rather than relying on total read count. Short primer fragments and intact viral reads have different implications, and called variants in a blank raise serious concerns about cross-contamination."
+  },
+  {
+   "q": "Can identical SARS-CoV-2 genomes identify an outbreak's index case?",
+   "a": "Not necessarily. The hosts explain that an outbreak may contain identical genomes, while differences in incubation periods mean the earliest symptomatic person need not be the index case."
+  }
+ ]
+}

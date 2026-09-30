@@ -1,0 +1,169 @@
+{
+  "episode": "047",
+  "headline": "SARS-CoV-2 lineages, sequencing pitfalls and open data",
+  "description": "Missing SNPs, E484K, Nanopore basecalling, ARTIC artefacts and genome sharing: practical SARS-CoV-2 analysis advice from February 2021.",
+  "summary": "Lee Katz, Andrew Page and Nabil-Fareed Alikhan are joined by Leonardo de Oliveira Martins, head of phylogenomics at the Quadram Institute, for a SARS-CoV-2 analysis roundup recorded on 5 February 2021. They discuss unstable lineage assignments, recurring spike mutations, sequencing artefacts and tools for annotating variants. The conversation also covers practical barriers to sequencing and why sharing consensus genomes alone is insufficient for reproducible analysis.",
+  "people": [
+    {
+      "name": "Lee Katz",
+      "role": "host",
+      "affiliation": "Centers for Disease Control and Prevention; University of Georgia"
+    },
+    {
+      "name": "Andrew Page",
+      "role": "host",
+      "affiliation": "Quadram Institute, Norwich, UK"
+    },
+    {
+      "name": "Nabil-Fareed Alikhan",
+      "role": "host",
+      "affiliation": "Quadram Institute, Norwich, UK"
+    },
+    {
+      "name": "Leonardo de Oliveira Martins",
+      "role": "guest",
+      "affiliation": "Quadram Institute"
+    },
+    {
+      "name": "Ben Jackson",
+      "role": "mentioned",
+      "affiliation": ""
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Why one missing SNP can change a lineage",
+      "body": "A listener’s question asks why losing a single SNP can completely change a SARS-CoV-2 lineage assignment. Leonardo explains that Pangolin’s approach at the time uses a decision tree, with SNPs at particular positions acting as features. Missing an informative feature can send a sequence down a different branch of that classifier.\n\nChoosing the closest sequence in a database has limitations too: overall similarity does not necessarily capture phylogenetic position. Leonardo suggests inspecting the sequence’s placement in a tree and mentions LAMA as a relevant approach. Andrew also describes checking SNPs manually when a cluster contains an unexpected assignment, especially when epidemiological evidence suggests otherwise. The practical message is to investigate important discrepancies rather than treating the lineage label as definitive: missing regions, unusual distances and long branches can all warrant closer inspection."
+    },
+    {
+      "heading": "E484K, lineage names and repeated mutations",
+      "body": "The panel distinguishes a lineage from a mutation appearing within it. E484K, nicknamed “eek” in the discussion, describes a change from E to K at position 484 in the spike protein. Andrew explains why B.1.1.7 plus E484K can be a useful description when that mutation has arisen independently in different parts of the tree, rather than marking one newly spreading lineage.\n\nLeonardo describes repeated appearances as homoplasy, while cautioning that this observation alone does not establish convergent evolution rather than chance or drift. The genetic background matters; looking only for one spike mutation does not identify the whole variant. For proposed new lineages, he points to criteria including a supported cluster in the global tree and epidemiological evidence. The discussion also covers door-to-door surge testing in eight UK areas following community detections of B.1.351."
+    },
+    {
+      "heading": "Co-infection claims and RNA quality",
+      "body": "Andrew questions an unnamed paper reporting infections with two different SARS-CoV-2 lineages. He says controls were not described and roughly 53% of its SNPs were C-to-U changes, raising concerns about degraded RNA and contamination as alternative explanations. These are concerns about interpreting the reported signal, not confirmation that the samples were contaminated.\n\nThe panel discusses how delayed freezing can affect RNA quality and whether substitution-bias checks should be built into analysis pipelines. Andrew already uses such checks to identify extreme outliers. C-to-U mutations can be genuine, so the warning concerns unusually high rates rather than the presence of that substitution alone."
+    },
+    {
+      "heading": "Nanopore accuracy, shipping and ARTIC artefacts",
+      "body": "For Nanopore basecalling, Andrew recommends high-accuracy mode, HAC, rather than fast mode because small differences matter for SARS-CoV-2 analysis. A compatible NVIDIA GPU makes this practical; he suggests that a gaming laptop or an older 1080 card may suffice. CPU basecalling is described as slow, while cloud processing can be constrained by cost, electricity and internet access.\n\nA collaboration with Zimbabwe illustrates another bottleneck. Reagents remained at Stansted Airport for two weeks, beyond what their dry ice could sustain, destroying thousands of pounds’ worth of material. Room-temperature equipment could be shipped, but border closures and flight restrictions complicated the cold chain.\n\nThe discussion then turns to recombination claims from ARTIC data. PCR chimeras can resemble biological signals, and short Illumina fragments make interpretation particularly difficult. For Nanopore, the panel stresses requiring barcodes at both ends and filtering read lengths. To investigate recombination or structural variation, they recommend metagenomics or possibly hybrid capture with de novo assembly, rather than relying on ARTIC consensus sequences."
+    },
+    {
+      "heading": "Annotating variants and tracking community spread",
+      "body": "The suggested annotation resources are COV-GLUE, Nextclade for FASTA sequences and SnpEff for VCF files. Leonardo adds Ben Jackson’s type_variants Python script, which takes a genome aligned to the reference and reports amino acid replacements. Its small size makes it a candidate for incorporation into other software or workflows.\n\nThe hosts also discuss using Nextstrain maps to recognise community spread and repeated introductions of variants of concern. They emphasise that extensive sequencing can reveal many introductions rather than a single contained event.\n\nAt the Quadram Institute, sequencing had passed 10,000 genomes, with another 1,500 added that week. Andrew describes samples from local hospitals, national community testing and the REACT study. Randomly selected households in REACT provide a structured way to examine how much virus is circulating; sequencing positive samples can then help establish which lineages were present and when B.1.1.7 began appearing in those surveys."
+    },
+    {
+      "heading": "Open genomes need accessible raw reads",
+      "body": "The Nature news article “Scientists call for fully open sharing of coronavirus genome data” prompts a discussion of INSDC archives and GISAID. Andrew contrasts open access with protections intended to encourage hesitant contributors to share. He also reports that INSDC turnaround was a limitation for immediate public health surveillance at the time.\n\nThe panel considers contributors’ interests, appropriate reuse and the difficulties of establishing shared expectations outside a consortium. It then separates access to consensus genomes from access to the evidence behind them. Andrew says that 15 of 25 papers he recently examined lacked available raw reads. Consensus sequences or assemblies alone do not allow analysts to revisit every processing decision as methods change. He also reports encountering studies and sequencing groups that used public data for context without sharing their own, arguing that participation needs to work in both directions."
+    }
+  ],
+  "highlights": [
+    {
+      "time": "00:01:21",
+      "topic": "Why one missing SNP can change a SARS-CoV-2 lineage assignment"
+    },
+    {
+      "time": "00:05:54",
+      "topic": "Choosing lineage names and describing B.1.1.7 with additional mutations"
+    },
+    {
+      "time": "00:08:59",
+      "topic": "Does repeated E484K indicate convergent evolution?"
+    },
+    {
+      "time": "00:14:19",
+      "topic": "Questioning co-infection reports: controls, substitution bias and contamination"
+    },
+    {
+      "time": "00:16:51",
+      "topic": "HAC basecalling, NVIDIA GPUs and resource constraints"
+    },
+    {
+      "time": "00:19:03",
+      "topic": "Cold-chain failures when shipping Nanopore reagents to Zimbabwe"
+    },
+    {
+      "time": "00:21:56",
+      "topic": "Requiring Nanopore barcodes at both ends to filter artefacts"
+    },
+    {
+      "time": "00:22:40",
+      "topic": "Annotating variants with COV-GLUE, Nextclade and SnpEff"
+    },
+    {
+      "time": "00:24:26",
+      "topic": "Recognising community spread and multiple introductions in Nextstrain"
+    },
+    {
+      "time": "00:25:29",
+      "topic": "Quadram sequencing totals and hospital, community and REACT samples"
+    },
+    {
+      "time": "00:28:05",
+      "topic": "INSDC and GISAID: openness, contributor protections and turnaround"
+    },
+    {
+      "time": "00:30:36",
+      "topic": "Missing raw reads and the limits of reproducibility"
+    }
+  ],
+  "quotes": [
+    {
+      "text": "So make sure you use the right technology to answer the question that you're asking.",
+      "time": "00:19:03",
+      "speaker": "Andrew Page"
+    }
+  ],
+  "tools": [
+    "Pangolin",
+    "LAMA",
+    "ARTIC protocol",
+    "Oxford Nanopore",
+    "Illumina",
+    "HAC basecalling",
+    "COV-GLUE",
+    "Nextclade",
+    "SnpEff",
+    "type_variants",
+    "Nextflow",
+    "Nextstrain",
+    "GISAID",
+    "INSDC",
+    "NCBI",
+    "EBI",
+    "DDBJ"
+  ],
+  "topics": [
+    "sars-cov-2",
+    "lineage assignment",
+    "phylogenetics",
+    "e484k",
+    "sequencing quality control",
+    "nanopore basecalling",
+    "recombination artefacts",
+    "variant annotation",
+    "genomic surveillance",
+    "open data"
+  ],
+  "faq": [
+    {
+      "q": "Why can one missing SNP change a Pangolin lineage assignment?",
+      "a": "The episode describes Pangolin’s decision-tree approach at the time: missing an informative SNP can change the route through the classifier. The panel recommends checking the underlying SNPs, missing regions and phylogenetic placement when an assignment looks inconsistent."
+    },
+    {
+      "q": "Should I use a GPU for SARS-CoV-2 Nanopore basecalling?",
+      "a": "Andrew recommends a compatible NVIDIA GPU to make HAC, high-accuracy basecalling, practical rather than relying on fast mode. He describes CPU processing as slow and notes that cloud processing may be limited by connectivity and cost."
+    },
+    {
+      "q": "Can ARTIC sequencing reliably establish SARS-CoV-2 recombination?",
+      "a": "The panel warns that PCR chimeras in ARTIC data can be mistaken for recombination, especially when interpreting short Illumina fragments. They recommend metagenomics or possibly hybrid capture followed by de novo assembly for that question."
+    },
+    {
+      "q": "Which tools can annotate SARS-CoV-2 mutations?",
+      "a": "The episode suggests COV-GLUE, Nextclade for FASTA input and SnpEff for VCF input. Ben Jackson’s type_variants script is also mentioned for reporting amino acid replacements from genomes aligned to a reference."
+    },
+    {
+      "q": "Why share raw reads as well as SARS-CoV-2 consensus genomes?",
+      "a": "Raw reads allow analysts to revisit the evidence and processing decisions behind a consensus sequence as methods change. Andrew reports that 15 of 25 papers he examined lacked available raw reads, limiting reproducibility."
+    }
+  ]
+}

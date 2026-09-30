@@ -1,0 +1,176 @@
+{
+  "episode": "070",
+  "headline": "Bacterial taxonomy with GTDB: genomes, ranks and names",
+  "description": "Phil Hugenholtz, Iain Sutcliffe and Mark Pallen discuss GTDB, evolutionary ranks, 16S limits and naming uncultured bacteria.",
+  "summary": "Professors Phil Hugenholtz, Iain Sutcliffe and Mark Pallen join hosts Andrew Page and Nabil-Fareed Alikhan for the second part of a bacterial taxonomy discussion. They examine how GTDB turns genome comparisons into a taxonomic framework, why evolutionary rates complicate classification, and why changing bacterial names attracts resistance. The conversation connects these questions to uncultured diversity and the practical challenge of describing hundreds of species together.",
+  "people": [
+    {
+      "name": "Andrew Page",
+      "role": "host",
+      "affiliation": "Quadram Institute, Norwich, UK"
+    },
+    {
+      "name": "Nabil-Fareed Alikhan",
+      "role": "host",
+      "affiliation": "Quadram Institute, Norwich, UK"
+    },
+    {
+      "name": "Lee Katz",
+      "role": "host",
+      "affiliation": "Centers for Disease Control and Prevention; University of Georgia (adjunct member)"
+    },
+    {
+      "name": "Phil Hugenholtz",
+      "role": "guest",
+      "affiliation": ""
+    },
+    {
+      "name": "Iain Sutcliffe",
+      "role": "guest",
+      "affiliation": ""
+    },
+    {
+      "name": "Mark Pallen",
+      "role": "guest",
+      "affiliation": ""
+    },
+    {
+      "name": "Carl Woese",
+      "role": "mentioned",
+      "affiliation": ""
+    }
+  ],
+  "sections": [
+    {
+      "heading": "How GTDB builds a taxonomy",
+      "body": "Phil Hugenholtz describes GTDB as a taxonomy built from genomic comparisons. It takes genomes from NCBI’s Genome Assembly Archive and constructs trees using concatenated single-copy conserved genes—120 in the bacterial analysis discussed here. He stresses that different choices of conserved genes often produce broadly comparable trees.\n\nScale imposes compromises. GTDB uses FastTree because it can handle very large trees; Hugenholtz acknowledges that this heuristic approach is imperfect but considers it adequate for the task. Much of the work then involves overlaying a hierarchical taxonomy on the tree.\n\nThis is not simply an automated classification pipeline. Hugenholtz says more than half the team’s time has gone into the taxonomic overlay. At recording, release 207 involved adding 17,000 species, with manual curation already occupying two months."
+    },
+    {
+      "heading": "Relative divergence, not an absolute clock",
+      "body": "GTDB uses relative evolutionary divergence to make ranks more comparable within a tree. The root is assigned zero, the tips one, and internal values are calculated by linear interpolation. Hugenholtz gives approximately 0.85–0.95 as the range in which genera generally fall.\n\nThese values are not dates and should not be compared between different trees. Dating would require calibration points, which are difficult to establish for bacteria. GTDB also allows corridors around ranks rather than imposing one rigid boundary. This leaves room for taxonomic opinion: either splitting or retaining Mycobacterium can fit the framework, whereas treating it as a phylum would not."
+    },
+    {
+      "heading": "Fast evolution and disputed names",
+      "body": "Pallen recalls Carl Woese’s review *Bacterial Evolution* while discussing Mycoplasma: organisms once treated as primitive and deeply separate were instead placed within the Firmicutes. Hugenholtz uses this example to explain why flat sequence-identity thresholds can mislead when a group evolves unusually quickly.\n\nThe candidate phyla radiation, or CPR, provides another example. Hugenholtz describes evidence supporting a derived, fast-evolving group and a sister relationship to Chloroflexota. Within GTDB’s relative-divergence framework, it is treated as one phylum rather than as many as 100.\n\nSutcliffe separates these evolutionary questions from nomenclatural rules. The genus containing the type species Mycoplasma mycoides must retain the name Mycoplasma. Reclassifications introducing names such as Mesomycoplasma and Metamycoplasma have met resistance, despite following the naming rules. His broader argument is that classifications and names must be able to respond to new knowledge."
+    },
+    {
+      "heading": "Uncultured diversity and alternative approaches",
+      "body": "Hugenholtz traces his interest in classification to curating Greengenes and encountering large numbers of unclassified environmental sequences in NCBI taxonomy. He sees a major GTDB contribution in providing a complete classification for uncultured taxa. NCBI taxonomy draws on multiple information sources and, unlike GTDB, does not use a rank-normalised approach.\n\nPallen celebrates a framework that can extend beyond the roughly 2% of bacteria described in the discussion as culturable. Hugenholtz is more cautious, calling GTDB a prototype rather than a final answer. Alternatives mentioned include PhyloPhlAn for phylogenetic analysis and TYGS, the Type Strain Genome Server associated with DSMZ and LPSN."
+    },
+    {
+      "heading": "What 16S gets right—and misses",
+      "body": "A host reports conflicting high-level classifications after comparing long-read metagenomic data against an unnamed 16S database and GTDB. Hugenholtz rejects the suggestion that 16S was a wasted effort, but explains how PCR-generated chimeras can distort trees. He recalls estimating that at least 4% of 16S sequences were chimeric to some degree, with some chimeras recurring reproducibly.\n\nHe also describes reduced bootstrap support in very large 16S trees. Sutcliffe regards 16S as a major historical advance, while noting problems at higher taxonomic ranks. Average nucleotide identity and digital DNA–DNA hybridisation now provide useful species-level metrics; grouping species into genera and families remains an important focus of genomic classification."
+    },
+    {
+      "heading": "Naming hundreds of species together",
+      "body": "The panel challenges the one-colony, one-species, one-paper model. Pallen describes a chicken gut microbiome study that named more than 600 species in one paper. The team initially prepared names and protologues in a spreadsheet, then moved them into the manuscript because of concerns about acceptance as supplementary information. That added more than 100 pages and over $1,000 in publication costs.\n\nSutcliffe argues for separating classification from exhaustive characterisation. A genome-based framework can identify interesting groups for later investigation—for example, examining biosynthetic gene clusters in taxa that might produce useful metabolites. Pallen similarly argues that robust phylogenetic placement and clear circumscription should not be delayed by reviewers demanding additional methods merely as a matter of convention."
+    }
+  ],
+  "highlights": [
+    {
+      "time": "00:01:28",
+      "topic": "Hugenholtz explains GTDB’s genome sources, conserved-gene trees and manual curation."
+    },
+    {
+      "time": "00:05:05",
+      "topic": "Relative evolutionary divergence assigns ranks without dating the tree."
+    },
+    {
+      "time": "00:07:47",
+      "topic": "Mycoplasma illustrates how molecular evidence overturned older classifications."
+    },
+    {
+      "time": "00:08:48",
+      "topic": "Fast evolutionary rates complicate sequence thresholds for Mycoplasma and CPR."
+    },
+    {
+      "time": "00:10:42",
+      "topic": "Sutcliffe explains type species and resistance to Mycoplasma renaming."
+    },
+    {
+      "time": "00:15:25",
+      "topic": "Pallen argues that a broad genomic framework for bacterial taxonomy is worth celebrating."
+    },
+    {
+      "time": "00:16:46",
+      "topic": "Hugenholtz cautions that GTDB should be considered a prototype."
+    },
+    {
+      "time": "00:17:35",
+      "topic": "NCBI taxonomy and GTDB differ in rank normalisation and uncultured-taxon coverage."
+    },
+    {
+      "time": "00:19:35",
+      "topic": "PCR chimeras and large-tree limitations complicate 16S-based classification."
+    },
+    {
+      "time": "00:22:59",
+      "topic": "TYGS provides another approach as taxonomy moves from phenotype to genotype."
+    },
+    {
+      "time": "00:24:25",
+      "topic": "Pallen describes naming more than 600 chicken gut species in one paper."
+    },
+    {
+      "time": "00:25:20",
+      "topic": "Sutcliffe distinguishes genome-based classification from detailed downstream characterisation."
+    }
+  ],
+  "quotes": [
+    {
+      "text": "the grand vista is ahead of us now and this is something to celebrate",
+      "time": "00:15:25",
+      "speaker": "Mark Pallen"
+    },
+    {
+      "text": "let's consider it more a prototype to show that it's possible",
+      "time": "00:16:46",
+      "speaker": "Phil Hugenholtz"
+    }
+  ],
+  "tools": [
+    "GTDB",
+    "NCBI Genome Assembly Archive",
+    "NCBI Taxonomy",
+    "FastTree",
+    "Greengenes",
+    "PhyloPhlAn",
+    "TYGS",
+    "LPSN",
+    "Relative evolutionary divergence",
+    "16S rRNA analysis",
+    "PCR",
+    "Average nucleotide identity",
+    "Digital DNA–DNA hybridisation",
+    "DNA–DNA hybridisation"
+  ],
+  "topics": [
+    "bacterial taxonomy",
+    "genomic classification",
+    "gtdb",
+    "relative evolutionary divergence",
+    "bacterial nomenclature",
+    "uncultured bacteria",
+    "16s rrna",
+    "phylogenetics",
+    "species descriptions"
+  ],
+  "faq": [
+    {
+      "q": "How does GTDB turn genome data into a taxonomy?",
+      "a": "Hugenholtz describes building conserved-gene trees from NCBI genomes, then overlaying taxonomic ranks using relative evolutionary divergence. Automation supports the process, but substantial manual curation is also required."
+    },
+    {
+      "q": "Does relative evolutionary divergence tell us how old a bacterial lineage is?",
+      "a": "No. It places nodes on a relative scale between a root of zero and tips of one. Absolute dating would require calibration points, and the relative values should not be compared across different trees."
+    },
+    {
+      "q": "Why do some Mycoplasma species get new genus names?",
+      "a": "Sutcliffe explains that the genus containing the type species Mycoplasma mycoides must retain the name Mycoplasma. Phylogenetic evidence places other species elsewhere, prompting proposals for genera such as Mesomycoplasma and Metamycoplasma."
+    },
+    {
+      "q": "Why might 16S and GTDB classifications disagree?",
+      "a": "The panel discusses PCR-generated chimeras, reduced support in very large 16S trees and limitations when applying 16S at higher taxonomic ranks. Both Hugenholtz and Sutcliffe nevertheless defend 16S as an important and successful step in bacterial classification."
+    }
+  ]
+}

@@ -1,0 +1,130 @@
+{
+ "episode": "044",
+ "headline": "Sequencing SARS-CoV-2 with Joshua Quick and the ARTIC protocol",
+ "description": "Joshua Quick explains SARS-CoV-2 sequencing with ARTIC, covering primer design, amplicon dropouts, Nanopore barcoding and data quality.",
+ "summary": "Joshua Quick of the University of Birmingham explains how the ARTIC protocol uses multiplex PCR and Nanopore sequencing to recover SARS-CoV-2 genomes. Recorded at the joint ARTICnetwork and CLIMB-BIG-DATA workshop on 14–15 January 2021, chaired by Nick Loman, the talk places the method within COG-UK's genomic surveillance work. The discussion covers primer design, missing amplicons, sequencing depth and the importance of stringent barcode assignment.",
+ "people": [
+  {
+   "name": "Joshua Quick",
+   "role": "guest",
+   "affiliation": "University of Birmingham"
+  },
+  {
+   "name": "Nick Loman",
+   "role": "panellist",
+   "affiliation": ""
+  }
+ ],
+ "sections": [
+  {
+   "heading": "Why ARTIC uses multiplex PCR",
+   "body": "Quick describes COG-UK as a decentralised network combining rapid Nanopore sequencing of up to 96 samples with higher-throughput approaches, usually using Illumina sequencing. He distinguishes untargeted metagenomic RNA-seq from two targeted approaches: amplicon sequencing and bait capture. ARTIC's amplicon method is relatively cheap, scales readily and can recover complete or partial SARS-CoV-2 genomes from samples with cycle threshold values around 30–35, even with substantial host material present.\n\nThe multiplex approach grew out of work with clinical Zika virus samples in Brazil, where the modal Ct was about 36. Earlier Ebola work had used separate, singleplex RT-PCR reactions. Multiplex PCR offered a way to use less RNA while making the work faster and more suitable for processing many samples."
+  },
+  {
+   "heading": "Designing overlapping amplicons",
+   "body": "Primal Scheme grew from Quick's attempt to reverse-engineer the primer-design principles behind AmpliSeq. The web tool accepts FASTA references and a requested amplicon size. Its updated design process uses parasail to align reference sequences and select conserved primer sites across multiple genomes. A pinned option restricts primer selection to sequences present in the first reference, retaining behaviour closer to the earlier version.\n\nThe SARS-CoV-2 scheme generates 96 amplicons across the approximately 30,000-base genome in two reactions. Neighbouring amplicons overlap, but their primers are separated into different pools: putting overlapping neighbours together could favour short, unwanted products. The overlaps also allow synthetic primer sequences to be trimmed during analysis while retaining coverage from adjacent amplicons. Quick stresses that analysis should reflect the viral sequence rather than the synthetic oligonucleotides used to amplify it."
+  },
+  {
+   "heading": "Dropouts and deciding when to stop",
+   "body": "Coverage varies because primer pairs amplify with different efficiencies, while overlapping regions receive reads from neighbouring amplicons. Dropouts are regions with no usable amplification. Quick attributes them to poor primers, mutations at primer-binding sites, high Ct values or degraded input material. Less input cDNA generally means more dropouts and less complete genome recovery.\n\nSequencing more deeply cannot recover an amplicon that was never produced. Quick describes genome recovery levelling off after roughly 100,000 reads per sample in the example presented, rather than treating additional reads as an automatic route to completeness. RAMPART displays coverage profiles, barcode-associated sample information and progress towards saturation during a run. Those views help users decide whether further sequencing is worthwhile or whether to stop."
+  },
+  {
+   "heading": "Primer pools and shared protocols",
+   "body": "For a newly designed scheme, odd-numbered amplicon primer pairs go into one pool and even-numbered pairs into the other. Quick recommends starting with equimolar pools, sequencing them and then adjusting primer representation using observed coverage across multiple samples. Reaction efficiency cannot be predicted reliably enough to skip that initial assessment. Rebalancing is intended to improve coverage balance and genome completeness.\n\nQuick also describes distributing the version 3 primer pools through IDT following a bulk synthesis arrangement. The low-cost protocol on protocols.io had received more than 100,000 views and around 56 forks. Comments and forks provided a place for troubleshooting and adaptations, although he notes that the platform's versioning is not equivalent to GitHub's. ONT also supported the protocol through technical support."
+  },
+  {
+   "heading": "Barcoding specificity and direct RNA",
+   "body": "The preference for native rather than rapid Nanopore barcoding is not simply about how many barcodes are available. Quick explains that the analysis requires barcodes at both ends of a read for stringent demultiplexing; rapid barcoding supplies only a 5′ barcode. Rapid barcoding also fragments the approximately 400-base amplicons further, potentially producing reads below the roughly 250-base lower limit he cites for Guppy basecalling with standard settings.\n\nStringent assignment matters because amplicon coverage can differ by two or three orders of magnitude. Reads assigned to the wrong sample could fill an apparent dropout and pass a coverage threshold, producing a variant call where no call should have been made. A high-input sample or positive control could similarly contribute misleading reads to a low-input sample or negative control.\n\nDirect RNA sequencing has different limitations: the kit targets polyadenylated RNA and requires high input amounts. Quick mentions an early Australian proof-of-principle study examining subgenomic RNA and annotating the genome, but describes little wider use for clinical genomic epidemiology at that point."
+  },
+  {
+   "heading": "Diverse, segmented and bacterial targets",
+   "body": "The newer Primal Scheme handles more diverse reference sets better, but it cannot always find conserved primers across very diverse viruses. Quick presents this as a trade-off: the sensitivity of targeted amplification depends on having suitable primer-binding sites. A panellist added that SARS-CoV-2 was a favourable application at the time because its genomes shared a recent common ancestor and relatively little diversity.\n\nSegmented viruses could be handled through separate design runs, but that would miss potential primer interactions across segments. Primal Scheme uses Primer3's thermodynamic engine to assess heterodimer stability within pools. Quick wanted a future multi-input workflow to apply those checks across segments or genes, potentially supporting bacterial cgMLST panels too.\n\nFor bacterial targets, high GC content can complicate primer design. The high-GC mode changes permitted primer lengths and other settings; for genomes around 50–55% GC, Quick suggests comparing both modes."
+  }
+ ],
+ "highlights": [
+  {
+   "time": "00:00:16",
+   "topic": "SARS-CoV-2 sequencing approaches across the COG-UK network"
+  },
+  {
+   "time": "00:10:54",
+   "topic": "Input requirements and other limitations of Nanopore direct RNA sequencing"
+  },
+  {
+   "time": "00:12:06",
+   "topic": "Preparing two primer pools and rebalancing them using observed coverage"
+  },
+  {
+   "time": "00:13:34",
+   "topic": "Segmented viruses and the limits of checking primer interactions across separate designs"
+  },
+  {
+   "time": "00:15:23",
+   "topic": "How reference diversity limits conserved-primer design"
+  },
+  {
+   "time": "00:17:17",
+   "topic": "Why native barcoding is preferred to rapid barcoding for this workflow"
+  },
+  {
+   "time": "00:18:41",
+   "topic": "How barcode cross-talk can create misleading coverage and variant calls"
+  },
+  {
+   "time": "00:20:41",
+   "topic": "Using high-GC mode when designing primers for bacterial targets"
+  }
+ ],
+ "quotes": [
+  {
+   "text": "it's not possible to predict the efficiency of the reactions in advance",
+   "time": "00:12:06",
+   "speaker": "Joshua Quick"
+  }
+ ],
+ "tools": [
+  "ARTIC protocol",
+  "Primal Scheme",
+  "RAMPART",
+  "parasail",
+  "Primer3",
+  "Guppy",
+  "protocols.io",
+  "AmpliSeq",
+  "Nanopore sequencing",
+  "Illumina sequencing",
+  "Nanopore native barcoding",
+  "Nanopore rapid barcoding",
+  "Nanopore direct RNA sequencing",
+  "cgMLST"
+ ],
+ "topics": [
+  "sars-cov-2",
+  "artic protocol",
+  "genomic surveillance",
+  "multiplex pcr",
+  "primer design",
+  "nanopore sequencing",
+  "amplicon dropouts",
+  "demultiplexing",
+  "cog-uk"
+ ],
+ "faq": [
+  {
+   "q": "What Ct range can the ARTIC method work with?",
+   "a": "Quick describes recovering complete or partial SARS-CoV-2 genomes from samples with Ct values around 30–35. He also explains that high Ct and degraded input material can increase amplicon dropouts, so this is not a guarantee of complete recovery."
+  },
+  {
+   "q": "Can more sequencing fix ARTIC amplicon dropouts?",
+   "a": "Not if the amplicon failed to amplify: additional sequencing cannot recover material that is absent. RAMPART helps users distinguish continuing gains in genome coverage from samples that have reached saturation."
+  },
+  {
+   "q": "Why use native rather than rapid Nanopore barcoding for ARTIC?",
+   "a": "The workflow requires barcodes at both ends of a read for stringent demultiplexing, whereas rapid barcoding provides only a 5′ barcode. Quick also notes that rapid barcoding fragments the roughly 400-base amplicons further, which can leave reads too short for basecalling under the settings discussed."
+  },
+  {
+   "q": "Could Primal Scheme design primers for segmented viruses in January 2021?",
+   "a": "Segments could be submitted as separate design runs, but the tool would not assess heterodimer formation between primers designed in different runs. Quick described integrated multi-segment design as a planned feature rather than an existing capability."
+  }
+ ]
+}

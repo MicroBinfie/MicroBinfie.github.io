@@ -1,0 +1,141 @@
+{
+  "episode": "131",
+  "headline": "Torsten Seemann on Snippy NG and sustaining genomic tools",
+  "description": "Torsten Seemann discusses plans for Snippy NG, Nanopore and assembly support, Australian genomic surveillance and open-source maintenance.",
+  "summary": "Andrew Page catches up with Torsten Seemann at the 10th Microbial Bioinformatics Hackathon in Bethesda, Maryland. They discuss the expansion of genomics after COVID, Australian public health laboratories’ work on sharing data, and the difficulty of sustaining bioinformatics software. Seemann outlines two years of Chan Zuckerberg Initiative funding for Snippy’s next generation, including planned support for Nanopore reads, pre-assembled genomes and fuzzy core alignments.",
+  "people": [
+    {
+      "name": "Andrew Page",
+      "role": "host",
+      "affiliation": ""
+    },
+    {
+      "name": "Torsten Seemann",
+      "role": "guest",
+      "affiliation": "Microbiological Diagnostic Unit (MDU), University of Melbourne; Doherty Institute"
+    },
+    {
+      "name": "Michael Hall",
+      "role": "mentioned",
+      "affiliation": ""
+    },
+    {
+      "name": "Ryan Wick",
+      "role": "mentioned",
+      "affiliation": ""
+    }
+  ],
+  "sections": [
+    {
+      "heading": "More sequencing, more difficult choices",
+      "body": "Andrew Page and Torsten Seemann return to a conversation they began at a hackathon in Norwich around 2019. Meeting again in Bethesda, they reflect on how the pandemic changed microbial bioinformatics: more laboratories have sequencing capacity, but there are also many competing software solutions to navigate.\n\nSeemann describes working with partners across the Asia-Pacific region whose move into genomics was accelerated by COVID. Some lack dedicated bioinformatics personnel or access to dedicated training in their countries. They need practical ways to analyse Nanopore and Illumina data, but explaining the available options—and which suit a particular laboratory—is difficult. His concern is not simply a shortage of tools, but the overwhelming range of choices."
+    },
+    {
+      "heading": "Connecting Australia’s public health laboratories",
+      "body": "Seemann works at Melbourne’s Microbiological Diagnostic Unit, a state public health laboratory. He explains that Australia does not have a national reference laboratory and describes much of his work over the preceding ten years as helping state laboratories collaborate and share data. That work contributed to OzTracker, an online, semi-private surveillance and data-sharing platform. An immature version was used urgently during the COVID pandemic.\n\nThe laboratory is returning to its main work in bacterial genomics, while still dealing with viruses including monkeypox virus and Japanese encephalitis virus. National data sharing remains a priority, alongside interoperability with international platforms, the WHO Berlin hub and regional partners. Seemann attributes the laboratory’s broader reach partly to its position within the University of Melbourne’s microbiology department and the Doherty Institute: those connections allow public health work to sit alongside research, immunology and clinical services."
+    },
+    {
+      "heading": "Funding maintenance rather than starting again",
+      "body": "The post-pandemic funding picture is less favourable. Seemann reports budget cuts, smaller bioinformatics teams and colleagues leaving public health for industry and other roles. Software development has slowed, while his own work has shifted towards management. Page recognises that transition, and their discussion of who will maintain Perl code leads into the move towards Python for Snippy’s next version.\n\nSeemann describes receiving his first grant through the Chan Zuckerberg Initiative’s open-source software scheme. Unlike conventional academic grants focused on research questions, this application asked directly about existing tools, competing software, maintenance problems and planned improvements. He found that a much better fit for his work. The award provides two years of funding and supports a postdoc developing Snippy NG, or Snippy the next generation. Seemann presents it as the opportunity to deliver improvements delayed by software ageing and limited attention during COVID, rather than a fully backward-compatible update."
+    },
+    {
+      "heading": "Snippy NG: reads and assemblies in one workflow",
+      "body": "At the time of recording, the team was preparing a community user survey to send out before the end of 2024. Nanopore support was already a prominent request. Seemann says existing Snippy can sometimes work with Nanopore reads, but is not optimised for them. The next version is intended to retain Illumina support while adding a better-supported Nanopore workflow.\n\nA Nanopore benchmarking paper developed with Michael Hall is informing those plans. Seemann describes it as awaiting publication and says the team has gained insight into efficient Nanopore variant calling. He also wants Snippy to accept pre-assembled genomes alongside read data, rather than forcing every input through the same read-based route.\n\nExisting Snippy can accept contigs by shredding them into artificial Illumina reads. Seemann instead describes a working proof of concept using minimap2 to align contigs against contigs and call SNPs directly, which he reports is very fast. The goal is a uniform route from assemblies, Nanopore reads and Illumina reads to comparable VCF output, followed by core-genome alignments."
+    },
+    {
+      "heading": "Fuzzy alignments and software survival",
+      "body": "Another planned change is support for fuzzy core alignments. Seemann points to research by Ryan Wick, known for Unicycler, into how far alignments can be relaxed before their signal is corrupted. He sees a fuzzy core approach as the direction Snippy should take, while presenting this as work for the next version rather than an already delivered feature.\n\nPage connects these plans to a wider maintenance problem: useful tools can disappear when their developers finish a PhD, postdoc or grant, or when dependencies stop being updated. Seemann describes meeting other Chan Zuckerberg Initiative award recipients, including projects such as Bioconductor. Both emphasise the value of funding continued support for established software, rather than treating publication or initial development as the end of the work."
+    }
+  ],
+  "highlights": [
+    {
+      "time": "00:00:48",
+      "topic": "Andrew Page reunites with Torsten Seemann at the Bethesda hackathon."
+    },
+    {
+      "time": "00:01:45",
+      "topic": "Seemann reflects on the expansion of sequencing capacity after COVID."
+    },
+    {
+      "time": "00:01:57",
+      "topic": "Asia-Pacific partners face an overwhelming choice of bioinformatics tools."
+    },
+    {
+      "time": "00:03:00",
+      "topic": "Australia’s state laboratory structure and efforts to coordinate data sharing."
+    },
+    {
+      "time": "00:05:44",
+      "topic": "The transition from writing code to managing bioinformatics teams."
+    },
+    {
+      "time": "00:06:01",
+      "topic": "Perl maintenance and the developer helping write Snippy’s next version."
+    },
+    {
+      "time": "00:06:47",
+      "topic": "Seemann’s first grant and the Chan Zuckerberg Initiative’s maintenance funding."
+    },
+    {
+      "time": "00:08:31",
+      "topic": "The Snippy postdoc’s experience in AI, phylogenetics and software engineering."
+    },
+    {
+      "time": "00:11:07",
+      "topic": "Why useful bioinformatics tools disappear when maintenance stops."
+    },
+    {
+      "time": "00:11:42",
+      "topic": "Support for established open-source projects, including Bioconductor."
+    }
+  ],
+  "quotes": [
+    {
+      "text": "They say diversity is a good thing. I think we probably have a bit too much diversity in the bioinformatics space. It's quite overwhelming.",
+      "time": "00:01:57",
+      "speaker": "Torsten Seemann"
+    }
+  ],
+  "tools": [
+    "Snippy",
+    "Snippy NG",
+    "OzTracker",
+    "Nanopore",
+    "Illumina",
+    "minimap2",
+    "BEAST",
+    "Unicycler",
+    "Bioconductor",
+    "Perl",
+    "Python",
+    "fuzzy core alignments"
+  ],
+  "topics": [
+    "variant calling",
+    "bacterial genomics",
+    "public health genomics",
+    "nanopore sequencing",
+    "genomic surveillance",
+    "open-source software",
+    "software maintenance",
+    "fuzzy core alignments"
+  ],
+  "faq": [
+    {
+      "q": "Does Snippy support Nanopore reads?",
+      "a": "In this episode, Seemann says existing Snippy can sometimes work with Nanopore reads but is not optimised for them. Proper Nanopore support is a planned priority for Snippy NG, informed by benchmarking work with Michael Hall."
+    },
+    {
+      "q": "How will Snippy NG handle pre-assembled genomes?",
+      "a": "Existing Snippy shreds contigs into artificial Illumina reads before processing them. Seemann describes a proof of concept using minimap2 to align contigs directly and call SNPs, with the aim of producing comparable VCF output from assemblies and sequencing reads."
+    },
+    {
+      "q": "What is OzTracker used for?",
+      "a": "Seemann describes OzTracker as an online, semi-private surveillance platform developed to help Australian state laboratories share data. An early version was used during the COVID pandemic, and the discussion places it within continuing national genomic surveillance efforts."
+    },
+    {
+      "q": "Who is funding development of Snippy NG?",
+      "a": "The Chan Zuckerberg Initiative awarded Seemann two years of funding through its open-source software scheme. The grant supports maintenance and improvement of existing software, including a postdoc developing Snippy NG."
+    }
+  ]
+}

@@ -1,0 +1,158 @@
+{
+  "episode": "123",
+  "headline": "Hash-based allele names for decentralised cgMLST databases",
+  "description": "Lee Katz and Andrew Page discuss hash-based cgMLST allele naming, collision tests, exact matching and decentralised database standards.",
+  "summary": "Lee Katz and Andrew Page discuss using sequence hashes to name alleles consistently across separate MLST and cgMLST databases. Katz describes collision tests, changes needed in allele-calling software and a specification for hashing allele profiles. They also examine what remains unresolved: readable sequence-type names, quality control and community ownership of a shared standard.",
+  "people": [
+    {
+      "name": "Lee Katz",
+      "role": "host",
+      "affiliation": "Centers for Disease Control and Prevention, Atlanta, United States"
+    },
+    {
+      "name": "Andrew Page",
+      "role": "host",
+      "affiliation": ""
+    },
+    {
+      "name": "Nabil-Fareed Alikhan",
+      "role": "mentioned",
+      "affiliation": "Quadram Institute, Norwich, UK"
+    },
+    {
+      "name": "Torsten",
+      "role": "mentioned",
+      "affiliation": ""
+    }
+  ],
+  "sections": [
+    {
+      "heading": "The same allele, different numbers",
+      "body": "Katz starts with a practical frustration: separate MLST databases can assign different integer identifiers to the same allele. A database in England and another in the United States might each accumulate genomes and increment their allele numbers independently. Both can contain the same genetic sequences without sharing a naming system, complicating comparisons for genomic surveillance and population-structure studies.\n\nThe proposed alternative is to calculate an identifier from the allele sequence itself. If two institutions hash the same sequence using the same method, they can obtain the same identifier without coordinating the next available number. Katz sees this as especially useful for groups that lack the funding or system support needed to keep conventional databases synchronised."
+    },
+    {
+      "heading": "Testing CRC32, MD5 and SHA-256",
+      "body": "The attraction of hashing is that even a single nucleotide polymorphism changes the resulting hash. That fits allele-based typing, where a sequence difference means a different allele. The complication is a collision: two different sequences can produce the same hash. Page introduces MD5 and the birthday-attack idea while discussing why collisions remain a consideration.\n\nKatz reports testing whole-genome MLST and cgMLST databases covering Salmonella, E. coli, Listeria and Campylobacter. CRC32 produced collisions, whereas he found none with MD5 or SHA-256. To test a larger collection, he took the largest database available to him, Salmonella, and generated ten randomly mutated versions per allele. This made a database eleven times the original size; CRC32 again produced collisions, while MD5 and SHA-256 did not.\n\nA collision could make genuinely different alleles appear identical, contributing zero rather than one to a locus-level distance. These are reported experimental results, not a claim that collisions are impossible."
+    },
+    {
+      "heading": "What allele callers would need to change",
+      "body": "Katz contrasts exact hash comparisons with the looser sequence matching available through BLAST and other approaches used by MLST software. With hashes, a one-base difference changes the identifier rather than producing a partly matching result. He tried generating multiple hashes per allele to support a looser comparison, but says the approach became too complicated and produced a large database without solving the problem usefully.\n\nHe identifies eToKi as a caller that could work with the approach and mentions another caller still being tried out, whose name and availability he could not confirm. He also discusses Chewy Snake, described as a hash-based version of Chewbacca from colleagues in Germany, while expressing concern about its use of CRC32. Checking Git history, he found that Torsten had added allele hashing to his seven-gene MLST work five years earlier."
+    },
+    {
+      "heading": "Sequence types and allele codes",
+      "body": "Hashing individual alleles does not settle how to name their combinations. Katz gives the example of two databases assigning sequence type 10 and sequence type 30 to the same profile. His specification therefore includes a method for hashing the allele hashes to create a sequence-type identifier. Page points out the communication problem: a long hash is harder to discuss with a medic than a small integer.\n\nKatz also argues that sequence types are less useful for cgMLST than for seven-gene MLST because almost every genome can yield a new type. He introduces allele codes, described in a Stevens et al. paper from a couple of years earlier. He confirms that the idea was copied from SNP addresses, but says he does not yet know how to decentralise it. Consistent allele identifiers are presented as a first step, not a complete decentralised typing system."
+    },
+    {
+      "heading": "Quality control and ownership of the standard",
+      "body": "Page asks whether allowing anyone to generate allele hashes could pollute databases. He contrasts this with centralised systems that have gatekeepers, verification and validation. Later, he notes that submitting alleles can involve waiting for acceptance or being asked for Sanger sequencing, while applying comparable checks across cgMLST's many genes is difficult.\n\nThe discussion ends with stewardship. Page asks whether a specification held in Katz's personal GitHub account would have greater longevity under an international organisation. Katz names Phage, GMI and PulseNet International as possible homes, explaining that he made the specification for PulseNet International. These are possibilities rather than announced adoption plans: Katz describes the conversation as brainstorming about who might maintain and develop the work."
+    }
+  ],
+  "highlights": [
+    {
+      "time": "00:00:43",
+      "topic": "Andrew Page introduces the discussion of hash databases with Lee Katz."
+    },
+    {
+      "time": "00:01:14",
+      "topic": "Siloed MLST databases can give the same allele different integer identifiers."
+    },
+    {
+      "time": "00:03:42",
+      "topic": "MD5 introduces the discussion of hash collisions and birthday attacks."
+    },
+    {
+      "time": "00:06:26",
+      "topic": "Katz describes CRC32 collisions and their possible effect on allele distances."
+    },
+    {
+      "time": "00:07:45",
+      "topic": "Tests cover four organism groups and an elevenfold-expanded Salmonella database."
+    },
+    {
+      "time": "00:09:48",
+      "topic": "Allele submission, acceptance and quality-control barriers in existing databases."
+    },
+    {
+      "time": "00:10:29",
+      "topic": "Exact hash matching changes software requirements for allele callers."
+    },
+    {
+      "time": "00:12:40",
+      "topic": "How sequence-type identifiers might be allocated from collections of allele hashes."
+    },
+    {
+      "time": "00:14:21",
+      "topic": "Why cgMLST sequence types are less useful than seven-gene MLST types."
+    },
+    {
+      "time": "00:15:32",
+      "topic": "Whether a community organisation should maintain Katz's specification."
+    },
+    {
+      "time": "00:15:57",
+      "topic": "Phage, GMI and PulseNet International are discussed as possible organisational homes."
+    }
+  ],
+  "quotes": [
+    {
+      "text": "And so that would be a unique identifier that if I found it and you found it in your institution, we'd have the same identifier and we could synchronize our databases much more easily.",
+      "time": "00:01:14",
+      "speaker": "Lee Katz"
+    },
+    {
+      "text": "I'm looking for a parent to adopt me on this specification.",
+      "time": "00:15:57",
+      "speaker": "Lee Katz"
+    }
+  ],
+  "tools": [
+    "MLST",
+    "cgMLST",
+    "whole-genome MLST",
+    "CRC32",
+    "MD5",
+    "SHA-256",
+    "BLAST",
+    "eToKi",
+    "Chewbacca",
+    "Chewy Snake",
+    "Git",
+    "GitHub",
+    "Sanger sequencing",
+    "allele codes",
+    "SNP addresses"
+  ],
+  "topics": [
+    "microbial bioinformatics",
+    "cgmlst",
+    "allele identification",
+    "hash databases",
+    "hash collisions",
+    "database synchronisation",
+    "genomic surveillance",
+    "sequence types",
+    "decentralised databases"
+  ],
+  "faq": [
+    {
+      "q": "Why use hashes instead of integer allele numbers in cgMLST?",
+      "a": "Separate databases can assign different integer names to the same allele. Hashing the sequence provides a way for institutions to calculate the same identifier independently, making synchronisation easier."
+    },
+    {
+      "q": "Did Katz find collisions with MD5 or SHA-256?",
+      "a": "He reports finding no collisions with either algorithm in the MLST databases he tested or in a Salmonella database expanded to eleven times its original size using random mutations. CRC32 did produce collisions."
+    },
+    {
+      "q": "Which organisms were included in the hash tests?",
+      "a": "Katz names Salmonella, E. coli, Listeria and Campylobacter among the whole-genome MLST and cgMLST databases he tested. He used Salmonella for the expanded mutation experiment because it was the largest database he could find."
+    },
+    {
+      "q": "Can hashing also create decentralised sequence-type identifiers?",
+      "a": "Katz's specification includes hashing the allele hashes to identify a sequence type. The hosts note that long hash identifiers are awkward to communicate, and Katz says decentralising allele codes remains unresolved."
+    },
+    {
+      "q": "Who might maintain the hash-database specification?",
+      "a": "Katz discusses Phage, GMI and PulseNet International as possible homes. He says the specification was made for PulseNet International, but no adoption decision is announced."
+    }
+  ]
+}

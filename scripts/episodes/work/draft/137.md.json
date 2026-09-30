@@ -1,0 +1,158 @@
+{
+  "episode": "137",
+  "headline": "Contagion part 2: genome dashboards, phylogenies and the CDC",
+  "description": "Contagion’s genome dashboard, phylogenetic trees and CDC scenes get a bioinformatics review, from R0 claims to early sequencing technology.",
+  "summary": "Lee Katz, Andrew Page and Nabil-Fareed Alikhan continue their review of Contagion, examining its genome dashboard, phylogenetic trees and portrayal of CDC scientists. They compare the film’s laboratory scenes with bioinformatics work around 2011 and identify real CDC locations used during filming. Their discussion separates convincing scientific detail from dramatic shortcuts in disease progression, vaccine allocation and the international pandemic response.",
+  "people": [
+    {
+      "name": "Lee Katz",
+      "role": "host",
+      "affiliation": "CDC"
+    },
+    {
+      "name": "Andrew Page",
+      "role": "host",
+      "affiliation": ""
+    },
+    {
+      "name": "Nabil-Fareed Alikhan",
+      "role": "host",
+      "affiliation": ""
+    },
+    {
+      "name": "Ian Lipkin",
+      "role": "mentioned",
+      "affiliation": ""
+    },
+    {
+      "name": "Matt Damon",
+      "role": "mentioned",
+      "affiliation": ""
+    }
+  ],
+  "sections": [
+    {
+      "heading": "A convincing genome dashboard",
+      "body": "The hosts begin with the genome dashboard shown around the film’s 28th or 29th minute. Its panels combine a sequence alignment, protein structure, recombination map and similarity comparisons with related sequences. They particularly like the way it brings these views together. They also clarify two shortcuts in the dialogue: bat and pig sequences mean sequences from viruses associated with those hosts, not the animals’ own genomes, and the molecular graphic depicts an attachment protein rather than an entire virus particle.\n\nThe interface reminds them of Jalview and Java desktop software, prompting a discussion of Swing. Nobody identifies the application, however, and they suspect it was made for the film. One host reports having read that the displayed sequence and protein came from Nipah virus, but explicitly cannot confirm this. Ian Lipkin is named as the scientific adviser; the hosts would like to know who designed the dashboard."
+    },
+    {
+      "heading": "What the phylogenetic tree does not establish",
+      "body": "A later scene links a phylogenetic tree to a newly increased R0. The hosts find this much less convincing than the dashboard. The scientist appears to open an image attachment in Microsoft Paint, rather than inspect a tree in specialist software. Its coloured branches and black background look more like a textbook illustration than their usual working output, although its long tip labels earn a point for realism.\n\nThey question the long branches, the absence of a scale bar and bootstrap values, and the lack of an obviously divergent lineage. A second view turns out to be a zoom into the blue Durban cluster, not a different tree. Their central objection is that the displayed tree does not justify the claimed change in R0. They contrast this shortcut with the film’s earlier explanation involving infectious period, contact rate and mode of transmission."
+    },
+    {
+      "heading": "Bioinformatics and sequencing around 2011",
+      "body": "The film’s bioinformatician moves between computer work and the laboratory. Lee explains that CDC had very few dedicated bioinformaticians around 2011, making that combination more plausible then than the hosts would find it in an updated film. The discussion connects this changing division of labour with the spread of accessible sequencing instruments, particularly the MiSeq desktop sequencer.\n\nLee says they received their first MiSeq in 2012. He also recalls sequencing the major Haiti cholera genome using 36-base-pair reads on a GA2, while being unsure whether the instrument was a GA2X. The hosts discuss 454 and SOLiD alongside early Illumina sequencing, and remember Velvet as software built for very short reads. This leads to a terminology point: roughly 300-base-pair 454 reads once seemed long, while later expectations include 150-base paired-end reads and much longer sequences."
+    },
+    {
+      "heading": "Which CDC locations are real?",
+      "body": "Lee remembers seeing preparations for Contagion while commuting to CDC, including staged protesters outside. He identifies the actual driveway, visitors’ car park and public museum area in the film. The other hosts recognise places they visited themselves. Lee also finds the fictional director’s route from the visitors’ car park through the museum amusing.\n\nThese recognisable exterior and public spaces do not make all the CDC scenes authentic: Lee says the interior conference-room scenes were not filmed at CDC. The hosts recommend the museum as a place visitors can explore. They contrast Contagion’s use of real CDC locations with The Walking Dead, which used the Cobb Energy Center as its stand-in."
+    },
+    {
+      "heading": "Disease progression and missing recoveries",
+      "body": "In their closing assessment, the hosts question the film’s compressed disease timeline. One host describes an apparent progression from infection on day zero to contagiousness on day one, illness on day two and death by day six. They argue that such rapid incapacitation sits awkwardly with the film’s account of extensive transmission and an R0 rising to four.\n\nThey also note a mismatch between the stated mortality rate of around 20% and the emphasis on fatal cases: the film does not clearly show people becoming ill and recovering. Matt Damon’s character complicates the picture because he remains well despite exposure. The hosts discuss whether his different-coloured wristband acknowledges immunity, without resolving its basis. Nipah virus provides a comparison for the fictional disease’s fever and encephalitis, while Hendra virus enters the discussion as another bat-associated example."
+    },
+    {
+      "heading": "Vaccine allocation and the worldwide response",
+      "body": "The vaccine rollout prompts a separate criticism. Allocation follows a birthday-based lottery rather than prioritising people described as especially susceptible, such as elderly or immunocompromised people. One host compares the mechanism with the US draft lottery.\n\nLee also raises the film’s US-centred response. The hosts would expect substantial involvement from China, the UK and other international partners. Although WHO appears, they describe its role as concentrated in a single character whose kidnapping largely removes that strand of the response.\n\nDespite these objections, the hosts enjoy the film and appreciate its scientific care. Their overall verdict is that Hollywood compresses large teams, complicated decisions and long processes into a few characters and dramatic moments. They suggest Outbreak and The Andromeda Strain as possible future films to review."
+    }
+  ],
+  "highlights": [
+    {
+      "time": "00:00:48",
+      "topic": "The genome dashboard introduces the virus sequence and protein model."
+    },
+    {
+      "time": "00:03:04",
+      "topic": "The dashboard’s Windows setting, Jalview-like interface and recombination panels."
+    },
+    {
+      "time": "00:05:50",
+      "topic": "Ian Lipkin’s advisory role and the unidentified dashboard designer."
+    },
+    {
+      "time": "00:06:55",
+      "topic": "A phylogenetic tree appears to trigger a new estimate of R0."
+    },
+    {
+      "time": "00:08:15",
+      "topic": "The tree is an image attachment, with missing scale and support information."
+    },
+    {
+      "time": "00:11:31",
+      "topic": "Long branches and tree structure raise questions about the depicted outbreak."
+    },
+    {
+      "time": "00:15:19",
+      "topic": "Lee explains why combining laboratory work and bioinformatics was plausible in 2011."
+    },
+    {
+      "time": "00:17:29",
+      "topic": "Early Illumina sequencing and the usefulness of 36-base reads."
+    },
+    {
+      "time": "00:19:45",
+      "topic": "Lee recalls filming preparations and identifies real CDC locations."
+    },
+    {
+      "time": "00:23:45",
+      "topic": "The overall verdict begins with compressed disease progression and missing recoveries."
+    },
+    {
+      "time": "00:28:39",
+      "topic": "The birthday-based vaccine lottery and comparison with more sensational outbreak films."
+    },
+    {
+      "time": "00:30:40",
+      "topic": "Hollywood conventions compress an international response into a US-centred story."
+    }
+  ],
+  "quotes": [
+    {
+      "text": "We should be happy that there's a phylogenetic tree in a mainstream movie to begin with.",
+      "time": "00:14:17",
+      "speaker": "one of the hosts"
+    }
+  ],
+  "tools": [
+    "Jalview",
+    "Java",
+    "Swing",
+    "Microsoft Paint",
+    "Internet Explorer",
+    "MiSeq",
+    "GA2",
+    "GA2X",
+    "454",
+    "SOLiD",
+    "Velvet"
+  ],
+  "topics": [
+    "contagion",
+    "microbial bioinformatics",
+    "phylogenetics",
+    "genome visualisation",
+    "sequencing technology",
+    "nipah virus",
+    "epidemiology",
+    "cdc",
+    "vaccine allocation"
+  ],
+  "faq": [
+    {
+      "q": "What software is used for Contagion’s genome dashboard?",
+      "a": "The hosts do not identify it. They say it resembles Jalview and a Java desktop interface, and suspect it was custom-made for the film."
+    },
+    {
+      "q": "Why do the hosts criticise the phylogenetic tree scene?",
+      "a": "They do not see a clearly divergent lineage supporting the dialogue about the Durban cluster, and they question the branch lengths and missing scale and support information. They also argue that the displayed tree does not establish a new R0."
+    },
+    {
+      "q": "Was Contagion filmed at the real CDC?",
+      "a": "Lee identifies the real CDC driveway, visitors’ car park and public museum area. He says the interior conference-room scenes were not filmed at CDC."
+    },
+    {
+      "q": "Which sequencing technologies are discussed in the episode?",
+      "a": "The hosts discuss MiSeq, early Illumina GA2 sequencing, 454 and SOLiD. Lee recalls receiving a MiSeq in 2012 and using 36-base-pair reads for the major Haiti cholera genome, while the group remembers Velvet’s role in assembling very short reads."
+    }
+  ]
+}

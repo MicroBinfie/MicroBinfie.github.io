@@ -1,0 +1,141 @@
+{
+ "episode": "050",
+ "headline": "Changing invasive Salmonella serovars in The Gambia",
+ "description": "Abdoulie Kanteh and Grant Mackenzie discuss changing invasive Salmonella serovars in The Gambia, genomics and implications for vaccines.",
+ "summary": "Nabil-Fareed Alikhan and Andrew Page speak with Abdoulie Kanteh and Grant Mackenzie about invasive non-typhoidal Salmonella in rural Gambia. Their surveillance and genomic study finds that serovars other than Typhimurium and Enteritidis have become increasingly prominent. They discuss a possible connection with a toxin gene, alternative explanations for the shift and implications for vaccine development.",
+ "people": [
+  {
+   "name": "Nabil-Fareed Alikhan",
+   "role": "host",
+   "affiliation": "Quadram Institute, Norwich, UK"
+  },
+  {
+   "name": "Andrew Page",
+   "role": "host",
+   "affiliation": "Quadram Institute, Norwich, UK"
+  },
+  {
+   "name": "Lee Katz",
+   "role": "host",
+   "affiliation": "Centers for Disease Control and Prevention; University of Georgia"
+  },
+  {
+   "name": "Abdoulie Kanteh",
+   "role": "guest",
+   "affiliation": "MRC Unit The Gambia at the London School of Hygiene and Tropical Medicine"
+  },
+  {
+   "name": "Grant Mackenzie",
+   "role": "guest",
+   "affiliation": "MRC Unit The Gambia at the London School of Hygiene and Tropical Medicine"
+  }
+ ],
+ "sections": [
+  {
+   "heading": "Surveillance in rural Gambia",
+   "body": "The episode centres on a study of invasive non-typhoidal Salmonella in rural Gambia, available as a bioRxiv preprint. Grant Mackenzie describes population-based surveillance linking government health facilities with clinical assessment and laboratory testing. The study drew on nine years of surveillance at nine health facilities, with blood cultures taken from sick children rather than relying solely on hospital admissions.\n\nAbdoulie Kanteh works across laboratory genomics and bioinformatics at MRC Unit The Gambia. Its genomics platform now has Illumina and Nanopore technologies, although these study samples were sequenced elsewhere before the local sequencing facility was available."
+  },
+  {
+   "heading": "What makes Salmonella invasive?",
+   "body": "Abdoulie distinguishes infection confined to the gut, typically causing self-limiting gastroenteritis, from invasive infection outside the gut, including bloodstream infection. A separate distinction concerns typhoidal and non-typhoidal Salmonella: non-typhoidal does not mean non-invasive. Typhimurium and Enteritidis are discussed as major causes of invasive non-typhoidal disease in Africa.\n\nGrant describes malnutrition and damage to the gut lining as possible reasons bacteria can more readily enter the bloodstream in this setting. The discussion also covers malaria-associated susceptibility."
+  },
+  {
+   "heading": "From samples to phylogenies",
+   "body": "DNA extraction was carried out in Fajara, and the samples were sent to Sanger for Illumina sequencing, producing 125-base reads. Andrew describes an informal collaboration that developed through colleagues at Sanger, visits to The Gambia and Abdoulie's month at Quadram working with Andrew and Nabil-Fareed.\n\nAbdoulie's workflow included read quality checks with FastQC, genome assembly with SPAdes and assembly quality assessment. Three samples had unusually large assemblies compared with expected Salmonella genomes and were excluded as potential contaminants. The analysis also screened virulence and antimicrobial resistance genes, examined core and pan-genomes, and used IQ-TREE to construct a phylogeny from a core-genome alignment."
+  },
+  {
+   "heading": "A shift towards atypical serovars",
+   "body": "The central finding is a change in the composition of invasive disease. In surveillance from 2000–2005 in the same geographical area, the so-called atypical serovars caused about 10–15% of invasive cases. Grant reports that they consistently accounted for about 60–65% during the latest five years discussed. Here, atypical means serovars other than Typhimurium and Enteritidis.\n\nAbdoulie reports substantial mortality associated with these serovars and frequent detection of a cytolethal distending toxin gene. The team considers whether this gene could contribute to their success or invasiveness, but presents this as a hypothesis rather than a demonstrated mechanism. How the gene reached these distinct serovars remains unresolved."
+  },
+  {
+   "heading": "Could sampling explain the change?",
+   "body": "Nabil-Fareed asks whether changing sample numbers could account for the findings. Grant explains that rainfall, malaria and respiratory virus activity affect attendance and therefore blood culture numbers: roughly 1,900 cultures were taken in children in 2009, compared with 3,500 in 2015. More testing can reveal more cases, but he does not see an obvious explanation here for the sustained change in serovar proportions.\n\nThe study was not designed to identify every possible driver. Grant reports no substantial changes in measured livestock ownership, malnutrition or HIV prevalence that would explain the shift. Abdoulie separately identifies closely related Enteritidis isolates from 2010–2011 as a cluster worth investigating alongside flooding."
+  },
+  {
+   "heading": "Follow-up studies and vaccine implications",
+   "body": "Proposed follow-up work includes long-read sequencing to examine the toxin gene's genomic context and laboratory investigation of its effects. Grant suggests comparing case fatality in infections with and without the gene, and encourages other West African investigators to monitor invasive serovar distributions.\n\nAbdoulie wants to compare the invasive isolates with gut isolates from the Global Enteric Multicenter Study, or GEMS, which includes cases and controls from rural Gambia. He also proposes microbiome, host genetic and environmental investigations, including domestic animals.\n\nFor vaccines, the concern is that targeting only Typhimurium and Enteritidis may leave other important serovars uncovered. Grant discusses whole-cell, attenuated bacterial and outer membrane vesicle platforms alongside serovar-specific approaches. The panel argues against assuming that other Salmonella serovars are harmless."
+  }
+ ],
+ "highlights": [
+  {
+   "time": "00:01:28",
+   "topic": "Grant Mackenzie introduces population-based bacterial disease surveillance in rural Gambia."
+  },
+  {
+   "time": "00:08:41",
+   "topic": "Abdoulie Kanteh explains invasive versus gut-confined Salmonella infection."
+  },
+  {
+   "time": "00:17:16",
+   "topic": "Nine years of surveillance and blood culture collection across nine health facilities."
+  },
+  {
+   "time": "00:19:06",
+   "topic": "Sample preparation in Fajara and Illumina sequencing at Sanger."
+  },
+  {
+   "time": "00:20:40",
+   "topic": "Training at Quadram and a workflow using FastQC, SPAdes and IQ-TREE."
+  },
+  {
+   "time": "00:22:19",
+   "topic": "Atypical serovars dominate the findings, alongside mortality and toxin-gene observations."
+  },
+  {
+   "time": "00:24:29",
+   "topic": "How rainfall, malaria and blood culture numbers affect interpretation of surveillance."
+  },
+  {
+   "time": "00:33:07",
+   "topic": "Unresolved toxin-gene movement between distinct serovars and the value of long reads."
+  },
+  {
+   "time": "00:35:57",
+   "topic": "Concern about geographical spread and implications for serovar-specific vaccines."
+  },
+  {
+   "time": "00:37:42",
+   "topic": "Plans to study GEMS gut isolates, microbiomes, host factors and environmental sources."
+  }
+ ],
+ "quotes": [
+  {
+   "text": "I think pathogenesis, given the right conditions, can come from anywhere.",
+   "time": "00:36:41",
+   "speaker": "Nabil-Fareed Alikhan"
+  }
+ ],
+ "tools": [
+  "FastQC",
+  "SPAdes",
+  "IQ-TREE"
+ ],
+ "topics": [
+  "invasive non-typhoidal salmonella",
+  "the gambia",
+  "serovar replacement",
+  "pathogen genomics",
+  "bacterial surveillance",
+  "cytolethal distending toxin",
+  "vaccine development",
+  "malaria"
+ ],
+ "faq": [
+  {
+   "q": "Which Salmonella serovars were becoming more common in rural Gambia?",
+   "a": "Serovars other than Typhimurium and Enteritidis, described as atypical in the study, were becoming more prominent. Grant reports a rise from about 10–15% of invasive cases in 2000–2005 to around 60–65% during the latest five years discussed."
+  },
+  {
+   "q": "Did the study prove that a toxin gene caused the serovar shift?",
+   "a": "No. Frequent detection of a cytolethal distending toxin gene suggested a possible explanation, but its contribution remained unresolved. The panel proposes further genomic, laboratory and case-fatality comparisons."
+  },
+  {
+   "q": "Which bioinformatics tools were used for the Salmonella analysis?",
+   "a": "Abdoulie describes FastQC for read quality checks, SPAdes for assembly and IQ-TREE for phylogenetic reconstruction. Three unusually large assemblies were excluded as potential contaminants."
+  },
+  {
+   "q": "How could GEMS samples extend the invasive Salmonella study?",
+   "a": "Abdoulie proposes comparing gut isolates from the Global Enteric Multicenter Study with the invasive isolates. GEMS includes cases and controls from rural Gambia, providing a way to investigate Salmonella outside the bloodstream surveillance collection."
+  }
+ ]
+}

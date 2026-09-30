@@ -1,0 +1,173 @@
+{
+  "episode": "encore-06-what-software-not-to-write",
+  "headline": "What not to write: Torsten Seemann on bioinformatics software",
+  "description": "Torsten Seemann discusses Prokka, reliable command-line tools, Conda packaging and the long-term work of maintaining bioinformatics software.",
+  "summary": "Torsten Seemann joins Nabil-Fareed Alikhan and Andrew Page to discuss what makes bioinformatics software useful beyond its publication. Drawing on Prokka and his other tools, he explains the value of straightforward installation, small databases, standard formats and helpful command-line behaviour. The conversation also covers naming, packaging, promotion and the continuing responsibility of supporting users.",
+  "people": [
+    {
+      "name": "Torsten Seemann",
+      "role": "guest",
+      "affiliation": "Microbiological Diagnostic Unit Public Health Lab, Doherty Institute for Immunity and Infection, University of Melbourne"
+    },
+    {
+      "name": "Nabil-Fareed Alikhan",
+      "role": "host",
+      "affiliation": "Quadram Institute"
+    },
+    {
+      "name": "Andrew Page",
+      "role": "host",
+      "affiliation": "Quadram Institute"
+    },
+    {
+      "name": "Lee Katz",
+      "role": "host",
+      "affiliation": "Centers for Disease Control and Prevention; University of Georgia"
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Why Prokka became useful",
+      "body": "Seemann traces Prokka back to modular bash scripts used internally at Monash University around 2004–2006, before its paper appeared in 2014. It began as a way to bootstrap manual gene curation for individual genomes. As sequencing volumes increased, the same approach became useful for annotating hundreds or thousands of bacterial genomes.\n\nHe attributes its adoption to practical details: a single download, bundled Linux and Mac binaries, small databases and usable defaults. Users could supply a FASTA file of contigs without choosing lots of settings, then receive valid GFF and GenBank files for downstream work in tools such as Artemis or Roary. Running locally on the command line also avoided uploading genomes to websites one at a time and tracking their downloads and failures. His wider design pattern is minimal input, predictable output and software that works immediately."
+    },
+    {
+      "heading": "Smaller databases and standard formats",
+      "body": "Reducing Prokka’s download size was partly a distribution problem. Seemann recalls a roughly 1.2 GB archive, slow downloads from Australia and a Dropbox account suspended after excessive bandwidth use. He subsequently used Google Drive, but also reconsidered how much annotation data the tool needed.\n\nRather than use the whole NR database, with the risk of propagating poor annotations, he selected the curated UniProt SwissProt records and filtered further using evidence codes. This reduced the database to about 70,000 proteins; he says it could annotate around 60% of genes using a small, reliable reference set. Prokka later gained support for user-supplied reference genomes. He also recommends established formats such as BED, GFF, VCF and FASTA: interoperable outputs mean fewer conversion scripts between pipeline steps."
+    },
+    {
+      "heading": "Make the first run a good experience",
+      "body": "The conversation follows a familiar disappointment: discover a promising paper, struggle to find its source-code link, work through installation instructions, then encounter an error on a small test dataset. Seemann argues that a software paper’s URL belongs in its abstract. Andrew Page adds examples of hardcoded institutional settings and instructions requiring users to edit a particular script line.\n\nOnce installed, a command run without the necessary inputs should explain what is missing, not crash or silently create files. Seemann favours informative progress messages, with a quiet option for larger pipelines. The discussion also identifies a troublesome Prokka dependency: NCBI’s Table to ASN tool, which writes its GenBank files. Seemann describes binary-only distribution, updates that appear without notice and expiry after roughly six months to a year. Although it produced compliant files, he regards relying on it as a mistake."
+    },
+    {
+      "heading": "Decide whether to write it at all",
+      "body": "Seemann’s first advice to prospective developers is not to start unless they are prepared for maintenance. Publishing a tool and abandoning it does little for its users. Using the software yourself matters because experiencing its failures creates a direct incentive to improve it. Prokka illustrates how that commitment can extend well beyond the initial project or paper.\n\nA distinctive name and a durable source-code home are also part of making software usable. Seemann describes checking names such as Prokka, Snippy and Barrnap through searches for conflicts; the discussion also recommends checking Urban Dictionary. He favours GitHub, GitLab or Bitbucket over institutional websites whose reorganisations can break download links. GitHub’s issue tracking and pull requests helped persuade him to move beyond distributing numbered archives from personal websites."
+    },
+    {
+      "heading": "Package for people who just want to install it",
+      "body": "The intended audience is often a biologist with data to analyse, not another developer. Traditional distribution packages can be demanding to prepare, and installation may require administrator access. Homebrew and Conda offer alternatives, with Seemann highlighting Conda’s handling of versions and environments as important for reproducibility.\n\nFor Python tools, he recommends packaging for PyPI so users can install them with pip. That also simplifies subsequent Conda packaging. However, pip does not install external programs such as samtools or BWA alongside the Python scripts. Conda can combine the tool with those dependencies by reusing existing packages.\n\nClear dependency lists and setup instructions make life easier for the Bioconda contributors who package tools for the community. Seemann describes volunteers updating packages before he has noticed, and connects straightforward installation with wider research use and citations."
+    },
+    {
+      "heading": "Promotion, support and paying for maintenance",
+      "body": "Seemann has promoted tools through blog posts and Twitter, often before writing papers. The hosts advocate preprints while cautioning that authors should check journal policies. The Journal of Open Source Software interests Seemann because its review focuses on software quality, documentation and installation. Its reviewer guidelines are suggested as a useful checklist even for developers not submitting there.\n\nFor support, he encourages GitHub issues rather than private email. Other users often answer questions before he reaches them, making maintenance partly a community effort. Nevertheless, unresolved issues and unreviewed pull requests create a substantial workload and a sense of guilt. He says his employer recognises maintenance as part of his job, while acknowledging that many bioinformaticians lack that support.\n\nAt the time of the conversation, he was investigating a Chan Zuckerberg grant programme for established computational biology software. He describes awards of US$50,000–250,000, with three rounds per year, intended for maintenance rather than creating new tools. The broader point is that successful software needs continuing resources, not just an initial publication."
+    }
+  ],
+  "highlights": [
+    {
+      "time": "00:03:03",
+      "topic": "Prokka’s bundled databases, minimal settings and origins in manual genome annotation."
+    },
+    {
+      "time": "00:08:37",
+      "topic": "Standard formats reduce the glue needed between bioinformatics tools."
+    },
+    {
+      "time": "00:10:23",
+      "topic": "Reducing dependencies and shrinking Prokka’s annotation databases."
+    },
+    {
+      "time": "00:12:36",
+      "topic": "The frustrating journey from discovering a software paper to a failed first run."
+    },
+    {
+      "time": "00:16:12",
+      "topic": "What a command-line tool should do when users run it without required inputs."
+    },
+    {
+      "time": "00:19:45",
+      "topic": "Why developers should not start a tool they will neither use nor maintain."
+    },
+    {
+      "time": "00:22:38",
+      "topic": "Moving Prokka from website downloads to GitHub and version control."
+    },
+    {
+      "time": "00:24:40",
+      "topic": "Choosing a distinctive software name and checking for conflicts."
+    },
+    {
+      "time": "00:28:24",
+      "topic": "Installation without administrator access and the community effort behind Bioconda."
+    },
+    {
+      "time": "00:31:06",
+      "topic": "Packaging explained, from configure and make to PyPI and Conda."
+    },
+    {
+      "time": "00:36:54",
+      "topic": "JOSS and reviewing software for usability, documentation and installation."
+    },
+    {
+      "time": "00:38:01",
+      "topic": "Managing support through GitHub issues and sustaining long-term maintenance."
+    }
+  ],
+  "quotes": [
+    {
+      "text": "I think the software URL should be in the abstract.",
+      "time": "00:14:39",
+      "speaker": "Torsten Seemann"
+    },
+    {
+      "text": "If you're going to just write a tool, publish it and then abandon it, please do not start that project.",
+      "time": "00:19:45",
+      "speaker": "Torsten Seemann"
+    }
+  ],
+  "tools": [
+    "Prokka",
+    "Snippy",
+    "Barrnap",
+    "Abricate",
+    "Nullarbor",
+    "MLST",
+    "Artemis",
+    "Roary",
+    "UniProt",
+    "UniProt SwissProt",
+    "NR database",
+    "GenBank",
+    "Table to ASN",
+    "Conda",
+    "Bioconda",
+    "Homebrew",
+    "PyPI",
+    "pip",
+    "samtools",
+    "BWA",
+    "GitHub",
+    "GitLab",
+    "Bitbucket",
+    "SourceForge",
+    "Debian Med",
+    "Biostars"
+  ],
+  "topics": [
+    "bioinformatics software",
+    "bacterial genome annotation",
+    "command-line usability",
+    "software packaging",
+    "reproducibility",
+    "data standards",
+    "open-source maintenance",
+    "user support",
+    "software publication"
+  ],
+  "faq": [
+    {
+      "q": "Why did Prokka become widely used?",
+      "a": "Seemann credits easy installation, bundled small databases, useful defaults and fast command-line operation. Standard GFF and GenBank outputs also made it straightforward to connect Prokka to downstream analysis tools."
+    },
+    {
+      "q": "When should a bioinformatician avoid writing a new tool?",
+      "a": "Seemann advises against starting if the plan is simply to publish and abandon it, or if the developer will not use it themselves. Maintaining a useful tool is a long-term commitment, and encountering its problems firsthand helps drive improvements."
+    },
+    {
+      "q": "Why use Conda as well as pip for a Python bioinformatics tool?",
+      "a": "In the episode’s examples, pip installs Python software but not external dependencies such as samtools or BWA. Conda can bring those components together using existing packages, without requiring administrator access."
+    },
+    {
+      "q": "How does Torsten Seemann manage support for his tools?",
+      "a": "He encourages users to open GitHub issues rather than send private email, allowing other users to help answer questions. Community support reduces the burden, but he still describes substantial work and guilt around unresolved issues and pull requests."
+    }
+  ]
+}
