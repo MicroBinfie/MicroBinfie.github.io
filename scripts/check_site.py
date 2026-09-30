@@ -29,6 +29,7 @@ LEAKS = [
     ("liquid", re.compile(r"\{\{|\{%|%\}")),
     ("code backtick", re.compile(r"`")),
     ("HTML comment", re.compile(r"<!--|-->")),
+    ("attribute list", re.compile(r"\{:\s*[\w-]|\{[#.][\w-]")),
     ("table pipe row", re.compile(r"^\s*\|.*\|\s*$", re.MULTILINE)),
 ]
 

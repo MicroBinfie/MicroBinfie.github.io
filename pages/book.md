@@ -8,6 +8,9 @@ book:
   authors: ["Nabil-Fareed Alikhan", "Lee Katz", "Andrew J. Page"]
   year: "2026"
   cover: /assets/book/cover.jpg
+# Book files are assets of this GitHub release, which counts every download (see
+# scripts/book_downloads.sh). A new edition is a new release: change this one line.
+downloads: https://github.com/MicroBinfie/MicroBinfie.github.io/releases/download/book-2026-09-29
 amazon:
   asin: B0HG3VN36K
   url: https://www.amazon.com/dp/B0HG3VN36K
@@ -45,13 +48,13 @@ following years demolished, the wrong version is still there and the correction 
 
 | Format | Best for | Size |
 |---|---|---|
-| [EPUB]({{ '/assets/book/nobody-wrote-this-down.epub' | relative_url }}) | E-readers, phones and tablets; Apple Books, Kobo, Google Play Books, and Kindle via Send to Kindle | 333&nbsp;KB |
-| [PDF, paperback layout]({{ '/assets/book/nobody-wrote-this-down-6x9.pdf' | relative_url }}) | Reading on screen exactly as printed (6 × 9 in, 188 pages) | 980&nbsp;KB |
-| [PDF, A4]({{ '/assets/book/nobody-wrote-this-down-a4.pdf' | relative_url }}) | Printing at home, or annotating | 960&nbsp;KB |
-| [PDF, phone]({{ '/assets/book/nobody-wrote-this-down-phone.pdf' | relative_url }}) | A narrow page sized for a phone screen | 1.1&nbsp;MB |
-| [PDF, large print]({{ '/assets/book/nobody-wrote-this-down-large-print.pdf' | relative_url }}) | 17-point type for easier reading | 1.1&nbsp;MB |
-| [Web page]({{ '/assets/book/nobody-wrote-this-down.html' | relative_url }}) | Reading in a browser, one long page | 530&nbsp;KB |
-| [Plain text]({{ '/assets/book/nobody-wrote-this-down.txt' | relative_url }}) | Anything at all; screen readers, slow connections | 500&nbsp;KB |
+| [EPUB]({{ page.downloads }}/nobody-wrote-this-down.epub){: data-book-format="epub"} | E-readers, phones and tablets; Apple Books, Kobo, Google Play Books, and Kindle via Send to Kindle | 333&nbsp;KB |
+| [PDF, paperback layout]({{ page.downloads }}/nobody-wrote-this-down-6x9.pdf){: data-book-format="pdf-6x9"} | Reading on screen exactly as printed (6 × 9 in, 188 pages) | 980&nbsp;KB |
+| [PDF, A4]({{ page.downloads }}/nobody-wrote-this-down-a4.pdf){: data-book-format="pdf-a4"} | Printing at home, or annotating | 960&nbsp;KB |
+| [PDF, phone]({{ page.downloads }}/nobody-wrote-this-down-phone.pdf){: data-book-format="pdf-phone"} | A narrow page sized for a phone screen | 1.1&nbsp;MB |
+| [PDF, large print]({{ page.downloads }}/nobody-wrote-this-down-large-print.pdf){: data-book-format="pdf-large-print"} | 17-point type for easier reading | 1.1&nbsp;MB |
+| [Web page]({{ '/assets/book/nobody-wrote-this-down.html' | relative_url }}){: data-book-format="web"} | Reading in a browser, one long page | 530&nbsp;KB |
+| [Plain text]({{ page.downloads }}/nobody-wrote-this-down.txt){: data-book-format="txt"} | Anything at all; screen readers, slow connections | 500&nbsp;KB |
 
 ## Buy the paperback
 
@@ -67,3 +70,20 @@ The guests, and the colleagues they talk about, appear in the book under pseudon
 themselves, and the [episode pages on this site]({{ '/pages/Episodes.html' | relative_url }}),
 are where to hear them in their own words. Quoted speech in the book is verbatim from the
 recordings, and every episode behind each chapter is listed in its Note on Sources.
+
+<script>
+  /* Count book downloads in Google Analytics as one 'book_download' event with the format, so
+     the EPUB and web edition are counted too (GA's automatic tracking only sees PDF and TXT).
+     gtag exists only on the published site; locally this does nothing. */
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest && e.target.closest('a[data-book-format]');
+    if (!a || typeof gtag !== 'function') return;
+    gtag('event', 'book_download', {
+      format: a.getAttribute('data-book-format'),
+      file_name: a.href.split('/').pop(),
+      link_url: a.href,
+      transport_type: 'beacon'
+    });
+  });
+</script>
+
