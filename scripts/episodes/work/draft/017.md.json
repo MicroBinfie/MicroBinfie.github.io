@@ -1,0 +1,165 @@
+{
+  "episode": "017",
+  "headline": "Bayesian phylogenetics: software, clocks and practical checks",
+  "description": "Practical Bayesian phylogenetics: learning RevBayes, checking MCMC convergence, comparing clock models and testing priors and sampling dates.",
+  "summary": "Nabil-Fareed Alikhan is joined by Conor Meehan and Leo Martins for a practical follow-up on Bayesian analysis in microbial bioinformatics. They discuss learning tools, checking MCMC convergence, choosing phylogenetic models and testing how much information the data contribute. Molecular epidemiology and Mycobacterium tuberculosis provide recurring examples.",
+  "people": [
+    {
+      "name": "Nabil-Fareed Alikhan",
+      "role": "host",
+      "affiliation": "Quadram Institute Bioscience"
+    },
+    {
+      "name": "Conor Meehan",
+      "role": "guest",
+      "affiliation": "University of Bradford"
+    },
+    {
+      "name": "Leo Martins",
+      "role": "guest",
+      "affiliation": "Quadram Institute Bioscience"
+    },
+    {
+      "name": "Sebastian Duchesne",
+      "role": "mentioned",
+      "affiliation": ""
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Where to start learning",
+      "body": "Graphical models offer a way into Bayesian statistics by making parameters and their dependencies explicit. The discussion introduces Stan, BUGS, WinBUGS and the Rev language used by RevBayes. Rather than treating an analysis as a black box, learners can describe how parameters interact, use data to obtain a posterior distribution, or simulate data from a model. Plate notation provides a visual counterpart: circles, squares and arrows describe variables and conditional relationships.\n\nThe guests recommend RevBayes tutorials and Taming the Beast for practical exercises. Taming the Beast has online introductory, intermediate and advanced material alongside its in-person courses. Many examples concern eukaryotes, including bears, but the panel recommends them for understanding both the inputs to an analysis and the results it produces."
+    },
+    {
+      "heading": "Developing a Bayesian method",
+      "body": "Writing a Bayesian version of an existing method is not presented as a straightforward coding exercise. One guest describes discovering that a first-author paper from his Bayesian phylogenetics PhD contained a mistake: another group published a correction, which he reviewed and accepted. The lesson is to involve someone who can check the statistical model, proposals and conditional relationships, even when the implementation feels well tested.\n\nTwo starting points are suggested. Simulated annealing can help test optimisation behaviour before attempting to estimate a full posterior distribution. ABC offers a simulation-based route when the likelihood cannot be calculated: simulated outputs are accepted according to rules, producing a distribution used as a posterior approximation. The panel also stresses that phylogenetic analyses need organism-specific biological knowledge rather than completely automatic choices of priors."
+    },
+    {
+      "heading": "Checking convergence and reporting uncertainty",
+      "body": "A long runtime is not evidence that an MCMC analysis has finished. Tracer is recommended for inspecting traces, effective sample sizes and agreement between independent runs. RWTY, expanded as Are We There Yet, examines sampled trees and their movement through tree space; CODA is mentioned for analyses outside phylogenetics.\n\nOne guest commonly runs an analysis four or five times, compares the results, then combines and thins samples. Retaining around 10,000 samples is described as a personal workflow, not a universal requirement. Combining results also depends on using the same model and parameters.\n\nThe discussion distinguishes log-file results, such as mutation-rate estimates, from summaries of sampled trees. A maximum a posteriori tree is described as the tree appearing most frequently in the posterior sample, while continuous parameters can be summarised with means or medians. FigTree is suggested for displaying uncertainty: a tree figure should not conceal the uncertainty behind it."
+    },
+    {
+      "heading": "Choosing software and understanding time trees",
+      "body": "BEAST is praised for its graphical interface and accompanying tools for combining, thinning and summarising outputs. Ease of use also creates a risk: users may accept defaults without understanding the analysis. The panel notes that newer versions warn when defaults have not been changed. BEAST 1 and BEAST 2 are discussed as separate projects rather than simply successive releases of one programme.\n\nA central distinction is that Bayesian trees do not necessarily have to be time trees. BEAST is described as requiring a clock model, whereas MrBayes, PhyloBayes and RevBayes support analyses that need not be time-calibrated. RevBayes makes model choices explicit through scripting, which is useful but potentially demanding for beginners.\n\nFor a non-Bayesian route, LSD is discussed as taking a maximum-likelihood tree, a mutation rate and sampling times to construct a time tree quickly."
+    },
+    {
+      "heading": "Clock models, coalescence and model comparison",
+      "body": "The tree itself is part of the evolutionary model, not something separate from it. Molecular clock models connect genetic change with elapsed time. The guests contrast strict clocks, with one rate across the tree, and relaxed clocks, with rates varying among branches. They also discuss exponential and log-normal rate distributions and whether rates on related branches are correlated.\n\nThe practical advice is to test alternatives rather than infer the right model from an outbreak label alone. Path sampling and stepping-stone approaches estimate marginal likelihoods, allowing comparison through Bayes factors. These calculations can be expensive: the panel describes running chains 30 or 40 times for such comparisons.\n\nCoalescent models provide another component, describing how sampled lineages trace back to common ancestors and how population size changes through time. Birth-death skyline models are also mentioned as options whose relevance depends on the biological question."
+    },
+    {
+      "heading": "Testing priors, dates and biological plausibility",
+      "body": "A clock-rate paper by Sebastian Duchesne and colleagues is discussed as a starting point for choosing a prior, not a fixed answer for every dataset. For Mycobacterium tuberculosis, the panel notes differences among lineages and between short- and long-term evolution. Published estimates can guide the prior while still allowing other values to be explored.\n\nTwo checks test what the data contribute. First, run the model without data to sample its prior distribution, then compare that with the posterior. Similar distributions can warn that the data have added little information. Second, randomly reassign sampling dates among tips and check whether the estimated root age changes. If the same age emerges, the original tip dates may not be informative enough to support confidence in the dating result.\n\nThe closing advice is to collaborate across biology, bioinformatics and Bayesian modelling. Biological sense-checks matter too: an inferred origin of multidrug-resistant tuberculosis before the relevant drugs existed would demand investigation."
+    }
+  ],
+  "highlights": [
+    {
+      "time": "00:01:19",
+      "topic": "Graphical models and learning Bayesian statistics with Stan and RevBayes."
+    },
+    {
+      "time": "00:02:47",
+      "topic": "Taming the Beast tutorials and biological practice datasets."
+    },
+    {
+      "time": "00:04:20",
+      "topic": "Why even experienced developers need statistical collaborators."
+    },
+    {
+      "time": "00:05:16",
+      "topic": "Simulated annealing as a starting point for developing Bayesian software."
+    },
+    {
+      "time": "00:07:43",
+      "topic": "Checking convergence with Tracer, effective sample sizes and repeated runs."
+    },
+    {
+      "time": "00:11:45",
+      "topic": "BEAST's interface, supporting tools and the risks of accepting defaults."
+    },
+    {
+      "time": "00:13:58",
+      "topic": "BEAST 1 and BEAST 2 as separate projects."
+    },
+    {
+      "time": "00:18:04",
+      "topic": "The phylogenetic tree as part of the evolutionary model."
+    },
+    {
+      "time": "00:22:40",
+      "topic": "Comparing models using marginal likelihoods, path sampling and stepping stones."
+    },
+    {
+      "time": "00:24:57",
+      "topic": "Using published clock-rate estimates as a starting point."
+    },
+    {
+      "time": "00:26:43",
+      "topic": "Running without data to compare the prior with the posterior."
+    },
+    {
+      "time": "00:28:21",
+      "topic": "Randomising tip dates to test their contribution to estimated root ages."
+    }
+  ],
+  "quotes": [
+    {
+      "text": "I often run any of my analysis by somebody else as well, just to be sure.",
+      "time": "00:05:12",
+      "speaker": "a guest"
+    }
+  ],
+  "tools": [
+    "Stan",
+    "BUGS",
+    "WinBUGS",
+    "RevBayes",
+    "BEAST",
+    "BEAST 2",
+    "MrBayes",
+    "PhyloBayes",
+    "Tracer",
+    "RWTY",
+    "CODA",
+    "FigTree",
+    "LSD",
+    "Markov chain Monte Carlo (MCMC)",
+    "Simulated annealing",
+    "ABC",
+    "Plate notation",
+    "Path sampling",
+    "Stepping-stone sampling",
+    "Bayes factors",
+    "Coalescent models",
+    "Birth-death skyline models",
+    "Tip-date randomisation"
+  ],
+  "topics": [
+    "bayesian phylogenetics",
+    "microbial bioinformatics",
+    "molecular epidemiology",
+    "mcmc convergence",
+    "molecular clocks",
+    "prior distributions",
+    "model comparison",
+    "time trees",
+    "mycobacterium tuberculosis"
+  ],
+  "faq": [
+    {
+      "q": "Where should I start learning practical Bayesian phylogenetics?",
+      "a": "The guests recommend RevBayes tutorials for understanding parameters and their relationships, and Taming the Beast for worked biological examples. Stan is also suggested as a widely used modelling language."
+    },
+    {
+      "q": "How can I check whether my Bayesian phylogenetic analysis has converged?",
+      "a": "Use tools such as Tracer to inspect traces, effective sample sizes and agreement between independent runs. RWTY adds checks based on the sampled trees themselves; simply running an analysis for several weeks is not enough."
+    },
+    {
+      "q": "Are Bayesian phylogenetic trees always time trees?",
+      "a": "No. The panel distinguishes BEAST's clock-based time trees from Bayesian analyses in MrBayes, PhyloBayes and RevBayes that need not be time-calibrated. LSD is discussed as a non-Bayesian route to constructing a time tree from a maximum-likelihood tree."
+    },
+    {
+      "q": "How can I test whether my data are informing the Bayesian result?",
+      "a": "Run the model without data and compare the resulting prior distribution with the posterior. For dating analyses, the panel also recommends randomising tip dates: recovering the same root age can indicate that the original sampling dates contribute little information."
+    }
+  ]
+}

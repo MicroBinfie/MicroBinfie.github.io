@@ -1,0 +1,144 @@
+{
+  "episode": "126",
+  "headline": "Tree visualisation: IcyTree, Microreact, iTOL and GrapeTree",
+  "description": "Lee Katz and Nabil-Fareed Alikhan compare web-based tree viewers, minimum spanning trees and tools for sharing large microbial datasets.",
+  "summary": "Lee Katz and Nabil-Fareed Alikhan compare web-based tools for displaying trees, adding metadata and sharing results. They discuss quick tree viewing, time-scaled phylogenies, outbreak clusters and visualisation of up to one million SARS-CoV-2 genomes. The conversation explains why different questions call for different displays, particularly when choosing between a rooted phylogeny and an unrooted view of closely related groups.",
+  "people": [
+    {
+      "name": "Lee Katz",
+      "role": "host",
+      "affiliation": "Centers for Disease Control and Prevention"
+    },
+    {
+      "name": "Nabil-Fareed Alikhan",
+      "role": "host",
+      "affiliation": "Center for Genomic Pathogen Surveillance, University of Oxford"
+    },
+    {
+      "name": "Theo Sanderson",
+      "role": "mentioned",
+      "affiliation": ""
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Quick tree viewing with IcyTree",
+      "body": "Lee describes a workflow of running MashTree, copying the resulting tree from the command line and pasting it into IcyTree. He distinguishes making a tree from necessarily making a phylogeny. Having previously used the local application MEGA, he now finds browser-based viewers increasingly convenient.\n\nIcyTree supports searching tip names, displaying bootstrap information and adjusting how tips are shown. Lee checks its manual and notes support for Nexus annotations. The hosts also discuss its skyline-plot option and its use for viewing BEAST analyses and molecular clock results, although Lee has not recently run BEAST himself."
+    },
+    {
+      "heading": "Nextstrain, Auspice and comparing two trees",
+      "body": "Nabil describes Nextstrain’s strength in displaying time phylogenies, particularly for viral evolution and the SARS-CoV-2 datasets widely shared during COVID-19. Auspice is the viewer used behind Nextstrain, and he discusses loading a tree and metadata directly through its browser interface. Lee opens an avian-flu example while they explore the available displays.\n\nThey also discuss time-based animation and tanglegrams. A tanglegram places two trees opposite one another and draws connections between matching tip labels. Nabil describes straight connections when the trees match and crisscrossing lines where their topology differs, giving a visual way to locate differences between two trees."
+    },
+    {
+      "heading": "Microreact, metadata and reusable viewers",
+      "body": "Microreact combines trees with metadata and allows a visualisation state to be saved with a permanent link for sharing or inclusion in manuscripts. Nabil gives COG-UK SARS-CoV-2 data as an example of its use. He values being able to produce tree-and-metadata figures without writing R code with ggtree, using coloured blocks to show attributes such as country or gene presence and absence.\n\nThe hosts discuss Phylocanvas as a tree-viewing library that can be incorporated into other software. Nabil notes that Phandango also uses it. Phandango brings together trees, metadata, recombination results—including output from ClonalFrameML—and gene presence/absence data. Lee asks about emailing a self-contained interactive page; they do not establish that Phandango offers this capability."
+    },
+    {
+      "heading": "iTOL annotation and sharing",
+      "body": "Nabil recalls iTOL as one of the first online tree viewers he used and dates its first publication to 2006. The hosts discuss sharing trees and adding annotation tracks, coloured labels, concentric rings and per-tip graphs. Both acknowledge a learning curve, particularly for more elaborate figures.\n\nThey read through iTOL’s access tiers during the episode. The free-access description says annotation features are available but annotations cannot be saved. The standard subscription description says trees and data uploaded through batch mode during an active subscription remain accessible after it expires. They also identify a separate annotation-editor subscription. These are the terms discussed on the recording, rather than a general statement about current pricing."
+    },
+    {
+      "heading": "GrapeTree and outbreak clusters",
+      "body": "Nabil, who helped develop GrapeTree, explains that it was conceived as an online minimum spanning tree viewer and can also display other trees. He finds it particularly useful for what he calls blobby data: closely related outbreak clusters separated by longer branches. A threshold control lets users collapse branches into larger groups that can be coloured and annotated.\n\nUnlike viewers that allow a root to be selected, GrapeTree is described here as an unrooted display. The hosts frame this as useful when the question is which major groups differ, rather than what evolved from what. Lee values having a free online minimum spanning tree option for public health work. PhyloViz is mentioned as another option, without a detailed walkthrough."
+    },
+    {
+      "heading": "Taxonium and the scale of COVID-19 data",
+      "body": "Nabil highlights Theo Sanderson’s Taxonium for responsive navigation through very large trees, including scrolling, jumping between regions and zooming. He refers to the Taxonium paper’s display of up to one million SARS-CoV-2 genomes. The hosts wonder how the viewer achieves its responsiveness but do not establish its implementation.\n\nLee contrasts this scale with reports of MashTree crashing on inputs of 5,000 genomes and reflects that such large datasets can have a practical purpose. Nabil adds that COVID-19 also drove optimisation of tools such as Microreact and Nextstrain: the need to display increasingly large datasets extended beyond Taxonium."
+    }
+  ],
+  "highlights": [
+    {
+      "time": "00:01:20",
+      "topic": "Lee’s MashTree-to-IcyTree workflow and the move from local to browser-based viewers"
+    },
+    {
+      "time": "00:02:13",
+      "topic": "IcyTree’s tip searches, bootstrap display and Nexus annotation support"
+    },
+    {
+      "time": "00:04:59",
+      "topic": "Auspice as Nextstrain’s viewer and loading your own data in the browser"
+    },
+    {
+      "time": "00:06:07",
+      "topic": "How tanglegrams connect matching tips to compare two trees"
+    },
+    {
+      "time": "00:07:04",
+      "topic": "Microreact’s metadata displays, saved visualisations and permanent sharing links"
+    },
+    {
+      "time": "00:11:02",
+      "topic": "iTOL’s history as an online tree viewer, dating back to 2006"
+    },
+    {
+      "time": "00:13:19",
+      "topic": "Reading iTOL’s free-access and standard-subscription conditions"
+    },
+    {
+      "time": "00:14:25",
+      "topic": "GrapeTree’s minimum spanning tree origins and branch collapsing for clustered data"
+    },
+    {
+      "time": "00:16:18",
+      "topic": "GrapeTree’s unrooted display and the distinction from selecting a root"
+    },
+    {
+      "time": "00:17:49",
+      "topic": "Taxonium’s responsive navigation of very large trees"
+    },
+    {
+      "time": "00:19:44",
+      "topic": "COVID-19-driven optimisation of tree viewers for larger datasets"
+    }
+  ],
+  "quotes": [],
+  "tools": [
+    "MashTree",
+    "MEGA",
+    "IcyTree",
+    "BEAST",
+    "Nextstrain",
+    "Auspice",
+    "Microreact",
+    "ggtree",
+    "Phylocanvas",
+    "Phandango",
+    "ClonalFrameML",
+    "iTOL",
+    "GrapeTree",
+    "PhyloViz",
+    "Taxonium",
+    "minimum spanning trees",
+    "molecular clock analysis"
+  ],
+  "topics": [
+    "tree visualisation",
+    "microbial bioinformatics",
+    "minimum spanning trees",
+    "phylogenetics",
+    "outbreak analysis",
+    "metadata annotation",
+    "sars-cov-2",
+    "public health",
+    "data sharing"
+  ],
+  "faq": [
+    {
+      "q": "Which tool can save a tree visualisation with a shareable link?",
+      "a": "The hosts describe Microreact as allowing users to save the state of a tree-and-metadata visualisation and obtain a permanent link. They discuss sharing those links with colleagues and including them in manuscripts."
+    },
+    {
+      "q": "Why use GrapeTree for outbreak data?",
+      "a": "Nabil finds GrapeTree useful for displaying closely related outbreak clusters, with threshold controls for collapsing branches into larger groups. Its unrooted display suits questions about differences between groups rather than evolutionary direction."
+    },
+    {
+      "q": "What does a tanglegram show?",
+      "a": "A tanglegram places two trees opposite one another and connects matching tip labels. In the hosts’ explanation, the pattern of straight or crossing connections helps reveal where the trees agree or differ."
+    },
+    {
+      "q": "Which tree viewer is discussed for very large SARS-CoV-2 datasets?",
+      "a": "Taxonium is highlighted for responsive navigation of very large trees. Nabil cites its paper’s example of up to one million SARS-CoV-2 genomes, while also noting that COVID-19 prompted scaling improvements in Microreact and Nextstrain."
+    }
+  ]
+}

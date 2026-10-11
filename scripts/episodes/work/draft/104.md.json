@@ -1,0 +1,162 @@
+{
+  "episode": "104",
+  "headline": "Kraken, KrakenUniq and Bracken: classification and contamination",
+  "description": "Jennifer Lu and Natalia Rincon explain Kraken's tools, database trade-offs, pathogen detection and contamination checks.",
+  "summary": "Jennifer Lu and Natalia Rincon from Johns Hopkins University join the hosts to explain the Kraken software suite, from taxonomic classification to abundance estimation and visualisation. They compare Kraken 1, KrakenUniq and Kraken 2, including their memory requirements and approaches to counting sequence evidence. Clinical examples and contamination checks show why database composition matters as much as the choice of software.",
+  "people": [
+    {
+      "name": "Lee Katz",
+      "role": "host",
+      "affiliation": "Centers for Disease Control and Prevention; University of Georgia (adjunct member)"
+    },
+    {
+      "name": "Andrew Page",
+      "role": "host",
+      "affiliation": "Quadram Institute, Norwich, UK"
+    },
+    {
+      "name": "Nabil-Fareed Alikhan",
+      "role": "host",
+      "affiliation": "Quadram Institute, Norwich, UK"
+    },
+    {
+      "name": "Jennifer Lu",
+      "role": "guest",
+      "affiliation": "Johns Hopkins University Center for Computational Biology"
+    },
+    {
+      "name": "Natalia Rincon",
+      "role": "guest",
+      "affiliation": "Johns Hopkins University Center for Computational Biology"
+    }
+  ],
+  "sections": [
+    {
+      "heading": "From Kraken 1 to Kraken 2",
+      "body": "The guests trace the suite back to the original Kraken, developed in 2013–2014. They describe its exact k-mer matching, a k-mer size of 31 and the use of Jellyfish. KrakenUniq retains Kraken 1's database structure and classification approach while adding unique k-mer counts. The rationale is that evidence for a species should be spread across its genome, rather than consist of repeated matches to the same sequence.\n\nKraken 2 addresses the growing size of reference databases through a probabilistic data structure and minimisers. The example given is a reduction from a roughly 300 GB database to about 30–50 GB, with a small accuracy trade-off and faster classification. The algorithm discussion also covers shorter sequence representations and caching: nearby k-mers can share a minimiser, reducing repeated lookup work."
+    },
+    {
+      "heading": "Unique counts, limited RAM and abundance estimates",
+      "body": "The episode describes the incorporation of KrakenUniq-style counting into Kraken 2, with an important distinction: Kraken 2 counts unique minimisers rather than unique k-mers. KrakenUniq also has an option to process a large database in portions, allowing users to specify their available RAM instead of loading everything at once. This reduces memory requirements at some cost in speed.\n\nBracken answers a different question from Kraken. Kraken classifies reads as specifically as their evidence permits, so assignments may stop at genus or family rather than species. Bracken uses a Bayesian algorithm to re-estimate read counts and abundances at a chosen level, such as species or genus. The guests also explain that KrakenUniq and Kraken 2 databases can coexist in one folder without duplicating the library and taxonomy files."
+    },
+    {
+      "heading": "Making classification reports usable",
+      "body": "Pavian provides an R/Shiny graphical interface for inspecting Kraken reports. It helps users compare read counts across species and see graphical representations of what is present in a sample. The guests describe it as an important companion to classification, particularly when investigating possible pathogens.\n\nKrakenTools is their ongoing collection of scripts for downstream work, including extracting reads, producing visualisations and calculating statistical metrics. Rather than being another classifier, it supports different uses of Kraken's output. Both guests also co-authored the Nature Protocols paper introduced in the episode, which covers metagenomic analysis using the Kraken software suite."
+    },
+    {
+      "heading": "Microbiomes and clinical pathogen detection",
+      "body": "The discussion covers microbiome analysis in drinking water, waterways and the human gut, including interest in microbes in Baltimore's Inner Harbor. The guests' own laboratory places more emphasis on pathogen detection. Working with Johns Hopkins Hospital clinicians, they analyse sequencing data from samples such as cerebrospinal fluid and brain biopsies. Many analyses do not identify a pathogen, but published examples include detecting tuberculosis and a viral infection using Kraken and Pavian.\n\nRincon describes an early PhD project involving an ocular sarcoidosis dataset with patient and control whole-genome sequencing. It introduced her directly to the infectious pathogen detection pipeline, with Lu providing support.\n\nFor these investigations, the laboratory generally prefers the Kraken 1-based KrakenUniq because of concerns about Kraken 2's small false-positive rate when searching for rare pathogen evidence. Kraken 2 is useful for diversity and abundance work where its speed and smaller database are advantages. Clinical interpretation focuses on presence or absence rather than quantifying an infection, and relies on doctors and pathological verification."
+    },
+    {
+      "heading": "Reference coverage and contamination checks",
+      "body": "A host asks how pathogen-heavy reference collections affect microbiome analysis, using Salmonella as an example. The guests emphasise that results depend on what has been sequenced and included in the database. They describe NCBI RefSeq Complete as strongly weighted towards bacterial and viral genomes, with fewer eukaryotic pathogen genomes. Bracken can adjust read-count estimates, but users still need to understand their reference collection.\n\nLee Katz describes treating an expected single-genome sample as a metagenome for quality control. Conflicting assignments, such as Listeria reads in an E. coli sample, can flag contamination. Another host runs Kraken on isolate data and describes EnteroBase checks that expect about 90% of genomic content to match the intended species.\n\nThe guests also use Kraken to screen draft eukaryotic pathogen genomes against bacteria, human sequences, vertebrates and plants. This has exposed host contamination, including chicken and cow sequences in genomes of malaria pathogens. Contaminating regions can then be masked. They also mention adding the T2T consortium's complete human genome to their databases, which has produced further contamination findings."
+    },
+    {
+      "heading": "Keeping the suite practical as databases grow",
+      "body": "The team plans to maintain the Kraken GitHub repositories and continue improving accuracy, speed and usefulness. KrakenTools will gain scripts and downstream analyses as new needs arise.\n\nDatabase growth remains a central challenge. Rincon identifies smaller databases as necessary for keeping Kraken usable as more genomes become available. The possibilities under discussion include different indexing and sketching approaches, as well as hosting on a compute resource; these are directions being explored rather than announced solutions."
+    }
+  ],
+  "highlights": [
+    {
+      "time": "00:02:00",
+      "topic": "Kraken 1's exact k-mer matching and the development of KrakenUniq and Kraken 2"
+    },
+    {
+      "time": "00:04:50",
+      "topic": "How minimisers help reduce Kraken 2's database size"
+    },
+    {
+      "time": "00:05:30",
+      "topic": "Caching and shared minimisers as an explanation for faster lookups"
+    },
+    {
+      "time": "00:06:03",
+      "topic": "Unique-minimiser counting brings KrakenUniq-style functionality into Kraken 2"
+    },
+    {
+      "time": "00:10:20",
+      "topic": "Rincon's early PhD work with an ocular sarcoidosis sequencing dataset"
+    },
+    {
+      "time": "00:11:22",
+      "topic": "Microbiome applications and the laboratory's clinical pathogen detection work"
+    },
+    {
+      "time": "00:13:07",
+      "topic": "Why the laboratory favours KrakenUniq for infectious pathogen detection"
+    },
+    {
+      "time": "00:14:32",
+      "topic": "Database dependence and the limited representation of eukaryotic pathogens"
+    },
+    {
+      "time": "00:16:23",
+      "topic": "Treating a single-genome sample as a metagenome for contamination checks"
+    },
+    {
+      "time": "00:17:21",
+      "topic": "Screening draft eukaryotic pathogen genomes for host and other contamination"
+    },
+    {
+      "time": "00:19:07",
+      "topic": "Routine isolate checks and EnteroBase's expected-species threshold"
+    },
+    {
+      "time": "00:20:40",
+      "topic": "Smaller databases through indexing, sketching and possible hosted computing"
+    }
+  ],
+  "quotes": [
+    {
+      "text": "We need to figure out how to make the database smaller.",
+      "time": "00:20:40",
+      "speaker": "Natalia Rincon"
+    }
+  ],
+  "tools": [
+    "Kraken 1",
+    "KrakenUniq",
+    "Kraken 2",
+    "Bracken",
+    "Pavian",
+    "KrakenTools",
+    "Jellyfish",
+    "R",
+    "Shiny",
+    "NCBI RefSeq Complete",
+    "EnteroBase",
+    "T2T consortium human genome",
+    "Exact k-mer matching",
+    "Minimisers",
+    "Bayesian abundance estimation"
+  ],
+  "topics": [
+    "taxonomic classification",
+    "metagenomics",
+    "pathogen detection",
+    "microbiome analysis",
+    "reference databases",
+    "contamination detection",
+    "abundance estimation",
+    "k-mers",
+    "minimisers"
+  ],
+  "faq": [
+    {
+      "q": "What is the difference between Kraken and Bracken?",
+      "a": "Kraken classifies reads at the most specific taxonomic level supported by their sequence evidence. Bracken uses a Bayesian algorithm to re-estimate abundances at a selected level, such as species or genus, including information from reads assigned at broader levels."
+    },
+    {
+      "q": "Why do the guests prefer KrakenUniq for clinical pathogen detection?",
+      "a": "Their laboratory is concerned about Kraken 2's small false-positive rate when looking for rare pathogen evidence, so it generally uses KrakenUniq for infectious pathogen detection. They favour Kraken 2's speed and smaller storage requirements for diversity and abundance analyses."
+    },
+    {
+      "q": "Can KrakenUniq run when its database is larger than available RAM?",
+      "a": "The guests describe an option that lets users specify available RAM and compare reads against portions of the database in turn. This avoids loading the whole database at once, at some cost in speed."
+    },
+    {
+      "q": "Can Kraken check contamination in isolate sequencing data?",
+      "a": "Yes. Katz describes treating an expected single-genome sample as a metagenome and looking for conflicting taxonomic assignments, such as Listeria in an E. coli sample. The guests also use Kraken to identify host contamination in draft eukaryotic pathogen genomes."
+    }
+  ]
+}

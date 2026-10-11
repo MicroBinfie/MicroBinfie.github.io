@@ -1,0 +1,160 @@
+{
+ "episode": "072",
+ "headline": "Bactopia: bacterial genome analysis and workflow managers",
+ "description": "Robert Petit explains how Bactopia processes bacterial genomes, separates isolate analysis from comparative genomics, and builds on Nextflow.",
+ "summary": "Robert Petit of the Wyoming Public Health Laboratory joins the hosts to explain Bactopia, an all-in-one bacterial genome analysis workflow. He traces its origins in Staphopia and discusses quality control, reference datasets, comparative genomics and Nextflow. The discussion centres on getting usable results quickly while keeping analysis steps understandable and allowing users to choose which samples proceed.",
+ "people": [
+  {
+   "name": "Robert Petit",
+   "role": "guest",
+   "affiliation": "Wyoming Public Health Laboratory"
+  },
+  {
+   "name": "Lee Katz",
+   "role": "host",
+   "affiliation": "Centers for Disease Control and Prevention; University of Georgia (adjunct member)"
+  },
+  {
+   "name": "Andrew Page",
+   "role": "host",
+   "affiliation": "Quadram Institute, Norwich, UK"
+  },
+  {
+   "name": "Nabil-Fareed Alikhan",
+   "role": "host",
+   "affiliation": "Quadram Institute, Norwich, UK"
+  }
+ ],
+ "sections": [
+  {
+   "heading": "From Staphopia to Bactopia",
+   "body": "Bactopia grew out of work that began around 2010, when Petit was a master's student. The initial goal was to download and consistently analyse the hundreds of public Staphylococcus aureus datasets then available through the Sequence Read Archive and European Nucleotide Archive. An early website called Staphopedia accepted FASTQ uploads and launched shell scripts; the project later became Staphopia.\n\nRepeated rewrites took the workflow through Perl, Python, a Python workflow manager and finally Nextflow around 2016–17. Requests to analyse other organisms exposed the limits of a staphylococcal workflow. Processing Haemophilus influenzae required manually removing species-specific steps and changing references. Bactopia became an opportunity to generalise that work and adopt newer workflow and container approaches, rather than asking other users to understand and modify Staphopia's internals."
+  },
+  {
+   "heading": "What an isolate run produces",
+   "body": "Petit describes Bactopia as a way to turn raw sequence data into a broad set of results that researchers are likely to need. A typical example starts with bacterial FASTQ files and a question about antibiotic resistance. The workflow filters poor-quality reads, creates an assembly, annotates the genome and makes antimicrobial resistance predictions. Multilocus sequence typing provides another useful output, allowing users to investigate whether an isolate belongs to a sequence type known to be associated with a certain virulence.\n\nThe intended audience includes people who can obtain sequencing data but do not yet know which tools to combine. Petit nevertheless encourages users to learn the command line and understand the analysis. The documentation explains individual steps and identifies the programs responsible, providing a route from running the workflow to investigating its components."
+  },
+  {
+   "heading": "Reference datasets and public sequence inputs",
+   "body": "Bactopia can run without supplementary datasets, or users can build datasets to support species-specific analysis. Examples include Mash's RefSeq sketch and sourmash's GenBank sketch for preliminary checks of sequence identity. A sample expected to be S. aureus but matching E. coli is a reason to investigate, rather than simply continuing with the expected species label.\n\nUsers can supply reference genomes for SNP and indel calling, plus genes, proteins or primers for BLAST searches. Public-data support includes GenBank, RefSeq, SRA and ENA; an SRA accession can be supplied as an input for downloading reads. Petit also describes curated Bactopia datasets, with a working S. aureus example, and invites species experts to contribute useful reference selections."
+  },
+  {
+   "heading": "Checkpoints before comparative genomics",
+   "body": "The episode distinguishes Bactopia's isolate workflow from Bactopia tools: separate workflows for comparative genomics, including phylogenetic analysis. This separation lets users process samples first, inspect quality and decide which belong in a comparison. Minimum requirements can stop unsuitable samples before expensive downstream steps—for example, avoiding an assembly attempt with only 2× coverage. Structured output directories and inclusion or exclusion lists support subsequent analyses.\n\nThe Bactopia paper provides a practical example. A public collection labelled Lactobacillus contained a yeast sample and some Streptococcus samples. A quick tree exposed conspicuous outliers. To focus on a particular Lactobacillus species, the researchers used FastANI against a reference genome, selected samples within a chosen ANI range, and used that subset for pangenome analysis and a core-genome tree. The paper listed in the show notes is identified by DOI 10.1128/mSystems.00190-20."
+  },
+  {
+   "heading": "Choosing representatives from thousands of genomes",
+   "body": "One host asks how to reduce 67,000 S. aureus genomes to roughly 1,000 useful tree tips. Petit does not offer a universal solution. For S. aureus, the team created a non-redundant dataset, nicknamed the nerd set, by choosing one high-quality genome per sequence type. At that point, this reduced about 40,000 genomes to roughly 400 representatives, which could help guide further selection.\n\nA host describes selecting one representative per rMLST type as another practical approach, although it requires assemblies and typing results already to exist. The discussion distinguishes subsampling an analysed collection from searching public data for relevant neighbours. Species-specific population structure remains an important complication."
+  },
+  {
+   "heading": "Contributing tools and moving to modular workflows",
+   "body": "Petit welcomes GitHub feature requests for tools used by other bacterial research communities. His stated requirement is availability through Bioconda, because installation and supporting container infrastructure are already addressed. If a requested tool is not packaged there, he is willing to investigate adding it. He also emphasises responding promptly to issues so that installation or analysis problems do not cause users to abandon the workflow.\n\nContributors helped move Bactopia from Nextflow DSL1 to DSL2, enabling reusable modules, subworkflows and workflows. Petit describes incorporating Staphopia-specific analyses into this structure. He also discusses planned integration with nf-core modules and contributing individual tool modules back, so that people building other workflows can reuse the same components without adopting Bactopia itself."
+  }
+ ],
+ "highlights": [
+  {
+   "time": "00:02:18",
+   "topic": "Petit introduces Bactopia and thanks the developers of the tools it uses."
+  },
+  {
+   "time": "00:03:03",
+   "topic": "The master's project and repeated Staphopia rewrites that led to Bactopia."
+  },
+  {
+   "time": "00:13:27",
+   "topic": "Getting from raw sequences to useful results, with documentation for learners."
+  },
+  {
+   "time": "00:16:19",
+   "topic": "A resistance-analysis use case, isolate outputs and supplementary datasets."
+  },
+  {
+   "time": "00:18:14",
+   "topic": "Why comparative genomics sits in separate Bactopia tools workflows."
+  },
+  {
+   "time": "00:22:52",
+   "topic": "Public Lactobacillus data reveal mislabelled samples and motivate ANI-based selection."
+  },
+  {
+   "time": "00:25:31",
+   "topic": "How could 67,000 S. aureus genomes become a manageable phylogenetic dataset?"
+  },
+  {
+   "time": "00:26:06",
+   "topic": "Staphopia's non-redundant set selects one high-quality genome per sequence type."
+  },
+  {
+   "time": "00:28:58",
+   "topic": "Species expertise and curated reference datasets for Bactopia."
+  },
+  {
+   "time": "00:30:20",
+   "topic": "Requesting new tools through GitHub and the Bioconda packaging requirement."
+  },
+  {
+   "time": "00:32:24",
+   "topic": "A contributor pull request leads into DSL2 modularity and nf-core reuse."
+  }
+ ],
+ "quotes": [
+  {
+   "text": "The only requirement is it has to be on Bioconda just because I think that's a good starting point.",
+   "time": "00:30:20",
+   "speaker": "Robert Petit"
+  }
+ ],
+ "tools": [
+  "Bactopia",
+  "Staphopia",
+  "Staphopedia",
+  "Nextflow",
+  "Nextflow DSL1",
+  "Nextflow DSL2",
+  "nf-core modules",
+  "Bioconda",
+  "BioContainers",
+  "Docker",
+  "Singularity",
+  "GitHub",
+  "Mash",
+  "sourmash",
+  "FastANI",
+  "BLAST",
+  "MLST",
+  "rMLST",
+  "GenBank",
+  "RefSeq",
+  "Sequence Read Archive",
+  "European Nucleotide Archive"
+ ],
+ "topics": [
+  "bacterial genomics",
+  "workflow managers",
+  "quality control",
+  "antimicrobial resistance",
+  "comparative genomics",
+  "phylogenetics",
+  "public sequence data",
+  "genome subsampling",
+  "software development"
+ ],
+ "faq": [
+  {
+   "q": "What results does Bactopia produce from bacterial sequencing reads?",
+   "a": "The episode describes read quality control, genome assembly, annotation, antimicrobial resistance predictions and multilocus sequence typing. Supplementary datasets can support reference-based variant calling and searches against user-supplied sequences."
+  },
+  {
+   "q": "Does Bactopia build phylogenetic trees?",
+   "a": "Yes, through the separate Bactopia tools workflows. Petit keeps comparative analyses separate so users can inspect isolate results, exclude unsuitable samples and choose a relevant dataset before running more demanding analyses."
+  },
+  {
+   "q": "Can Bactopia download public sequencing data?",
+   "a": "Petit explains that users can provide SRA accessions and have the workflow download the reads. He also describes support for public data from GenBank, RefSeq and ENA."
+  },
+  {
+   "q": "How can researchers request another tool in Bactopia?",
+   "a": "Petit recommends opening a GitHub feature request describing the desired tool. His stated requirement is that it be available through Bioconda, and he offers to investigate packaging tools that are not yet on Bioconda."
+  }
+ ]
+}

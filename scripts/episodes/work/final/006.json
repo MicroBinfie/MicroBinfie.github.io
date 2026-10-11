@@ -1,0 +1,167 @@
+{
+ "episode": "006",
+ "headline": "Writing usable bioinformatics software with Torsten Seemann",
+ "description": "Torsten Seemann discusses Prokka, standard formats, Conda packaging and the long-term work of maintaining useful bioinformatics software.",
+ "summary": "Torsten Seemann joins Nabil-Fareed Alikhan and Andrew Page to discuss what makes bioinformatics software useful beyond its accompanying paper. Drawing on Prokka and his other tools, he explains the value of straightforward installation, small curated databases, standard outputs and predictable command-line behaviour. The conversation also covers packaging, publication, user support and the commitment required to maintain software.",
+ "people": [
+  {
+   "name": "Torsten Seemann",
+   "role": "guest",
+   "affiliation": "Microbiological Diagnostic Unit Public Health Lab, Doherty Institute for Immunity and Infection, University of Melbourne"
+  },
+  {
+   "name": "Nabil-Fareed Alikhan",
+   "role": "host",
+   "affiliation": "Quadram Institute"
+  },
+  {
+   "name": "Andrew Page",
+   "role": "host",
+   "affiliation": "Quadram Institute"
+  },
+  {
+   "name": "Lee Katz",
+   "role": "host",
+   "affiliation": "Centers for Disease Control and Prevention; University of Georgia"
+  }
+ ],
+ "sections": [
+  {
+   "heading": "Prokka as a practical model",
+   "body": "Seemann approaches good software by avoiding the experiences that make bad software frustrating. The implementation language matters less to users than whether a tool works reliably and does what they need. Prokka illustrates that approach: it bundled small databases and Linux and Mac binaries, accepted a FASTA file of contigs with minimal configuration, and produced standard annotation outputs.\n\nHe traces Prokka to modular Bash scripts developed around 2004–2006 at Monash University's Department of Microbiology, with the paper following in 2014. It originally helped bootstrap manual curation of a single genome. As sequencing expanded to hundreds and thousands of genomes, its command-line interface made automated annotation practical without repeated website uploads. GFF and GenBank outputs could feed downstream tools such as Artemis and Roary."
+  },
+  {
+   "heading": "Smaller databases, better-supported annotations",
+   "body": "Prokka's database design was partly a response to distribution problems. Seemann recalls a 1.2 GB download hosted on a university website, complaints from users outside Australia, and a Dropbox account suspended after one day of excessive bandwidth use. Google Drive subsequently handled the bandwidth, but reducing the download remained worthwhile.\n\nRather than use the whole nr database, he selected the curated UniProt Swiss-Prot collection and filtered records using their evidence codes. He describes a resulting set of about 70,000 proteins that could annotate roughly 60% of genes with high reliability. His concern was that poorly supported annotations could otherwise propagate between records. For users wanting more detailed annotation, Prokka gained the ability to incorporate supplied reference genomes."
+  },
+  {
+   "heading": "Standard outputs and predictable behaviour",
+   "body": "The discussion recommends established formats such as BED, GFF, VCF and FASTA instead of inventing another format that downstream users must interpret. Seemann argues that interoperability reduces the glue code needed between tools. Barrnap follows the same general model as Prokka: a focused task, bundled databases and simple inputs and outputs.\n\nA command run without sufficient arguments should explain what is missing, not produce a traceback or silently create files. Help should be available, and progress messages should tell users what is happening; Seemann favours informative logging with a quiet option.\n\nDependencies can undermine reliability. He describes NCBI's tbl2asn converter as a recurring Prokka problem: it is distributed only as a binary, updates appear without warning, and it expires after roughly six months to a year. He wants to remove that dependency despite its value in producing compliant GenBank files."
+  },
+  {
+   "heading": "Hosting and packaging for installation",
+   "body": "Seemann recommends public source repositories over personal or institutional websites, where reorganisations can leave software links broken. GitHub helped him organise issues and contributions; he also considers Bitbucket and GitLab suitable alternatives.\n\nFor installation, he favours Conda and Bioconda. Conda supports versions and separate environments without requiring administrator access, while recipes reuse packages for existing dependencies. He contrasts this with Homebrew's flatter versioning approach and the complexity of traditional distribution packaging.\n\nLanguage-specific packaging still matters: Python software should use PyPI, Perl software CPAN, and R software CRAN. A Python package can make subsequent Conda packaging easier, but pip alone will not install external tools such as SAMtools or BWA. Clear dependency and installation documentation helps community packagers produce reliable packages."
+  },
+  {
+   "heading": "Names, visibility and software publication",
+   "body": "A distinctive name helps people find software without confusing it with another package. Seemann describes checking proposed names through Google searches, including incognito searches. The group also discusses checking Urban Dictionary and the pitfalls of forced backronyms.\n\nSeemann has mainly promoted tools through blog posts and Twitter, usually waiting until a tool is in a reasonably good state. His blog post on command-line software standards became a GigaScience paper. He argues that a software paper's URL belongs in its abstract, where readers can find it immediately.\n\nThe group discusses preprints and the Journal of Open Source Software. Seemann values JOSS's emphasis on installability, documentation and software quality. Its review guidance is suggested as useful even for developers who do not submit there."
+  },
+  {
+   "heading": "Maintenance is part of the project",
+   "body": "Seemann's first advice to someone considering a new tool is not to write one, because doing it properly is a big commitment. He discourages writing software merely to publish and abandon it, and argues that using it yourself exposes problems that motivate improvements. Releasing code before publication also lets the community find problems the author has missed.\n\nFor support, he prefers GitHub issues to private email because users can help one another. He describes substantial community assistance, but also unreviewed pull requests, unresolved problems and guilt about work he cannot complete. His employer recognises maintenance as part of his job; he notes that others do not have that support.\n\nHe identifies maintenance funding as an unmet need. In this 2019 discussion, he describes then-new Chan Zuckerberg grants offering US$50,000–250,000 for established software, with three rounds a year, as a possible route to supporting Prokka and other tools."
+  }
+ ],
+ "highlights": [
+  {
+   "time": "00:01:51",
+   "topic": "Avoiding bad software experiences and prioritising the user's interaction"
+  },
+  {
+   "time": "00:03:05",
+   "topic": "Prokka's bundled databases, minimal inputs and origins in genome curation"
+  },
+  {
+   "time": "00:08:37",
+   "topic": "Standard file formats and command-line workflows"
+  },
+  {
+   "time": "00:10:21",
+   "topic": "Reducing dependencies and building a smaller, curated annotation database"
+  },
+  {
+   "time": "00:16:13",
+   "topic": "What a tool should do when first run without the required arguments"
+  },
+  {
+   "time": "00:18:38",
+   "topic": "The reliability problems caused by Prokka's tbl2asn dependency"
+  },
+  {
+   "time": "00:19:46",
+   "topic": "Why writing a new tool requires a commitment to maintenance"
+  },
+  {
+   "time": "00:22:35",
+   "topic": "Adopting GitHub for source distribution, issues and contributions"
+  },
+  {
+   "time": "00:24:40",
+   "topic": "Choosing distinctive software names and checking for conflicts"
+  },
+  {
+   "time": "00:28:21",
+   "topic": "Installing without administrator access through Conda and community packaging"
+  },
+  {
+   "time": "00:36:51",
+   "topic": "JOSS and reviewing software for usability and quality"
+  },
+  {
+   "time": "00:38:00",
+   "topic": "Managing support requests, community help and maintenance funding"
+  }
+ ],
+ "quotes": [
+  {
+   "text": "You don't expect it to just spit out an error. You expect it to spit out a useful piece of information to tell you what to do next.",
+   "time": "00:16:13",
+   "speaker": "Torsten Seemann"
+  }
+ ],
+ "tools": [
+  "Prokka",
+  "Snippy",
+  "Barrnap",
+  "Abricate",
+  "Nullarbor",
+  "MLST",
+  "Roary",
+  "Artemis",
+  "UniProt",
+  "UniProt Swiss-Prot",
+  "nr",
+  "GenBank",
+  "tbl2asn",
+  "Conda",
+  "Bioconda",
+  "Homebrew",
+  "GitHub",
+  "Bitbucket",
+  "GitLab",
+  "PyPI",
+  "pip",
+  "CPAN",
+  "CRAN",
+  "SAMtools",
+  "BWA"
+ ],
+ "topics": [
+  "bioinformatics software",
+  "genome annotation",
+  "command-line interfaces",
+  "software packaging",
+  "standard file formats",
+  "documentation",
+  "open-source maintenance",
+  "community support",
+  "software publication"
+ ],
+ "faq": [
+  {
+   "q": "Why did Prokka become widely used?",
+   "a": "Seemann credits straightforward installation, bundled databases, minimal required settings and fast command-line operation. Its standard GFF and GenBank outputs also made it easy to connect to downstream analysis tools."
+  },
+  {
+   "q": "Why does Prokka use a small annotation database?",
+   "a": "Seemann wanted to reduce download size and avoid propagating poorly supported annotations. He describes filtering UniProt Swiss-Prot using evidence codes to obtain about 70,000 proteins, sufficient to annotate roughly 60% of genes with high reliability."
+  },
+  {
+   "q": "Why use Conda when a Python tool is already available through pip?",
+   "a": "The episode distinguishes installing Python code from installing its external dependencies. Conda recipes can also bring in tools such as SAMtools and BWA, reusing existing packages without requiring administrator access."
+  },
+  {
+   "q": "How does Torsten Seemann manage software support requests?",
+   "a": "He encourages GitHub issues rather than private email so that other users can contribute answers. Community help reduces the burden, but he still describes maintenance as substantial work requiring time, employer support and better funding."
+  }
+ ]
+}

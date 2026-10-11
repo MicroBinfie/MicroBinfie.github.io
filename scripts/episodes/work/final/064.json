@@ -1,0 +1,157 @@
+{
+ "episode": "064",
+ "headline": "Tuberculosis: the forgotten pandemic and its genomic challenges",
+ "description": "Why TB remains a global threat, and how slow growth, mixed infections and drug resistance complicate genomic surveillance and treatment.",
+ "summary": "Guests Suzie Hingley-Wilson, Dany Beste and Conor Meehan discuss Mycobacterium tuberculosis, bringing perspectives on bacterial persistence, metabolism and molecular epidemiology. The conversation connects TB’s continuing public-health burden with the practical difficulties of studying its genomes. Mixed infections, culture bias and incomplete knowledge of resistance mutations complicate both transmission analysis and treatment decisions.",
+ "people": [
+  {
+   "name": "Lee Katz",
+   "role": "host",
+   "affiliation": "Centers for Disease Control and Prevention; University of Georgia"
+  },
+  {
+   "name": "Andrew Page",
+   "role": "host",
+   "affiliation": "Quadram Institute"
+  },
+  {
+   "name": "Nabil-Fareed Alikhan",
+   "role": "host",
+   "affiliation": "Quadram Institute"
+  },
+  {
+   "name": "Suzie Hingley-Wilson",
+   "role": "guest",
+   "affiliation": "University of Surrey"
+  },
+  {
+   "name": "Dany Beste",
+   "role": "guest",
+   "affiliation": "University of Surrey"
+  },
+  {
+   "name": "Conor Meehan",
+   "role": "guest",
+   "affiliation": "University of Bradford"
+  }
+ ],
+ "sections": [
+  {
+   "heading": "A pandemic beyond drug resistance",
+   "body": "In this October 2021 discussion, the panel describes TB as a continuing pandemic, not a historical disease. They cite approximately 10 million cases and 1.5 million deaths annually, with around 80% of deaths attributed to fully drug-sensitive TB. Drug-resistant cases are estimated at 500,000–600,000 each year. Resistance is therefore only part of the problem: poverty, crowded housing, access to healthcare and reliable drug supplies also matter.\n\nThe guests describe drug-sensitive treatment as four drugs over six months, creating adherence challenges when symptoms improve much earlier. BCG protection is discussed as geographically variable, although valuable against childhood TB and disseminated disease. COVID-19 adds another concern: disrupted diagnosis and treatment could undermine progress against TB even as shorter treatment regimens offer hope."
+  },
+  {
+   "heading": "Latency, evolution and a clonal genome",
+   "body": "Estimates of latent infection remain uncertain. A host raises the familiar figure of one third of the world’s population; guests discuss a revised estimate of one quarter while questioning how confidently it can be calculated. They distinguish latent infection from asymptomatic, subclinical and clinical disease rather than treating these as interchangeable categories.\n\nSlow growth does not make TB evolution straightforward. The panel questions whether mutation rates differ between latent and active infection, noting how rarely researchers have genomes from both initial infection and disease many years later. Treatment pressure further complicates interpretation. They also report no evidence of recombination in classic M. tuberculosis, even in mixed infections. Resistance is discussed as chromosomal rather than plasmid-mediated, while error-prone DNA repair is raised as a possible contributor to genomic variation."
+  },
+  {
+   "heading": "Mixed infections and the limits of sputum",
+   "body": "A clinical example illustrates how culture can conceal mixed infection: an initially detected, faster-growing drug-sensitive strain was followed by a different, isoniazid-resistant strain after treatment. The panel argues that mixed infections are substantially underdiagnosed because the strain that grows most readily may dominate the diagnostic sample.\n\nWithin-host diversity also has a spatial dimension. Different lung cavities or lesions can contain different subpopulations, and drugs may penetrate those sites differently. What a patient coughs up in sputum need not represent everything in the lung. Culture adds another selection step, favouring strains and lineages that grow well under laboratory conditions. Deep sequencing is revealing minority variants shared across transmission clusters, but the guests distinguish fitness for transmission from fitness within a patient or in culture."
+  },
+  {
+   "heading": "Direct sequencing, hybrid capture and affordability",
+   "body": "Sequencing directly from sputum could avoid some culture bias, but there are few TB cells to work with. Extracting DNA is difficult because of the waxy cell wall, and sonication can leave fragments that are too short. Hybrid capture, including SureSelect, is discussed as a promising enrichment approach rather than a solved problem.\n\nReference choice introduces another limitation. Capture designs based on H37Rv, a lineage 4 reference genome, may miss genes found in other lineages. A guest describes lineage 5 strains containing genes absent from H37Rv. Cost is equally important: a method affordable for the UK’s roughly 4,500 annual cases may not scale to high-burden settings. The panel explicitly warns against creating a two-tier system in which advanced diagnostics serve mainly high-income countries."
+  },
+  {
+   "heading": "Predicting resistance from known mutations",
+   "body": "The guests describe routine genomic resistance testing in the UK and the Netherlands, contrasting it with the diagnostic pathway in settings such as South Africa. There, GeneXpert can test sputum for TB and rifampicin resistance. Targeted sequencing with Deeplex is also discussed as a way to examine resistance-associated genes directly from sputum without first growing the organism.\n\nPrediction depends on which drug is being considered. For rifampicin, the panel attributes 95–98% of observed resistance to mutations concentrated in an 81-base-pair region of rpoB. GeneXpert probes interrogate this region. Pyrazinamide is harder: resistance-associated variation occurs across pncA rather than within one compact hotspot. Bedaquiline prediction is also described as less settled, with new variants continuing to appear.\n\nThe discussion references a newly released WHO list of resistance-associated SNPs, but stresses the limitations of searching only for known mutations. Minority resistant populations, culture delays and changing definitions of extensively drug-resistant TB all complicate the route from sequence data to treatment."
+  },
+  {
+   "heading": "Making treatment work for more people",
+   "body": "The panel discusses shorter regimens for drug-resistant TB alongside the toxicity and cost of treatment. At the most severe end, surgical removal of affected lung tissue is described as an option already being used when resistance leaves few alternatives. The contrast with rapid COVID-19 vaccine development prompts frustration about funding for TB research.\n\nPossible future approaches include phage-based treatment, restricting bacterial nutrition and adjuvant therapies that help existing antibiotics remain useful. These are presented as research directions, not established solutions. The episode also considers co-infection and reactivation: TB and HIV worsen one another, while diabetes is described as a major risk factor. Whether COVID-19 might reactivate latent TB is left explicitly unresolved."
+  }
+ ],
+ "highlights": [
+  {
+   "time": "00:02:10",
+   "topic": "Why TB remains a major infectious cause of death despite being seen as historical."
+  },
+  {
+   "time": "00:03:12",
+   "topic": "BCG’s variable protection across populations and its value against childhood disease."
+  },
+  {
+   "time": "00:04:44",
+   "topic": "Long treatment courses, adherence, access and the relationship between TB and poverty."
+  },
+  {
+   "time": "00:08:57",
+   "topic": "What genomic studies can reveal about mutation during latent and active infection."
+  },
+  {
+   "time": "00:10:52",
+   "topic": "A mixed-infection case in which a resistant strain emerged after treatment."
+  },
+  {
+   "time": "00:13:24",
+   "topic": "Why mixed infections do not imply recombination in M. tuberculosis."
+  },
+  {
+   "time": "00:17:44",
+   "topic": "Hybrid capture, H37Rv reference bias and the cost of direct-from-sputum sequencing."
+  },
+  {
+   "time": "00:23:55",
+   "topic": "Where genomic resistance testing is used and how GeneXpert fits into diagnosis."
+  },
+  {
+   "time": "00:26:24",
+   "topic": "Rifampicin resistance in rpoB compared with more dispersed resistance mutations."
+  },
+  {
+   "time": "00:30:04",
+   "topic": "Treatment costs, desperate clinical choices and unequal investment in TB research."
+  },
+  {
+   "time": "00:33:34",
+   "topic": "Adjuvant therapies intended to extend the usefulness of existing antibiotics."
+  },
+  {
+   "time": "00:34:17",
+   "topic": "The interaction between TB and HIV, parasitic infections and diabetes."
+  }
+ ],
+ "quotes": [
+  {
+   "text": "So we need to find strategies to make the drugs we have last longer.",
+   "time": "00:33:34",
+   "speaker": "a guest"
+  }
+ ],
+ "tools": [
+  "Hybrid capture",
+  "SureSelect",
+  "GeneXpert",
+  "Deeplex",
+  "PCR"
+ ],
+ "topics": [
+  "mycobacterium tuberculosis",
+  "tuberculosis",
+  "drug resistance",
+  "mixed infections",
+  "within-host diversity",
+  "genomic epidemiology",
+  "latent infection",
+  "hybrid capture",
+  "public health"
+ ],
+ "faq": [
+  {
+   "q": "Why can culture distort the genomic picture of a TB infection?",
+   "a": "Faster-growing strains can dominate culture and conceal other strains present in the patient. Sputum itself may also fail to represent the different bacterial populations distributed across lung lesions."
+  },
+  {
+   "q": "Can M. tuberculosis be sequenced directly from sputum?",
+   "a": "The panel discusses hybrid capture and targeted resistance-gene sequencing as ways to work directly from sputum. Low bacterial abundance, difficult DNA extraction, reference bias and cost remain important limitations."
+  },
+  {
+   "q": "Why is rifampicin resistance easier to predict than pyrazinamide resistance?",
+   "a": "The guests describe rifampicin resistance as strongly concentrated in an 81-base-pair region of rpoB. By contrast, pyrazinamide resistance-associated variation is distributed across pncA, making interpretation more difficult."
+  },
+  {
+   "q": "Does mixed infection lead to recombination in M. tuberculosis?",
+   "a": "The panel reports no evidence of recombination in classic M. tuberculosis, including in mixed infections. Coexisting strains can still complicate diagnosis, treatment and clinical outcomes without exchanging genomic material."
+  }
+ ]
+}

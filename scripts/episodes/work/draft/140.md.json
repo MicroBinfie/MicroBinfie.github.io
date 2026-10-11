@@ -1,0 +1,147 @@
+{
+  "episode": "140",
+  "headline": "Clinical metagenomics: finding pathogens in difficult samples",
+  "description": "How clinical metagenomics supports difficult diagnoses, from host DNA and noisy databases to clinical interpretation and genomic training.",
+  "summary": "Hosts Lee Katz and Andrew Page join guests Torsten Seemann and Finlay Maguire to discuss clinical metagenomics when routine microbiology has not explained an infection. They examine sample selection, human DNA, taxonomic profiling and misleading database matches. The conversation presents sequencing as a complementary source of evidence that requires close discussion between bioinformaticians and clinicians.",
+  "people": [
+    {
+      "name": "Lee Katz",
+      "role": "host",
+      "affiliation": ""
+    },
+    {
+      "name": "Andrew Page",
+      "role": "host",
+      "affiliation": "CTO at Origin Sciences and visiting professor at the University of East Anglia"
+    },
+    {
+      "name": "Torsten Seemann",
+      "role": "guest",
+      "affiliation": ""
+    },
+    {
+      "name": "Finlay Maguire",
+      "role": "guest",
+      "affiliation": ""
+    }
+  ],
+  "sections": [
+    {
+      "heading": "When routine microbiology leaves questions",
+      "body": "Finlay describes clinical metagenomics as an approach used after conventional microbiology workflows, including culture and biochemical tests, have failed to explain a patient's infection. The next step is to sequence the sample deeply and look for evidence that can guide further investigation.\n\nSample choice depends on the clinical presentation. Blood, blood cultures, cerebrospinal fluid and skin swabs are discussed; swabs from sores can contain greater microbial diversity. These difficult hospital cases often involve immunocompromised patients or people with long-term frailty. There may be several concurrent infections rather than one obvious causative organism, and viral pathogens add another challenge to the analysis."
+    },
+    {
+      "heading": "Deep sequencing and multiple profiling tools",
+      "body": "Human DNA can dominate the data. Finlay describes sequencing deeply, sometimes using cultures or swabs with less human material, and applying computational host removal. He analyses both the complete dataset and the host-removed dataset to check that filtering has not discarded potentially important microbial reads through sequence similarity to the human genome.\n\nTaxonomic profiling is generally more practical than recovering a good microbial genome from sparse short-read data. Kraken2 and Bracken are discussed, although Finlay's immediate priority is identifying candidates rather than estimating abundance. The tax profiler workflow is mentioned for bringing several profiling tools together. Marker-gene approaches provide another comparison: they can offer greater specificity, but sensitivity suffers when the required markers are not represented in the reads."
+    },
+    {
+      "heading": "Reference databases can create false leads",
+      "body": "Large databases increase the chance of finding an unusual organism, but also introduce noise. Finlay describes using NR alongside other databases and looking for signals that agree across analyses. More curated marker-gene databases can provide a useful cross-check, while unusual bacteria, fungi and parasites may remain poorly represented.\n\nThe panel discusses contamination in reference assemblies, including examples involving RefSeq and malaria-related false positives. Human sequence in a falciparum assembly can make human reads appear to support a pathogen identification. More diverse human references can help recognise such contamination, but aggressive host filtering creates its own risk of losing useful reads. Database matches therefore need scrutiny rather than automatic acceptance."
+    },
+    {
+      "heading": "Interpretation is an ongoing clinical discussion",
+      "body": "Finlay describes the analysis as hypothesis generation followed by repeated conversations with clinical microbiologists. Symptoms, exposure history and published case reports help determine which findings deserve attention. A candidate can prompt a more focused analysis using a customised database and additional reference genomes. Specialist government laboratories may also have relevant expertise or culture capabilities unavailable in a routine clinical laboratory.\n\nIn the service he describes, results are generally communicated through discussion rather than a formal report. The shared hospital laboratory is jointly funded by participating hospitals. A panellist distinguishes these discussions from official reports, which bring accreditation and legal responsibilities. Finlay says much of this work happens under research use: it may inform care without being an accredited component of the clinical treatment plan."
+    },
+    {
+      "heading": "Treatment continues while the investigation proceeds",
+      "body": "The panel stresses that patients are already being treated while difficult infections are investigated. An early clinical metagenomics example involving Leptospira illustrates this: penicillin was among the treatments being given, and the organism was susceptible. Sequencing was not a reason to leave the patient untreated.\n\nFinlay also recalls a conference talk about a service offering clinical metagenomic testing. There were occasions when unexpected findings improved outcomes, but broad testing could also produce the pathogen equivalent of incidentalomas. As with incidental findings on body scans, detecting something does not establish that it is harmful. Acting on findings that would otherwise cause no problem can itself lead to harm."
+    },
+    {
+      "heading": "Genomic literacy needs formal training",
+      "body": "Useful interpretation requires clinicians who understand enough genomics and bioinformaticians who engage with microbiology. Finlay says genomics is not yet part of the core residency competencies for microbiologists in Canada, despite substantial expertise among colleagues. He contrasts this with examination questions that had required interpretation of pulsed-field results and describes efforts to introduce formal Royal College competencies.\n\nTraining changes also take time: a potentially five-year programme means new requirements would not immediately produce a fully trained workforce. Public health provides a contrasting example, with PulseNet certification requiring relevant analysis and interpretation. The panel distinguishes having experienced individuals from guaranteeing that everyone entering a role has received genomic training."
+    }
+  ],
+  "highlights": [
+    {
+      "time": "00:01:07",
+      "topic": "Clinical metagenomics after conventional microbiology has failed to explain an infection"
+    },
+    {
+      "time": "00:01:34",
+      "topic": "Choosing blood, cerebrospinal fluid or swabs according to the clinical presentation"
+    },
+    {
+      "time": "00:03:59",
+      "topic": "Handling samples dominated by human DNA"
+    },
+    {
+      "time": "00:04:54",
+      "topic": "Using multiple profiling tools to generate diagnostic hypotheses"
+    },
+    {
+      "time": "00:06:41",
+      "topic": "Why reference database quality matters as much as tool choice"
+    },
+    {
+      "time": "00:10:28",
+      "topic": "False-positive pathogen calls, malaria references and database contamination"
+    },
+    {
+      "time": "00:14:02",
+      "topic": "Ongoing treatment and the early Leptospira metagenomics example"
+    },
+    {
+      "time": "00:14:44",
+      "topic": "The shared expertise needed for meaningful clinical interpretation"
+    },
+    {
+      "time": "00:15:21",
+      "topic": "Gaps in formal genomic training for microbiologists in Canada"
+    },
+    {
+      "time": "00:18:22",
+      "topic": "What happens when an analysis is ready to communicate to clinicians"
+    },
+    {
+      "time": "00:19:35",
+      "topic": "Joint hospital funding of the microbiology consultation service"
+    },
+    {
+      "time": "00:21:22",
+      "topic": "Accreditation and legal responsibilities surrounding formal clinical reports"
+    }
+  ],
+  "quotes": [
+    {
+      "text": "So we don't actually generally tend to use a formal report in this process because it's way more of a discussion.",
+      "time": "00:18:49",
+      "speaker": "Finlay Maguire"
+    }
+  ],
+  "tools": [
+    "Kraken2",
+    "Bracken",
+    "tax profiler",
+    "BLAST",
+    "NR",
+    "RefSeq"
+  ],
+  "topics": [
+    "clinical metagenomics",
+    "pathogen detection",
+    "taxonomic profiling",
+    "host dna removal",
+    "reference database contamination",
+    "clinical interpretation",
+    "genomic literacy",
+    "laboratory accreditation"
+  ],
+  "faq": [
+    {
+      "q": "When is clinical metagenomics used in the workflow described?",
+      "a": "It is used when routine microbiology has not explained an infection. The panel presents it as a complementary investigation while clinicians continue treating the patient."
+    },
+    {
+      "q": "How does human DNA affect clinical metagenomic analysis?",
+      "a": "Human DNA can dominate the sequencing data. Finlay compares analyses before and after computational host removal because filtering can also remove potentially useful microbial reads."
+    },
+    {
+      "q": "Why can a metagenomic analysis report pathogens that are not causing disease?",
+      "a": "Reference contamination can produce misleading matches, and detected organisms may be commensals rather than causes of illness. The episode emphasises checking database evidence against symptoms, exposures and clinical expertise."
+    },
+    {
+      "q": "Does every clinical metagenomic analysis produce a formal diagnostic report?",
+      "a": "Not in the service Finlay describes: results usually support repeated discussions and focused follow-up analyses. The panel distinguishes research-use findings from accredited clinical reports with legal responsibilities."
+    }
+  ]
+}

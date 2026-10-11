@@ -1,0 +1,150 @@
+{
+  "episode": "085",
+  "headline": "Breaking microbial dogma: outbreaks, ancient DNA and new species",
+  "description": "Mark Pallen on outbreak genomics, the 2011 German E. coli outbreak, ancient TB and the microbial diversity still hidden in metagenomes.",
+  "summary": "Professor Mark Pallen returns to discuss early microbial outbreak genomics and how unexpected results challenged established assumptions. With hosts Lee Katz, Andrew Page and Nabil-Fareed Alikhan, he traces work with Nick Loman from hospital outbreaks to clinical metagenomics, ancient tuberculosis and the chicken gut microbiome. The conversation connects these discoveries with evidence checking, open science and the large proportion of microbial diversity still uncharacterised.",
+  "people": [
+    {
+      "name": "Mark Pallen",
+      "role": "guest",
+      "affiliation": "University of East Anglia; Quadram Institute"
+    },
+    {
+      "name": "Lee Katz",
+      "role": "host",
+      "affiliation": "Centers for Disease Control and Prevention; University of Georgia (adjunct member)"
+    },
+    {
+      "name": "Andrew Page",
+      "role": "host",
+      "affiliation": "Quadram Institute, Norwich, UK"
+    },
+    {
+      "name": "Nabil-Fareed Alikhan",
+      "role": "host",
+      "affiliation": "Quadram Institute, Norwich, UK"
+    },
+    {
+      "name": "Nick Loman",
+      "role": "mentioned",
+      "affiliation": ""
+    },
+    {
+      "name": "George Weinstock",
+      "role": "mentioned",
+      "affiliation": ""
+    }
+  ],
+  "sections": [
+    {
+      "heading": "From databases to outbreak genomics",
+      "body": "Pallen recalls recruiting Nick Loman to Birmingham with five years of funding and the opportunity to complete a PhD. Their earlier database work included Colibase and CampyDB, but high-throughput sequencing opened a different direction: tracking multidrug-resistant Acinetobacter baumannii in hospital.\n\nGeorge Weinstock sequenced three isolates, allowing the team to identify SNPs and examine relationships between strains. Pallen describes this as the first Gram-negative genomic epidemiology paper, following earlier work on Staphylococcus aureus. A subsequent outbreak study expanded to over 70 genomes, as he recalls. The central question was whether genome differences could reveal how a hospital pathogen spread."
+    },
+    {
+      "heading": "The 2011 German outbreak and benchtop sequencers",
+      "body": "Winning an Ion Torrent sequencer in a European competition gave Pallen and Loman an opportunity to learn its data analysis before the 2011 German Shiga toxin-producing E. coli outbreak. When a German group and BGI released outbreak sequence data, Loman analysed it and shared results through Twitter. Other bioinformaticians contributed resistance searches and comparisons with existing genomes.\n\nThe collaboration produced a New England Journal of Medicine paper after Pallen and Loman accepted a deadline of less than 48 hours to rewrite the paper and redo the genome analysis. A separate study compared Ion Torrent, 454 Junior and Illumina MiSeq using a British outbreak isolate. Pallen reports homopolymer-related accuracy problems with Ion Torrent and 454, while MiSeq performed substantially better. At recording, the comparison had received over 1,500 citations."
+    },
+    {
+      "heading": "Pathotypes, evidence trails and open science",
+      "body": "The outbreak strain challenged tidy E. coli pathotype categories. It combined Shiga toxin production with enteroaggregative features but lacked the LEE-encoded type III secretion system. Pallen uses this to question assumptions that a familiar combination of virulence factors must always accompany disease.\n\nThe discussion extends to evidence trails: an often-repeated Darwin quotation may lack a genuine source, just as a protein annotation can propagate through sequence matches without adequate supporting evidence. The hosts also recall seeing detailed outbreak analyses appear on blogs and Twitter rather than waiting for journal publication. Pallen connects that experience with later open-science practices during COVID-19, including preprints and rapid sharing."
+    },
+    {
+      "heading": "Clinical metagenomics and pathogen blooms",
+      "body": "After the outbreak collaboration, the team sequenced stored patient stool samples to test whether metagenomics could detect the outbreak organism. Pallen expected E. coli to be a minor component, perhaps yielding only a Shiga toxin gene. Instead, Loman reported examples with 20-fold and 50-fold coverage of the outbreak genome: infection had produced a substantial bacterial bloom.\n\nLater intensive-care work found a related pattern. In some patients who had received multiple antibiotics, multidrug-resistant pathogens accounted for 80–90% of the microbial biomass, sometimes more than 90%. These findings challenged Pallen’s expectation that pathogens would increase without taking over the microbiome."
+    },
+    {
+      "heading": "Ancient tuberculosis and submerged sediments",
+      "body": "Metagenomics of 200-year-old Hungarian mummy samples initially yielded seven-fold coverage of a tuberculosis genome. Further sampling recovered more than a dozen ancient genomes. Mixed bases, initially hidden by a pipeline’s filtering threshold, revealed closely related strains within individual samples. Most patients analysed had more than one strain, overturning Pallen’s assumption that tuberculosis infection involved only a single strain.\n\nAnother collaboration examined undersea sediments for evidence of the Neolithic transition. The intended targets were sheep and goat DNA, but the analysis instead detected wheat. The resulting Science paper reported wheat in the British Isles 8,000 years before present, around 2,000 years earlier than expected. Pallen describes this as evidence suggesting social connections between southern European Neolithic communities and northern Mesolithic peoples."
+    },
+    {
+      "heading": "Chicken gut genomes and the unexplored majority",
+      "body": "Pallen recalls a 2012 chicken gut study that assembled genomes from shotgun metagenomic data using tetranucleotide-frequency binning, before the term MAGs became established. Later work revealed hundreds of new species: he recalls 800, distinguishing over 600 completely new species from others that had not been named. Giving these organisms names became another research direction.\n\nIn other animal-associated datasets, up to 80% of reads could remain unassigned by Kraken. Pallen argues that these sequences are not merely functionally unknown: their taxonomic origins are unknown too. He estimates that only 1–2% of microbial species have been genome-sequenced and characterised, and sees long reads and binning as routes to better genome recovery."
+    }
+  ],
+  "highlights": [
+    {
+      "time": "00:01:17",
+      "topic": "Recruiting Nick Loman to Birmingham as high-throughput sequencing emerges"
+    },
+    {
+      "time": "00:09:55",
+      "topic": "Lee Katz recalls watching the 2011 outbreak analysis unfold on Twitter"
+    },
+    {
+      "time": "00:10:59",
+      "topic": "How genomics helped explain the outbreak strain’s complex pathotype"
+    },
+    {
+      "time": "00:11:16",
+      "topic": "Why the outbreak challenged assumptions about E. coli virulence factors"
+    },
+    {
+      "time": "00:12:51",
+      "topic": "Checking evidence trails for Darwin quotations and protein annotations"
+    },
+    {
+      "time": "00:14:11",
+      "topic": "Reading detailed outbreak results on blogs and social media in real time"
+    },
+    {
+      "time": "00:14:56",
+      "topic": "The legacy of 2011 open genomics for sharing research during COVID-19"
+    },
+    {
+      "time": "00:15:32",
+      "topic": "Moving from outbreak isolates to diagnostic metagenomics of stool samples"
+    },
+    {
+      "time": "00:24:09",
+      "topic": "Unexpected chicken gut diversity and the microbial species still undiscovered"
+    }
+  ],
+  "quotes": [
+    {
+      "text": "And then it turns out nature and evolution doesn't play by those rules. It just mixes and meshes and does all sorts of things.",
+      "time": "00:11:16",
+      "speaker": "Mark Pallen"
+    }
+  ],
+  "tools": [
+    "Colibase",
+    "CampyDB",
+    "Ion Torrent",
+    "454 Junior",
+    "Illumina MiSeq",
+    "PubMed",
+    "Kraken",
+    "shotgun metagenomics",
+    "tetranucleotide-frequency binning"
+  ],
+  "topics": [
+    "microbial genomics",
+    "genomic epidemiology",
+    "escherichia coli",
+    "acinetobacter baumannii",
+    "clinical metagenomics",
+    "ancient dna",
+    "tuberculosis",
+    "open science",
+    "chicken gut microbiome",
+    "microbial diversity"
+  ],
+  "faq": [
+    {
+      "q": "How did the 2011 German E. coli outbreak challenge pathotype categories?",
+      "a": "The strain combined Shiga toxin production with enteroaggregative features but lacked the LEE-encoded type III secretion system. The discussion uses it to show why fixed pathotype categories can obscure unexpected combinations of virulence traits."
+    },
+    {
+      "q": "Which benchtop sequencers did Pallen and Loman compare?",
+      "a": "They compared Ion Torrent, 454 Junior and Illumina MiSeq using a British isolate from the outbreak. Pallen describes homopolymer-related accuracy problems with the first two platforms and better accuracy from MiSeq."
+    },
+    {
+      "q": "Could metagenomics recover the outbreak genome directly from stool?",
+      "a": "Yes. Loman reported samples with 20-fold and 50-fold coverage of the outbreak genome because E. coli had bloomed during infection, rather than remaining a minor component of the gut microbiome."
+    },
+    {
+      "q": "What did the Hungarian mummy samples reveal about tuberculosis?",
+      "a": "The team recovered more than a dozen approximately 200-year-old tuberculosis genomes. Most patients analysed contained more than one strain, challenging Pallen’s prior assumption that a person would carry only a single strain."
+    }
+  ]
+}

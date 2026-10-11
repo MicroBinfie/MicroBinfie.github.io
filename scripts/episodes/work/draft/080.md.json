@@ -1,0 +1,163 @@
+{
+  "episode": "080",
+  "headline": "SARS-CoV-2 benchmark datasets for pipeline validation",
+  "description": "Lingzi Xiaoli and Jill Hagey explain SARS-CoV-2 benchmark datasets for pipeline validation, lineage testing and failed quality-control scenarios.",
+  "summary": "CDC guests Lingzi Xiaoli and Jill Hagey join Lee Katz, Andrew Page and Nabil-Fareed Alikhan to discuss benchmark datasets for SARS-CoV-2 analysis. The collection covers outbreak reconstruction, sequencing approaches, representative lineages and quality-control failures. They explain how shared test data can help laboratories validate pipelines, investigate conflicting results and avoid duplicating work.",
+  "people": [
+    {
+      "name": "Lee Katz",
+      "role": "host",
+      "affiliation": "Centers for Disease Control and Prevention; adjunct member at the University of Georgia"
+    },
+    {
+      "name": "Andrew Page",
+      "role": "host",
+      "affiliation": "Quadram Institute, Norwich, UK"
+    },
+    {
+      "name": "Nabil-Fareed Alikhan",
+      "role": "host",
+      "affiliation": "Quadram Institute, Norwich, UK"
+    },
+    {
+      "name": "Lingzi Xiaoli",
+      "role": "guest",
+      "affiliation": "Centers for Disease Control and Prevention"
+    },
+    {
+      "name": "Jill Hagey",
+      "role": "guest",
+      "affiliation": "Waterborne Disease Prevention Branch, Centers for Disease Control and Prevention"
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Why public health laboratories wanted benchmarks",
+      "body": "Lingzi Xiaoli explains that the project began after a needs assessment with state partners. Laboratories wanted benchmark data to establish quality-control metrics and validate bioinformatics pipelines, but their needs differed: some were just starting sequencing, while others had more developed workflows. The aim was therefore a collection serving several stages of laboratory development, rather than one test dataset for everyone.\n\nLee Katz connects the work to the earlier GenFS bacterial benchmarking paper in PeerJ, which provided outbreak datasets for organisms including E. coli, Salmonella and Campylobacter. Users could run their pipelines and try to reproduce the supplied phylogenies. The SARS-CoV-2 project reuses that approach, spreadsheet format and download scripts while supplying new datasets. The hosts also recall their earlier comparison of MLST callers as another example of benchmarking tools against shared data."
+    },
+    {
+      "heading": "Outbreaks, sequencing comparisons and failed QC",
+      "body": "The Boston outbreak dataset contains 63 samples selected to represent three introductions. It supplies complete genomes, raw data and a phylogenetic tree, allowing laboratories to test whether their analyses recover those introductions. Other datasets cover the same samples processed using different sequencing platforms and wet-lab approaches, representative variants of interest and concern, and lineages outside those categories.\n\nThe failed-QC collection is described as 24 samples covering eight possible failure scenarios. Examples include low coverage, amplicon dropout, contaminated negative controls and substantial host contamination; some samples contain more than 65% host reads. The discussion distinguishes poor-quality data from useless data. A partial genome might still answer a particular question even if it is unsuitable for a phylogenetic analysis. Conversely, sequencing a very high-Ct sample more deeply does not necessarily produce a trustworthy complete genome."
+    },
+    {
+      "heading": "Finding representative SARS-CoV-2 lineages",
+      "body": "Jill Hagey describes an iterative search involving upwards of 380,000 sequences. Initially, the team expected to screen small selections from each lineage. Repeatedly finding that these selections were insufficient led to processing the full collection. They ran a newer version of Pangolin to check whether lineage assignments still agreed, trying to avoid representatives whose labels changed between versions while recognising that some instability was unavoidable.\n\nNew variants also complicated the stopping point. The discussion settles on a 30 May cutoff, and Lingzi confirms that at least two Delta representatives were included after another search. The team distinguishes the fixed version needed for a manuscript from a continuing repository that could accept new lineages and datasets."
+    },
+    {
+      "heading": "Retrieving data and checking the repository",
+      "body": "The CDCgov/datasets-sars-cov-2 repository organises datasets in TSV files. A header describes the dataset, organism and intended use; sample-level entries provide accessions and other supporting information. Tables can include checksums, links to the associated paper and a reference tree. A Perl script downloads the available reads and assemblies. The variants-of-interest and variants-of-concern dataset is an exception to the usual consensus-sequence provision: its table contains SRA accessions, with users directed to GISAID to find matching assemblies.\n\nRepository testing downloads datasets and checks their hashes. Lee reports that running this for every commit exhausted GitHub's 2,000 free minutes, but also revealed incorrect checksums. This existing repository check is distinct from the broader pipeline-comparison system proposed during the conversation. Contributions are welcome through contact with the team or GitHub pull requests, with an initial paper and release preceding further additions."
+    },
+    {
+      "heading": "Why similar pipelines can disagree",
+      "body": "Jill says the team used Titan for QC because it ran readily in their environment and supplied useful metrics, not because they were endorsing it over alternatives. Titan could run through Terra and had a Conda installation available. The hosts argue that pipelines using the same underlying programs can still differ through parameters, software versions, integration errors and treatment of particular genomic regions.\n\nNabil-Fareed Alikhan gives an example in which mixed reads led different variant callers to choose an alternative base, retain the dominant base or mask the site. He also describes default coverage thresholds of 20× for Nanopore and 10× for Illumina in the workflows his group used, noting that users change them. The proposed next step is continuous integration that repeatedly runs pipelines against common benchmarks, making changes in results visible when software is updated."
+    },
+    {
+      "heading": "Privacy and the limits of reference material",
+      "body": "A contaminated benchmark poses a privacy problem if its human reads contain personally identifiable information. Lee describes replacing the reads mapping to human with sequence from the human reference genome. The intention is to retain realistic quantities and genomic positions without distributing that person's distinctive variants. The team also discusses clearly labelling failed-QC data in a planned BioProject, so that people collecting records by taxon do not mistake deliberately problematic data for clean genomes.\n\nAndrew Page proposes distributing physical samples to test the entire sequencing workflow, rather than just its computational stages. Lingzi says the team considered this but faced RNA degradation, batch differences and shipping requirements. For the immediate project, in-silico panels were more practical. The guests close by emphasising collaboration with state laboratories and other contributors: benchmarks should help improve systems, not shame people for mistakes made while assembling pipelines under pandemic pressure."
+    }
+  ],
+  "highlights": [
+    {
+      "time": "00:02:26",
+      "topic": "State partners' needs shaped the benchmarking project."
+    },
+    {
+      "time": "00:05:14",
+      "topic": "The earlier GenFS bacterial benchmark paper provided the project's foundation."
+    },
+    {
+      "time": "00:06:50",
+      "topic": "The Boston outbreak dataset uses 63 samples to represent three introductions."
+    },
+    {
+      "time": "00:07:27",
+      "topic": "The collection spans sequencing approaches, variant groups and failed-QC samples."
+    },
+    {
+      "time": "00:11:49",
+      "topic": "TSV files and a download script provide access to reads and assemblies."
+    },
+    {
+      "time": "00:13:22",
+      "topic": "Jill describes screening upwards of 380,000 sequences for lineage representatives."
+    },
+    {
+      "time": "00:15:57",
+      "topic": "A fixed publication version is separated from the continuing repository."
+    },
+    {
+      "time": "00:20:13",
+      "topic": "Titan supplied QC metrics through a workflow suited to the team's infrastructure."
+    },
+    {
+      "time": "00:21:56",
+      "topic": "Variant-calling thresholds can produce different consensus bases from the same reads."
+    },
+    {
+      "time": "00:28:03",
+      "topic": "Lee explains the Perl code, TSV structure and checksum testing."
+    },
+    {
+      "time": "00:29:58",
+      "topic": "Replacing human reads with reference sequence preserves contamination tests while protecting privacy."
+    },
+    {
+      "time": "00:37:30",
+      "topic": "The guests invite additional datasets and discuss avoiding duplicated effort."
+    }
+  ],
+  "quotes": [
+    {
+      "text": "But our hope with the data set, right, is to show that it doesn't matter if you use this pipeline or that pipeline, you should be able to get the same answer, right?",
+      "time": "00:18:20",
+      "speaker": "Jill Hagey"
+    }
+  ],
+  "tools": [
+    "Pangolin",
+    "Titan",
+    "Terra",
+    "Conda",
+    "Perl",
+    "GitHub",
+    "Sequence Read Archive (SRA)",
+    "GISAID",
+    "NCBI BioProject",
+    "MLST",
+    "Illumina",
+    "Nanopore"
+  ],
+  "topics": [
+    "sars-cov-2",
+    "benchmark datasets",
+    "pipeline validation",
+    "quality control",
+    "lineage assignment",
+    "phylogenetics",
+    "host contamination",
+    "continuous integration",
+    "public health"
+  ],
+  "faq": [
+    {
+      "q": "What can the SARS-CoV-2 benchmark datasets test?",
+      "a": "They support testing outbreak reconstruction, comparisons across sequencing platforms and wet-lab approaches, lineage analysis and QC failure detection. The Boston outbreak set includes 63 samples representing three introductions, while the failed-QC collection is described as 24 samples covering eight failure scenarios."
+    },
+    {
+      "q": "How do users download the benchmark reads and assemblies?",
+      "a": "Users obtain the dataset's TSV file and run the supplied Perl download script. The tables provide accession information and checksums, with additional supporting material such as papers and reference trees."
+    },
+    {
+      "q": "Why can SARS-CoV-2 pipelines produce different consensus sequences?",
+      "a": "The hosts describe differences in software versions, parameters, coverage thresholds and variant-calling behaviour. With mixed reads, one caller might choose an alternative base while another keeps the dominant base or masks the site."
+    },
+    {
+      "q": "How did the team propose protecting privacy in human-contaminated samples?",
+      "a": "They proposed replacing reads that map to human with sequence from the human reference genome. This would retain realistic contamination quantities and genomic positions without retaining the sampled person's distinctive variants."
+    },
+    {
+      "q": "Can researchers contribute additional benchmark datasets?",
+      "a": "Yes. The guests invite contact with the team and GitHub pull requests, describing a fixed publication release alongside a repository intended to continue accepting useful datasets."
+    }
+  ]
+}

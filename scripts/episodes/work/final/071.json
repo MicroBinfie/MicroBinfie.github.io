@@ -1,0 +1,149 @@
+{
+ "episode": "071",
+ "headline": "Bacterial names at scale: SeqCode, GTDB and renamed phyla",
+ "description": "Phil Hugenholtz, Iain Sutcliffe and Mark Pallen debate naming uncultured bacteria, SeqCode, GTDB and controversial phylum renaming.",
+ "summary": "Nabil-Fareed Alikhan and Andrew Page conclude their taxonomy special with Phil Hugenholtz, Iain Sutcliffe and Mark Pallen. The panel discusses Latin names, naming uncultured organisms through SeqCode, automated naming at scale and the renaming of bacterial phyla. Their disagreements expose competing priorities: stability, descriptive meaning, workable rules and names that researchers can actually use.",
+ "people": [
+  {
+   "name": "Nabil-Fareed Alikhan",
+   "role": "host",
+   "affiliation": "Quadram Institute, Norwich, UK"
+  },
+  {
+   "name": "Andrew Page",
+   "role": "host",
+   "affiliation": "Quadram Institute, Norwich, UK"
+  },
+  {
+   "name": "Lee Katz",
+   "role": "host",
+   "affiliation": "Centers for Disease Control and Prevention; University of Georgia (adjunct member)"
+  },
+  {
+   "name": "Phil Hugenholtz",
+   "role": "guest",
+   "affiliation": ""
+  },
+  {
+   "name": "Iain Sutcliffe",
+   "role": "guest",
+   "affiliation": "ICSP (chair)"
+  },
+  {
+   "name": "Mark Pallen",
+   "role": "guest",
+   "affiliation": ""
+  }
+ ],
+ "sections": [
+  {
+   "heading": "Classification versus names",
+   "body": "Pallen distinguishes taxonomy—deciding which organisms belong together and how groups relate—from nomenclature, which supplies their labels. Bacterial and archaeal names must be presented as Latin, but the code permits arbitrary coinages. He uses **Staphylococcus aureus** to explain grammatical gender agreement, while questioning how much attention malformed Latin deserves.\n\nNames need not remain accurate descriptions. **Haemophilus influenzae** retains its name despite the changed understanding of its relationship to influenza. Speaking personally rather than as ICSP chair, Sutcliffe is comfortable with approximate Latin. He notes that the community checking names is small and dwindling, and that the nomenclatural code can evolve."
+  },
+  {
+   "heading": "Candidatus and the priority problem",
+   "body": "Hugenholtz asks whether GTDB’s placeholder names have an advantage: they signal uncultured lineages. Pallen replies that **Candidatus** already provides a way to flag organisms while giving them Latin names. He questions cultivation as the dividing line, contrasting the approved name Mycobacterium leprae with Mycobacterium lepromatosis, which he says lacks a valid name because it cannot be grown.\n\nSutcliffe identifies a fundamental weakness: Candidatus names lack priority and can therefore be overwritten. Pallen argues that editors and reviewers should prevent unnecessary renaming. Sutcliffe counters that publishing thousands of names at once makes explicit priority rules more important, not less."
+  },
+  {
+   "heading": "SeqCode as a parallel route",
+   "body": "Sutcliffe explains that Rule 30 places culture at the centre of valid naming under the ICNP. Proposals to allow genomic sequences as types were rejected by a two-thirds majority of voting ICSP members. That left uncultivated taxa outside the existing route and prompted work on the parallel **SeqCode**.\n\nAt the time of this December 2021 episode, a manuscript describing its first version was under peer review. Sutcliffe and Hugenholtz were involved, with administration envisaged under the ISME society. Pallen supports the principle but criticises the rollout’s openness and proposed quality thresholds. Sutcliffe points to February 2021 workshops attended by hundreds of delegates; Hugenholtz suggests making the draft code available on the website during review."
+  },
+  {
+   "heading": "From 600 names to automated naming",
+   "body": "Pallen describes naming 600 chicken-gut species by combining roots for host, gut or faecal context, and generic microbial terms. Ten roots at each of three positions can yield 1,000 combinations. However, descriptive naming runs out of useful combinations and can produce unwieldy words, while GTDB’s alphanumeric placeholders are difficult to remember or discuss.\n\nHis alternative uses Python to combine the first five letters of Latin dictionary words with feminine noun endings. Candidates are checked against existing taxonomic names and six million English Wiktionary entries. The project produced more than 60,000 names, released in a preprint, with a document exceeding 10,000 pages of formal descriptions. A Twitter poll favoured these names over placeholders by roughly two to one."
+  },
+  {
+   "heading": "Useful handles or lost information?",
+   "body": "Hugenholtz broadly supports automated naming but values names that convey biological information. He suggests screening genomes for features such as mreB or sulfate-reduction genes to guide some choices, rather than making every name arbitrary. He also raises the importance of names sounding distinct from one another.\n\nSutcliffe worries about a researcher spending years characterising an organism only to find it automatically named through GTDB. Pallen replies that researchers can propose names when depositing genomes and publishing their work. He presents his Candidatus names as usable placeholders, not permanent ownership claims, and says communities could replace them with descriptive alternatives."
+  },
+  {
+   "heading": "Why phylum names changed",
+   "body": "Hugenholtz explains that bringing phylum into the nomenclatural code provides type-based reference points and priority. The adopted framework uses a type genus and the suffix **-ota**. The controversial consequences include Firmicutes becoming **Bacillota**, after Bacillus, and a replacement name for Proteobacteria based on Pseudomonas.\n\nGTDB adds another complication: it has re-circumscribed Proteobacteria to the alpha, beta and gamma classes, and has also re-circumscribed Firmicutes. Some users therefore favour different names to distinguish changed groups. Pallen objects to new names retaining old, broad descriptions rather than modern circumscriptions. Sutcliffe stresses the clarity of type-based rules and expects users to adapt. Pallen also notes that familiar names can continue in informal use, and argues that the larger opportunity is exploring the vast microbial diversity now accessible through sequences."
+  }
+ ],
+ "highlights": [
+  {
+   "time": "00:01:12",
+   "topic": "Pallen distinguishes taxonomy from nomenclature and explains Latin naming rules."
+  },
+  {
+   "time": "00:07:10",
+   "topic": "Latin requirements, name stability and combinatorial naming for chicken-gut organisms."
+  },
+  {
+   "time": "00:12:22",
+   "topic": "Sutcliffe explains why Candidatus names lacking priority is a problem."
+  },
+  {
+   "time": "00:14:43",
+   "topic": "The authority of naming rules and the historical route towards SeqCode."
+  },
+  {
+   "time": "00:18:41",
+   "topic": "Pallen challenges SeqCode’s openness and proposed quality thresholds."
+  },
+  {
+   "time": "00:22:09",
+   "topic": "Automated arbitrary Latin names as an alternative to GTDB placeholders."
+  },
+  {
+   "time": "00:24:42",
+   "topic": "Hugenholtz suggests using genomic clues to make names more informative."
+  },
+  {
+   "time": "00:28:52",
+   "topic": "Phylum types, the -ota suffix and controversial replacements for familiar names."
+  },
+  {
+   "time": "00:34:20",
+   "topic": "Sutcliffe defends type-based naming rules and discusses adaptation to renamed taxa."
+  },
+  {
+   "time": "00:39:06",
+   "topic": "Pallen closes by contrasting naming disputes with the scale of unexplored microbial diversity."
+  }
+ ],
+ "quotes": [
+  {
+   "text": "It just says the words have to be Latin. It doesn't say they have to be perfect Latin.",
+   "time": "00:07:10",
+   "speaker": "Mark Pallen"
+  }
+ ],
+ "tools": [
+  "GTDB",
+  "GTDB toolkit",
+  "NCBI Taxonomy",
+  "Python",
+  "English Wiktionary"
+ ],
+ "topics": [
+  "bacterial taxonomy",
+  "nomenclature",
+  "uncultured microorganisms",
+  "seqcode",
+  "candidatus",
+  "gtdb",
+  "automated naming",
+  "phylum renaming",
+  "nomenclatural priority"
+ ],
+ "faq": [
+  {
+   "q": "What is the difference between taxonomy and nomenclature?",
+   "a": "Taxonomy determines how organisms are classified and how groups relate. Nomenclature supplies names for those groups."
+  },
+  {
+   "q": "Why was SeqCode being developed?",
+   "a": "The existing code required culture for valid naming, and proposals to accept genomic sequences as types had been rejected. SeqCode was being developed as a parallel framework that could name uncultivated taxa."
+  },
+  {
+   "q": "Why does Pallen propose arbitrary Latin names for GTDB species?",
+   "a": "He argues that descriptive naming cannot scale to the number of unnamed species, while alphanumeric placeholders are difficult to use. His automated approach produced more than 60,000 Latin-looking names."
+  },
+  {
+   "q": "Why was Firmicutes renamed Bacillota?",
+   "a": "The panel explains that the new phylum framework uses a type genus and the suffix -ota. Bacillota is formed from Bacillus, although the desirability of replacing familiar names remains disputed in the discussion."
+  }
+ ]
+}

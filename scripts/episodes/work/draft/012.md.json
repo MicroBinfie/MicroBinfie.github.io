@@ -1,0 +1,170 @@
+{
+  "episode": "012",
+  "headline": "Phylogenetic models, recombination and the limits of SNP trees",
+  "description": "Conor Meehan and Leonardo de Oliveira Martins discuss evolutionary models, recombination, SNP bias and whole-genome phylogenetics.",
+  "summary": "Nabil-Fareed Alikhan continues the phylogenetics discussion with Conor Meehan and Leonardo de Oliveira Martins. They examine evolutionary models, recombination, supertrees and the biases introduced by analysing SNPs without constant sites. Throughout, they ask whether a single tree can answer the biological question, and what information is lost when genomic data are filtered or compressed.",
+  "people": [
+    {
+      "name": "Nabil-Fareed Alikhan",
+      "role": "host",
+      "affiliation": "Quadram Institute, Norwich, UK"
+    },
+    {
+      "name": "Conor Meehan",
+      "role": "guest",
+      "affiliation": "University of Bradford"
+    },
+    {
+      "name": "Leonardo de Oliveira Martins",
+      "role": "guest",
+      "affiliation": "Quadram Institute Bioscience"
+    },
+    {
+      "name": "Lee Katz",
+      "role": "host",
+      "affiliation": "Centers for Disease Control and Prevention; adjunct member at the University of Georgia"
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Choosing an evolutionary model",
+      "body": "Evolutionary models describe changes between nucleotide or amino-acid states, including multiple substitutions at the same site. Meehan compares a useful model to the London Underground map: it should capture enough detail to answer the question without reproducing every feature of reality.\n\nMartins favours HKY partly because his PhD supervisor was Kishino, the K in its name, and partly because it has an analytical solution. Meehan’s experience with HIV led him towards GTR and the view that under-parameterisation is generally more concerning than over-parameterisation. Both acknowledge that models are imperfect. Model selection is data-dependent: they contrast IQ-TREE’s testing of alternative models with RAxML’s traditional emphasis on GTR, while noting that other models can be specified."
+    },
+    {
+      "heading": "Rate variation and the information in indels",
+      "body": "A substitution model is only part of the specification. Rates can vary across sites or along branches, and the discussion separates these forms of heterogeneity. Martins explains that CAT means category, not concatenate. The CAT models associated with RAxML and PhyloBayes are different: one concerns site-rate categories, while the other concerns amino-acid equilibrium frequencies. Gamma-distributed rates provide another way to describe variation among sites.\n\nInsertions and deletions receive particular attention because ordinary substitution-based analyses do not explicitly model their evolutionary history. Martins highlights TKF91, TKF92 and the Poisson indel process as approaches that do. These models are computationally demanding, but could help estimate alignments and trees together. Ignoring indels can also discard useful information, particularly when examining non-coding regions."
+    },
+    {
+      "heading": "When recombination undermines a single tree",
+      "body": "Meehan’s blunt starting point is that extensive recombination may make a single tree the wrong target. He cites Burkholderia pseudomallei as an example, with an estimate that 70–80% of its genome reflects recombination. Removing most of that information raises a basic question: what is the remaining tree intended to represent?\n\nThe guests discuss ClonalFrameML and Gubbins, phylogenetic networks such as those explored with SplitsTree, and Bayesian ancestral recombination graphs in BEAST. Martins cautions that a network summarising conflicting trees does not necessarily explain which genomic regions have different histories.\n\nThey distinguish recombination within genes from transfer of whole genes. Whole-gene transfers can be investigated using individual gene trees; within-gene recombination is harder. When recombination is relatively rare, trees and breakpoints along the genome may be recoverable. With very frequent recombination, population-level approaches may be more appropriate than seeking one tree."
+    },
+    {
+      "heading": "Supertrees and conflicting gene histories",
+      "body": "A supermatrix combines sequences into one alignment. A supertree instead summarises information from multiple trees. Martins explains that supertrees historically combined trees with overlapping but incomplete species coverage; the term is now also used more broadly for summarising collections of gene trees.\n\nThe discussion covers subtree prune-and-regraft distances and an approximate implementation Martins contributed to the R package phangorn. Such approaches may help with whole-gene transfer, but the guests do not present them as a solution to within-gene recombination.\n\nDifferent genes need not tell the same story. Martins uses Rashomon as an analogy and recommends the 2017 Nature Ecology & Evolution paper Contentious relationships in phylogenetic studies can be driven by a handful of genes. Its examples show that removing a few genes, or sites within genes, can change inferred relationships."
+    },
+    {
+      "heading": "Why SNP-only trees need constant-site information",
+      "body": "Meehan identifies ascertainment bias as a recurring problem in bacterial phylogenetics. Programs may assume they have received complete sequences containing both constant and variable sites, while users supply only SNPs. Alikhan reports that topology can remain broadly similar in his comparisons while branch lengths become unreliable.\n\nThe missing information affects nucleotide frequencies as well as estimates of change. Meehan uses Mycobacterium tuberculosis as an example: a high-GC genome can have variable sites with a very different base composition. Estimating a model from those sites alone can therefore distort branch lengths.\n\nThey compare the Lewis correction, which needs no additional constant-site counts, a Felsenstein correction using the total number of constant sites, and a Stamatakis approach using separate constant A, C, G and T counts. Their practical preference is to include the full sequence information where possible. They also warn that whole-genome sequencing data may exclude repetitive regions, so even an apparently complete dataset needs scrutiny."
+    },
+    {
+      "heading": "Scaling up without losing the biological question",
+      "body": "The guests separate diagnostic discrimination from evolutionary interpretation. A marker useful for diagnosis may contain too little variation for transmission analysis, while maximising differences between isolates does not automatically produce a meaningful evolutionary history. Martins also questions whether 100 SNPs can adequately resolve a tree with 1,000 tips.\n\nFor future development, Meehan wants Bayesian methods that can handle larger bacterial datasets, contrasting papers based on 20 isolates a decade earlier with expectations of hundreds of isolates. Both guests are interested in joint alignment and tree estimation. They discuss SATé and PASTA, alongside hidden Markov model approaches and indel-aware methods.\n\nMartins’s broader priority is whole-genome alignment and its use in phylogenomics, including the promise of genome graphs. The closing advice is to understand the data before deciding how to build the tree."
+    }
+  ],
+  "highlights": [
+    {
+      "time": "00:02:04",
+      "topic": "Why evolutionary models must account for changes between states and repeated substitutions."
+    },
+    {
+      "time": "00:02:53",
+      "topic": "Rate heterogeneity across sites and branches, including different meanings of CAT."
+    },
+    {
+      "time": "00:06:48",
+      "topic": "Martins explains his personal and mathematical reasons for preferring HKY."
+    },
+    {
+      "time": "00:08:01",
+      "topic": "Model selection depends on the data rather than one universally best model."
+    },
+    {
+      "time": "00:09:05",
+      "topic": "TKF91 and TKF92 explicitly model insertions and deletions."
+    },
+    {
+      "time": "00:11:57",
+      "topic": "Extensive recombination can make a single tree an inappropriate target."
+    },
+    {
+      "time": "00:17:13",
+      "topic": "Supertrees combine information from collections of individual trees."
+    },
+    {
+      "time": "00:22:16",
+      "topic": "Methods built for complete gene sequences can be misused with SNP-only data."
+    },
+    {
+      "time": "00:24:25",
+      "topic": "Ascertainment-bias corrections differ in the constant-site information they require."
+    },
+    {
+      "time": "00:27:04",
+      "topic": "Scaling Bayesian phylogenetics to larger bacterial genomes and isolate collections."
+    },
+    {
+      "time": "00:29:42",
+      "topic": "Genome graphs are discussed as a promising direction for whole-genome alignment."
+    },
+    {
+      "time": "00:30:06",
+      "topic": "A 2017 paper shows how a handful of genes or sites can change a phylogeny."
+    }
+  ],
+  "quotes": [
+    {
+      "text": "Understand your data and then build your tree from there.",
+      "time": "00:30:04",
+      "speaker": "Conor Meehan"
+    }
+  ],
+  "tools": [
+    "HKY",
+    "GTR",
+    "IQ-TREE",
+    "RAxML",
+    "PhyloBayes",
+    "CAT models",
+    "Gamma-distributed rate models",
+    "TKF91",
+    "TKF92",
+    "Poisson indel process",
+    "ClonalFrameML",
+    "Gubbins",
+    "SplitsTree",
+    "BEAST",
+    "Supertree methods",
+    "Subtree prune-and-regraft distance",
+    "phangorn",
+    "Lewis ascertainment-bias correction",
+    "Felsenstein ascertainment-bias correction",
+    "Stamatakis ascertainment-bias correction",
+    "SATé",
+    "PASTA",
+    "Hidden Markov models"
+  ],
+  "topics": [
+    "phylogenetics",
+    "evolutionary models",
+    "recombination",
+    "supertrees",
+    "ascertainment bias",
+    "snp analysis",
+    "indels",
+    "whole-genome alignment",
+    "phylogenetic uncertainty",
+    "bacterial genomics"
+  ],
+  "faq": [
+    {
+      "q": "Should I use HKY or GTR for a bacterial phylogeny?",
+      "a": "The guests say model choice depends on the data and can be assessed through model selection. Martins favours HKY’s analytical solution, while Meehan argues that under-parameterisation is generally more worrying than over-parameterisation; neither presents one model as universally correct."
+    },
+    {
+      "q": "Why can SNP-only phylogenies have misleading branch lengths?",
+      "a": "Excluding constant sites changes the nucleotide frequencies seen by the model and omits information needed to estimate evolutionary change. The episode recommends including full sequence information where possible, or supplying appropriate constant-site information with an ascertainment-bias correction."
+    },
+    {
+      "q": "Should recombinant regions always be removed before building a tree?",
+      "a": "Not without considering the question and how much information would be lost. For highly recombinant organisms, the guests suggest that networks, multiple regional trees or population-level approaches may be more useful than a single filtered tree."
+    },
+    {
+      "q": "What is the difference between a supermatrix and a supertree?",
+      "a": "A supermatrix combines sequence data into one alignment for tree inference. A supertree combines information from individual trees; the guests see potential advantages for whole-gene transfer, but not a general solution to recombination within genes."
+    },
+    {
+      "q": "Which paper discusses phylogenies being driven by a few genes?",
+      "a": "Martins recommends Contentious relationships in phylogenetic studies can be driven by a handful of genes, published in Nature Ecology & Evolution in 2017. He describes examples where removing a few genes, or a few sites within genes, changes the inferred phylogeny."
+    }
+  ]
+}

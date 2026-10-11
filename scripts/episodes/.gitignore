@@ -1,0 +1,4 @@
+# Briefs embed whole transcripts; build_inputs.py regenerates them.
+work/in/
+work/checkin/
+work/checked/*.err

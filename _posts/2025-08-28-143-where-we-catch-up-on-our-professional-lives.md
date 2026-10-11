@@ -1,0 +1,129 @@
+---
+layout: page
+title: 'Episode 143: Where we catch up on our professional lives'
+date: '2025-08-28 00:00:00'
+link: https://soundcloud.com/microbinfie/143-where-we-catch-up-on-our-professional-lives
+episode: '143'
+soundcloud_track: '2157716388'
+tags:
+- microbinfie
+- podcast
+description: Andrew Page discusses cancer diagnostics, Nabil-Fareed Alikhan updates on Oxford, and Lee Katz explains a change in podcast identity.
+excerpt: Andrew Page discusses cancer diagnostics, Nabil-Fareed Alikhan updates on Oxford, and Lee Katz explains a change in podcast identity.
+headline: Career updates, cancer diagnostics and podcasting boundaries
+guests: []
+topics:
+- career updates
+- cancer diagnostics
+- rectal mucus
+- microbiome
+- clinical studies
+- pathogen surveillance
+- bioinformatics
+- podcasting
+faq:
+- q: Where is Andrew Page working in this episode?
+  a: Andrew is CTO at Origin Sciences and a visiting professor at the University of East Anglia. He describes working mainly on cancer diagnostics, with some gut and vaginal metagenomics.
+- q: Where is Nabil-Fareed Alikhan working?
+  a: Nabil is a senior bioinformatician at the Center for Genomic Pathogen Surveillance at the University of Oxford. He says he has been there for about 18 months and identifies it as the group behind Pathogenwatch and Microreact.
+- q: Why collect rectal mucus for cancer diagnostics?
+  a: Andrew explains that rectal mucus contains mostly human DNA, unlike stool, which is mostly microbial. The approach uses sequencing to look for cancer-associated variants, with the aim of helping identify who needs further investigation.
+- q: How is the rectal mucus test being studied?
+  a: Andrew describes a fourth clinical study involving 6,500 people. Patients referred urgently for cancer investigation in one area of England are offered participation alongside standard care.
+- q: Why does Lee Katz want to use only his first name on the podcast?
+  a: Lee wants to keep his current employer separate from the podcast, citing a story about another podcaster losing his job after his employer discovered the show. He says he records after hours without workplace resources and will just go by Lee.
+---
+
+*Career updates, cancer diagnostics and podcasting boundaries*
+
+Lee Katz, Andrew Page and Nabil-Fareed Alikhan catch up on their professional lives and explain changes to the affiliations in the podcast introduction. Andrew describes his work on sequencing-based cancer diagnostics at Origin Sciences, while Nabil discusses his move to the Center for Genomic Pathogen Surveillance at Oxford. Lee explains his decision to keep his current employer separate from the podcast.
+
+<iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" title="Episode 143: Where we catch up on our professional lives" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2157716388&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=false"></iframe>
+
+[Listen to Episode 143: Where we catch up on our professional lives on SoundCloud](https://soundcloud.com/microbinfie/143-where-we-catch-up-on-our-professional-lives)
+
+## In this episode
+
+### New roles and continuing connections
+
+Andrew is now CTO at Origin Sciences and a visiting professor at the University of East Anglia. His main work concerns cancer diagnostics rather than microbes, although he still works on gut and vaginal metagenomics.
+
+Nabil is a senior bioinformatician at the Center for Genomic Pathogen Surveillance at the University of Oxford. He has been there for about 18 months and describes it as the group behind Pathogenwatch and Microreact. He enjoys the people and variety of the work, and has moved from Norwich to southern England. Andrew and Nabil also discuss crossing paths through collaborations and meetings at the Genome Campus.
+
+### Using rectal mucus to look for cancer
+
+Andrew describes a device that collects rectal mucus using a small balloon inflated inside the rectum. Unlike stool, which he describes as mostly microbial, this material contains predominantly human DNA. The proposed diagnostic approach is to sequence that DNA and look for variants associated with cancer. He also reports seeing microbiome differences in samples from people with cancer, and stronger signals when a cancer is closer to the collection site.
+
+The aim is a quick screening test that helps identify who needs further investigation. Andrew contrasts this with colonoscopy, discussing bowel preparation, specialist staffing, expense and the risk of bowel perforation. He says that only four in every hundred people referred for colonoscopy have cancer, illustrating why a better preliminary test could reduce unnecessary procedures.
+
+He also describes a similar balloon-based vaginal sampling device being used to investigate detection of cervical, endometrial and ovarian cancers.
+
+### Clinical studies and the work behind a diagnostic test
+
+Andrew describes the company's fourth clinical study as a 6,500-person trial. In one area of England, patients referred urgently for investigation of possible cancer are offered participation alongside their standard care. This lets the team collect samples from people presenting with symptoms through the existing healthcare pathway.
+
+He discusses existing stool-based screening approaches, including FIT tests, and argues that some can increase referrals without a corresponding increase in cancers detected. Reducing that pressure on hospital clinics is part of the motivation for the work; he also mentions a forthcoming paper.
+
+Working in a small diagnostics company has brought Andrew into clinical studies, regulatory requirements and quality frameworks. He emphasises the extensive documentation required for processes that academic researchers might otherwise take for granted.
+
+### Lee keeps his employer off the podcast
+
+Lee says he changed jobs on 26 January 2025. He remains in bioinformatics in the United States and still cares about public health, but chooses not to name his current employer on the episode.
+
+He recounts a story from a legal podcast about a co-host whose employer discovered the podcast and fired him. Against that background, Lee says he will just go by Lee on this show and stresses that he records after hours without using workplace resources. The others suggest Dr Lee and Dr L, and invite listeners to send nickname suggestions through Mastodon or Bluesky.
+
+## Highlights
+
+- [00:00:03](https://soundcloud.com/microbinfie/143-where-we-catch-up-on-our-professional-lives#t=0:03) — The hosts introduce a catch-up episode about their changing jobs and affiliations.
+- [00:01:14](https://soundcloud.com/microbinfie/143-where-we-catch-up-on-our-professional-lives#t=1:14) — Andrew introduces his cancer diagnostics work at Origin Sciences.
+- [00:01:33](https://soundcloud.com/microbinfie/143-where-we-catch-up-on-our-professional-lives#t=1:33) — Nabil describes joining the Oxford group behind Pathogenwatch and Microreact.
+- [00:02:57](https://soundcloud.com/microbinfie/143-where-we-catch-up-on-our-professional-lives#t=2:57) — Andrew discusses recent collaborations and meetings at the Genome Campus.
+- [00:03:29](https://soundcloud.com/microbinfie/143-where-we-catch-up-on-our-professional-lives#t=3:29) — Andrew explains the rectal mucus collection device and its use in cancer diagnostics.
+- [00:06:50](https://soundcloud.com/microbinfie/143-where-we-catch-up-on-our-professional-lives#t=6:50) — Working in a small diagnostics company brings clinical, regulatory and documentation demands.
+- [00:07:51](https://soundcloud.com/microbinfie/143-where-we-catch-up-on-our-professional-lives#t=7:51) — Andrew describes a fourth clinical study involving 6,500 people.
+- [00:09:52](https://soundcloud.com/microbinfie/143-where-we-catch-up-on-our-professional-lives#t=9:52) — Lee explains his January job change and decision not to advertise his employer.
+- [00:11:24](https://soundcloud.com/microbinfie/143-where-we-catch-up-on-our-professional-lives#t=11:24) — The hosts suggest a nickname for Lee and invite listener suggestions.
+
+## In their own words
+
+> I still care about public health and that's where I am.
+>
+> — Lee Katz, [00:09:52](https://soundcloud.com/microbinfie/143-where-we-catch-up-on-our-professional-lives#t=9:52)
+
+## Who is talking
+
+- **Lee Katz** (host)
+- **Andrew Page** (host)
+- **Nabil-Fareed Alikhan** (host)
+
+## Tools and resources mentioned
+
+Pathogenwatch, Microreact, FIT tests.
+
+## Questions this episode answers
+
+### Where is Andrew Page working in this episode?
+
+Andrew is CTO at Origin Sciences and a visiting professor at the University of East Anglia. He describes working mainly on cancer diagnostics, with some gut and vaginal metagenomics.
+
+### Where is Nabil-Fareed Alikhan working?
+
+Nabil is a senior bioinformatician at the Center for Genomic Pathogen Surveillance at the University of Oxford. He says he has been there for about 18 months and identifies it as the group behind Pathogenwatch and Microreact.
+
+### Why collect rectal mucus for cancer diagnostics?
+
+Andrew explains that rectal mucus contains mostly human DNA, unlike stool, which is mostly microbial. The approach uses sequencing to look for cancer-associated variants, with the aim of helping identify who needs further investigation.
+
+### How is the rectal mucus test being studied?
+
+Andrew describes a fourth clinical study involving 6,500 people. Patients referred urgently for cancer investigation in one area of England are offered participation alongside standard care.
+
+### Why does Lee Katz want to use only his first name on the podcast?
+
+Lee wants to keep his current employer separate from the podcast, citing a story about another podcaster losing his job after his employer discovered the show. He says he records after hours without workplace resources and will just go by Lee.
+
+*This page was written from a machine transcript of the episode and checked against it. Listen to the episode for the whole conversation.*
+
+## Show notes
+
+143 - where we catch up on our professional lives by Microbial Bioinformatics

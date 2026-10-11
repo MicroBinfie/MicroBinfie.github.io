@@ -1,0 +1,145 @@
+{
+  "episode": "015",
+  "headline": "Bioinformatics war stories: contamination, mix-ups and floods",
+  "description": "The hosts recount Listeria pseudo-outbreaks, flow cell faults, contaminated reference databases, Excel mix-ups and a flooded sequencing facility.",
+  "summary": "Lee Katz, Andrew Page and Nabil-Fareed Alikhan share bioinformatics war stories about misleading results and the work needed to explain them. Their examples range from contaminated culture media and reference databases to sequencing faults, unannounced protocol changes and scrambled metadata. The recurring lesson is that sequencing results need scrutiny: problems can originate in the laboratory, software inputs, sample handling or human decisions.",
+  "people": [
+    {
+      "name": "Lee Katz",
+      "role": "host",
+      "affiliation": "Centers for Disease Control and Prevention; University of Georgia (adjunct member)"
+    },
+    {
+      "name": "Andrew Page",
+      "role": "host",
+      "affiliation": "Quadram Institute, Norwich, UK"
+    },
+    {
+      "name": "Nabil-Fareed Alikhan",
+      "role": "host",
+      "affiliation": "Quadram Institute, Norwich, UK"
+    }
+  ],
+  "sections": [
+    {
+      "heading": "An apparent Listeria outbreak in the culture media",
+      "body": "Lee Katz recalls the early years of the Listeria real-time WGS project, when results suggested an unusually large outbreak spanning several states. The explanation was contamination in the sheep blood used to make blood agar: the team was growing Listeria from the plate itself as well as from the samples.\n\nKatz identifies a paper in the Journal of Clinical Microbiology as *Two Listeria monocytogenes pseudo outbreaks caused by contaminated laboratory culture and media*. The hosts also recount a forensic parallel: repeated DNA signatures across murder investigations were attributed to contamination from someone making police swabs. Both stories prompt a warning against blindly trusting apparently consistent DNA results."
+    },
+    {
+      "heading": "Low-diversity sequencing and flow cell bubbles",
+      "body": "One host remembers early TraDIS experiments, described as transposon mutagenesis, on the GAII. Adding the same adapter to the front of every DNA fragment meant that every cluster showed the same colour during a cycle, and the sequencer failed. The discussion connects this lack of sequence diversity with the first few bases used for templating; a host recalls a 15-base templating period.\n\nAnother recurring fault involved bubbles on flow cells, which put the camera out of focus and degraded the data. Repeated problems in the same tile helped expose the cause. The hosts explain that FASTQ headers contain machine, tile and coordinate information, allowing quality to be examined by location rather than only across the whole sample."
+    },
+    {
+      "heading": "Contaminated samples and misleading database matches",
+      "body": "While working on the Haiti cholera outbreak, Katz examined earlier samples using a metagenomics database to check whether they matched cholera alone. He describes samples from previous studies with roughly 25% or 50% contamination by organisms unrelated to Vibrio, and says the findings were reported in his team's manuscript.\n\nReference databases can also produce misleading identifications. One host describes Salmonella sequences matching a mountain beetle because bacteria from the beetle's gut had been included in its sequence data. Another recalls a similar mismatch involving Pseudomonas and camels, without knowing how it arose.\n\nKatz then describes Shigella samples repeatedly appearing to be Salmonella when analysed with standard Kraken. The team found two Salmonella genomes in the standard database with regions shared with Shigella. Inspection in IGV revealed a marked disparity between covered and uncovered regions, but tracking down the explanation took considerable time."
+    },
+    {
+      "heading": "Protocol shortcuts and irrecoverable metadata",
+      "body": "In a project involving about 1,000 samples, the first plates looked good before many samples began showing mixed strains. A laboratory worker had changed the protocol without telling the team: instead of picking single colonies and culturing them, they sequenced directly from beads, assuming one bead would contain one organism. Discovering the change required substantial sequencing and investigation, followed by repeating the work.\n\nOne host calls human interference with a dataset the worst kind of contamination. Their example is an Excel metadata sheet sorted incorrectly, leaving valid genome data disconnected from trustworthy years, countries and sample identities. Some metadata could be reconstructed, but other samples had to be discarded because the shuffle could not be reversed."
+    },
+    {
+      "heading": "Sample transport and a flooded sequencing facility",
+      "body": "The discussion extends to failures outside the analysis pipeline: refrigerated shipments left warm, and samples potentially compromised when customs staff open lids or seals. One host advocates a secret positive control as a check on whether the material arriving at the other end is what the team expects.\n\nThe final story concerns the Sanger Institute's sequencing facility on the River Cam floodplain. A host recalls rising water entering the ground-floor facility through leaks and holes. Staff had to carry heavy, carefully calibrated ABI sequencers upstairs, and the sequencing facility subsequently moved to an upper floor."
+    }
+  ],
+  "highlights": [
+    {
+      "time": "00:00:00",
+      "topic": "Lee Katz introduces the hosts and their microbial bioinformatics work"
+    },
+    {
+      "time": "00:02:06",
+      "topic": "The paper describing Listeria pseudo-outbreaks caused by contaminated culture media"
+    },
+    {
+      "time": "00:02:28",
+      "topic": "Early TraDIS experiments on the GAII fail when every cluster shows the same colour"
+    },
+    {
+      "time": "00:03:22",
+      "topic": "The first few sequencing bases and their role in templating"
+    },
+    {
+      "time": "00:04:04",
+      "topic": "Using FASTQ header information to investigate tile-specific quality problems"
+    },
+    {
+      "time": "00:04:42",
+      "topic": "Contamination discovered in earlier samples during Haiti cholera outbreak work"
+    },
+    {
+      "time": "00:05:28",
+      "topic": "Salmonella matching a mountain beetle because of bacterial sequences in a database"
+    },
+    {
+      "time": "00:05:56",
+      "topic": "Shigella samples appearing as Salmonella in standard Kraken analysis"
+    },
+    {
+      "time": "00:06:38",
+      "topic": "An unannounced protocol change produces mixed strains in a 1,000-sample project"
+    },
+    {
+      "time": "00:07:30",
+      "topic": "An Excel sorting error disconnects genomes from their sample metadata"
+    },
+    {
+      "time": "00:08:26",
+      "topic": "Sample shipments compromised by temperature and handling"
+    },
+    {
+      "time": "00:09:17",
+      "topic": "Moving ABI sequencers upstairs as water enters the Sanger sequencing facility"
+    }
+  ],
+  "quotes": [
+    {
+      "text": "The worst one was someone missorting an Excel sheet with all the metadata.",
+      "time": "00:07:30",
+      "speaker": "one of the hosts"
+    },
+    {
+      "text": "Once that gets into a database it's hard to get it out again.",
+      "time": "00:05:28",
+      "speaker": "one of the hosts"
+    }
+  ],
+  "tools": [
+    "Kraken",
+    "Standard Kraken database",
+    "IGV",
+    "TraDIS",
+    "Transposon mutagenesis",
+    "Illumina GAII",
+    "ABI sequencers"
+  ],
+  "topics": [
+    "microbial bioinformatics",
+    "listeria",
+    "laboratory contamination",
+    "reference databases",
+    "sequencing quality",
+    "taxonomic classification",
+    "metadata errors",
+    "protocol changes",
+    "sample transport"
+  ],
+  "faq": [
+    {
+      "q": "What caused the apparent multi-state Listeria outbreak described in the episode?",
+      "a": "Lee Katz says the sheep blood used in blood agar was contaminated with Listeria. The team was therefore recovering Listeria from the culture medium itself, creating the appearance of a widespread outbreak."
+    },
+    {
+      "q": "Why did Shigella samples appear to be Salmonella in Kraken?",
+      "a": "Katz describes two Salmonella genomes in the standard Kraken database containing regions shared with Shigella. His team investigated the misleading results in IGV and found large differences between covered and uncovered regions."
+    },
+    {
+      "q": "How can FASTQ headers help investigate flow cell problems?",
+      "a": "The hosts explain that FASTQ headers contain machine, tile and coordinate information. Examining quality by tile or sector can reveal localised drops, such as those associated with a bubble putting the camera out of focus."
+    },
+    {
+      "q": "What happened when an Excel metadata sheet was sorted incorrectly?",
+      "a": "The genome data remained usable, but their associated years, countries and sample identities could no longer be trusted. Some information was reconstructed, while samples whose identities could not be recovered were discarded."
+    }
+  ]
+}

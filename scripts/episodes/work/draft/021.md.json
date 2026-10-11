@@ -1,0 +1,173 @@
+{
+  "episode": "021",
+  "headline": "Setting up SARS-CoV-2 sequencing for public health surveillance",
+  "description": "Justin O'Grady and Andrew Page explain how Quadram set up SARS-CoV-2 sequencing, from ARTIC PCR and contamination to COG-UK data sharing.",
+  "summary": "Nabil-Fareed Alikhan talks to Andrew Page and Justin O'Grady about establishing SARS-CoV-2 sequencing at the Quadram Institute during the first pandemic wave. Their team generated 1,500 genomes in two months as part of COG-UK. The discussion follows samples from hospital laboratories through amplification, sequencing and bioinformatics, then considers how the resulting genomes could support local outbreak control.",
+  "people": [
+    {
+      "name": "Nabil-Fareed Alikhan",
+      "role": "host",
+      "affiliation": ""
+    },
+    {
+      "name": "Andrew Page",
+      "role": "host",
+      "affiliation": "Quadram Institute of Bioscience"
+    },
+    {
+      "name": "Justin O'Grady",
+      "role": "guest",
+      "affiliation": "Quadram Institute; University of East Anglia"
+    },
+    {
+      "name": "Josh Quick",
+      "role": "mentioned",
+      "affiliation": ""
+    },
+    {
+      "name": "Nick Loman",
+      "role": "mentioned",
+      "affiliation": ""
+    },
+    {
+      "name": "Tom Connor",
+      "role": "mentioned",
+      "affiliation": ""
+    },
+    {
+      "name": "Oliver Pybus",
+      "role": "mentioned",
+      "affiliation": ""
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Building a regional COG-UK effort",
+      "body": "COG-UK brought together 16 sequencing sites across England, Scotland, Wales and Northern Ireland, including academic laboratories, public health laboratories and research institutes. Its aim was to build a family tree of SARS-CoV-2: tracing introductions into the UK, spread across the country and outbreaks in settings such as care homes and workplaces.\n\nAndrew received the invitation to participate while on jury service in March. Existing professional connections helped the consortium form unusually quickly, and Justin says sequencing began within about two weeks of the initial contact. Quadram produced 1,500 genomes in two months. Nabil puts that output alongside Norfolk's population of roughly 900,000: one genome for every 600 people."
+    },
+    {
+      "heading": "Hospital samples, ethics and lockdown staffing",
+      "body": "Connections between Quadram, the local medical school and the regional hospital, NNUH, helped the team get started. The NNUH biorepository could collect excess diagnostic samples under its overarching ethical arrangements, allowing work to begin before the study-wide approvals came through COG-UK and Public Health England. It also handled samples, metadata and anonymisation. Justin explains that obtaining patient information required local ethical approval.\n\nLaboratory work depended on volunteers covering sample collection, cDNA production, PCR and sequencing, with bioinformatics following downstream. Andrew recalls about 26 people being involved. Backups mattered because staff could become ill, and the team planned separate laboratory pods so that one group could replace another without everyone being exposed together."
+    },
+    {
+      "heading": "Why the team chose ARTIC PCR",
+      "body": "Justin links the choice of the ARTIC protocol to its sensitivity and specificity, and to the involvement of developers including Josh Quick and Nick Loman in COG-UK. The approach uses 98 primer pairs to generate overlapping amplicons of about 400 bases. He contrasts it with protocols producing 1 kb or 1.2 kb amplicons, which he describes as less sensitive.\n\nMetagenomics had been used to discover the virus, but Justin explains that it would recover fewer complete genomes from low-viral-load samples than tiling PCR. The laboratory workflow took around seven or eight hours from sample to sequencing. Alongside careful sample tracking, contamination control was essential: amplification generated large amounts of coronavirus nucleic acid that then moved through cleanup and library preparation."
+    },
+    {
+      "heading": "Balancing coverage, sample selection and throughput",
+      "body": "Diagnostic qPCR results supplied Ct values as an indication of viral abundance. Justin says ARTIC worked well up to approximately Ct 32–33, which he associates with about 100 viral copies in a sample. Sequencing could still work above that range, but genome coverage declined.\n\nA strict Ct cutoff risked biasing which patients were represented. Instead, Justin suggests measuring nucleic acid concentration with Qubit after ARTIC PCR: samples below about 2 ng/µl might be excluded because they were likely to fail sequencing quality thresholds. This is presented as a practical recommendation, not an absolute rule.\n\nThroughput drove the preference for Illumina over Nanopore. During the April–May peak, the team needed hundreds of samples per week; Andrew reports a largest run of 384 samples."
+    },
+    {
+      "heading": "From reads to shared consensus genomes",
+      "body": "The team coordinated through Discord. Andrew describes Guppy basecalling for Nanopore data and bcl2fastq processing for Illumina data. For Illumina, iVar handled synthetic ARTIC primer sequence so that it would not be mistaken for genuine viral variation. A slightly modified Nextflow pipeline from Tom Connor's laboratory produced consensus sequences and BAM files, followed by checks on genome recovery and coverage.\n\nAmplicon coverage was highly uneven, and genome ends were generally missing. Andrew warns against treating these reads like ordinary sequencing data without accounting for the amplification protocol.\n\nNabil checked run quality and submitted sequences and metadata to COG-UK, with consensus data subsequently reaching GISAID. The thresholds described in the episode were 90% genome recovery for GISAID and 50% within COG-UK, although the team submitted poorer results too, alongside Ct values. ENA and SRA submission mattered because consensus sequences alone did not allow others to inspect and reanalyse the underlying reads."
+    },
+    {
+      "heading": "Turning genomes into public health evidence",
+      "body": "Justin stresses that producing 1,500 genomes was not enough without using the data. He cites work involving Oliver Pybus that estimated around 1,350 separate introductions into the UK, described as likely to be an underestimate.\n\nLooking ahead from June 2020, the next goal was to work with local county councils and Public Health England on outbreak control. Sequencing could help assess whether cases in a school, care home or factory were consistent with transmission within that setting or with separate introductions. Those interpretations could support different interventions. The team therefore wanted results available as close to real time as possible, backed by accurate patient metadata and reporting."
+    }
+  ],
+  "highlights": [
+    {
+      "time": "00:00:07",
+      "topic": "Introducing the Quadram sequencing effort and its first 1,500 SARS-CoV-2 genomes"
+    },
+    {
+      "time": "00:02:08",
+      "topic": "COG-UK's 16 sites and the aim of reconstructing viral introductions and spread"
+    },
+    {
+      "time": "00:03:13",
+      "topic": "How existing connections helped the consortium come together rapidly"
+    },
+    {
+      "time": "00:06:21",
+      "topic": "How the NNUH biorepository enabled access to excess diagnostic samples"
+    },
+    {
+      "time": "00:07:10",
+      "topic": "Recruiting laboratory volunteers and organising the sample-to-sequence workflow"
+    },
+    {
+      "time": "00:09:59",
+      "topic": "Choosing ARTIC and its 98-primer-pair tiling PCR approach"
+    },
+    {
+      "time": "00:12:18",
+      "topic": "Laboratory processing time, sample tracking and contamination risks"
+    },
+    {
+      "time": "00:14:44",
+      "topic": "Avoiding Ct-based sampling bias and considering post-PCR Qubit measurements"
+    },
+    {
+      "time": "00:16:22",
+      "topic": "Why high sample throughput favoured Illumina over Nanopore"
+    },
+    {
+      "time": "00:17:33",
+      "topic": "Processing reads with Guppy, bcl2fastq, iVar and a Nextflow pipeline"
+    },
+    {
+      "time": "00:19:51",
+      "topic": "Quality checks, COG-UK submission and onward sharing through GISAID"
+    },
+    {
+      "time": "00:25:53",
+      "topic": "Using the genomes to study UK introductions and support local outbreak control"
+    }
+  ],
+  "quotes": [
+    {
+      "text": "So the tiling PCR approach gives you more complete genomes from more patients.",
+      "time": "00:11:18",
+      "speaker": "Justin O'Grady"
+    }
+  ],
+  "tools": [
+    "ARTIC protocol",
+    "Tiling PCR",
+    "Clinical metagenomics",
+    "qPCR",
+    "Qubit",
+    "Illumina",
+    "Nanopore",
+    "Guppy",
+    "bcl2fastq",
+    "iVar",
+    "Nextflow",
+    "Discord",
+    "GISAID",
+    "ENA",
+    "SRA"
+  ],
+  "topics": [
+    "sars-cov-2",
+    "covid-19",
+    "cog-uk",
+    "genomic surveillance",
+    "amplicon sequencing",
+    "laboratory contamination",
+    "bioinformatics",
+    "data sharing",
+    "public health",
+    "outbreak investigation"
+  ],
+  "faq": [
+    {
+      "q": "Why did Quadram use ARTIC PCR rather than metagenomic sequencing?",
+      "a": "Justin explains that tiling PCR recovered complete genomes from a wider range of viral loads. Metagenomics could recover genomes from high-viral-load samples but was less sensitive for samples containing less virus."
+    },
+    {
+      "q": "Did the team reject every SARS-CoV-2 sample above Ct 32?",
+      "a": "No. Justin warns that a hard Ct cutoff could bias sample selection and miss biology. He instead suggests considering post-PCR Qubit concentration when deciding whether a sample is worth sequencing."
+    },
+    {
+      "q": "Why was sharing raw sequencing reads important?",
+      "a": "Andrew estimates that only about 20% of genomes submitted to GISAID also reached ENA or SRA at the time. Without underlying reads, researchers could not independently check consensus sequences or perform some forms of reanalysis."
+    },
+    {
+      "q": "How could SARS-CoV-2 genomes help investigate a care-home or workplace outbreak?",
+      "a": "Justin describes using genomes to assess whether multiple cases were consistent with transmission within an institution or separate introductions. That distinction could inform different public health interventions, particularly if sequencing results were available quickly."
+    }
+  ]
+}

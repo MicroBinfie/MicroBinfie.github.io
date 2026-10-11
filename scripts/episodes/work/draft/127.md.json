@@ -1,0 +1,125 @@
+{
+  "episode": "127",
+  "headline": "Minimum spanning trees for outbreaks and transmission networks",
+  "description": "Lee Katz and Nabil-Fareed Alikhan discuss minimum spanning trees, GrapeTree, outbreak profiles and the limits of interpreting genetic distances.",
+  "summary": "Lee Katz and Nabil-Fareed Alikhan explain minimum spanning trees and why they are useful in microbial bioinformatics. They discuss genetic distances, software tie-breaking rules and the appeal of showing outbreak profiles as connected blobs. They also examine the limitations of treating these connections as evolutionary history or transmission links, particularly when ancestral strains have not been sampled.",
+  "people": [
+    {
+      "name": "Lee Katz",
+      "role": "host",
+      "affiliation": "Centers for Disease Control and Prevention, Atlanta, United States"
+    },
+    {
+      "name": "Nabil-Fareed Alikhan",
+      "role": "host",
+      "affiliation": "Center for Genomic Pathogen Surveillance, University of Oxford"
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Connecting every node with minimum total distance",
+      "body": "A minimum spanning tree, or MST, connects every node in a connected, undirected, weighted graph without creating loops, while minimising the total edge weight. Nabil explains this as points on a page with known distances between them: the task is to connect all the points with only one path between any pair.\n\nFor microbial data, those points can represent strains or genetic profiles, and the distances can measure genetic differences. The hosts contrast this arrangement with the commonly bifurcating phylogenetic trees they use: an MST can connect one observed profile directly to several others."
+    },
+    {
+      "heading": "Tied solutions and software choices",
+      "body": "Minimising total distance does not always produce a unique answer. Nabil explains that several trees can have the same minimum total edge weight, leaving software to choose between tied solutions. He points to the goeBURST paper discussed in the episode for this problem.\n\nThe conversation names eBURST, BioNumerics, PHYLOViZ and GrapeTree. Lee asks whether their choices optimise the tree in an evolutionary context. Nabil distinguishes tie-breaking from further adjustments intended to make the output more realistic, particularly GrapeTree’s handling of missing allele data. He argues that these modifications mean its output departs from a strict mathematical MST."
+    },
+    {
+      "heading": "Outbreak profiles as connected blobs",
+      "body": "Lee describes using MSTs for outbreaks that appear to involve a founder followed by a bottleneck expansion. In that setting, many pathogens may share one genetic profile, with a minority differing by only a couple of SNPs or alleles. A central profile with nearby variants radiating outwards can be a useful way to display that pattern.\n\nThe visualisation can also show how common each profile is: a larger circle represents the majority profile, while smaller circles represent less common profiles. Lee values displaying these small, direct differences rather than correcting them through evolutionary assumptions."
+    },
+    {
+      "heading": "Missing ancestors and understandable distances",
+      "body": "Nabil identifies the absence of hypothetical ancestral nodes as an important limitation. An MST connects the observed nodes; interpreting one of them as the founder may be misleading if the actual founder was not sampled. He contrasts this with the internal splits shown in phylogenetic trees, especially when considering longer evolutionary timescales.\n\nThe hosts also value the flexibility of distance measures. They discuss allele distances in MLST, SNP counts and repeat counts, and suggest that even plasmid insertions or structural variation could define distances. Nabil notes that counts familiar to users can be easier to interpret than substitutions per site."
+    },
+    {
+      "heading": "Comparing MSTs with transmission networks",
+      "body": "Lee contrasts foodborne outbreaks, where a shared food vehicle may contain a common ancestor, with person-to-person transmission. He uses tuberculosis and Shigella as examples where an MST might resemble a transmission network if the relevant infections have all been sampled.\n\nNabil adds that transmission networks may already be familiar to people who do not routinely read phylogenetic trees. Their comparison is conditional: they describe a closed setting where transmission can be followed and there is no unobserved third party infecting both people. Under those circumstances, the transmission network and MST may look similar."
+    }
+  ],
+  "highlights": [
+    {
+      "time": "00:00:00",
+      "topic": "Lee introduces minimum spanning trees and their use in microbial bioinformatics."
+    },
+    {
+      "time": "00:01:35",
+      "topic": "Nabil explains nodes, edges and connecting points without loops."
+    },
+    {
+      "time": "00:03:19",
+      "topic": "How MST connections differ from commonly bifurcating phylogenetic trees."
+    },
+    {
+      "time": "00:03:57",
+      "topic": "Spanning every node while minimising total edge weight."
+    },
+    {
+      "time": "00:07:26",
+      "topic": "Tie-breaking rules and GrapeTree’s adjustments for missing allele data."
+    },
+    {
+      "time": "00:08:31",
+      "topic": "Lee describes founder expansion and profile-sized blobs in outbreak analysis."
+    },
+    {
+      "time": "00:09:56",
+      "topic": "Why the absence of hypothetical ancestral nodes can be problematic."
+    },
+    {
+      "time": "00:12:22",
+      "topic": "Using distances beyond conventional measures of evolutionary change."
+    },
+    {
+      "time": "00:13:05",
+      "topic": "Tuberculosis and Shigella as examples for comparing MSTs with transmission networks."
+    },
+    {
+      "time": "00:14:02",
+      "topic": "Why transmission-network interpretations depend on a closed, traceable setting."
+    }
+  ],
+  "quotes": [
+    {
+      "text": "Something like substitutions per site is something a little less intuitive.",
+      "time": "00:09:56",
+      "speaker": "Nabil-Fareed Alikhan"
+    }
+  ],
+  "tools": [
+    "Minimum spanning trees (MSTs)",
+    "MLST",
+    "eBURST",
+    "goeBURST",
+    "BioNumerics",
+    "PHYLOViZ",
+    "GrapeTree"
+  ],
+  "topics": [
+    "minimum spanning trees",
+    "graph theory",
+    "outbreak analysis",
+    "genetic distances",
+    "phylogenetics",
+    "allele profiles",
+    "transmission networks"
+  ],
+  "faq": [
+    {
+      "q": "How does a minimum spanning tree differ from a phylogenetic tree?",
+      "a": "The hosts describe an MST as connecting observed nodes with the lowest total edge weight and no loops. Unlike the phylogenetic trees they discuss, it does not introduce hypothetical ancestral nodes, and one observed profile can connect directly to several others."
+    },
+    {
+      "q": "Why use minimum spanning trees for outbreak analysis?",
+      "a": "Lee finds them useful when many samples share a dominant profile and a minority differ by only a few SNPs or alleles. Circle sizes can show profile frequencies, while connections display the genetic differences between profiles."
+    },
+    {
+      "q": "Why can the same distance data produce more than one minimum spanning tree?",
+      "a": "Several different trees can share the same minimum total edge weight. Nabil explains that software therefore needs tie-breaking rules, and some tools make additional adjustments, such as those he discusses for missing allele data in GrapeTree."
+    },
+    {
+      "q": "Can an MST resemble a person-to-person transmission network?",
+      "a": "The hosts discuss this possibility using tuberculosis and Shigella. They frame it around comprehensive sampling in a closed setting, where transmission can be followed and an unobserved third party is not infecting both people."
+    }
+  ]
+}

@@ -1,0 +1,133 @@
+{
+  "episode": "138",
+  "headline": "How a small plasmid shapes tetracycline resistance in MRSA",
+  "description": "Megan Phillips discusses pT181, tetK and variable tetracycline resistance in Staphylococcus aureus, using public genomes and historical papers.",
+  "summary": "Andrew Page speaks with Megan Phillips, a PhD student at Emory University, at the microbial genomics hackathon in Bethesda, Maryland. They discuss plasmid-mediated tetracycline resistance in Staphylococcus aureus, including why isolates carrying the same resistance plasmid can have very different minimum inhibitory concentrations. The conversation connects short-read genome analysis, plasmid evolution and gene transfer with historical perspectives on antimicrobial resistance.",
+  "people": [
+    {
+      "name": "Andrew Page",
+      "role": "host",
+      "affiliation": "Theogen, Cambridge, UK"
+    },
+    {
+      "name": "Megan Phillips",
+      "role": "guest",
+      "affiliation": "Emory University"
+    },
+    {
+      "name": "Lee Katz",
+      "role": "host",
+      "affiliation": "Centers for Disease Control and Prevention"
+    }
+  ],
+  "sections": [
+    {
+      "heading": "A resistance plasmid with variable effects",
+      "body": "Phillips studies Staphylococcus aureus, an organism she finds particularly useful because of the amount of available data and its varied relationships with hosts. It occurs in humans and animals and can be harmless or cause serious illness. Her current focus is plasmid-mediated tetracycline resistance, particularly the small plasmid pT181.\n\nThe plasmid carries tetK, which encodes an efflux pump that moves tetracycline out of the bacterial cell. Yet carrying the plasmid does not correspond to one fixed minimum inhibitory concentration (MIC). Phillips describes isolates that remain susceptible and others with much higher MICs. She suggests that differences in plasmid copy number may partly explain this variation: more copies could allow bacteria to produce more efflux pumps and remove more drug. This is presented as a possible explanation, not a settled result."
+    },
+    {
+      "heading": "Public genomes and spread across lineages",
+      "body": "Rather than concentrating on a single strain, Phillips works mostly with publicly available sequences across genetic backgrounds. The wet-lab work she describes includes primarily CC8 and USA 300 strains, alongside other lineages. She reports finding the plasmid in more than 30 clonal complexes. Available sample metadata place it on every continent except Antarctica.\n\nPhillips argues that this distribution implies at least 30 horizontal transfer events, because the plasmid is much younger than the clonal complexes in which it occurs. She also expects substantial vertical inheritance. The distinction matters to her evolutionary questions: the plasmid can move between lineages, but it can also persist as bacteria pass it to their descendants."
+    },
+    {
+      "heading": "Detecting pT181 with BLAST",
+      "body": "Phillips uses short-read sequencing data to look for the plasmid, which she describes as approximately 4.4 kb long. Her detection approach uses BLAST and a stringent threshold: nearly the entire plasmid must be present before she counts a genome as carrying it. She reports that the plasmid assembles as a single contig.\n\nTo choose the threshold, she examined the distribution of BLAST coverage across her genomes. Coverage was concentrated close to the full plasmid length, giving her confidence in setting a cutoff just below that range. Her approach therefore looks for broad coverage of the plasmid rather than simply detecting its resistance gene. The episode describes this presence-detection strategy but does not set out a method for estimating copy number."
+    },
+    {
+      "heading": "Three genes, integration and treatment context",
+      "body": "Phillips describes three genes on the plasmid: tetK for the efflux pump, pre associated with mobilisation, and repC involved in replication. She characterises the plasmid as mobilisable, rather than requiring its own complete transfer machinery.\n\nAndrew also asks whether it integrates into the genome. Phillips says this is an area of ongoing work, but notes that the entire plasmid is already known to be integrated into the type 3 methicillin-resistance cassette. The discussion thus considers both the plasmid itself and its presence within a larger resistance element.\n\nOn treatment, Phillips emphasises that antibiotic choice depends on infection site and severity. Andrew contrasts topical and bloodstream infections, illustrating why the conversation cannot reduce tetracycline's place in treatment to a single universal sequence."
+    },
+    {
+      "heading": "Historical papers and the next research questions",
+      "body": "Reading about tetracycline resistance has led Phillips back to early antibiotic research. She particularly enjoys a 1948 paper about the discovery of an early tetracycline, praising the poetic language and freedom of expression in older scientific writing. Access has generally been straightforward through her university library.\n\nThe conversation also turns to tracing historical samples through chains of papers and personal exchanges. Andrew describes how a sample's provenance can become difficult to establish when each publication points to another researcher. Phillips recognises the same problem: sometimes the trail ends with a statement that a friend supplied the material.\n\nBeyond writing style, Phillips is struck by how early resistance was framed as a narrow biochemical interaction rather than an evolutionary problem. Her planned pT181 paper takes a broader approach, examining spread, copy-number evolution and sequence change. Looking further ahead, she wants to investigate networks of gene exchange and species-wide patterns of horizontal transfer in S. aureus."
+    }
+  ],
+  "highlights": [
+    {
+      "time": "00:00:46",
+      "topic": "Andrew Page introduces the interview from the hackathon in Bethesda"
+    },
+    {
+      "time": "00:01:10",
+      "topic": "Why Staphylococcus aureus offers varied questions about hosts and disease"
+    },
+    {
+      "time": "00:02:02",
+      "topic": "Variable tetracycline MICs and the possible role of plasmid copy number"
+    },
+    {
+      "time": "00:02:44",
+      "topic": "Public genome sequences and wet-lab strains, including CC8 and USA 300"
+    },
+    {
+      "time": "00:03:27",
+      "topic": "Evidence for horizontal transfer alongside vertical inheritance"
+    },
+    {
+      "time": "00:04:22",
+      "topic": "The 4.4 kb plasmid and stringent BLAST-based detection"
+    },
+    {
+      "time": "00:05:10",
+      "topic": "The plasmid's three genes: tetK, pre and repC"
+    },
+    {
+      "time": "00:05:49",
+      "topic": "Integration into the type 3 methicillin-resistance cassette"
+    },
+    {
+      "time": "00:06:15",
+      "topic": "Treatment choices depend on infection site and severity"
+    },
+    {
+      "time": "00:06:51",
+      "topic": "Historical tetracycline papers and a favourite example from 1948"
+    },
+    {
+      "time": "00:09:10",
+      "topic": "Early resistance research and the neglect of evolutionary explanations"
+    },
+    {
+      "time": "00:10:16",
+      "topic": "Plans for a pT181 evolution paper and research on gene-exchange networks"
+    }
+  ],
+  "quotes": [
+    {
+      "text": "So we definitely see some horizontal transfer, but it can also be vertically inherited and I suspect that's happening a lot too.",
+      "time": "00:03:27",
+      "speaker": "Megan Phillips"
+    }
+  ],
+  "tools": [
+    "BLAST"
+  ],
+  "topics": [
+    "mrsa",
+    "staphylococcus aureus",
+    "tetracycline resistance",
+    "plasmids",
+    "plasmid copy number",
+    "horizontal gene transfer",
+    "short-read sequencing",
+    "evolution of antimicrobial resistance"
+  ],
+  "faq": [
+    {
+      "q": "Why can S. aureus isolates carrying pT181 have different tetracycline MICs?",
+      "a": "Phillips reports that plasmid-carrying isolates range from susceptible to highly resistant. She suggests that differences in plasmid copy number may contribute, with more copies potentially supporting more TetK efflux pumps."
+    },
+    {
+      "q": "How does Megan Phillips detect pT181 in short-read genome data?",
+      "a": "She uses BLAST with a stringent threshold requiring nearly the entire plasmid to be present. The approximately 4.4 kb plasmid assembles as one contig in the work she describes."
+    },
+    {
+      "q": "How widespread is pT181 in the genomes discussed?",
+      "a": "Phillips reports finding it in more than 30 S. aureus clonal complexes. The metadata she examined indicate a distribution across all continents except Antarctica."
+    },
+    {
+      "q": "What research was Megan Phillips planning to publish?",
+      "a": "She hoped to publish a paper on pT181 evolution covering its spread, copy-number evolution and sequence change. She also described plans to study gene-exchange networks and species-wide patterns of horizontal transfer in S. aureus."
+    }
+  ]
+}

@@ -1,0 +1,151 @@
+{
+ "episode": "150",
+ "headline": "Genomicx: AI-built bioinformatics tools for the browser",
+ "description": "The hosts test AI-built WebAssembly tools for browser-based genomics, from MashTree to consensus calling, and discuss privacy, validation and limits.",
+ "summary": "Lee Katz, Nabil-Fareed Alikhan and Andrew Page describe building Genomicx prototypes with AI coding assistants, turning existing bioinformatics tools into browser applications. They discuss WebAssembly ports, a reference-based consensus workflow and automated deployment from GitHub. Local processing could help users facing data-sharing restrictions or unreliable internet access, but the hosts stress memory limits, testing and the risks of cloud-based AI.",
+ "people": [
+  {
+   "name": "Lee Katz",
+   "role": "host",
+   "affiliation": ""
+  },
+  {
+   "name": "Nabil-Fareed Alikhan",
+   "role": "host",
+   "affiliation": "Centre for Genomic Pathogen Surveillance, University of Oxford"
+  },
+  {
+   "name": "Andrew Page",
+   "role": "host",
+   "affiliation": "Origin Sciences; University of East Anglia"
+  }
+ ],
+ "sections": [
+  {
+   "heading": "Why move bioinformatics into the browser?",
+   "body": "Nabil-Fareed Alikhan describes a recurring problem: someone has a handful of genomes and needs a simple analysis, but is asked to install Linux, use Galaxy or upload data to an external service. Public health organisations may prohibit those uploads, while unreliable internet makes transferring large sequencing files difficult.\n\nDuring COVID, Nabil and Andrew worked on RonaQC using biowasm, a library of bioinformatics programs compiled to WebAssembly. This lets compiled software run inside a browser without a computational back end. Nabil had already built the analysis plumbing, but disliked maintaining the front end. AI assistance offered a way past that obstacle rather than a new biological algorithm."
+  },
+  {
+   "heading": "Compiling Mash and rebuilding MashTree",
+   "body": "The experiment began with a suggestion to try AI coding on tools the hosts already knew well. Nabil asked Claude to compile Mash to WebAssembly, despite dependencies such as Boost and complications involving 64-bit code and a 32-bit target.\n\nHe supplied 10 Salmonella genomes and instructed the assistant to compare the browser-compatible build with native Mash installed using Pixi. Compilation took about 40 minutes and testing another 10. The assistant reported identical distance matrices; this was an initial comparison, not a comprehensive benchmark.\n\nNabil then supplied Lee's Perl MashTree code and requested a web application with the same configuration options and bootstrapping step. The resulting prototype prompted the hosts to try the approach on more tools. Andrew extracted the shared approach into a reusable Claude skill."
+  },
+  {
+   "heading": "A collection of small, familiar tools",
+   "body": "Andrew describes adapting socru for typing genomic arrangements in long-read assemblies, including a visualisation he preferred to the existing one. He also made a separate barrnap application for identifying 16S, 5S and 23S ribosomal RNA genes, since that functionality was already needed by socru.\n\nOther examples included assembly-stats, converted to TypeScript with additional visualisations; snp-sites, originally written by Andrew in C; and snp-dists, which produces a distance matrix from a multiple-FASTA alignment. Andrew says the snp-sites adaptation took about 40 minutes.\n\nNabil also had the assistant restyle RonaQC, requesting a restrained appearance rather than bright startup-style colours. Across roughly 10 prototypes, the emphasis was on repackaging existing methods, not inventing new algorithms."
+  },
+  {
+   "heading": "Consensus calling and browser memory limits",
+   "body": "Nabil wanted to push beyond small utilities by assembling a bacterial genome in the browser. He describes a practical browser-tab memory budget of roughly 2 GB, perhaps 4 GB, which he considered insufficient for SPAdes with a reasonable amount of reads.\n\nInstead, he asked for reference mapping and consensus calling, followed by assembly of the remaining unassembled reads. For a few example genomes, checks in Pathogenwatch returned the expected MLST and antimicrobial-resistance results, including accessory resistance genes. These checks encouraged further experimentation but did not establish general accuracy.\n\nThe hosts do not present browser tools as replacements for high-performance computing. Nabil warns that even loading 100 small Campylobacter genomes could exhaust memory because files held for WebAssembly carry overhead. A small identification task is a different proposition from a large comparative analysis."
+  },
+  {
+   "heading": "Free subscriptions and automated deployment",
+   "body": "Lee used the free browser version of Claude, copying in the files describing the shared skill. He reached a usage limit, returned the following day and completed a simple Mash-distance application without paying. It used his precompiled Kalamari database, described as an approximately 80 MB curated collection of bacterial pathogen genomes. After correcting the database URL, an example Klebsiella genome returned Klebsiella pneumoniae as its closest database match.\n\nAndrew's workflow used VS Code terminals on an AWS virtual machine. He has Claude plan the work first, then runs multiple Claude agents in parallel on research, source-code review and building tasks. He also described deploying an application from his phone while travelling.\n\nVercel handled builds and deployment from GitHub, including automatic updates and previews. The hosts explicitly say this is not an endorsement: other deployment platforms and AI assistants are available."
+  },
+  {
+   "heading": "What still needs checking",
+   "body": "The prototypes had not undergone a full benchmark. Nabil warns that generated code can misread an output column, produce an incorrect call or behave differently from what users expect. Where an application wraps an existing tool, comparing its output with the original provides a practical testing route. Connecting an assistant to repositories and deployment services also increases what it can change.\n\nBrowser-local analysis and cloud-based AI are separate privacy questions. The intended WebAssembly workflow downloads the application and then processes genomic files locally, avoiding large uploads. By contrast, Nabil warns against sending personal information or access tokens to an AI service, and says the prototype work used published tools and data.\n\nThe discussion also raises copyright concerns around model training and questions about future student projects. The hosts invite feedback on the experimental tools using #genomicx."
+  }
+ ],
+ "highlights": [
+  {
+   "time": "00:01:33",
+   "topic": "The case for browser bioinformatics and the earlier RonaQC project."
+  },
+  {
+   "time": "00:06:42",
+   "topic": "Testing AI coding assistants on familiar code bases, starting with Mash and MashTree."
+  },
+  {
+   "time": "00:11:17",
+   "topic": "Andrew turns the initial work into a reusable Claude skill."
+  },
+  {
+   "time": "00:15:23",
+   "topic": "Andrew describes adapting socru for browser-based genomic arrangement typing."
+  },
+  {
+   "time": "00:18:23",
+   "topic": "How Vercel builds and deploys web applications from GitHub."
+  },
+  {
+   "time": "00:22:51",
+   "topic": "Lee starts building a Mash application with the free browser version of Claude."
+  },
+  {
+   "time": "00:27:01",
+   "topic": "Why WebAssembly can operate close to native execution speed."
+  },
+  {
+   "time": "00:33:05",
+   "topic": "Generated-code errors, incomplete validation and risks from automated access."
+  },
+  {
+   "time": "00:36:11",
+   "topic": "Using published data and keeping sensitive information out of AI services."
+  },
+  {
+   "time": "00:38:37",
+   "topic": "How browser-local WebAssembly analysis avoids uploading genomic files."
+  }
+ ],
+ "quotes": [
+  {
+   "text": "So what we've got in the end is a bunch of toys, really, that can do meaningful work, but they're toys.",
+   "time": "00:27:01",
+   "speaker": "Nabil-Fareed Alikhan"
+  }
+ ],
+ "tools": [
+  "WebAssembly",
+  "biowasm",
+  "RonaQC",
+  "Claude",
+  "Claude Code",
+  "Galaxy",
+  "Mash",
+  "MashTree",
+  "Boost",
+  "Pixi",
+  "socru",
+  "barrnap",
+  "assembly-stats",
+  "snp-sites",
+  "snp-dists",
+  "SPAdes",
+  "Pathogenwatch",
+  "MLST",
+  "Kalamari",
+  "VS Code",
+  "AWS",
+  "GitHub",
+  "Vercel"
+ ],
+ "topics": [
+  "browser bioinformatics",
+  "webassembly",
+  "ai coding assistants",
+  "microbial genomics",
+  "genomic data privacy",
+  "reference-based consensus",
+  "software validation",
+  "low-resource settings"
+ ],
+ "faq": [
+  {
+   "q": "Do these browser tools upload genomic data to a server?",
+   "a": "The described WebAssembly design downloads the application and processes genomic files locally in the browser, without an analysis back end. That is separate from using a cloud AI assistant to write code, where submitted information leaves the user's machine."
+  },
+  {
+   "q": "Can browser bioinformatics replace an HPC cluster?",
+   "a": "Not for the workloads discussed here. The hosts describe useful small analyses, but browser memory limits and file-handling overhead make large genome collections and conventional bacterial assembly difficult."
+  },
+  {
+   "q": "Can a free AI subscription build a bioinformatics web application?",
+   "a": "Lee completed a Mash-distance prototype using the free browser version of Claude and the hosts' shared skill files. He hit a usage limit, resumed the next day and needed help deploying the application and correcting its database URL."
+  },
+  {
+   "q": "Have the Genomicx prototypes been fully validated?",
+   "a": "No full benchmark had been completed at the time of the discussion. Initial checks included a comparison of native and WebAssembly Mash on 10 Salmonella genomes and Pathogenwatch checks on a few consensus outputs, but the hosts say further testing and fixes are needed."
+  }
+ ]
+}

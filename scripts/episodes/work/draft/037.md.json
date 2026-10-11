@@ -1,0 +1,154 @@
+{
+  "episode": "037",
+  "headline": "Ontologies: making microbial metadata work together",
+  "description": "Emma Griffiths and João Carriço explain how ontologies clarify microbial metadata, link datasets and give genome analyses their context.",
+  "summary": "Lee Katz and Nabil-Fareed Alikhan talk with Emma Griffiths and João Carriço about what ontologies are and why microbial bioinformatics needs them. The discussion connects controlled vocabularies and shared definitions to everyday problems with spreadsheets, sample descriptions and genomic analysis. It also examines the work needed to make standards useful without placing all the burden on people collecting data.",
+  "people": [
+    {
+      "name": "Lee Katz",
+      "role": "host",
+      "affiliation": "Centers for Disease Control and Prevention; University of Georgia (adjunct member)"
+    },
+    {
+      "name": "Nabil-Fareed Alikhan",
+      "role": "host",
+      "affiliation": "Quadram Institute, Norwich, UK"
+    },
+    {
+      "name": "Emma Griffiths",
+      "role": "guest",
+      "affiliation": ""
+    },
+    {
+      "name": "João Carriço",
+      "role": "guest",
+      "affiliation": "University of Lisbon (former tenured professor)"
+    }
+  ],
+  "sections": [
+    {
+      "heading": "A shared language for microbial data",
+      "body": "An opening exercise involving Portuguese, French and Spanish introduces the central problem: different expressions can carry the same meaning, but computers need explicit information to connect them. Ontologies are described as controlled vocabularies whose terms are organised into hierarchies and connected by logical relationships. They support standardising, structuring and querying information, rather than simply searching for matching text.\n\nThe practical example is exchanging Excel spreadsheets. Someone may understand every field in their own sheet, yet another organisation may interpret those fields differently. Ontologies can help connect the meanings across datasets. However, structure alone is not enough: ontologies built in incompatible ways can still leave information trapped in separate silos."
+    },
+    {
+      "heading": "Same word, different meaning",
+      "body": "Each ontology term receives an identifier, allowing different meanings to be distinguished even when their labels look alike. The US and UK meanings of biscuit illustrate this: the same word can refer to quite different foods. A more specialised example concerns animal layer crumb, a feed for laying chickens that was initially misinterpreted as crumbs at the bottom of an animal-feed bag. Without the relevant knowledge, apparently straightforward metadata can be standardised incorrectly.\n\nThe problem also reaches core biological terminology. João discusses strain, isolate, allele, locus and SNP, stressing that researchers may assume agreement where none exists. A reported SNP depends on the tools and parameters used to obtain it; different workflows can undermine comparability. Work on the metadata section of an ISO standard for whole-genome sequencing in food microbiology also exposed difficulty distinguishing strain from isolate using public-repository definitions."
+    },
+    {
+      "heading": "Why sequence data needs context",
+      "body": "The panel argues that generating sequencing data is no longer enough on its own. As genome production becomes easier and more routine, obtaining useful metadata remains difficult. One host suggests covering the country labels and coloured annotations beside a published phylogenetic tree: the remaining branching figure loses the context needed to discuss geography, niches, time or links between genotype and phenotype.\n\nMetadata also includes methods and sampling purpose, not just whether a sample came from a chicken. Surveillance, monitoring, cluster investigations and outbreak investigations can produce different sample collections and affect interpretation. The discussion stresses that missing contextual information cannot simply be reconstructed afterwards; it needs attention during sampling and data collection."
+    },
+    {
+      "heading": "Who benefits from better data entry?",
+      "body": "A recurring concern is the gap between those collecting data and those analysing it. A nurse or sample collector may see extra form-filling as an overhead, while the eventual benefit appears in somebody else's analysis or publication. The panel argues that useful results should be reported back to the people doing that work.\n\nSmarter data-entry interfaces, natural-language interpretation and disambiguation are suggested as ways to reduce the burden. There is also a chicken-and-egg problem: people want a convincing demonstration before investing in ontologies, but developers need concrete problems and use cases to build something worth demonstrating. Treating metadata as secondary to genomic results makes that cycle harder to break."
+    },
+    {
+      "heading": "Familiar resources already depend on structure",
+      "body": "Gene Ontology (GO), KEGG, COG and Pfam enter the discussion as familiar resources for organising gene-function information. Researchers routinely use such resources to classify predicted genes and examine functional categories, benefiting from structural work done beforehand by others. Those structures can be corrected and refined as knowledge changes.\n\nThe broader point is that ontologies need not be conspicuous to be useful. Google is cited as using a proprietary ontology. João compares successful ontology infrastructure with network and web protocols: it should work in the background, connecting information without requiring every user to think about the machinery."
+    },
+    {
+      "heading": "From agreed definitions to working systems",
+      "body": "An ontology is not a complete application. It needs a tool to implement it or integration into a system's back end. Converting an existing database to a standard is substantial work, and the panel contrasts the attention given to genomic analysis tools with the smaller effort devoted to metadata and ontology tooling.\n\nAgreeing definitions is also collaborative work, not something one person should settle alone. Disagreement can reveal concepts that need further clarification, even when discussion feels slower than implementation. As a potential application, João describes linking climate data, sampling locations, strain locations and genomic change. Such connections depend on the component datasets expressing compatible meanings. The episode closes by reserving a fuller discussion of practical applications for the next instalment."
+    }
+  ],
+  "highlights": [
+    {
+      "time": "00:02:04",
+      "topic": "Ontologies as controlled vocabularies with hierarchies and logical relationships."
+    },
+    {
+      "time": "00:02:39",
+      "topic": "Objects, relationships and mapping different expressions to a shared meaning."
+    },
+    {
+      "time": "00:03:49",
+      "topic": "Ontology uses beyond bioinformatics and the risk of incompatible information structures."
+    },
+    {
+      "time": "00:05:23",
+      "topic": "Why a well-formatted Excel sheet is not enough for exchanging and querying data."
+    },
+    {
+      "time": "00:06:56",
+      "topic": "Allele calling and inconsistent meanings of strain, isolate, allele, locus and SNP."
+    },
+    {
+      "time": "00:08:33",
+      "topic": "Term identifiers disambiguate meanings, illustrated by biscuits and animal feed."
+    },
+    {
+      "time": "00:13:28",
+      "topic": "The lack of an obvious payoff for people collecting samples and filling in forms."
+    },
+    {
+      "time": "00:14:39",
+      "topic": "The chicken-and-egg problem of building ontologies around convincing use cases."
+    },
+    {
+      "time": "00:16:40",
+      "topic": "A phylogenetic tree without contextual annotations illustrates the value of metadata."
+    },
+    {
+      "time": "00:19:45",
+      "topic": "KEGG, COG and Pfam demonstrate the value of previously structured gene-function information."
+    },
+    {
+      "time": "00:21:01",
+      "topic": "Community standards build on earlier work, but ontologies still need implementation tools."
+    },
+    {
+      "time": "00:22:44",
+      "topic": "Defining an ontology requires collaboration and agreement among its users."
+    }
+  ],
+  "quotes": [
+    {
+      "text": "I always said that if ontologies work, it's the kind of thing that people won't even know that it's over there, right?",
+      "time": "00:12:10",
+      "speaker": "João Carriço"
+    },
+    {
+      "text": "You can't impute it after the fact. You just can't make it up.",
+      "time": "00:16:40",
+      "speaker": "one of the hosts"
+    }
+  ],
+  "tools": [
+    "Excel",
+    "Google Translate",
+    "Google",
+    "Gene Ontology (GO)",
+    "KEGG",
+    "COG",
+    "Pfam"
+  ],
+  "topics": [
+    "ontologies",
+    "metadata",
+    "controlled vocabularies",
+    "data interoperability",
+    "microbial genomics",
+    "public health",
+    "sampling context",
+    "gene function",
+    "data standardisation"
+  ],
+  "faq": [
+    {
+      "q": "What is an ontology in bioinformatics?",
+      "a": "The episode describes an ontology as a controlled vocabulary organised into a hierarchy, with logical relationships between terms. It helps standardise, structure and query information while making the meanings of terms explicit."
+    },
+    {
+      "q": "Why does microbial genome analysis need metadata?",
+      "a": "Metadata provides the context needed to interpret genomic results, including geography, time, phenotype and sampling purpose. The panel uses a phylogenetic tree stripped of its contextual annotations to illustrate how much interpretation depends on information beyond the sequences."
+    },
+    {
+      "q": "How can ontologies resolve ambiguous sample descriptions?",
+      "a": "Ontology terms have definitions and identifiers that distinguish meanings even when people use the same word. The discussion illustrates this with US and UK biscuits, strain versus isolate, and a chicken-feed description that was misunderstood without specialist knowledge."
+    },
+    {
+      "q": "Why are ontologies difficult to put into everyday use?",
+      "a": "Agreeing definitions, converting existing data and integrating an ontology into software all require work. The panel calls for collaborative development, better interfaces and useful feedback to data collectors, with ontologies eventually operating invisibly in the background."
+    }
+  ]
+}

@@ -1,0 +1,167 @@
+{
+  "episode": "115",
+  "headline": "Write-the: code, documentation and AI agents for bioinformatics",
+  "description": "Wytamma Wirth discusses write-the, codebase context, constrained AI agents and turning generated docstrings into searchable documentation.",
+  "summary": "Wytamma Wirth of the University of Melbourne returns to discuss write-the with the MicroBinfie hosts. They explore language models for codebase-wide changes, narrowly scoped agents, diagrams, software papers and multilingual documentation. A demonstration distinguishes LLM-generated docstrings from the non-LLM steps that turn them into a searchable documentation website, with review and testing still important.",
+  "people": [
+    {
+      "name": "Wytamma Wirth",
+      "role": "guest",
+      "affiliation": "University of Melbourne"
+    },
+    {
+      "name": "Lee Katz",
+      "role": "host",
+      "affiliation": "Centers for Disease Control and Prevention"
+    },
+    {
+      "name": "Andrew Page",
+      "role": "host",
+      "affiliation": ""
+    },
+    {
+      "name": "Nabil-Fareed Alikhan",
+      "role": "host",
+      "affiliation": "Quadram Institute"
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Giving language models context across a codebase",
+      "body": "Wirth is exploring how write-the could work across an entire project rather than isolated pieces of code. A large Python script may exceed a language model’s context limit; truncating it leaves the model without information about earlier parts. Vector stores and vector databases offer a way to retrieve relevant code and add it to the context when needed.\n\nThe proposed approach combines project summaries, function definitions and related code retrieved for a particular task. This could support refactoring and optimisation across a codebase. Wirth presents these as directions he is investigating, with the central challenge being how to represent enough of a project for the model to understand the relationships within it."
+    },
+    {
+      "heading": "Constrained agents rather than general intelligence",
+      "body": "Wirth uses LangChain to interface with language models and build prompts and agents. He also describes Langflow, which lets users connect components in flow diagrams, and Haystack as another library for defining tools that a model can use. The hosts compare this with ChatGPT’s GPT-4 plugins, where a tool retrieves information and the model formats or summarises it.\n\nOne experiment gave an agent a tool for writing and executing Perl scripts. Wirth explicitly warns against allowing arbitrary code execution. He contrasts narrowly defined tasks with the broad ambitions of AutoGPT and BabyAGI: an agent constrained to a specific bioinformatics task may be less likely to lose track of its purpose. Clearly specified inputs, outputs and responsibilities are recurring themes."
+    },
+    {
+      "heading": "UML diagrams and Mermaid",
+      "body": "The hosts ask whether write-the could generate UML diagrams showing classes, attributes, methods and their relationships. One host explains why these diagrams can be useful: mapping a program may reveal a function in the wrong class, repeated behaviour or an opportunity to create a shared class. Producing the diagram by hand, however, can be tedious.\n\nLee Katz brings up Mermaid, describing a text-based way to express and visualise a flow chart. Diagram generation remains a possible extension rather than a demonstrated write-the feature. The discussion also distinguishes diagrams that help a programmer reason about a design from a model directly interpreting and reorganising the code."
+    },
+    {
+      "heading": "Drafting software papers and translating documentation",
+      "body": "The hosts suggest a command that could draft a JOSS paper from a project. Wirth thinks documented code, examples and a description of the software could provide material for an introduction and background. Journal templates could supply a starting structure, while a chat interface would allow authors to revise wording through successive exchanges. Understanding the whole codebase remains a limitation.\n\nThe motivation is practical: the hosts enjoy writing software but find formal descriptions harder. One jokes about needing to explain a project whose functionality was already available in BEDTools. The conversation then turns to researchers who can write quickly in their first language but spend much longer producing formal English prose.\n\nWirth says he has not personally tried that translation workflow. He nevertheless sees value in multilingual project documentation, provided the translation preserves the intended meaning rather than changing it."
+    },
+    {
+      "heading": "From docstrings to a searchable website",
+      "body": "During the conversation, one host runs write-the on his own code and praises the result, while noting that he has not yet run tests. Wirth then demonstrates the separate MkDocs utility. Unlike the docstring-writing step, this utility does not use an LLM: it prepares a documentation template and uses existing docstrings to build an API reference.\n\nThe resulting site includes descriptions, input parameters, return types and other information extracted from consistently formatted docstrings. It is searchable, supports dark mode and can be deployed to GitHub Pages using a generated GitHub Actions script. A README becomes the front page; tutorials are not generated automatically.\n\nThe point is to reduce the effort needed to publish useful documentation. The model supplies docstring content, while ordinary parsing and templating turn that content into the website."
+    },
+    {
+      "heading": "Language support, testing and human review",
+      "body": "Asked about Perl documentation, Wirth describes the current documentation parser as limited to Python files. He plans to integrate an unnamed open-source library used by GitHub for identifying symbols and relationships in code. Its concrete syntax tree parsing could help locate functions and docstrings across other programming languages.\n\nThe closing exchange sketches a sequence of converting code to Python, generating docstrings, building the documentation site and writing tests. It is a suggested workflow, not evidence that conversion produces a validated project. Together with the warning about arbitrary code execution and the host’s untested local run, this keeps an important distinction visible: generating code or documentation is not the same as checking that it is correct."
+    }
+  ],
+  "highlights": [
+    {
+      "time": "00:01:06",
+      "topic": "Vector stores and project summaries as context for codebase-wide operations"
+    },
+    {
+      "time": "00:02:33",
+      "topic": "A request for automatically generated UML diagrams"
+    },
+    {
+      "time": "00:03:28",
+      "topic": "LangChain and Langflow for building language-model applications"
+    },
+    {
+      "time": "00:05:09",
+      "topic": "Defining agent tools, including an experiment that executes Perl scripts"
+    },
+    {
+      "time": "00:05:55",
+      "topic": "Why constrained agents may be more useful than broadly autonomous systems"
+    },
+    {
+      "time": "00:06:55",
+      "topic": "Mermaid as a text-based approach to diagrams"
+    },
+    {
+      "time": "00:09:51",
+      "topic": "Proposed commands for diagrams and JOSS paper drafts"
+    },
+    {
+      "time": "00:13:51",
+      "topic": "Multilingual documentation and the need to preserve meaning"
+    },
+    {
+      "time": "00:15:30",
+      "topic": "A host reports trying write-the on his code, with tests still outstanding"
+    },
+    {
+      "time": "00:15:52",
+      "topic": "The non-LLM MkDocs utility for generating and deploying documentation"
+    },
+    {
+      "time": "00:19:54",
+      "topic": "Extracting consistently formatted docstrings to populate documentation templates"
+    },
+    {
+      "time": "00:20:47",
+      "topic": "Python-only parsing and plans for broader programming-language support"
+    }
+  ],
+  "quotes": [
+    {
+      "text": "You shouldn't let it execute arbitrary code, but yeah, you can sort of define any sort of tool that you want using these interfaces and libraries.",
+      "time": "00:05:09",
+      "speaker": "Wytamma Wirth"
+    },
+    {
+      "text": "We are rapidly running out of excuses for why we don't have documentation.",
+      "time": "00:17:51",
+      "speaker": "one of the hosts"
+    }
+  ],
+  "tools": [
+    "write-the",
+    "ChatGPT",
+    "GPT-4",
+    "LangChain",
+    "Langflow",
+    "Haystack",
+    "AutoGPT",
+    "BabyAGI",
+    "Unified Modeling Language (UML)",
+    "Mermaid",
+    "MkDocs",
+    "GitHub",
+    "GitHub Actions",
+    "GitHub Pages",
+    "BEDTools",
+    "concrete syntax trees"
+  ],
+  "topics": [
+    "bioinformatics software",
+    "large language models",
+    "code documentation",
+    "vector databases",
+    "ai agents",
+    "code refactoring",
+    "software papers",
+    "documentation translation",
+    "software testing"
+  ],
+  "faq": [
+    {
+      "q": "Does write-the use an LLM to build its documentation website?",
+      "a": "The MkDocs utility demonstrated in the episode does not use an LLM. It extracts existing docstrings and populates documentation templates; those docstrings can have been generated in an earlier LLM-powered step."
+    },
+    {
+      "q": "Can write-the refactor an entire codebase?",
+      "a": "Wirth describes codebase-wide refactoring and optimisation as areas he is investigating. He discusses using vector stores and project summaries to supply relevant context, rather than demonstrating a finished whole-project refactoring feature."
+    },
+    {
+      "q": "Could write-the draft a JOSS software paper?",
+      "a": "The hosts propose this as an extension. Wirth thinks documented code, examples and journal templates could support drafting an introduction and background, with revision through a chat interface."
+    },
+    {
+      "q": "Does write-the generate documentation for Perl projects?",
+      "a": "Wirth says he has not tried parsing Perl documentation and describes the current documentation generation as limited to Python files. He discusses plans to use a language-agnostic parsing library to support other languages."
+    },
+    {
+      "q": "Why does the episode favour narrowly scoped AI agents?",
+      "a": "Wirth argues that agents with a specific task and constrained inputs and outputs may be less likely to lose track of their purpose. He also warns that letting an agent execute arbitrary code is unsafe."
+    }
+  ]
+}

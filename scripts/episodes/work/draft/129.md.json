@@ -1,0 +1,157 @@
+{
+  "episode": "129",
+  "headline": "Bactopia, bacterial surveillance and bioinformatics in Wyoming",
+  "description": "Robert Petit on Bactopia, human-read filtering, YAML-based typing and the practicalities of public health genomics in Wyoming.",
+  "summary": "Andrew Page talks with Robert Petit of the Wyoming Public Health Laboratory about Bactopia, an end-to-end pipeline for bacterial genomics. They discuss its origins, documentation, human-read filtering and plans for clearer public health reporting, alongside Robert's CamelHUMP project for sequence-based typing. Recorded at the Microbial Bioinformatics Hackathon in Bethesda, Maryland, the conversation also explores genomic surveillance in a sparsely populated state with limited bioinformatics staffing.",
+  "people": [
+    {
+      "name": "Andrew Page",
+      "role": "host",
+      "affiliation": "Theogen, Cambridge, UK"
+    },
+    {
+      "name": "Robert Petit",
+      "role": "guest",
+      "affiliation": "Wyoming Public Health Laboratory"
+    },
+    {
+      "name": "Lee Katz",
+      "role": "host",
+      "affiliation": "Centers for Disease Control and Prevention"
+    },
+    {
+      "name": "Nabil-Fareed Alikhan",
+      "role": "host",
+      "affiliation": "Center for Genomic Pathogen Surveillance, University of Oxford"
+    },
+    {
+      "name": "Michael Hall",
+      "role": "mentioned",
+      "affiliation": ""
+    }
+  ],
+  "sections": [
+    {
+      "heading": "From Staphopia to Bactopia",
+      "body": "Robert introduces Bactopia as an end-to-end pipeline for bacterial genomics, alongside his work on pathogen surveillance at the Wyoming Public Health Laboratory. Its origins lie in Staphopia, a project intended to analyse all available Staph aureus genomes. At the time, Robert recalls, there were only about 700 genomes to process.\n\nAndrew describes running roughly 20 Salmonella genomes through Bactopia and finding the analysis finished about half an hour later. This is his experience rather than a formal performance benchmark. Robert attributes the pipeline's reliability to years of resolving issues and fixing straightforward problems. Andrew also values its ability to identify a pathogen and run pathogen-specific analyses."
+    },
+    {
+      "heading": "Documentation and coverage reduction",
+      "body": "Bactopia's documentation starts inside its configuration files. Robert writes the information there once, then uses a script to convert it into Markdown for the documentation site. He compares this with writing API documentation alongside a function. Andrew highlights the clear layout and examples that users can copy and paste.\n\nGenome size has a practical role in keeping analyses quick. By default, Bactopia reduces coverage to 100×; without a supplied genome size, it skips that reduction and processing takes longer. A batch containing one organism can share a genome-size value, whereas a sequencing run containing 20 different organisms needs a way to assign suitable values to individual samples."
+    },
+    {
+      "heading": "Teton and human-read filtering",
+      "body": "Robert describes Teton as a step intended to run before Bactopia. Named after Wyoming's Grand Tetons, it combines human-read removal with taxonomic classification. The plan is to run it across bacterial and viral samples, rather than metagenomic samples. For bacteria, it would also produce a Bactopia sample sheet with genome sizes assigned from the classification.\n\nFor human-read filtering, Robert favours giving users several choices. He discusses the NCBI/SRA human scrubber and Michael Hall's approach using Kraken against a human pangenome, with Hostile as another forthcoming option and Scrubby also mentioned.\n\nThe motivation is partly administrative. Their isolate-derived data are not expected to contain human DNA, but explaining that repeatedly to privacy and security colleagues has proved difficult. Routinely filtering the reads gives the laboratory a concrete processing step to report, without relying solely on an explanation of how isolates were prepared."
+    },
+    {
+      "heading": "Reports for public health colleagues",
+      "body": "A Chan Zuckerberg Initiative Essential Open Source Software grant is supporting work on visualisation and reporting for Bactopia. Robert distinguishes between producing substantial analytical output and presenting it in a form that colleagues outside bioinformatics can use. A collection of TSV files is not the report his epidemiology colleagues need.\n\nThe planned work includes clearer reports and integration with third-party tools such as Microtrace and Microreact. Andrew identifies this presentation layer as something missing from many analysis tools. The discussion presents these improvements as upcoming work, not as an existing reporting interface: the aim is to make Bactopia's results easier to communicate to the people who need them."
+    },
+    {
+      "heading": "CamelHUMP and reusable typing schemas",
+      "body": "CamelHUMP separates the programming machinery of sequence-based typing from the definition of a typing scheme. Robert wants someone who can describe a schema in YAML to be able to use a shared analysis framework without implementing a new typing program. He describes YAML as readable and says the project uses a standard structure for these definitions.\n\nThis also addresses his own maintenance workload. Instead of maintaining three separate typing tools, he can maintain one framework, with each tool represented by two files: a YAML schema and a FASTA file containing the relevant reference sequences.\n\nThe name has personal and professional connections. Robert's wife's favourite animal is a camel, and Wyoming has worked with Oman's Central Public Health Laboratory through an Association of Public Health Labs twinning experience. Reciprocal visits between the laboratories made camels a reminder of that collaboration too."
+    },
+    {
+      "heading": "Public health genomics on the frontier",
+      "body": "Robert describes Wyoming as a rural and frontier state covering about 250,000 square kilometres, with only around 600,000 people. He enjoys the small-town setting, scenery, camping and hiking. Andrew also asks about Robert's recognisable colourful shirts, which Robert says he wears regularly rather than just at conferences.\n\nThe staffing picture is more challenging. Robert describes himself as Wyoming's only bioinformatician and says the four other US states in the Northern Plains Consortium also lack a bioinformatician. He nevertheless praises his laboratory colleagues for embracing sequencing and genomic analysis, including working at the command line. The conversation closes at the hackathon in Bethesda, with Andrew and Robert preparing to return to coding."
+    }
+  ],
+  "highlights": [
+    {
+      "time": "00:00:50",
+      "topic": "Robert introduces his Wyoming surveillance work and Bactopia."
+    },
+    {
+      "time": "00:01:24",
+      "topic": "Bactopia's origins in Staphopia and an initial collection of about 700 Staph aureus genomes."
+    },
+    {
+      "time": "00:02:32",
+      "topic": "Writing documentation once inside Bactopia's configuration files."
+    },
+    {
+      "time": "00:03:24",
+      "topic": "Teton: a pre-Bactopia step for human-read removal and taxonomic classification."
+    },
+    {
+      "time": "00:04:27",
+      "topic": "Why genome size matters for Bactopia's default reduction to 100× coverage."
+    },
+    {
+      "time": "00:05:17",
+      "topic": "Chan Zuckerberg Initiative funding for visualisation, reporting and tool integration."
+    },
+    {
+      "time": "00:06:15",
+      "topic": "Human-read filtering choices, including the NCBI scrubber, Kraken and Hostile."
+    },
+    {
+      "time": "00:07:09",
+      "topic": "Why the laboratory filters human reads even from isolate-derived data."
+    },
+    {
+      "time": "00:08:14",
+      "topic": "CamelHUMP's name, its Oman connection and its YAML-based typing framework."
+    },
+    {
+      "time": "00:11:07",
+      "topic": "Andrew asks about living in Wyoming and Robert's colourful shirts."
+    },
+    {
+      "time": "00:13:04",
+      "topic": "Bioinformatics staffing gaps in Wyoming and the Northern Plains Consortium."
+    }
+  ],
+  "quotes": [
+    {
+      "text": "But this is just a simple way to remove the human reads, do a quick taxon classification, and then assign a genome size based on that.",
+      "time": "00:05:01",
+      "speaker": "Robert Petit"
+    }
+  ],
+  "tools": [
+    "Bactopia",
+    "Staphopia",
+    "Teton",
+    "NCBI/SRA human scrubber",
+    "Kraken",
+    "Hostile",
+    "Scrubby",
+    "Microtrace",
+    "Microreact",
+    "CamelHUMP"
+  ],
+  "topics": [
+    "bacterial genomics",
+    "pathogen surveillance",
+    "public health bioinformatics",
+    "human-read filtering",
+    "taxonomic classification",
+    "sequence-based typing",
+    "software documentation",
+    "genomic reporting",
+    "wyoming"
+  ],
+  "faq": [
+    {
+      "q": "Why does Bactopia ask for a genome size?",
+      "a": "Robert explains that Bactopia uses genome size to reduce coverage to 100× by default, saving processing time. If no genome size is supplied, it skips that reduction rather than preventing the analysis."
+    },
+    {
+      "q": "What is Teton intended to do before Bactopia?",
+      "a": "Teton combines human-read removal and taxonomic classification for bacterial and viral samples, excluding metagenomic samples in the workflow described. For bacteria, it is intended to generate a Bactopia sample sheet with genome sizes assigned from the classification."
+    },
+    {
+      "q": "Why filter human reads from bacterial isolate sequencing?",
+      "a": "Robert says the laboratory does not expect human DNA in its isolate-derived data. It nevertheless filters the reads routinely to address privacy and security requirements with a concrete processing step."
+    },
+    {
+      "q": "What reporting improvements are planned for Bactopia?",
+      "a": "The Chan Zuckerberg Initiative grant supports visualisation and reporting work, including integration with tools such as Microtrace and Microreact. Robert wants reports suitable for epidemiology colleagues rather than handing them collections of TSV files."
+    },
+    {
+      "q": "How does CamelHUMP simplify sequence-based typing?",
+      "a": "It separates a shared programming framework from typing schemes defined in YAML, with reference sequences supplied in FASTA files. Robert describes this as a way for people without programming expertise to define schemas and for him to maintain one framework instead of three separate tools."
+    }
+  ]
+}

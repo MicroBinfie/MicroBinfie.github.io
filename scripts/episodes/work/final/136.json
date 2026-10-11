@@ -1,0 +1,152 @@
+{
+ "episode": "136",
+ "headline": "Contagion, part 1: R0, viral genomes and biosafety",
+ "description": "How realistic is Contagion? The hosts examine R0, Nipah-inspired MEV1, genome analysis, BSL-4 containment and the film's ambiguous portrayal of immunity.",
+ "summary": "Lee Katz, Andrew Page and Nabil-Fareed Alikhan revisit the 2011 film Contagion, examining its pandemic science through their microbial bioinformatics and public health perspectives. In this first part, they discuss epidemiological briefings, the fictional MEV1 virus, early genome characterisation and laboratory containment. Their central distinction is between science that helps explain a crisis and the practical, ethical and political decisions needed to manage it.",
+ "people": [
+  {
+   "name": "Lee Katz",
+   "role": "host",
+   "affiliation": ""
+  },
+  {
+   "name": "Andrew Page",
+   "role": "host",
+   "affiliation": ""
+  },
+  {
+   "name": "Nabil-Fareed Alikhan",
+   "role": "host",
+   "affiliation": ""
+  },
+  {
+   "name": "Ian Lipkin",
+   "role": "mentioned",
+   "affiliation": "Columbia"
+  },
+  {
+   "name": "Kate Winslet",
+   "role": "mentioned",
+   "affiliation": ""
+  },
+  {
+   "name": "Matt Damon",
+   "role": "mentioned",
+   "affiliation": ""
+  }
+ ],
+ "sections": [
+  {
+   "heading": "Watching Contagion after COVID-19",
+   "body": "Following their earlier discussion of Jurassic Park, the hosts turn to Contagion. Its fictional MEV1 pandemic connects viral spread, containment, vaccine development and the social consequences of an outbreak. They broadly praise its combination of shoe-leather epidemiology, genomics and behavioural responses, while joking about its competent government response and missing toilet-paper panic.\n\nThe film predates COVID-19, but one host resists simply calling it prophetic. They recognise familiar problems, including growing a newly identified virus and organising a response under uncertainty. Their recurring criticism is compression: disease progression, scientific work and deliberation happen much faster than they would in practice."
+  },
+  {
+   "heading": "R0 explains spread, not what society should do",
+   "body": "Kate Winslet's briefing scene introduces R0 through comparisons with seasonal flu, smallpox and polio. The film gives figures of about one, over three, and between four and six respectively. Lee questions why an epidemiologist would explain such a basic concept to other epidemiologists. Another host offers a different reading: the questioning official may be a lay participant, although her role is not established.\n\nThe discussion then separates scientific assessment from policy. Evidence of circulation does not itself determine whether to restrict activity; societal values and priorities matter too. The hosts discuss false alarms and emerging threats, including Zika, Ebola and H5N1 in raw milk, as examples of the uncertainty behind decisions that the film condenses into a short meeting."
+  },
+  {
+   "heading": "MEV1, Nipah and the missing experiment",
+   "body": "The hosts identify Nipah virus as the model for MEV1, crediting scientific consultant Ian Lipkin. They connect the film's bat-to-pig origin with the account of Nipah's emergence discussed in the episode, while stressing that the fictional virus spreads more rapidly. MEV1 is explained as meningoencephalitis virus 1.\n\nA professor describes the virus as 15–19 kilobases long, with 6–10 genes, typical of a paramyxovirus. One host points out that this describes the genome, not the virus itself. Lee questions the gene-count range and asks what experiment could already support those estimates.\n\nThe group considers whether this is only a rough initial assessment. They discuss Sanger and next-generation sequencing in the 2011 setting, contrasting this with metagenomic sequencing during COVID-19. Lee raises a gel or PFGE as possibilities, but nobody identifies a definite experimental basis for the character's claim."
+  },
+  {
+   "heading": "What high containment changes",
+   "body": "The BSL-4 scenes prompt a discussion of protective suits, restricted access and research capacity. The hosts acknowledge that they have not worked in BSL-4 laboratories, so their assessment of the on-screen procedures is limited. They mention Ebola, Lassa, Nipah, Hendra and smallpox while discussing high-containment pathogens.\n\nTheir main concern is the practical effect of classification: requiring a scarce, specialised laboratory can sharply limit who can investigate a pathogen. They also raise difficulties moving samples and sequencing equipment across containment boundaries. Drawing comparisons with COVID-19 work, they discuss BSL-3 for cultured isolates and arrangements described as two-plus for diagnostics, with cultured material presenting a different exposure risk."
+  },
+  {
+   "heading": "Rule-breaking scientists and emergency capacity",
+   "body": "The professor ignores an instruction to destroy his samples and subsequently finds a viable cell line. The hosts question the absence of consequences, suggesting that a real breach could threaten grants, affect the institution and bring legal repercussions. A scientist testing a vaccine on herself raises a similar concern. They recognise that the characters combine multiple roles, but worry that repeated misconduct undermines the portrayal of scientists and officials.\n\nThe emergency treatment centre raises another practical question: who pays? One host recalls a London conference centre fitted with 500 beds during COVID-19, including ventilators obtained from film sets and staffing drawn from retired doctors, junior doctors, vets and physiotherapists."
+  },
+  {
+   "heading": "Matt Damon's character: immune or asymptomatic?",
+   "body": "Matt Damon's character is exposed but does not become ill. One host initially treats this as an opportunity to discuss asymptomatic infection. Another points out that the film does not establish whether he is completely immune for some unexplained reason, or was infected without symptoms and now has protective antibodies. It also leaves possible shedding unaddressed.\n\nThe hosts find his behaviour inconsistent: he is intensely protective of his daughter but moves around without a mask or comparable precautions. They interpret him as an everyman character who lets the audience see the unfolding crisis, while questioning what that storytelling choice communicates about infection and immunity."
+  }
+ ],
+ "highlights": [
+  {
+   "time": "00:01:48",
+   "topic": "The fictional MEV1 pandemic and how to judge a pre-COVID film"
+  },
+  {
+   "time": "00:05:01",
+   "topic": "Setting a bioinformatics focus before examining the R0 briefing"
+  },
+  {
+   "time": "00:06:35",
+   "topic": "Who needs the R0 explanation, and how the film compresses policy decisions"
+  },
+  {
+   "time": "00:09:36",
+   "topic": "Emerging infections, false alarms and proportionate outbreak responses"
+  },
+  {
+   "time": "00:12:36",
+   "topic": "Nipah virus as the scientific inspiration for MEV1"
+  },
+  {
+   "time": "00:14:32",
+   "topic": "Interpreting the 15–19-kilobase genome and 6–10-gene description"
+  },
+  {
+   "time": "00:16:28",
+   "topic": "What an initial sample assessment could establish with 2011 sequencing"
+  },
+  {
+   "time": "00:19:34",
+   "topic": "Assessing BSL-4 realism without first-hand laboratory experience"
+  },
+  {
+   "time": "00:22:57",
+   "topic": "Cultured-virus risk and the professor's containment breach"
+  },
+  {
+   "time": "00:26:15",
+   "topic": "A 500-bed emergency facility and staffing during COVID-19"
+  },
+  {
+   "time": "00:27:21",
+   "topic": "Matt Damon's exposure, possible asymptomatic infection and unclear immunity"
+  }
+ ],
+ "quotes": [
+  {
+   "text": "That decision is down to your societal values, your priorities.",
+   "time": "00:06:35",
+   "speaker": "one of the hosts"
+  }
+ ],
+ "tools": [
+  "Sanger sequencing",
+  "Next-generation sequencing",
+  "Metagenomic sequencing",
+  "PFGE"
+ ],
+ "topics": [
+  "contagion",
+  "epidemiology",
+  "r0",
+  "nipah virus",
+  "viral genomics",
+  "biosafety",
+  "pandemic response",
+  "research ethics",
+  "asymptomatic infection"
+ ],
+ "faq": [
+  {
+   "q": "What real virus inspired MEV1 in Contagion?",
+   "a": "The hosts identify Nipah virus as the model. They connect the bat-to-pig origin and genome description with Nipah, while noting that the film accelerates transmission and disease progression."
+  },
+  {
+   "q": "Why do the hosts question Contagion's genome description?",
+   "a": "The professor gives a length of 15–19 kilobases and a range of 6–10 genes after only a short period with the sample. The hosts question both the ranges and which experiment could have produced that information so quickly."
+  },
+  {
+   "q": "Do the hosts consider the BSL-4 scenes realistic?",
+   "a": "They regard the protective procedures as broadly plausible but explicitly acknowledge their lack of BSL-4 experience. Their discussion focuses on scarce facilities, sample movement and the research restrictions imposed by higher containment."
+  },
+  {
+   "q": "Is Matt Damon's character an asymptomatic carrier?",
+   "a": "The discussion does not settle that interpretation. One host raises asymptomatic infection, but another stresses that the film leaves infection, immunity and possible viral shedding unresolved."
+  }
+ ]
+}

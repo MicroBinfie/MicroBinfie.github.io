@@ -1,0 +1,170 @@
+{
+ "episode": "089",
+ "headline": "WDL and portable workflows for public health bioinformatics",
+ "description": "Joel and Danny discuss WDL, portable bioinformatics pipelines, and how containers and workflow languages support public health laboratories.",
+ "summary": "Guests Joel and Danny join Lee Katz, Andrew Page and Nabil-Fareed Alikhan to discuss the Workflow Description Language (WDL) and its use in public health bioinformatics. They explain how WDL connects containerised tools, why a language specification differs from an execution engine, and what portability requires. Experiences with Lyve-SET, viral analysis pipelines and public health laboratories show how workflow languages can reduce installation work while supporting reproducible, scalable analysis.",
+ "people": [
+  {
+   "name": "Lee Katz",
+   "role": "host",
+   "affiliation": "Centers for Disease Control and Prevention; University of Georgia"
+  },
+  {
+   "name": "Andrew Page",
+   "role": "host",
+   "affiliation": "Quadram Institute"
+  },
+  {
+   "name": "Nabil-Fareed Alikhan",
+   "role": "host",
+   "affiliation": "Quadram Institute"
+  },
+  {
+   "name": "Joel",
+   "role": "guest",
+   "affiliation": "Theiagen Genomics"
+  },
+  {
+   "name": "Danny",
+   "role": "guest",
+   "affiliation": "Broad Institute of MIT and Harvard"
+  }
+ ],
+ "sections": [
+  {
+   "heading": "Connecting containerised tools",
+   "body": "Danny introduces WDL as a way to describe bioinformatics pipelines so they can run in different computing environments. In his explanation, the starting point is already-containerised tools. WDL describes how outputs become inputs, what file conversions or preparation steps are needed, and where a workflow branches or brings results together.\n\nLee tests the idea with a hypothetical workflow mapping reads to the human genome: could the same description run on a Raspberry Pi or an HPC system? Danny qualifies the portability claim. The destination must support the containers and provide the memory, CPU and disk resources required by the individual steps."
+  },
+  {
+   "heading": "A language specification, not an execution engine",
+   "body": "WDL is not itself a program that executes a pipeline. Danny contrasts it with Nextflow and Snakemake, where the language and execution engine are more closely tied together. Like Common Workflow Language (CWL), WDL separates its specification from the implementations that interpret it.\n\nThe discussion identifies the Broad Institute, DNAnexus and CZI as active participants with investments in implementations. Cromwell is named as the underlying engine for Terra. Danny also cautions that the formal language documentation is primarily a reference for people maintaining the specification or implementing engines, rather than an introduction for someone beginning to write workflows."
+  },
+  {
+   "heading": "Public health's route from virtual machines to workflows",
+   "body": "Joel describes five aims for public health bioinformatics: standardisation, reproducibility, portability, scalability and ease of use. When he started in public health, BioNumerics through PulseNet provided standardised analysis at state level, but work on other pathogens or alternative enteric pipelines often depended on custom scripts and local computing resources.\n\nLyve-SET illustrates the installation problem. To help other laboratories use it, the Colorado team created a Google Cloud virtual machine, had Lee install Lyve-SET, and distributed an image. This reduced repeated installation work but still required command-line expertise and did not fully solve scalability or usability.\n\nJoel credits the StaphB Docker repository with making containerised tools available for workflow managers to connect. Removing system-administration work meant more time for scientific questions."
+  },
+  {
+   "heading": "Versioning and the StaphB community",
+   "body": "Lee accepts that Lyve-SET was difficult to install, then recalls jokes about producing version two. The exchange becomes a discussion of quality management: even small fixes need identifiable versions, and patch numbers can accumulate as bugs are found. Lee compares the experience with repeatedly labelling a manuscript final.\n\nJoel also revisits StaphB's origins. State-level public health bioinformaticians were asking similar questions through a shared contact without necessarily knowing one another. They were encouraged to talk directly. Joel recalls virtual conversations followed by an in-person gathering at an APHL meeting in 2017, helping connect people facing similar state laboratory challenges."
+  },
+  {
+   "heading": "Why Danny's viral group adopted WDL",
+   "body": "Danny distinguishes his infectious disease work at the Broad Institute from the separate groups developing WDL and Terra. His priority was giving collaborators computational capabilities equivalent to those available within his own group, not choosing a tool because it came from the same institution.\n\nHis group had worked with DNAnexus since around 2014 to expand computing access for partners in West Africa. Initially, deploying pipelines required its proprietary workflow language and substantial hands-on help. Around 2016–2017, DNAnexus's adoption of WDL changed his assessment: there was now evidence that the language could run beyond a single organisation's platform. WDL became the primary route for deploying their viral pipelines on DNAnexus, later Terra, and also from the command line."
+  },
+  {
+   "heading": "Portability through limits and practical partnerships",
+   "body": "Danny explains that WDL gives developers less freedom than a system such as Snakemake, which allows Python in input rules. Those restrictions can support portability: a workflow should not depend on a particular shared directory or file path. Implementations can then manage files differently on a laptop or in cloud storage. His group used validators and automated tests on GitHub to check compatibility across implementations, occasionally finding edge cases.\n\nFor Joel, the choice was driven by the environment available to support public health, especially Terra, and by collaborators. He describes work with the Massachusetts Department of Health, Danny and the Broad Institute. Their interactions during summer 2019 through summer 2020 helped show how these approaches could be applied in public health laboratories."
+  }
+ ],
+ "highlights": [
+  {
+   "time": "00:02:36",
+   "topic": "Introducing WDL and its pronunciation"
+  },
+  {
+   "time": "00:03:29",
+   "topic": "How WDL connects containerised tools into computational pipelines"
+  },
+  {
+   "time": "00:04:43",
+   "topic": "Testing portability with a hypothetical human read-mapping workflow"
+  },
+  {
+   "time": "00:06:05",
+   "topic": "Separating the WDL specification from execution engines"
+  },
+  {
+   "time": "00:07:31",
+   "topic": "Organisations participating in the WDL consortium"
+  },
+  {
+   "time": "00:10:20",
+   "topic": "Public health's need for standardised, reproducible and usable pipelines"
+  },
+  {
+   "time": "00:15:07",
+   "topic": "Lyve-SET version numbers and quality-management requirements"
+  },
+  {
+   "time": "00:16:22",
+   "topic": "StaphB's origins in connecting state public health bioinformaticians"
+  },
+  {
+   "time": "00:18:13",
+   "topic": "Danny's route to WDL for portable viral analysis pipelines"
+  },
+  {
+   "time": "00:21:34",
+   "topic": "Parser implementations and automated compatibility testing"
+  },
+  {
+   "time": "00:22:52",
+   "topic": "Why restrictions on workflow developers can improve portability"
+  },
+  {
+   "time": "00:24:09",
+   "topic": "Joel's choice of WDL through Terra and public health partnerships"
+  }
+ ],
+ "quotes": [
+  {
+   "text": "But the problem it's trying to solve is inherently one of portability.",
+   "time": "00:09:09",
+   "speaker": "Danny"
+  },
+  {
+   "text": "I'll just say, I'm going to say you're right. It's hard to install.",
+   "time": "00:14:08",
+   "speaker": "Lee Katz"
+  }
+ ],
+ "tools": [
+  "WDL",
+  "Common Workflow Language (CWL)",
+  "Nextflow",
+  "Snakemake",
+  "Docker",
+  "Cromwell",
+  "Terra",
+  "DNAnexus",
+  "Lyve-SET",
+  "StaphB Docker repository",
+  "BioNumerics",
+  "Google Cloud",
+  "GitHub",
+  "BioPerl"
+ ],
+ "topics": [
+  "workflow languages",
+  "microbial bioinformatics",
+  "public health",
+  "pipeline portability",
+  "containerisation",
+  "reproducibility",
+  "cloud computing",
+  "quality management",
+  "viral genomics"
+ ],
+ "faq": [
+  {
+   "q": "What does WDL do in a bioinformatics pipeline?",
+   "a": "WDL describes how computational tasks fit together, including how files pass between tools and where conditional or branching steps occur. Danny presents it as a way to connect already-containerised tools into portable workflows."
+  },
+  {
+   "q": "How does WDL differ from Nextflow and Snakemake?",
+   "a": "The episode emphasises that WDL is a language specification separate from its execution engines, whereas Nextflow and Snakemake tie their languages more closely to their implementations. Danny also describes WDL as more restrictive for developers, with those restrictions helping workflows run across environments."
+  },
+  {
+   "q": "Can the same WDL workflow run locally and in the cloud?",
+   "a": "That is the portability goal discussed in the episode, but it is conditional. The destination needs a suitable implementation, support for the containers, and enough memory, CPU and disk resources for the workflow."
+  },
+  {
+   "q": "Why are containers and workflow managers useful to public health laboratories?",
+   "a": "Joel says they help make analysis standardised, reproducible, portable, scalable and easier to use. The Lyve-SET example shows how packaging software can reduce repeated installation work and the system-administration burden on laboratories."
+  },
+  {
+   "q": "Why did the guests choose WDL?",
+   "a": "Danny points to DNAnexus adopting WDL as evidence that his group's viral pipelines could move between platforms. Joel emphasises Terra's suitability for supporting public health and the influence of collaborations with Danny and the Broad Institute."
+  }
+ ]
+}

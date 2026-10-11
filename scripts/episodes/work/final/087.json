@@ -1,0 +1,159 @@
+{
+ "episode": "087",
+ "headline": "Nextstrain, SARS-CoV-2 and the challenge of 10 million genomes",
+ "description": "Emma Hodcroft and Leonardo de Oliveira Martins discuss Nextstrain, SARS-CoV-2 downsampling, data quality and the CoVariants website.",
+ "summary": "Emma Hodcroft and Leonardo de Oliveira Martins discuss how SARS-CoV-2 pushed phylogenetic workflows from small, manually managed datasets to millions of sequences. The conversation covers Nextstrain’s daily builds, downsampling and metadata checks, alongside the development of CoVariants. They explain why both the choice of sequences and the way results are displayed matter for researchers and the wider public.",
+ "people": [
+  {
+   "name": "Emma Hodcroft",
+   "role": "guest",
+   "affiliation": "ISPM, University of Bern; Swiss Institute of Bioinformatics (SIB)"
+  },
+  {
+   "name": "Leonardo de Oliveira Martins",
+   "role": "guest",
+   "affiliation": "Quadram Institute"
+  },
+  {
+   "name": "Nabil-Fareed Alikhan",
+   "role": "host",
+   "affiliation": "Quadram Institute, Norwich, UK"
+  },
+  {
+   "name": "Lee Katz",
+   "role": "host",
+   "affiliation": "Centers for Disease Control and Prevention; University of Georgia (adjunct member)"
+  },
+  {
+   "name": "Andrew Page",
+   "role": "host",
+   "affiliation": "Quadram Institute, Norwich, UK"
+  },
+  {
+   "name": "Moira Zuber",
+   "role": "mentioned",
+   "affiliation": ""
+  },
+  {
+   "name": "Eli Harkins",
+   "role": "mentioned",
+   "affiliation": ""
+  }
+ ],
+ "sections": [
+  {
+   "heading": "Adapting Nextstrain to SARS-CoV-2",
+   "body": "Emma explains that Nextstrain’s pre-pandemic development as a modular, flexible pipeline made the initial adaptation to SARS-CoV-2 relatively straightforward. Bioinformatic questions such as choosing a reference sequence and setting or inferring a mutation rate still had to be sorted out, but running the pipeline was not the main obstacle.\n\nA more immediate change concerned presentation. Rather than displaying very small branch-length values, the team showed the number of mutations separating sequences. Emma says that most sequences still had fewer than 100 changes across a roughly 30,000-base genome at the time of recording. Mutation counts offered a more understandable scale for visitors without a phylogenetics background."
+  },
+  {
+   "heading": "Explaining trees to a much wider audience",
+   "body": "Nextstrain attracted scientists and members of the public who were unfamiliar with phylogenetic trees. Emma describes the danger of reading a colourful tree as a definite account of someone travelling between countries and introducing the virus. Such stories could have real-world consequences, especially if a sequence was misplaced.\n\nThe team initially previewed every build before publication and paid greater attention to accompanying interpretation. They also produced situation reports using Nextstrain narratives: text alongside an interactive tree that changes as the reader scrolls. These explained how to read a phylogeny and were being translated into more than 20 languages during their early-pandemic peak."
+  },
+  {
+   "heading": "From copying FASTA files to automated daily builds",
+   "body": "Early analyses were strikingly manual: sequences were copied into FASTA files, and team members ran the pipeline on laptops as new data arrived. As datasets grew, work moved to compute clusters. Research assistants Moira Zuber and Eli Harkins helped check and standardise dates, sequence names and geographical labels, with work continuing seven days a week during the first few months.\n\nBy this episode, the discussion puts GISAID at around 10 million sequences. Nextstrain restricts its global and continental trees to about 5,000 sequences each. Emma says browser visualisation can be pushed towards 8,000–10,000 tips, but responsiveness deteriorates; displaying millions would also be difficult to interpret.\n\nData cleaning, daily runs and publication eventually became automated, creating a need for automated quality control rather than relying on someone inspecting every tree. Even compressed file downloads and repeated reading and writing became substantial bottlenecks. Emma notes that limited internet access makes these problems especially difficult for some laboratories."
+  },
+  {
+   "heading": "Choosing relevant sequences rather than simply fewer",
+   "body": "The earliest Nextstrain downsampling aimed for an even spread across geography and time, reducing the imbalance between countries that sequenced heavily and those that sequenced little. Regional builds preferentially included sequences from the focal continent, with a smaller background sample from elsewhere.\n\nEmma describes adding a proximity function to find sequences similar to a focal set, such as North American samples or a suspected outbreak. This makes the background more relevant than a random worldwide sample. Within Nextstrain Augur, proximity calculates similarity to the focal sequences, while the priority function turns that information into values used for sampling. Both can be used in other pipelines, and the code is open source.\n\nLeonardo describes another objective: selecting fewer leaves from an existing tree while preserving its phylogenetic diversity. For local investigations, he discusses Uvaia, developed at the Quadram, which scans a database for sequences closest to a query and returns matches with statistics."
+  },
+  {
+   "heading": "Sampling bias and unreliable metadata",
+   "body": "A large sequence collection is not necessarily a random survey. An outbreak investigation may contribute many closely related genomes, distorting the broader picture. GISAID has a field for sampling type, but Emma says Nextstrain does not currently receive it automatically, and submitters often leave it unfilled. The person uploading sequences may also be far removed from the person who collected the samples.\n\nEarlier in the pandemic, the team sometimes contacted contributors about suspicious clusters of similar dates and locations. That became impractical at scale. Emma considers the issue less influential in heavily downsampled global views, but important for local investigations. Date errors remain another recurring problem, including Omicron sequences labelled January 2021, inconsistent day/month ordering and Excel-altered date fields."
+  },
+  {
+   "heading": "CoVariants and accessible variant information",
+   "body": "CoVariants grew out of Emma’s work on EU1, a variant that circulated widely in Europe during summer 2020. She had made graphs showing its spread and the other variants present in different countries. Alpha’s emergence added urgency to sharing those plots, initially through a GitHub repository and then a full website launched shortly before the end of 2020.\n\nThe site shows the proportions of sequences assigned to different variants by country and over time, and lets visitors compare mutations between variants. A simplified tree showing relationships between variants comes from Nextstrain. One of the hosts describes using the site to help answer family members’ questions.\n\nEmma’s advice for similar projects is to identify the audience and the information they need. A useful website need not expose every detail: simplifying the presentation can make existing scientific information accessible while keeping it accurate."
+  }
+ ],
+ "highlights": [
+  {
+   "time": "00:01:58",
+   "topic": "Adapting Nextstrain’s existing pipeline to SARS-CoV-2 and changing how trees were presented"
+  },
+  {
+   "time": "00:06:59",
+   "topic": "Moving from manually collected sequences to automated, downsampled daily analyses"
+  },
+  {
+   "time": "00:12:15",
+   "topic": "Sampling across geography and time, then choosing relevant background sequences"
+  },
+  {
+   "time": "00:15:09",
+   "topic": "How the proximity and priority functions work within Nextstrain Augur"
+  },
+  {
+   "time": "00:16:08",
+   "topic": "Leonardo’s approaches to preserving phylogenetic diversity and finding close matches with Uvaia"
+  },
+  {
+   "time": "00:18:10",
+   "topic": "Distinguishing surveillance samples from outbreak investigations when metadata is incomplete"
+  },
+  {
+   "time": "00:20:31",
+   "topic": "Date mix-ups, Excel problems and Omicron sequences assigned to the wrong year"
+  },
+  {
+   "time": "00:21:39",
+   "topic": "The origins of CoVariants and its country-level variant and mutation displays"
+  },
+  {
+   "time": "00:24:56",
+   "topic": "A simplified tree showing how SARS-CoV-2 variants are related"
+  },
+  {
+   "time": "00:25:55",
+   "topic": "Designing scientific websites around their audience rather than including every detail"
+  }
+ ],
+ "quotes": [
+  {
+   "text": "Nextstrain is now flexible enough that if you have a virus you want to run it on, the pipeline essentially will usually work just fine.",
+   "time": "00:01:58",
+   "speaker": "Emma Hodcroft"
+  }
+ ],
+ "tools": [
+  "Nextstrain",
+  "Nextstrain narratives",
+  "Nextstrain Augur",
+  "Nextstrain proximity function",
+  "Nextstrain priority function",
+  "GISAID",
+  "Uvaia",
+  "CoVariants",
+  "GitHub",
+  "Excel"
+ ],
+ "topics": [
+  "sars-cov-2",
+  "phylogenetics",
+  "genomic surveillance",
+  "downsampling",
+  "sampling bias",
+  "metadata quality",
+  "workflow automation",
+  "variant tracking",
+  "science communication"
+ ],
+ "faq": [
+  {
+   "q": "Why did Nextstrain limit its SARS-CoV-2 trees to about 5,000 sequences?",
+   "a": "Emma describes this as a balance between analysis speed, browser performance and interpretability. Trees with 8,000–10,000 tips could become sluggish, while a tree containing millions of sequences would be difficult to understand even if it could be displayed."
+  },
+  {
+   "q": "How does Nextstrain select background sequences for a local outbreak?",
+   "a": "The proximity function finds sequences similar to a focal set, such as samples from a suspected outbreak. The priority function converts those results into sampling priorities so that relevant background sequences can be preferentially included."
+  },
+  {
+   "q": "Can outbreak sampling bias a SARS-CoV-2 phylogenetic analysis?",
+   "a": "Yes: an outbreak investigation can contribute many closely related genomes rather than a representative surveillance sample. Emma says sampling-type metadata is often missing, so detailed local investigations may require checking with the data contributors."
+  },
+  {
+   "q": "What information does CoVariants provide?",
+   "a": "CoVariants shows the proportions of sequenced SARS-CoV-2 samples belonging to different variants across countries and over time. It also provides mutation comparisons and a simplified Nextstrain tree showing relationships between variants."
+  }
+ ]
+}

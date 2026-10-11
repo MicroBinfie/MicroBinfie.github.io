@@ -1,0 +1,145 @@
+{
+ "episode": "133",
+ "headline": "Klebsiella typing and Nanopore AMR detection in public health",
+ "description": "Erin Young discusses bacterial species typing in Utah public health and testing Nanopore reads for antimicrobial resistance gene detection.",
+ "summary": "Andrew Page interviews Dr. Erin Young of the Utah Public Health Laboratory at the 10th Microbial Bioinformatics Hackathon in Bethesda, Maryland. They discuss her move from cancer research into public health, the practical difficulties of identifying closely related Klebsiella species, and tools for comparing bacterial genomes. Erin also describes research into detecting antimicrobial resistance genes directly from Nanopore reads, including the unresolved question of how much coverage is enough.",
+ "people": [
+  {
+   "name": "Andrew Page",
+   "role": "host",
+   "affiliation": "Theiagen, Cambridge, UK"
+  },
+  {
+   "name": "Erin Young",
+   "role": "guest",
+   "affiliation": "Utah Public Health Laboratory"
+  },
+  {
+   "name": "Lee Katz",
+   "role": "host",
+   "affiliation": "Centers for Disease Control and Prevention"
+  }
+ ],
+ "sections": [
+  {
+   "heading": "From cancer research to public health",
+   "body": "Erin Young began learning bioinformatics while researching inherited predisposition to cancer. Her laboratory shared a bioinformatician with another group, and she did not want to wait for her analyses. Her PhD concerned hereditary breast and ovarian cancer; a short postdoctoral position extended that interest to different diseases and a paediatric cancer cohort.\n\nDuring her postdoc at the University of Utah, she decided academia was not the right fit and looked for another setting where she could apply her skills to interesting work. A CDC and APHL bioinformatics fellowship provided the route into public health. She has worked at the Utah Public Health Laboratory since 2018."
+  },
+  {
+   "heading": "Bacterial genomes and outbreak analysis",
+   "body": "Erin’s main responsibility is bacterial sequence analysis. Her current focus includes antimicrobial-resistant organisms and completing their genomes as far as possible, with the aim of supporting robust outbreak studies. She describes a broad public health workload, with more questions to investigate than she has time to pursue.\n\nAndrew asks whether Utah encounters C. auris or other particular challenges. Erin confirms that C. auris and COVID are both present in Utah, but stresses that she is not the bioinformatician responsible for either. Her answers therefore centre on the bacterial work she handles directly."
+  },
+  {
+   "heading": "Why Klebsiella species labels matter",
+   "body": "Klebsiella subtyping takes more of Erin’s time than she thinks anyone intended. The difficulty she describes is distinguishing closely related Klebsiella species and related organisms, rather than identifying one particularly prevalent sequence type.\n\nThat distinction matters beyond the analysis itself. Erin explains that once an organism name enters an epidemiological report, changing it can be difficult. Subsequent analyses linking organisms in an outbreak are then expected to use the original species designation. The conversation highlights a practical tension: improving a species assignment does not necessarily mean that the corresponding reporting process can readily accommodate the change."
+  },
+  {
+   "heading": "MASH, FastANI and skani",
+   "body": "For species identification, Erin uses MASH with a reference built from representative genomes. She rebuilds that reference when the underlying genome resource is updated. Keeping the reference current can help identification, but it also creates a choice between being comprehensive and keeping results consistent over time.\n\nAndrew asks about sketch size, saying he tends to choose either 1,000 or 10,000 without a firm basis. Erin says the default size works for her; she does not present a comparison establishing an optimum. Her laboratory also uses FastANI with representative genomes and skani, which she explicitly spells out. She describes skani as faster, although she finds its inputs more cumbersome than those of the other tools."
+  },
+  {
+   "heading": "Testing AMR detection directly from Nanopore reads",
+   "body": "Erin previews a poster for ASM NGS about the effect of Nanopore read errors on antimicrobial resistance gene detection. Rather than comparing assemblies or a range of assembly-based methods, she asks whether the raw reads themselves can identify AMR genes accurately. The rationale is that a long read can contain an entire resistance gene.\n\nHer workflow converts FASTQ reads to FASTA, runs them through NCBI’s AMRFinderPlus, and compares the Nanopore results with corresponding Illumina assemblies. Andrew sees potential relevance to directly sequenced metagenomic samples, where long reads might reveal useful resistance information. That is an application he raises in discussion, rather than a validation study Erin reports."
+  },
+  {
+   "heading": "Read errors and the unanswered coverage question",
+   "body": "Erin remains cautious about Nanopore accuracy. SNPs are still present, but she explains that errors at different positions across reads can be overcome when enough reads support a result. Andrew distinguishes detecting a whole gene from identifying a particular point mutation, which he expects to be harder.\n\nHow many reads are enough remains unanswered. When Andrew asks whether she has examined coverage or established a threshold, Erin says that will require a later poster. Andrew mentions 10× and 20× as examples of numbers people choose, and recalls a 20× minimum used for ARTIC during COVID work. He explicitly notes that these involve different protocols. None of those numbers is presented as a validated threshold for Erin’s Nanopore AMR workflow."
+  }
+ ],
+ "highlights": [
+  {
+   "time": "00:00:48",
+   "topic": "Andrew introduces the interview with Erin Young at the Bethesda hackathon."
+  },
+  {
+   "time": "00:01:11",
+   "topic": "Erin explains why waiting for shared bioinformatics support prompted her to learn the subject."
+  },
+  {
+   "time": "00:02:17",
+   "topic": "A CDC and APHL fellowship provides a route from cancer research into public health."
+  },
+  {
+   "time": "00:03:42",
+   "topic": "Erin describes laboratory priorities, including AMR organisms and complete genomes for outbreak analysis."
+  },
+  {
+   "time": "00:05:29",
+   "topic": "Klebsiella subtyping reveals difficulties with closely related species and fixed reporting labels."
+  },
+  {
+   "time": "00:07:12",
+   "topic": "MASH reference updates create a trade-off between comprehensive and consistent species identification."
+  },
+  {
+   "time": "00:07:59",
+   "topic": "Erin discusses MASH defaults, FastANI and skani."
+  },
+  {
+   "time": "00:08:38",
+   "topic": "An ASM NGS poster investigates AMR gene detection directly from Nanopore reads."
+  },
+  {
+   "time": "00:10:24",
+   "topic": "The workflow converts FASTQ to FASTA, runs AMRFinderPlus and compares against Illumina assemblies."
+  },
+  {
+   "time": "00:11:23",
+   "topic": "Erin explains how differing SNP positions across reads affect confidence in AMR calls."
+  },
+  {
+   "time": "00:11:39",
+   "topic": "A minimum coverage threshold remains a question for future work."
+  }
+ ],
+ "quotes": [
+  {
+   "text": "So if you have enough reads, then the noise cancels out.",
+   "time": "00:11:23",
+   "speaker": "Erin Young"
+  },
+  {
+   "text": "Alas, that will have to be a later poster.",
+   "time": "00:11:39",
+   "speaker": "Erin Young"
+  }
+ ],
+ "tools": [
+  "MASH",
+  "FastANI",
+  "skani",
+  "Nanopore",
+  "Illumina",
+  "NCBI AMRFinderPlus",
+  "ARTIC"
+ ],
+ "topics": [
+  "public health bioinformatics",
+  "antimicrobial resistance",
+  "klebsiella",
+  "bacterial species identification",
+  "outbreak analysis",
+  "nanopore sequencing",
+  "long reads",
+  "sequencing coverage",
+  "bioinformatics careers"
+ ],
+ "faq": [
+  {
+   "q": "How did Erin Young move from cancer research into public health bioinformatics?",
+   "a": "After research on hereditary breast and ovarian cancer and a postdoc involving paediatric cancers, Erin sought work outside academia. A CDC and APHL bioinformatics fellowship helped her transition to the Utah Public Health Laboratory."
+  },
+  {
+   "q": "Which tools does Erin use for bacterial species identification?",
+   "a": "She names MASH, FastANI and skani. She updates her MASH reference using representative genomes and says the default sketch size works for her."
+  },
+  {
+   "q": "Can AMR genes be detected directly from Nanopore reads?",
+   "a": "Erin describes testing this by converting FASTQ reads to FASTA, analysing them with NCBI’s AMRFinderPlus and comparing the results with corresponding Illumina assemblies. She sees promise when enough reads support a call, but remains cautious about read errors."
+  },
+  {
+   "q": "What Nanopore coverage is needed for reliable AMR gene detection?",
+   "a": "The episode does not establish a threshold: Erin says coverage analysis is work for a later poster. Andrew’s references to 10×, 20× and COVID sequencing protocols are not recommendations validated for her workflow."
+  }
+ ]
+}

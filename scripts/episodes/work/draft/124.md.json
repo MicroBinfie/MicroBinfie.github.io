@@ -1,0 +1,128 @@
+{
+  "episode": "124",
+  "headline": "Kostas Konstantinidis on ANI, species boundaries and SeqCode",
+  "description": "Kostas Konstantinidis discusses ANI thresholds, Shigella and Salmonella taxonomy, and SeqCode’s role in naming uncultivated microbes.",
+  "summary": "Kostas Konstantinidis joins Lee Katz and Andrew Page to discuss the origins of ANI and its use in defining microbial species. They examine gaps in genomic diversity, disagreements between clinical names and genomic classifications, and SeqCode’s approach to naming uncultivated microbes. The discussion explains why useful species boundaries need biological context rather than one universal numerical threshold.",
+  "people": [
+    {
+      "name": "Kostas Konstantinidis",
+      "role": "guest",
+      "affiliation": "Georgia Tech"
+    },
+    {
+      "name": "Lee Katz",
+      "role": "host",
+      "affiliation": "Centers for Disease Control and Prevention, Atlanta, United States"
+    },
+    {
+      "name": "Andrew Page",
+      "role": "host",
+      "affiliation": "Theagen, Cambridge, UK"
+    }
+  ],
+  "sections": [
+    {
+      "heading": "From soil microbiology to metagenomics",
+      "body": "Kostas Konstantinidis describes studying agricultural sciences and plant protection in Greece before a fellowship enabled him to pursue graduate study in the United States. He wanted to investigate soil microbiology, which seemed much less understood than the plants growing in it. He began his PhD at Michigan State in 2000, during the early development of comparative microbial genomics.\n\nHis project involved sizing bacterial genomes using pulsed-field gel electrophoresis, but separating large chromosomes proved difficult. A summer internship introduced him to sequencing analysis. Later, wanting to understand soil isolates within their wider microbial communities, he moved into metagenomics during a postdoc at MIT, initially studying the deep sea."
+    },
+    {
+      "heading": "Why ANI was developed",
+      "body": "ANI emerged from a practical problem: distinguishing closely related strains in the laboratory. Kostas explains that 16S identity did not resolve those strains well enough. Working with a visiting postdoc experienced in DNA–DNA hybridisation, he explored which genome-derived measurements best matched that established comparison method.\n\nThe candidates included GC content, gene content and ANI. In those comparisons, ANI was the best predictor of DNA–DNA hybridisation results. Kostas presents its development as an attempt to connect genome comparisons with an existing taxonomic method, rather than simply selecting a convenient numerical cut-off. His later work extended the question from laboratory isolates to patterns of diversity in natural communities."
+    },
+    {
+      "heading": "Species boundaries are not one fixed number",
+      "body": "Kostas describes a low-frequency region around 85–95% ANI when genomes from resources such as NCBI and EBI are compared with one another. His group also observed gaps in natural populations using metagenomics. He therefore regards 95% ANI as a useful species proxy, but not a rule that fits every organism: boundaries may instead occur around 92% or 98%. He identifies SAR11 as an example with greater diversity within species.\n\nHe also previews papers forthcoming at the time of recording, including work in Nature Communications, on gaps within species that could help define subspecies and strains. Lee contributes a Salmonella example: he recalls a species boundary around 92% ANI in his laboratory’s work, while explicitly noting uncertainty about the exact threshold. Within Salmonella enterica, the laboratory also sees distinct groupings at different thresholds. Kostas’s recommendation is to examine the diversity of the organisms being studied."
+    },
+    {
+      "heading": "Clinical names and genomic classifications",
+      "body": "Andrew raises discrepancies between species labels in NCBI and genomic classifications in GTDB. Examples include Shigella versus E. coli, and Mycobacterium tuberculosis versus Mycobacterium bovis, which he describes as 99% identical. The question is whether historically defined species should be renamed when genomic evidence places them very close together.\n\nKostas supports recognising those relationships while preserving phenotypic distinctions that matter clinically, potentially through subspecies-level labels. Lee stresses the tension between genomic similarity and distinct clinical outcomes. Andrew encounters this directly when using GTDB to build databases: public health customers still want familiar Shigella names.\n\nRecalling an ASM clinical session, Kostas argues that clinical microbiologists, taxonomists and microbial ecologists need more communication. He sees common ground, but says separate naming practices and limited discussion make agreement harder."
+    },
+    {
+      "heading": "SeqCode and names for uncultivated microbes",
+      "body": "The final discussion concerns SeqCode and the limits of naming under the ICNP. Kostas explains that an uncultivated organism may receive a Candidatus name without that name having priority: someone who later cultures it can propose a different name. Under the traditional route he describes, establishing a name requires a culture deposited in two culture collections, which excludes organisms that cannot be cultivated.\n\nSeqCode instead allows a genome sequence to serve as type material. Kostas says the ICNP rejected the proposal to accept sequence-based types, prompting the separate system. Researchers can now use SeqCode to give stable names to uncultivated taxa when they have a high-quality genome.\n\nHe considers this approach capable of scaling with efforts to describe environmental diversity. However, he also regards two competing nomenclatural systems as undesirable and hopes for a unified system through further discussion."
+    }
+  ],
+  "highlights": [
+    {
+      "time": "00:01:37",
+      "topic": "Kostas’s education in Greece and route into soil microbiology and genomics"
+    },
+    {
+      "time": "00:07:16",
+      "topic": "ANI gaps, the 95% species proxy and variation between organisms"
+    },
+    {
+      "time": "00:09:32",
+      "topic": "NCBI, GTDB and disagreements over historically defined species"
+    },
+    {
+      "time": "00:10:45",
+      "topic": "Preserving clinically useful distinctions when revising Shigella names"
+    },
+    {
+      "time": "00:12:46",
+      "topic": "Lee’s Salmonella example and distinct groupings within Salmonella enterica"
+    },
+    {
+      "time": "00:13:57",
+      "topic": "Using natural diversity rather than one ANI threshold for every organism"
+    },
+    {
+      "time": "00:17:04",
+      "topic": "Public health customers’ expectations when databases use GTDB taxonomy"
+    },
+    {
+      "time": "00:17:36",
+      "topic": "Communication between clinical microbiology, taxonomy and ecology"
+    },
+    {
+      "time": "00:18:28",
+      "topic": "Introducing SeqCode and the question of naming new taxa"
+    }
+  ],
+  "quotes": [
+    {
+      "text": "I am convinced by now that in nature they form these clusters that we can actually recognize with the genomic tools.",
+      "time": "00:13:57",
+      "speaker": "Kostas Konstantinidis"
+    }
+  ],
+  "tools": [
+    "ANI",
+    "DNA–DNA hybridisation",
+    "Pulsed-field gel electrophoresis (PFGE)",
+    "16S identity",
+    "NCBI",
+    "EBI",
+    "GTDB"
+  ],
+  "topics": [
+    "ani",
+    "microbial species",
+    "metagenomics",
+    "microbial taxonomy",
+    "clinical nomenclature",
+    "shigella",
+    "salmonella",
+    "seqcode",
+    "uncultivated microbes"
+  ],
+  "faq": [
+    {
+      "q": "Does 95% ANI define every microbial species?",
+      "a": "No. Kostas describes it as a useful proxy supported by gaps in genomic diversity, but says some organisms show boundaries around 92% or 98% instead."
+    },
+    {
+      "q": "How was ANI originally evaluated?",
+      "a": "Kostas and collaborators compared genome-derived measurements with DNA–DNA hybridisation results. Among the measurements they tested, including GC content and gene content, ANI correlated best."
+    },
+    {
+      "q": "Why can GTDB names cause problems in public health databases?",
+      "a": "Andrew describes customers expecting familiar clinical names such as Shigella rather than alternative genomic classifications. The discussion distinguishes genomic relationships from phenotypic labels used in clinical practice."
+    },
+    {
+      "q": "How does SeqCode help name uncultivated microbes?",
+      "a": "As Kostas explains it, SeqCode allows a high-quality genome sequence to serve as type material rather than requiring a deposited culture. This provides a route to stable names for uncultivated taxa."
+    }
+  ]
+}

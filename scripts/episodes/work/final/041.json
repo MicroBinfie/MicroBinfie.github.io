@@ -1,0 +1,157 @@
+{
+ "episode": "041",
+ "headline": "SARS-CoV-2 phylogenomics: lineages, outbreaks and variant calls",
+ "description": "A January 2021 panel on SARS-CoV-2 outbreak detection, Pangolin lineages, Civet and Llama, contextual genomes and variant-call quality.",
+ "summary": "Nick Loman, Verity Hill, Andrew Page and Anna Price take part in a SARS-CoV-2 phylogenomics Q&A from the ARTICnetwork and CLIMB-BIG-DATA workshop held on 14–15 January 2021. The discussion covers outbreak detection, lineage assignment, selecting contextual genomes and interpreting variation. It explains why the resolution of a phylogenetic analysis, the quality of its input sequences and the epidemiological context all matter.",
+ "people": [
+  {
+   "name": "Nick Loman",
+   "role": "panellist",
+   "affiliation": "University of Birmingham"
+  },
+  {
+   "name": "Verity Hill",
+   "role": "panellist",
+   "affiliation": "University of Edinburgh"
+  },
+  {
+   "name": "Andrew Page",
+   "role": "panellist",
+   "affiliation": "Quadram Institute"
+  },
+  {
+   "name": "Anna Price",
+   "role": "panellist",
+   "affiliation": "MRC CLIMB and Cardiff University"
+  }
+ ],
+ "sections": [
+  {
+   "heading": "Detecting outbreaks with Polecat",
+   "body": "Polecat is presented as a systematic way to flag genomic clusters that might otherwise escape notice. Rather than relying only on someone spotting an unusual part of a tree, it summarises the tree into small groups and reports statistics about them. Features of interest include a long branch followed by many sequences, rapid growth, or more sequences than expected within a particular place and time.\n\nVerity explains that the tool was developed largely in response to requests from Public Health England. Its purpose was not originally limited to finding variants of concern: it could also help distinguish outbreaks where high case numbers made epidemiological connections difficult to see. Polecat was available on GitHub, although she could not confirm how well it would work on other datasets."
+  },
+  {
+   "heading": "Phylotypes, lineages and manual curation",
+   "body": "COG-UK phylotypes and Pangolin lineages answer questions at different resolutions. Verity describes phylotypes as a textual codification of the tree based on shared SNP sites. Two sequences with the same phylotype are much more closely connected than two sequences sharing a Pangolin lineage, which can sometimes be very large. Phylotypes therefore support finer-scale questions, including hospital outbreak investigations, while lineages are useful for broader national and international comparisons.\n\nThe sequence-to-lineage dataset used to train pangoLEARN requires substantial manual curation. The team divides a large tree into smaller trees that can be inspected comfortably in FigTree, compares previous assignments with the updated tree, adds sequences to existing lineages and assigns new lineage numbers where needed. At the time, this larger curation exercise took roughly a week and happened every couple of months. Researchers could also propose epidemiologically or biologically interesting groups for lineage assignment, and volunteers were invited to help inspect trees."
+  },
+  {
+   "heading": "Civet, Llama and finding contextual genomes",
+   "body": "Llama was developed for global use and broader lineage-level investigations, while Civet initially targeted UK cluster investigations. They share substantial code, but Civet includes spatial analysis and mapping features that depend on carefully curated metadata. The tools were becoming more similar as work progressed towards making Civet usable outside the UK.\n\nFor finding relatives of a query genome, the panel advises against relying on BLAST. SARS-CoV-2 genomes can differ by very few mutations, and the speakers argue that BLAST does not provide the resolution needed here. Searching the public NCBI database would also miss many genomes not held in GenBank.\n\nThe alternative described is to locate the relevant region of an existing reference tree, extract contextual sequences and rebuild a smaller tree with new queries. This avoids rebuilding a tree of perhaps 400,000 sequences whenever another genome is added. Even then, a broad lineage such as B.1 may say little about a genome's closest relatives. The discussion of B.1.1.7 stresses that distinguishing importation from local transmission also requires epidemiology."
+  },
+  {
+   "heading": "Choosing subtrees and adapting to other viruses",
+   "body": "Civet's subtree selection can be adjusted through its configuration file or command line. Verity recalls defaults of two nodes above and two nodes below a sequence of interest, alongside a radius setting. Increasing these distances can supply missing context; reducing them can prevent an investigation from pulling in overwhelming numbers of sequences.\n\nThis matters because densely sampled UK data can contain polytomies involving hundreds or thousands of sequences, which are difficult to display. The panel cautions against transferring settings directly to HIV or another virus. HIV's faster evolution changes how separation between subtrees should be interpreted, while infections involving multiple variants or strains may not be represented adequately by a simple tree. A setting useful for excluding SARS-CoV-2 transmission need not support the same conclusion for HIV."
+  },
+  {
+   "heading": "Sharing vaccine sequences",
+   "body": "A question asks whether sequences for mRNA and adenoviral-vector vaccines are available. One panellist recalls seeing a sequence for an mRNA vaccine, including notation for modified RNA bases, but does not think the sequences of all vaccines are available.\n\nThe response favours sharing these sequences and argues that they may become known through laboratory sequencing or incidental detection anyway. This is a discussion of availability and openness as understood in January 2021, rather than a catalogue of vaccine sequences."
+  },
+  {
+   "heading": "Variation databases and the limits of quality checks",
+   "body": "The panel compares CoV-GLUE, Nextstrain and the Nextstrain Clades sequence-analysis site. CoV-GLUE is described as a catalogue of mutations, insertions and deletions, useful for investigating their frequency. Nextstrain places changes on a phylogenetic tree through ancestral state reconstruction, helping users examine lineage-defining or recurrent mutations such as N501Y and E484K. These are complementary views, not interchangeable outputs; gene naming and filtering can differ between tools.\n\nVariant-call quality ultimately depends on the consensus genomes supplied. A base in a FASTA file does not reveal whether the underlying reads adequately support it. Curation and automated checks can flag suspicious sequences, but their results need interpretation: private variants might indicate poor data, or genuinely reflect sampling from an underrepresented region. The panel also notes CoV-GLUE checks against ARTIC amplicon regions that can highlight potentially problematic SNP positions. Database reports and quality flags cannot remove the need to consider the input data."
+  }
+ ],
+ "highlights": [
+  {
+   "time": "00:00:16",
+   "topic": "Introducing Polecat for investigating genomically defined clusters"
+  },
+  {
+   "time": "00:03:54",
+   "topic": "COG-UK phylotypes versus Pangolin lineages"
+  },
+  {
+   "time": "00:06:11",
+   "topic": "How Civet and Llama differ in scope and metadata requirements"
+  },
+  {
+   "time": "00:07:22",
+   "topic": "Finding related international genomes and whether BLAST is suitable"
+  },
+  {
+   "time": "00:10:43",
+   "topic": "Using reference trees rather than rebuilding a tree of 400,000 genomes"
+  },
+  {
+   "time": "00:11:48",
+   "topic": "Manually curating sequence-to-lineage assignments for pangoLEARN"
+  },
+  {
+   "time": "00:14:47",
+   "topic": "Adjusting Civet's node distances and radius to select subtrees"
+  },
+  {
+   "time": "00:16:56",
+   "topic": "Why tools built for SARS-CoV-2 need caution when applied to HIV"
+  },
+  {
+   "time": "00:18:12",
+   "topic": "Availability and sharing of vaccine sequences"
+  },
+  {
+   "time": "00:19:24",
+   "topic": "Comparing CoV-GLUE and Nextstrain variation reports"
+  },
+  {
+   "time": "00:22:55",
+   "topic": "Why variant-call quality depends on consensus genomes and read support"
+  },
+  {
+   "time": "00:23:55",
+   "topic": "Why private variants are not necessarily evidence of poor sequence quality"
+  }
+ ],
+ "quotes": [
+  {
+   "text": "So it depends on the resolution of the question you're asking really.",
+   "time": "00:04:11",
+   "speaker": "Verity Hill"
+  }
+ ],
+ "tools": [
+  "Polecat",
+  "Pangolin",
+  "pangoLEARN",
+  "Civet",
+  "Llama",
+  "BLAST",
+  "GenBank",
+  "FigTree",
+  "Nextstrain",
+  "Nextstrain Clades",
+  "CoV-GLUE"
+ ],
+ "topics": [
+  "sars-cov-2",
+  "phylogenomics",
+  "outbreak detection",
+  "lineage assignment",
+  "phylotypes",
+  "contextual genomes",
+  "variant interpretation",
+  "sequence quality",
+  "vaccine sequences"
+ ],
+ "faq": [
+  {
+   "q": "What is the difference between COG-UK phylotypes and Pangolin lineages?",
+   "a": "Phylotypes describe shared SNP sites at a much finer resolution and are characterised as a textual representation of the tree. Pangolin lineages can contain much larger groups, so sharing a lineage alone does not establish a close epidemiological connection."
+  },
+  {
+   "q": "Can BLAST find the closest SARS-CoV-2 genomes for an outbreak investigation?",
+   "a": "The panel advises against relying on it because the small number of differences between genomes demands finer resolution. They suggest using tools such as Llama to extract relevant parts of a reference tree, and note that a public NCBI search misses genomes outside GenBank."
+  },
+  {
+   "q": "How does Civet decide which sequences belong in a subtree?",
+   "a": "It uses configurable distances above and below the query sequence, together with a radius setting. Verity recalls defaults of two nodes up and two down, but recommends adjusting the settings to obtain useful context without including unmanageable numbers of sequences."
+  },
+  {
+   "q": "How was pangoLEARN's training dataset manually curated?",
+   "a": "The team split a large tree into smaller trees for inspection in FigTree, checked earlier lineage assignments and updated membership or created new lineages. The larger curation exercise was described as roughly a week's work every couple of months."
+  },
+  {
+   "q": "Do variation databases guarantee reliable SARS-CoV-2 variant calls?",
+   "a": "No: their results depend on the quality of the submitted consensus genomes, and a FASTA sequence alone does not establish read support. Quality checks can help, but unusual variants may represent either errors or genuine diversity from underrepresented regions."
+  }
+ ]
+}

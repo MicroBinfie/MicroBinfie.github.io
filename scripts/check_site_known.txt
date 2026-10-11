@@ -1,0 +1,10 @@
+# Problems check_site.py reports but does not fail on: known, pre-existing, and not fixable in
+# code. One substring per line; a reported problem containing it is listed as known instead.
+# Delete a line once the problem is fixed, so a regression is caught again.
+
+# Guest photos referenced by pages/Profiles.md that were never added to assets/images.
+pages/Profiles.html: broken link /assets/images/Henk_DenBakker.jpg
+pages/Profiles.html: broken link /assets/images/Phil_Hugenholtz.jpg
+pages/Profiles.html: broken link /assets/images/Conor_Meehan.jpg
+pages/Profiles.html: broken link /assets/images/Leighton_Pritchard.jpg
+pages/Profiles.html: broken link /assets/images/Iain_Sutcliffe.jpg

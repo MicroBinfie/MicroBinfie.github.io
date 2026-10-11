@@ -1,0 +1,155 @@
+{
+ "episode": "028",
+ "headline": "BRIG: building circular genome comparisons with BLAST",
+ "description": "Nabil-Fareed Alikhan explains BRIG’s circular genome plots, its beer-wager origins, and the design choices behind its lasting use.",
+ "summary": "Lee Katz and Andrew Page talk with fellow host Nabil-Fareed Alikhan about BRIG, the BLAST Ring Image Generator, which he authored. In this 2020 software deep dive, they discuss how BRIG turns sequence comparisons into publication-ready circular figures, why its interface and manual mattered, and how its reference-based design limits what users can see.",
+ "people": [
+  {
+   "name": "Lee Katz",
+   "role": "host",
+   "affiliation": "Centers for Disease Control and Prevention; University of Georgia (adjunct member)"
+  },
+  {
+   "name": "Andrew Page",
+   "role": "host",
+   "affiliation": "Quadram Institute, Norwich, UK"
+  },
+  {
+   "name": "Nabil-Fareed Alikhan",
+   "role": "host",
+   "affiliation": "Quadram Institute, Norwich, UK"
+  },
+  {
+   "name": "Scott Beatson",
+   "role": "mentioned",
+   "affiliation": ""
+  },
+  {
+   "name": "Kat Holt",
+   "role": "mentioned",
+   "affiliation": ""
+  }
+ ],
+ "sections": [
+  {
+   "heading": "What a BRIG figure shows",
+   "body": "BRIG accepts sequences in GenBank, FASTA or multi-FASTA format. Users select a reference genome, compare the other sequences against it with BLAST, and display the results as concentric rings. Annotations, thresholds and other settings can be adjusted. BRIG runs BLAST on the user’s behalf, but does not install it: users must supply a BLAST installation. Nabil says that BLAST+ had only just been released at the time, and BRIG worked with both legacy BLAST and BLAST+.\n\nThe attraction is a simple view of what is conserved relative to one reference. By this discussion, Nabil was seeing substantial use for plasmid comparisons, whereas earlier applications more often involved complete genomes. He also recalls someone asking him to increase the supported scale so that it would work for eukaryotes such as yeast. Lee Katz introduces BRIG as having around a thousand citations."
+  },
+  {
+   "heading": "A jug-of-beer challenge",
+   "body": "BRIG began with a challenge from Nabil’s PhD supervisor, Scott Beatson. Scott was using a Perl script to prepare configuration files for BLAST Atlas and wanted something simpler: a tool that would take BLAST results and draw the picture. The reward for the first working solution was one jug of beer, described as two imperial pints, or about 1.2 litres.\n\nThe basic brief took Nabil a week or two. Requests then accumulated for GenBank input, annotations, BAM coverage and other features, extending development to roughly six to nine months. BRIG was published in August 2011. Its name describes its function—BLAST Ring Image Generator—but also reflects Nabil’s interest in ships and the feeling of being locked in the brig while debugging."
+  },
+  {
+   "heading": "Drawing, feedback and a borrowed colour palette",
+   "body": "The image-rendering package underneath BRIG is CGView, which Nabil had already used in other projects. He stresses that circular comparative figures were not new: alternatives discussed include BLAST Atlas, DNAPlotter and the CGView server. BRIG’s contribution was not inventing the representation, but making it accessible and producing figures people wanted to use.\n\nDevelopment involved repeatedly emailing versions to users and collecting bug reports, ideas and aesthetic feedback, including from colleagues at the University of Queensland. Publication-ready SVG and PNG output was a central requirement. The default palette, containing about 20 colours, came from an unnamed fellow PhD student whose presentation figures Nabil admired. He still recognises that sequence of colours in published BRIG figures."
+  },
+  {
+   "heading": "Java implementation and maintenance regrets",
+   "body": "Nabil wrote BRIG in Java, using Swing for the graphical interface, because Java was the language he knew best from his undergraduate software-engineering training. It is distributed as a Java archive, or JAR. Looking back, he would have used library-management tools such as Maven to make updating and installation easier.\n\nBRIG launches BLAST as a subprocess. Nabil describes the work needed to ensure that terminating the main interface also stopped BLAST, rather than leaving searches consuming resources and slowing users’ laptops.\n\nHis major regret is the lack of unit tests. Although the code is object-oriented and follows design principles, it lacks a strong test suite. That makes substantial changes difficult to attempt without breaking existing behaviour."
+  },
+  {
+   "heading": "Documentation and manageable figures",
+   "body": "BRIG’s documentation is a roughly 50-page manual written in LaTeX and distributed with the software. It begins with finished figures and directs readers to worked examples showing exactly which controls to use and which settings to change. A reference section then explains CGView configuration, BLAST parameters and the interface’s options. Nabil says this structure took considerable effort; users’ praise for the manual was not accidental. He would now favour publishing similar material on Read the Docs.\n\nHe is also proud of the logic that simplifies overlapping BLAST hits before drawing them. Creating a separate SVG object for every hit could produce an unwieldy file. The optimisation keeps figures manageable, and he has seen users produce working images containing around 50 genomes with annotations."
+  },
+  {
+   "heading": "What the reference leaves out",
+   "body": "The same reference-centred design that makes BRIG easy to understand also creates a blind spot. Sequence present in query genomes but absent from the reference will not appear in the figure. Users therefore cannot use that image alone to see all accessory sequence shared or exchanged among their queries. The output is also static, rather than an interactive view for exploring regions in detail.\n\nNabil recalls Kat Holt requesting BED and wiggle file support, which he did not add. Command-line operation was another recurring request. Asked about future development, he says he would favour reimplementing BRIG, imagining an online version with more input types, including GFF. These are retrospective wishes and possible redesign ideas, not capabilities demonstrated in the episode."
+  }
+ ],
+ "highlights": [
+  {
+   "time": "00:01:14",
+   "topic": "BRIG’s sequence inputs, reference-based rings and built-in handling of BLAST."
+  },
+  {
+   "time": "00:03:00",
+   "topic": "What the figure communicates, with applications to plasmids, complete genomes and yeast."
+  },
+  {
+   "time": "00:04:16",
+   "topic": "BRIG’s longevity and the beer wager that started its development."
+  },
+  {
+   "time": "00:06:55",
+   "topic": "CGView, alternative plotting tools and the feedback behind publication-ready figures."
+  },
+  {
+   "time": "00:10:57",
+   "topic": "Ease of use, documentation and the choice of Java and Swing."
+  },
+  {
+   "time": "00:12:31",
+   "topic": "Why missing unit tests now make major changes difficult."
+  },
+  {
+   "time": "00:13:19",
+   "topic": "Managing BLAST subprocesses so they do not keep running after BRIG closes."
+  },
+  {
+   "time": "00:14:09",
+   "topic": "JAR packaging, the 50-page manual and optimisation of overlapping BLAST hits."
+  },
+  {
+   "time": "00:17:13",
+   "topic": "The fellow PhD student’s colour palette that became BRIG’s default."
+  },
+  {
+   "time": "00:18:01",
+   "topic": "Credit for the colour palette, followed by missing formats and reference-based limitations."
+  },
+  {
+   "time": "00:20:39",
+   "topic": "Command-line requests and ideas for an online reimplementation."
+  }
+ ],
+ "quotes": [
+  {
+   "text": "It just provides a very simple, I guess, intuitive visualization of what your different genomes look like to a single reference.",
+   "time": "00:03:00",
+   "speaker": "Nabil-Fareed Alikhan"
+  }
+ ],
+ "tools": [
+  "BRIG",
+  "BLAST",
+  "BLAST+",
+  "CGView",
+  "BLAST Atlas",
+  "DNAPlotter",
+  "CGView server",
+  "Java",
+  "Swing",
+  "Perl",
+  "Maven",
+  "LaTeX",
+  "Read the Docs"
+ ],
+ "topics": [
+  "comparative genomics",
+  "genome visualisation",
+  "plasmid comparison",
+  "reference-based comparison",
+  "graphical interfaces",
+  "software documentation",
+  "software testing",
+  "bioinformatics software development"
+ ],
+ "faq": [
+  {
+   "q": "What does BRIG do?",
+   "a": "BRIG, the BLAST Ring Image Generator, compares input sequences against a selected reference using BLAST and displays the results as concentric rings. It supports annotations and adjustable settings for producing publication-ready figures."
+  },
+  {
+   "q": "Do I need to install BLAST separately to use BRIG?",
+   "a": "Yes. BRIG runs BLAST for you, but does not install it; you must point BRIG to a BLAST installation. Nabil says it worked with both legacy BLAST and BLAST+, which had only just been released at the time."
+  },
+  {
+   "q": "Can BRIG show sequence that is absent from the reference?",
+   "a": "Not in the reference-based figure described here. Query sequence without a counterpart in the reference is not displayed, so the plot does not reveal all accessory sequence differences among the queries."
+  },
+  {
+   "q": "Does the episode describe a command-line version of BRIG?",
+   "a": "Command-line operation is discussed as a recurring request, not as the BRIG workflow presented in the episode. Nabil says he would favour reimplementing the software and discusses possible online operation and additional input formats."
+  }
+ ]
+}

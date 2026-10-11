@@ -1,0 +1,160 @@
+{
+  "episode": "094",
+  "headline": "Scientists move to Mastodon: running mstdn.science",
+  "description": "Nabil-Fareed Alikhan explains the costs and moderation of mstdn.science, while Emma Hodcroft discusses why scientists are trying Mastodon.",
+  "summary": "Lee Katz, Andrew Page and Nabil-Fareed Alikhan discuss scientists’ move from Twitter to Mastodon, joined by Emma Hodcroft. Nabil explains how an experimental server grew to almost 2,000 users, while Emma describes joining as insurance against Twitter’s uncertain future. They examine hosting costs, moderation and whether a federated network can support scientific exchange.",
+  "people": [
+    {
+      "name": "Lee Katz",
+      "role": "host",
+      "affiliation": "Centers for Disease Control and Prevention; adjunct member at the University of Georgia"
+    },
+    {
+      "name": "Andrew Page",
+      "role": "host",
+      "affiliation": "Quadram Institute"
+    },
+    {
+      "name": "Nabil-Fareed Alikhan",
+      "role": "host",
+      "affiliation": "Quadram Institute"
+    },
+    {
+      "name": "Emma Hodcroft",
+      "role": "guest",
+      "affiliation": ""
+    },
+    {
+      "name": "Duncan",
+      "role": "mentioned",
+      "affiliation": ""
+    },
+    {
+      "name": "Elon Musk",
+      "role": "mentioned",
+      "affiliation": ""
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Why scientists were trying Mastodon",
+      "body": "This November 2022 discussion follows a surge of interest in Mastodon after Elon Musk’s purchase of Twitter. Andrew describes Twitter as valuable for sharing papers, interacting with scientists and making friends since 2007. Nabil argues that the departures also reflect longer-standing dissatisfaction: a service once centred on people users chose to follow had become more dominated by promoted content, news and gossip.\n\nNabil introduces Mastodon as a free, open web application for short posts. Its distinguishing feature is communication between separately operated servers, or instances. An account on one server can follow, read and reply to accounts elsewhere, rather than being confined to that server’s membership."
+    },
+    {
+      "heading": "An experiment grows to almost 2,000 users",
+      "body": "Nabil and Duncan set up mstdn.science to experiment with the technology. Duncan bought the domain, and Nabil configured a virtual server. They expected perhaps 50–100 bioinformaticians, microbial genomics researchers and technically minded microbiologists to join, share messages and exchange memes.\n\nBy the recording, almost 2,000 users had signed up. Nabil had noticed a Nobel laureate, journals and researchers from disciplines including pharmacology, immunology and history. Other science-focused instances were also receiving new users. He sees possible uses beyond a general social network: conferences, universities, research councils or interest groups could operate their own spaces. These are possibilities he raises, not deployments the episode documents."
+    },
+    {
+      "heading": "Hosting costs and the email problem",
+      "body": "Nabil thinks the main virtual machine has 4 GB of memory and four virtual CPUs, with pictures and other static content stored separately in an object-storage bucket. He can resize the virtual server as demand grows rather than replacing physical hardware.\n\nAsked about monthly costs, he gives a rough estimate of £100 per 1,000 users, up to a point. The relationship is not strictly linear: following and interacting with accounts on other servers creates additional work. Reliable email delivery is a particular difficulty, because anti-spam controls complicate even confirmation and password-reset messages.\n\nThere is no settled long-term funding model. Some users have contributed money, and Nabil discusses donation-based monthly subscriptions used by other instances. He also notes that Mastodon does not provide a built-in advertising system."
+    },
+    {
+      "heading": "Federation creates work behind the scenes",
+      "body": "Nabil describes a stack using JavaScript and Ruby, PostgreSQL as the database, Redis as an in-memory cache and a background job processor. With roughly 200–300 people joining each day, evening activity sometimes exhausted available web-server threads. Visible posting activity understated the workload: the server had processed about 1.5 million jobs in a week, including work to retrieve and replicate content from other instances.\n\nHe does not restrict federation to science servers, since scientists also have accounts on general instances such as mastodon.social. However, he has blocked some domains because of their content, not to reduce traffic. Operating an instance therefore involves moderation as well as technical maintenance, including dealing with spam, bot accounts and unsafe material."
+    },
+    {
+      "heading": "Finding people and choosing a new feed",
+      "body": "Andrew describes using websites that connect to Twitter and Mastodon, identify contacts and produce a CSV file to import. They do not find everyone, but can provide a starting point, particularly when people put their Mastodon handle in their Twitter profile. Nabil prefers making fresh choices about whom to follow.\n\nThe discussion also acknowledges that finding people and searching for content can be harder on Mastodon. Nabil compares this with an earlier internet where locating useful material required more effort. Emma suggests that large, accessible platforms first demonstrated the value of microblogging; users may now be willing to do more work to participate in a decentralised version."
+    },
+    {
+      "heading": "A backup, not necessarily a replacement",
+      "body": "Emma describes joining Mastodon as bet hedging rather than announcing a complete departure from Twitter. She values a network that cannot be controlled entirely by one person, where users can move elsewhere if one part becomes unsuitable.\n\nNabil cautions against expecting a one-for-one Twitter replacement. He points to delays between independent servers and the difficulty of providing comprehensive search without central control of the data. Nevertheless, Mastodon could suit academics sharing and discussing papers. Emma is more optimistic about its atmosphere: she enjoys the scientific conversation and reduced pressure to pursue algorithmic visibility. Neither treats its future as settled, and Emma separates Mastodon’s prospects from Twitter’s eventual fate."
+    }
+  ],
+  "highlights": [
+    {
+      "time": "00:01:04",
+      "topic": "Nabil explains Mastodon and communication between independent servers."
+    },
+    {
+      "time": "00:04:13",
+      "topic": "How Nabil and Duncan launched mstdn.science and attracted almost 2,000 users."
+    },
+    {
+      "time": "00:07:54",
+      "topic": "Virtual-server resources, object storage and the difficulty of sending account emails."
+    },
+    {
+      "time": "00:09:04",
+      "topic": "Why hosting costs depend on cross-server activity as well as user numbers."
+    },
+    {
+      "time": "00:10:12",
+      "topic": "Donations and possible subscription-based funding for an instance."
+    },
+    {
+      "time": "00:12:10",
+      "topic": "Growing demand, exhausted server threads and the application’s technical stack."
+    },
+    {
+      "time": "00:14:34",
+      "topic": "Federating with general servers while blocking domains for moderation."
+    },
+    {
+      "time": "00:17:32",
+      "topic": "Emma explains joining Mastodon as a backup against Twitter’s uncertain future."
+    },
+    {
+      "time": "00:20:17",
+      "topic": "Emma considers how large platforms introduced people to the value of microblogging."
+    },
+    {
+      "time": "00:22:47",
+      "topic": "Andrew describes finding Twitter contacts through CSV import tools."
+    },
+    {
+      "time": "00:23:54",
+      "topic": "Nabil considers Mastodon’s future, federation delays and search limitations."
+    },
+    {
+      "time": "00:25:55",
+      "topic": "Emma welcomes the scientific atmosphere and considers whether the migration will last."
+    }
+  ],
+  "quotes": [
+    {
+      "text": "I mean, the most expensive thing is actually getting a mail server that works.",
+      "time": "00:07:54",
+      "speaker": "Nabil-Fareed Alikhan"
+    },
+    {
+      "text": "For me, it's a little bit of bet hedging.",
+      "time": "00:17:32",
+      "speaker": "Emma Hodcroft"
+    }
+  ],
+  "tools": [
+    "Mastodon",
+    "Twitter",
+    "PostgreSQL",
+    "Redis"
+  ],
+  "topics": [
+    "mastodon",
+    "scientific social media",
+    "twitter migration",
+    "federated networks",
+    "server administration",
+    "hosting costs",
+    "content moderation",
+    "science communication"
+  ],
+  "faq": [
+    {
+      "q": "What is mstdn.science?",
+      "a": "It is the Mastodon instance Nabil and Duncan set up initially for bioinformaticians, microbial genomics researchers and technically minded microbiologists. By the recording, it had almost 2,000 users and was attracting researchers from other disciplines."
+    },
+    {
+      "q": "How much did running the Mastodon server cost?",
+      "a": "Nabil estimated roughly £100 per 1,000 users per month, up to a point. He stressed that costs also depend on interactions and connections with other instances, so user numbers alone do not determine the bill."
+    },
+    {
+      "q": "Can users on different Mastodon servers interact?",
+      "a": "Yes. Nabil explains that users can follow, read and reply to accounts on other servers. His instance communicates with general-purpose servers as well as scientific ones, although he blocks some domains for moderation."
+    },
+    {
+      "q": "Did the panellists think Mastodon would replace Twitter?",
+      "a": "They did not reach a firm prediction. Nabil thought it could serve scientific discussion without reproducing all of Twitter’s capabilities, while Emma valued it as a backup and welcomed its science-focused atmosphere."
+    }
+  ]
+}

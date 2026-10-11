@@ -1,0 +1,151 @@
+{
+  "episode": "083",
+  "headline": "Mobile genetic elements: short reads, phages and plasmids",
+  "description": "Why bacterial mobile genetic elements are hard to assemble and annotate, with examples from Vibrio, E. coli, pertussis and Shigella.",
+  "summary": "Andrew Page asks Lee Katz and Nabil-Fareed Alikhan what mobile genetic elements are and how to investigate them in bacterial genomes. They discuss repetitive sequences, plasmid typing, prophage detection and CRISPRs, explaining why an assembly or annotation rarely provides the whole answer. The conversation ends early when Lee loses power, with a follow-up discussion promised.",
+  "people": [
+    {
+      "name": "Andrew Page",
+      "role": "host",
+      "affiliation": "Quadram Institute, Norwich, UK"
+    },
+    {
+      "name": "Lee Katz",
+      "role": "host",
+      "affiliation": "Centers for Disease Control and Prevention; University of Georgia, US (adjunct member)"
+    },
+    {
+      "name": "Nabil-Fareed Alikhan",
+      "role": "host",
+      "affiliation": "Quadram Institute, Norwich, UK"
+    }
+  ],
+  "sections": [
+    {
+      "heading": "What counts as a mobile genetic element?",
+      "body": "The discussion covers bacteriophages that integrate as prophages, transposons, plasmids, genomic islands, integrative conjugative elements and integrons. These categories are not tidy: an element can look partly like a phage or plasmid without fitting neatly into either group. Some prophages lack their own complete excision machinery and borrow it from elsewhere.\n\nMobile genetic elements overlap with the accessory genome, but an accessory gene is not necessarily mobile. The hosts also distinguish recognising phage-like genes from establishing that an element is complete and able to move. Tail and sheath proteins are useful clues, but not every prophage-like region contains the expected set of genes."
+    },
+    {
+      "heading": "Why short reads leave difficult questions",
+      "body": "PlasmidFinder and Inc typing provide evidence about plasmid replicons, but a replicon signal does not necessarily establish whether the sequence belongs to a standalone plasmid. If it appears within a chromosome, the hosts discuss both misassembly and a genuine integrated element, such as an ICE, as possible explanations.\n\nRepeated sequences create another obstacle. One example involves a Vibrio strain with three phages arranged back to back; PacBio becoming available helped resolve the region after about a year of study. Some E. coli genomes are described as having 10–20 prophage or prophage-like repetitive elements, each potentially breaking an assembly. Repeat-rich pertussis and Shigella genomes provide further examples of difficult assemblies and poor N50 values."
+    },
+    {
+      "heading": "CRISPR defence and organism-dependent typing",
+      "body": "CRISPRs are introduced as a bacterial acquired immune system: associated genes act alongside sequences used to recognise foreign DNA and target it for destruction. Conserved associated genes and the distinctive repeat-and-spacer structure make CRISPR regions recognisable. Detection tools mentioned include CRISPR Finder, PILER-CR and CRISPR-DB.\n\nTheir usefulness for typing depends on the organism. In some Salmonella serovars, particularly Typhimurium, spacer patterns can follow established lineages. Mycobacterium tuberculosis spoligotyping is described as examining the CRISPR panel. However, the hosts caution against assuming that CRISPR patterns always track chromosome evolution, and say CRISPR typing has been less reliable than SNPs or MLST for genomic surveillance."
+    },
+    {
+      "heading": "From reads to an inspectable genome",
+      "body": "Starting with FASTQ files, the proposed first step is assembly, whether the reads are short or long. Gene order and neighbourhood matter: finding a single transposon-related feature without genomic context tells the analyst much less. A first-pass Prokka annotation provides something to inspect in Artemis, followed by more specialised annotation for the elements that appear to be present.\n\nMapping reads back to the assembly adds another clue. A large coverage spike can indicate a collapsed repeat. A change in GC content relative to the chromosome may also flag an unusual region; many phages are described as AT-rich. These signals guide investigation rather than replacing visual inspection."
+    },
+    {
+      "heading": "Prophage predictions need checking",
+      "body": "For an initial prophage search, the hosts suggest PHAST or PHASTER. These assess candidate regions using a collection of criteria, including structural proteins and sequence-composition signals. Phage Finder and PhiSpy are also mentioned as options that may return different results.\n\nThe important limitation is that these are heuristic predictions, not complete answers. The suggested next step is to return to Artemis and check whether the proposed regions make biological sense. More broadly, the hosts argue that mobile genetic elements remain difficult enough that no single tool should be trusted to settle every case."
+    },
+    {
+      "heading": "When annotation finds no useful match",
+      "body": "An annotated phage tail gene may sit beside genes for which an NCBI nr search gives no useful result. Suggested next steps include more sensitive searches with PSI-BLAST, domain analysis with InterProScan or Pfam, searches against more curated phage or plasmid databases, and structural predictions. The discussion also stresses searching in amino-acid space rather than relying only on nucleotide comparisons.\n\nNone of these approaches is guaranteed to identify a function. Some sequences remain unknown despite repeated computational searches, and resolving their biology may require collaborators in the wet lab. The episode closes before the discussion can continue because Lee has lost power."
+    }
+  ],
+  "highlights": [
+    {
+      "time": "00:01:23",
+      "topic": "Defining mobile genetic elements and explaining why their categories overlap."
+    },
+    {
+      "time": "00:04:34",
+      "topic": "What PlasmidFinder and replicon typing can tell an analyst."
+    },
+    {
+      "time": "00:05:55",
+      "topic": "Short-read limitations and a Vibrio strain with three tandem phages."
+    },
+    {
+      "time": "00:08:01",
+      "topic": "CRISPR defence, repeat-and-spacer structures and detection tools."
+    },
+    {
+      "time": "00:09:37",
+      "topic": "CRISPR typing in Salmonella and Mycobacterium tuberculosis."
+    },
+    {
+      "time": "00:11:17",
+      "topic": "Assembly, gene context and first-pass annotation with Prokka and Artemis."
+    },
+    {
+      "time": "00:12:18",
+      "topic": "Mapping reads back to an assembly to spot collapsed repeats through coverage."
+    },
+    {
+      "time": "00:13:46",
+      "topic": "Using prophage prediction tools and checking their heuristic results."
+    },
+    {
+      "time": "00:15:10",
+      "topic": "Options when nr searches fail, including sensitive alignments and wet-lab work."
+    },
+    {
+      "time": "00:16:56",
+      "topic": "Lee's power cut brings the discussion to an early close."
+    }
+  ],
+  "quotes": [
+    {
+      "text": "As long as there's some sort of mechanism for it to transfer, then it's a mobile genetic element.",
+      "time": "00:01:23",
+      "speaker": "one of the hosts"
+    }
+  ],
+  "tools": [
+    "PlasmidFinder",
+    "Inc typing",
+    "PacBio",
+    "CRISPR Finder",
+    "PILER-CR",
+    "CRISPR-DB",
+    "CRISPR typing",
+    "Spoligotyping",
+    "MLST",
+    "Prokka",
+    "Artemis",
+    "PHAST",
+    "PHASTER",
+    "Phage Finder",
+    "PhiSpy",
+    "NCBI nr",
+    "PSI-BLAST",
+    "InterProScan",
+    "Pfam"
+  ],
+  "topics": [
+    "mobile genetic elements",
+    "plasmids",
+    "prophages",
+    "insertion sequences",
+    "short-read assembly",
+    "genome annotation",
+    "crispr typing",
+    "genomic surveillance"
+  ],
+  "faq": [
+    {
+      "q": "Are mobile genetic elements the same as the accessory genome?",
+      "a": "No. The hosts explain that the two overlap, but a sequence being part of the accessory genome does not necessarily mean it can move."
+    },
+    {
+      "q": "Can PlasmidFinder distinguish a standalone plasmid from an integrated element?",
+      "a": "A replicon signal alone does not settle that question. The discussion highlights the difficulty of distinguishing genuine integration from misassembly when working with short reads."
+    },
+    {
+      "q": "How should I start investigating mobile genetic elements from FASTQ files?",
+      "a": "The suggested workflow is to assemble the reads, produce a first-pass annotation with Prokka and inspect the genome in Artemis. Read-mapping coverage, GC-content changes and element-specific tools can then help identify regions worth examining."
+    },
+    {
+      "q": "Which tools are discussed for finding prophages?",
+      "a": "PHAST, PHASTER, Phage Finder and PhiSpy are mentioned. The hosts describe their outputs as heuristic predictions that should be checked against the annotated genome rather than accepted without inspection."
+    },
+    {
+      "q": "What can I try when a phage-associated gene has no useful nr match?",
+      "a": "Suggestions include PSI-BLAST, InterProScan, Pfam, more curated phage or plasmid databases, and structural predictions. The hosts caution that these can still fail, leaving experimental microbiology as the route to establishing function."
+    }
+  ]
+}

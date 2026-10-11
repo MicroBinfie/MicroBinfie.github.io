@@ -1,0 +1,160 @@
+{
+  "episode": "065",
+  "headline": "Tuberculosis genomics: tools, transmission and missing biology",
+  "description": "TB genomics, drug resistance and transmission: tools, slow mutation rates, spoligotyping and biological questions sequencing cannot yet answer.",
+  "summary": "Suzie Hingley-Wilson, Dany Beste and Conor Meehan join the hosts to discuss bioinformatics and genomics of Mycobacterium tuberculosis. They cover long-read tools, drug-resistance prediction, transmission analysis and the limits of older typing methods. The discussion connects these approaches to unresolved questions about TB metabolism, mutation rates and variation between individual bacterial cells.",
+  "people": [
+    {
+      "name": "Lee Katz",
+      "role": "host",
+      "affiliation": "Centers for Disease Control and Prevention; University of Georgia (adjunct member)"
+    },
+    {
+      "name": "Andrew Page",
+      "role": "host",
+      "affiliation": "Quadram Institute"
+    },
+    {
+      "name": "Nabil-Fareed Alikhan",
+      "role": "host",
+      "affiliation": "Quadram Institute"
+    },
+    {
+      "name": "Suzie Hingley-Wilson",
+      "role": "guest",
+      "affiliation": "University of Surrey"
+    },
+    {
+      "name": "Dany Beste",
+      "role": "guest",
+      "affiliation": "University of Surrey"
+    },
+    {
+      "name": "Conor Meehan",
+      "role": "guest",
+      "affiliation": "University of Bradford"
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Adapting TB tools to long reads",
+      "body": "Andrew Page introduces Galru, a tool for spoligotyping from long reads, developed by repurposing code from a project that had not worked as intended. Spoligotyping measures the presence or absence of CRISPR spacers. Conor Meehan places it within a wider effort to recover familiar clinical typing and resistance information from genome data. TB Profiler is discussed as a resistance tool that now also accepts Nanopore reads.\n\nMeehan describes a 40-author review he coordinated to define what TB bioinformatics tools should deliver. Standards matter: tools differ in their SNP databases, supported technologies and variant thresholds. He gives examples of 90% versus 70% read support for a majority call, and two versus five supporting reads for a minority variant. Similar-looking outputs can therefore rest on different analytical decisions."
+    },
+    {
+      "heading": "Drug resistance, tolerance and essential genes",
+      "body": "Dany Beste wants to understand how metabolic environments influence the evolution of drug resistance. Work in E. coli provides a comparison, but the conditions experienced by TB inside a person are harder to establish. She also distinguishes resistance from tolerance: mutations that help bacteria survive longer during drug exposure may give them an opportunity to become resistant later.\n\nThe panel discusses TraDIS and other transposon-library screens for identifying genes needed under particular conditions. Examples include studies involving M. tuberculosis, M. bovis, macrophages and macaque models. Beste questions whether an essential gene automatically makes a good drug target: essentiality depends on the environment, and laboratory growth requirements need not match those inside a host."
+    },
+    {
+      "heading": "Slow evolution complicates transmission analysis",
+      "body": "Meehan describes an expanding picture of TB diversity, with lineages numbered one to nine. He gives an approximate pace of one SNP every three years, explaining why genetically identical isolates do not establish who infected whom. Mutation-rate estimates also depend on assumptions about generation time, which Beste challenges. Meehan notes that roughly 10% of the genome is excluded from analyses because of repetitive regions, potentially hiding additional variation.\n\nFor transmission analysis, the usual approach is to call SNPs against H37Rv and compare distances, using thresholds such as five or 12 SNPs. A Rwandan cluster discussed in the episode had persisted since the 1990s, with around 12 SNPs separating many isolates. Core-genome MLST and Bayesian transmission approaches offer alternatives, but better models still require biological information about generation times and infectious periods."
+    },
+    {
+      "heading": "What the genome cannot explain about metabolism",
+      "body": "Beste describes TB living inside a macrophage phagosome, where sterols, fatty acids and some amino acids are available. Disrupting fatty-acid utilisation reduces its ability to survive there. Comparisons with Rhodococcus helped establish TB's ability to metabolise cholesterol, while comparisons within Mycobacterium are constrained by limited experimental knowledge of neighbouring species.\n\nGene content does not always predict behaviour. Beste describes metabolic differences between BCG and TB that are not explained simply by whether the relevant genes are present. Vitamin B12 is another puzzle: a study discussed found that TB did not make it despite retaining the pathway's genes, while supplying B12 improved the behaviour of a genome-scale metabolic model. The panel argues for transcriptomic and proteomic work; Meehan recalls finding very little public transcriptome data for a particular TB project."
+    },
+    {
+      "heading": "Where older typing and diagnostic methods still help",
+      "body": "Spoligotyping persists because it is inexpensive and practical: Meehan puts the cost below £1 per test and says 40 can be processed together. It can indicate broad lineages, but convergent patterns make it unsuitable for establishing transmission clusters. An unusual spoligotype nevertheless prompted sequencing that revealed lineage eight. His recommendation is to use older tests to guide further investigation, rather than discard them or treat them as definitive.\n\nBeste recalls distinguishing M. bovis from M. tuberculosis using LJ slopes with and without pyruvate. That cheap growth test informed treatment, alongside the discussion of intrinsic pyrazinamide resistance in M. bovis. Hingley-Wilson stresses the delay: growth on slopes takes about a month, so faster genetic information is needed before patients spend that time receiving an unsuitable drug."
+    },
+    {
+      "heading": "Single cells and sustained research funding",
+      "body": "Hingley-Wilson's wish list centres on single-cell genomics and transcriptomics. Population-level measurements can miss unusual cells and subpopulations relevant to survival and drug tolerance. The panel also identifies culture bias, obtaining complete genomes and making clinical bioinformatics usable by non-specialists as continuing challenges.\n\nThe closing discussion returns to funding. Beste warns that directing resources towards COVID must not mean forgetting TB and other ongoing pandemics, and argues for a broad research base. Meehan and Hingley-Wilson describe how TB's treatment outside the main WHO pathogen and AMR lists can be misunderstood by funders. Their shared concern is that genomic progress needs sustained support for the underlying experimental biology."
+    }
+  ],
+  "highlights": [
+    {
+      "time": "00:01:55",
+      "topic": "Andrew Page introduces Galru for spoligotyping long reads."
+    },
+    {
+      "time": "00:02:54",
+      "topic": "Conor Meehan discusses the TB tools review, long-read support and variant-calling standards."
+    },
+    {
+      "time": "00:05:50",
+      "topic": "Dany Beste asks how metabolic conditions influence resistance and drug tolerance."
+    },
+    {
+      "time": "00:07:40",
+      "topic": "TraDIS studies investigate genes needed for mycobacterial survival."
+    },
+    {
+      "time": "00:09:29",
+      "topic": "TB lineage diversity introduces questions about mutation rates and excluded genomic regions."
+    },
+    {
+      "time": "00:13:33",
+      "topic": "TB nutrition inside the phagosome includes sterols, fatty acids and amino acids."
+    },
+    {
+      "time": "00:16:00",
+      "topic": "Metabolic differences between BCG and TB expose limits of gene-content comparisons."
+    },
+    {
+      "time": "00:22:06",
+      "topic": "Suzie Hingley-Wilson calls for single-cell genomics and transcriptomics."
+    },
+    {
+      "time": "00:23:31",
+      "topic": "Transmission typing progresses from insertion patterns to whole-genome SNP comparisons."
+    },
+    {
+      "time": "00:26:40",
+      "topic": "Spoligotyping remains useful for low-cost lineage surveys, but not transmission proof."
+    },
+    {
+      "time": "00:30:01",
+      "topic": "Pyruvate-dependent growth on LJ slopes provides a historical diagnostic example."
+    },
+    {
+      "time": "00:31:26",
+      "topic": "The panel calls for broad research funding alongside the response to COVID."
+    }
+  ],
+  "quotes": [
+    {
+      "text": "we don't know as much of the fundamental biology as I think people assume we do",
+      "time": "00:11:46",
+      "speaker": "Conor Meehan"
+    }
+  ],
+  "tools": [
+    "Galru",
+    "TB Profiler",
+    "Nanopore sequencing",
+    "spoligotyping",
+    "TraDIS",
+    "VNTR typing",
+    "core-genome MLST",
+    "genome-scale metabolic modelling"
+  ],
+  "topics": [
+    "mycobacterium tuberculosis",
+    "tuberculosis genomics",
+    "drug resistance",
+    "drug tolerance",
+    "transmission analysis",
+    "spoligotyping",
+    "microbial metabolism",
+    "long-read sequencing",
+    "single-cell genomics"
+  ],
+  "faq": [
+    {
+      "q": "Why is TB transmission difficult to reconstruct from genome sequences?",
+      "a": "TB evolves slowly, so several patients can carry isolates with no SNP differences. The panel explains that SNP distances help identify circulating clusters but do not necessarily establish who infected whom."
+    },
+    {
+      "q": "Which long-read TB bioinformatics tools are discussed?",
+      "a": "Andrew Page introduces Galru for spoligotyping long reads. Conor Meehan also discusses TB Profiler's support for Nanopore reads and the broader challenge of adapting tools originally built for short reads."
+    },
+    {
+      "q": "Can matching spoligotypes prove a TB transmission cluster?",
+      "a": "No. Meehan describes spoligotyping as useful for broad lineage identification and choosing samples for further investigation, but convergent patterns mean matching results do not establish transmission."
+    },
+    {
+      "q": "Why does TB genomics still need laboratory experiments?",
+      "a": "The presence of metabolic genes does not always explain the organism's behaviour, as illustrated by BCG comparisons and the discussion of vitamin B12. Experiments are also needed to establish growth requirements, drug tolerance and generation times under conditions relevant to infection."
+    }
+  ]
+}

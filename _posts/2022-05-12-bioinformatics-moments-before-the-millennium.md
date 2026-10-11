@@ -1,12 +1,142 @@
 ---
-date: 2022-05-12 00:00:00
-title: MicroBinfie Podcast, 82 Bioinformatics moments before the millennium
-link: https://soundcloud.com/microbinfie/bioinformatics-moments-before-the-millennium
 layout: page
+title: 'Episode 82: Bioinformatics moments before the millennium'
+date: '2022-05-12 00:00:00'
+link: https://soundcloud.com/microbinfie/bioinformatics-moments-before-the-millennium
+episode: '82'
+soundcloud_track: '1240140109'
 tags:
-  - microbinfie
-  - podcast
+- microbinfie
+- podcast
+description: Mark Pallen recalls manual protein assembly, H. pylori urease, early PCR experiments and analysing the first Campylobacter jejuni genome.
+excerpt: Mark Pallen recalls manual protein assembly, H. pylori urease, early PCR experiments and analysing the first Campylobacter jejuni genome.
+headline: Mark Pallen’s bioinformatics before the millennium
+guests:
+- Mark Pallen
+topics:
+- bioinformatics history
+- protein sequence assembly
+- sequence homology
+- helicobacter pylori
+- pcr typing
+- bacterial genomics
+- campylobacter jejuni
+- genome annotation
+- internet in medicine
+faq:
+- q: How did Mark Pallen identify the H. pylori urease genes?
+  a: He compared translated sequences from Chris Clayton’s candidate clone with jack bean urease and found around 50% amino acid identity. Matches moving between reading frames then helped them identify and correct errors in the sequence readings.
+- q: Did Pallen use BLAST for his 1989 urease analysis?
+  a: No. After a host points out the chronology, Pallen clarifies that he recalls using FASTA, with an earlier mention of fastp as another possibility, to search the PIR protein database.
+- q: What did Nick Loman contribute to the first C. jejuni genome project?
+  a: As an 18-year-old gap-year recruit, Loman built a relational database and web front end for examining the emerging genome data. Pallen recalls that it took about three days and helped researchers investigate genes and pathways before the Sanger’s full annotation workflow was complete.
+- q: Why did Pallen stop developing his early PCR typing method?
+  a: The researchers encountered inconsistent banding patterns after an initial journal rejection and decided not to continue. Pallen later suspected contamination by previous PCR products, and recalls seeing the approach published by others about 18 months later as the method now called RAPD.
 ---
+
+*Mark Pallen’s bioinformatics before the millennium*
+
+Professor Mark Pallen joins Lee Katz, Andrew Page and Nabil-Fareed Alikhan to trace his move from medical microbiology to bioinformatics. His recollections span a 1977 entrance exam, sequence searches in the late 1980s and early access to bacterial genome data in the 1990s. The discussion shows how computational comparisons could guide experiments long before automated annotation pipelines.
+
+<iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" title="Episode 82: Bioinformatics moments before the millennium" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1240140109&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=false"></iframe>
+
+[Listen to Episode 82: Bioinformatics moments before the millennium on SoundCloud](https://soundcloud.com/microbinfie/bioinformatics-moments-before-the-millennium)
+
+## In this episode
+
+### Assembling proteins before bioinformatics had a name
+
+Pallen dates his first bioinformatics experience to a Cambridge entrance examination in 1977, the year Fred Sanger described his sequencing method. Given peptide sequences, he had to assemble them into a larger protein sequence by hand. He remembers looking for overlaps and joining matching fragments, much like a jigsaw. Protein sequences made this simpler than DNA assembly because there was no reverse-complement problem to consider.
+
+He connects that aptitude with an interest in languages, including Latin, French and Esperanto. Later collaborations extended sequence-analysis thinking to texts: comparing editions of Darwin’s *On the Origin of Species* for additions, deletions and edits, and discussing alignment and textual changes with a theologian studying Gospel of Luke manuscripts.
+
+### An Apple Mac, urease and a decisive sequence match
+
+At Barts Hospital, Pallen joined a molecular biology group that included Brendan Wren and Chris Clayton. Clayton had a possible *Helicobacter pylori* urease clone, but its weak antibody signal and lack of urease activity left its identity uncertain. The pair digitised sequencing results by having Clayton read bases from autoradiographs while Pallen entered them into an Apple Mac.
+
+On 15 September 1989, Pallen compared the translated sequences with jack bean urease. He recalls using FASTA, or possibly fastp, with the PIR protein database—not BLAST, which came later. Around 50% amino acid identity convinced him that Clayton had cloned the urease genes. Matches switching between reading frames also helped them locate base-counting errors and correct the sequence. The work appeared in *Nucleic Acids Research* after rejection by *Nature*.
+
+Other discoveries included a group II intron containing a reverse transcriptase and *Clostridium difficile* genes homologous to a butanol-fermentation pathway in *Clostridium acetobutylicum*. Pallen links the latter pathway to Chaim Weizmann’s First World War fermentation work and the Balfour Declaration.
+
+### A PCR typing opportunity that slipped away
+
+Pallen recalls proposing bacterial typing with arbitrary PCR primers and a low annealing temperature. Experiments produced different banding patterns from different *E. coli* strains, suggesting a useful typing method. However, a journal declined the manuscript, and inconsistent profiles in subsequent experiments led the researchers to put the work aside.
+
+About 18 months later, he saw a paper describing the approach now called RAPD. Looking back, he suspects carry-over amplicon contamination could have explained their extra bands, rather than treating that explanation as established. He keeps an image of one of the gels as a reminder about missed opportunities. His MD research also used PCR to detect the diphtheria toxin gene.
+
+### A PhD, medical internet guides and University Challenge
+
+Gordon Dougan encouraged Pallen to undertake a PhD through a Wellcome Trust scheme for medical microbiologists. Moving from consultant status to being seen as a laboratory novice meant three years of hard graft, but it strengthened both his molecular biology and computational skills. Pallen remembers Dougan using the term bioinformatics around 1995–1996; previously, he had called his work sequence analysis.
+
+During the PhD, Pallen wrote three articles introducing the medical profession to the internet for the *British Medical Journal*. Their optimism included the observation that email lacked junk mail—something his daughter later found amusing. He also captained a winning University Challenge team. Afterwards, he recalls submitting four proposals to the Wellcome Trust without success and four to the BBSRC, three of which secured project grants.
+
+### Hearing that a bacterial genome had been sequenced
+
+Another memorable moment came when a colleague returned from an American conference with news of Craig Venter and Ham Smith’s bacterial genome sequencing. Pallen recalls hearing about *Haemophilus influenzae* and a second, mycoplasma genome.
+
+For him, the breakthrough was methodological as well as biological: shotgun sequencing replaced a laborious, map-led workflow with many small fragments and computational assembly. The bioinformatics did the heavy lifting. He describes the Sanger adopting this approach and his subsequent involvement in the *Campylobacter jejuni* genome project.
+
+### Nick Loman and early access to the C. jejuni genome
+
+Work on internet columns for the student *BMJ* brought Pallen into contact with Nick Loman, then still at school. They ran an internet workshop for medics, discovering that some participants needed help even with using a mouse. Pallen subsequently recruited Loman for a gap year at the age of 18.
+
+The Sanger was releasing *C. jejuni* shotgun reads, but its workflow postponed biological interpretation until sequencing, assembly and annotation were complete. Pallen asked Loman to use the reads, BLAST comparisons against *E. coli* proteins and metabolic pathways to make the emerging genome accessible to researchers. Loman built a relational database and web front end in about three days, rather than the months Pallen had anticipated.
+
+Pallen contrasts this early access with manual annotation, in which individual protein-coding genes were assessed one at a time. Their work let the research community investigate the data before the formal process finished and contributed to the eventual *Nature* genome paper.
+
+## Highlights
+
+- [00:01:39](https://soundcloud.com/microbinfie/bioinformatics-moments-before-the-millennium#t=1:39) — Pallen’s 1977 entrance exam: assembling peptide sequences by hand
+- [00:14:15](https://soundcloud.com/microbinfie/bioinformatics-moments-before-the-millennium#t=14:15) — Why sequence comparisons and homopolymer errors remain familiar problems
+- [00:14:58](https://soundcloud.com/microbinfie/bioinformatics-moments-before-the-millennium#t=14:58) — Clarifying the use of FASTA rather than BLAST in early sequence searches
+- [00:16:19](https://soundcloud.com/microbinfie/bioinformatics-moments-before-the-millennium#t=16:19) — Finding overlaps to assemble proteins, and the connection with languages
+- [00:17:37](https://soundcloud.com/microbinfie/bioinformatics-moments-before-the-millennium#t=17:37) — Applying sequence-comparison ideas to On the Origin of Species and gospel manuscripts
+- [00:20:27](https://soundcloud.com/microbinfie/bioinformatics-moments-before-the-millennium#t=20:27) — Early PCR experiments and the bacterial typing approach Pallen set aside
+- [00:27:44](https://soundcloud.com/microbinfie/bioinformatics-moments-before-the-millennium#t=27:44) — Captaining a winning University Challenge team during the PhD
+- [00:30:25](https://soundcloud.com/microbinfie/bioinformatics-moments-before-the-millennium#t=30:25) — The Sanger’s sequencing projects and Pallen’s involvement with C. jejuni
+- [00:31:41](https://soundcloud.com/microbinfie/bioinformatics-moments-before-the-millennium#t=31:41) — Hearing Gordon Dougan use the term bioinformatics in the mid-1990s
+- [00:37:27](https://soundcloud.com/microbinfie/bioinformatics-moments-before-the-millennium#t=37:27) — Staged genome workflows, manual annotation and interpreting data earlier
+
+## In their own words
+
+> You just lined them up and look for the overlaps and where they overlap, you join them together until you got the whole thing.
+>
+> — Mark Pallen, [00:16:19](https://soundcloud.com/microbinfie/bioinformatics-moments-before-the-millennium#t=16:19)
+
+## Who is talking
+
+- **Mark Pallen** (guest, University of East Anglia; Quadram Institute)
+- **Lee Katz** (host)
+- **Andrew Page** (host)
+- **Nabil-Fareed Alikhan** (host)
+
+Also mentioned: Fred Sanger, Brendan Wren, Chris Clayton, Gordon Dougan, Nick Loman, Chaim Weizmann, Craig Venter, Ham Smith.
+
+## Tools and resources mentioned
+
+FASTA, fastp, BLAST, PIR protein database, PCR, RAPD, Western blotting, Shotgun sequencing, Perl, BBC BASIC, BBC Micro, Apple Mac.
+
+## Questions this episode answers
+
+### How did Mark Pallen identify the H. pylori urease genes?
+
+He compared translated sequences from Chris Clayton’s candidate clone with jack bean urease and found around 50% amino acid identity. Matches moving between reading frames then helped them identify and correct errors in the sequence readings.
+
+### Did Pallen use BLAST for his 1989 urease analysis?
+
+No. After a host points out the chronology, Pallen clarifies that he recalls using FASTA, with an earlier mention of fastp as another possibility, to search the PIR protein database.
+
+### What did Nick Loman contribute to the first C. jejuni genome project?
+
+As an 18-year-old gap-year recruit, Loman built a relational database and web front end for examining the emerging genome data. Pallen recalls that it took about three days and helped researchers investigate genes and pathways before the Sanger’s full annotation workflow was complete.
+
+### Why did Pallen stop developing his early PCR typing method?
+
+The researchers encountered inconsistent banding patterns after an initial journal rejection and decided not to continue. Pallen later suspected contamination by previous PCR products, and recalls seeing the approach published by others about 18 months later as the method now called RAPD.
+
+*This page was written from a machine transcript of the episode and checked against it. Listen to the episode for the whole conversation.*
+
+## Show notes
 
 In this episode we talk to Professor Mark Pallen, who discusses the
 highlights from his long career as a medical microbiologist turned
@@ -39,9 +169,9 @@ Relevant links:
 - Butanol - https://academic.oup.com/femsle/article/124/1/61/486499
 - Tree-like thinking for genes, languages and gospel manuscripts - https://www.youtube.com/watch?v=8Ykj5wQs7vU
 
-<iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1240140109&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=false"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/microbinfie" title="Micro Binfie Podcast" target="_blank" style="color: #cccccc; text-decoration: none;">Micro Binfie Podcast</a> · <a href="https://soundcloud.com/microbinfie/40-a-crash-course-in-sars-cov-2-bioinformatics" title="82 Bioinformatics moments before the millennium" target="_blank" style="color: #cccccc; text-decoration: none;">40 A crash course in SARS-CoV-2 bioinformatics</a></div>
 
-# Selective bibliography
+
+### Selective bibliography
 
 - Konings, F, Perkins, MD, Kuhn, JH, Pallen, MJ, Alm, EJ, Archer, BN, Barakat, A, Bedford, T, Bhiman, JN, Caly, L, Carter, LL, Cullinane, A, de Oliveira, T, Druce, J, El Masry, I, Evans, R, Gao, GF, Gorbalenya, AE, Hamblion, E, Herring, BL, Hodcroft, E, Holmes, EC, Kakkar, M, Khare, S, Koopmans, MPG, Korber, B, Leite, J, MacCannell, D, Marklewitz, M, Maurer-Stroh, S, Rico, JAM, Munster, VJ, Neher, R, Munnink, BO, Pavlin, BI, Peiris, M, Poon, L, Pybus, O, Rambaut, A, Resende, P, Subissi, L, Thiel, V, Tong, S, van der Werf, S, von Gottberg, A, Ziebuhr, J, Van Kerkhove, MD (2021) SARS-CoV-2 Variants of Interest and Concern naming scheme conducive for global discourse Nature Microbiology 6 (7) 821 823
 - Pallen, MJ, Alikhan, NF (2021) Naming the Unnamed: Over 45,000 Candidatus Names for Unnamed Archaea and Bacteria in the Genome Taxonomy Database Preprints https://doi.org/10.20944/preprints2021110557v1

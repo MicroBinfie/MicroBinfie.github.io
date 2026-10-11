@@ -1,0 +1,17 @@
+---
+layout: null
+permalink: /llms.txt
+---
+# MicroBinfie Podcast
+
+> A podcast about microbial bioinformatics and public health genomics, hosted by Lee Katz,
+> Andrew Page and Nabil-Fareed Alikhan since 2019. Each episode below has a written overview
+> made from its transcript and checked against it: who was on, what was discussed, timestamps,
+> quotes, the tools mentioned, and questions the episode answers. Audio is on SoundCloud.
+
+- [All episodes]({{ '/pages/Episodes.html' | absolute_url }}): the full list, newest first
+- [Nobody Wrote This Down]({{ '/pages/book.html' | absolute_url }}): the book of the podcast, free to read in EPUB, PDF, HTML and plain text
+
+## Episodes
+{% for p in site.posts %}{% if p.episode %}
+- [{{ p.title }}]({{ p.url | absolute_url }}) ({{ p.date | date: "%Y-%m-%d" }}): {{ p.description | default: p.excerpt | strip_html | strip_newlines | strip }} Listen: {{ p.link }}{% endif %}{% endfor %}

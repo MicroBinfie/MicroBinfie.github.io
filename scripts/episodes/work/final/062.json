@@ -1,0 +1,130 @@
+{
+ "episode": "062",
+ "headline": "Campylobacter: poultry, pathogenesis and a compact genome",
+ "description": "Ozan Gundogdu explains Campylobacter transmission, its compact genome, chicken carriage and the challenges of vaccines and disease control.",
+ "summary": "Dr Ozan Gundogdu joins the hosts to explain why Campylobacter is a major foodborne pathogen despite being less familiar to the public than Salmonella. The discussion covers chicken carriage, environmental transmission, disease patterns and the difficulty of controlling an organism with a low infectious dose. Gundogdu also describes how its early genome sequence transformed research into its physiology and pathogenesis, setting up a later discussion of bioinformatics-specific issues.",
+ "people": [
+  {
+   "name": "Ozan Gundogdu",
+   "role": "guest",
+   "affiliation": "London School of Hygiene & Tropical Medicine"
+  },
+  {
+   "name": "Andrew Page",
+   "role": "host",
+   "affiliation": "Quadram Institute, Norwich, UK"
+  },
+  {
+   "name": "Nabil-Fareed Alikhan",
+   "role": "host",
+   "affiliation": "Quadram Institute, Norwich, UK"
+  },
+  {
+   "name": "Lee Katz",
+   "role": "host",
+   "affiliation": "Centers for Disease Control and Prevention; University of Georgia (adjunct member)"
+  }
+ ],
+ "sections": [
+  {
+   "heading": "An under-recognised cause of gastroenteritis",
+   "body": "Gundogdu describes Campylobacter infection as typically self-limiting, but far from trivial. In high-resource countries, he associates it with acute bloody diarrhoea, time off work and substantial economic costs. He cites 50,000–70,000 reported UK cases a year, suggests the true burden may be about ten times higher, and gives an estimated cost to the UK government of 1 billion for 2019.\n\nThe disease profile he describes in low-resource countries is different: watery diarrhoea, repeated exposure and deaths among children associated with lack of fluids. Older people and people with compromised health are also discussed as vulnerable. Although several species matter, the discussion mainly concerns Campylobacter jejuni, which he says accounts for about 80–85% of human infections. Campylobacter coli and Campylobacter fetus are also named."
+  },
+  {
+   "heading": "Chicken carriage and kitchen hygiene",
+   "body": "Chickens can carry up to 10^9 colony-forming units of Campylobacter without necessarily showing harm. That raises an unresolved question: is it a commensal in poultry? Gundogdu says the answer may depend on the bacterial strain, its genes, the chicken and environmental conditions. Some studies suggest disease, while others report better chicken metrics when Campylobacter is present.\n\nHe resists a simple organic-versus-conventional comparison. Research on stocking density shows that changing the birds’ environment can alter gut microbial populations and potentially Campylobacter levels. For consumers, he explains the rationale for not washing raw chicken: splashes can transfer bacteria to utensils, vegetables and nearby surfaces. The advice discussed is to cook poultry properly rather than wash it."
+  },
+  {
+   "heading": "A difficult organism to study",
+   "body": "A recurring puzzle is how Campylobacter enters flocks despite stringent farm biosecurity. Gundogdu describes birds typically being slaughtered at around day 35 and cites anecdotal information that Campylobacter typically appears within the first two weeks. Its widespread environmental presence complicates attempts to keep it out.\n\nIn the laboratory, the organism is fussy, difficult to grow and not a standard model organism. It has also lacked a convenient animal model. Gundogdu describes it as microaerophilic, preferring roughly 5–10% oxygen, yet able to survive outside those ideal conditions. His own research has shifted from laboratory studies of gene function, physiology and survival towards applied work using whole-genome sequencing, transcriptomics and metagenomics."
+  },
+  {
+   "heading": "What the early genome sequence revealed",
+   "body": "Gundogdu links these experimental difficulties to the importance of early genome sequencing at the Sanger Institute in 1999–2000. The roughly 1.64-megabase genome is compact and densely packed with coding regions, raising questions about the regulatory mechanisms supporting survival.\n\nThe sequence helped settle a dispute about whether Campylobacter has a capsule: a capsule-encoding region provided genetic evidence supporting experimental work. It also highlighted the absence of a classic type III secretion system; Gundogdu’s group has since studied strains carrying a type VI secretion system. Other features discussed include lipooligosaccharide on the outer surface, O-linked glycosylation of flagella and N-linked glycosylation of proteins. He presents the genome as the start of a new phase of pathogenesis and physiology research."
+  },
+  {
+   "heading": "Wild birds, water and seasonal exposure",
+   "body": "Wild birds and water provide routes beyond commercial poultry. Gundogdu contrasts highly controlled poultry production with backyard and peri-urban markets, where different opportunities for transmission between animals and humans arise.\n\nThe conversation also covers the summer peak in high-resource countries. Barbecues and incomplete cooking are suggested possibilities, alongside exposure to wet environments. Gundogdu recalls an outbreak associated with a muddy obstacle-course event and contaminated puddles. The discussion does not establish a definitive explanation for the seasonal increase, and the exact event name remains uncertain."
+  },
+  {
+   "heading": "Vaccines and a combined control strategy",
+   "body": "Vaccinating chickens is attractive in principle, but Gundogdu identifies two obstacles. First, a vaccine has to be economically justified for birds raised for only about 35 days. Second, reducing bacterial numbers may not eliminate risk: he contrasts carriage of around 10^9 CFU with the roughly 100–500 colonies he says can cause human infection. A fall to 10^4 or 10^5 could therefore still leave a transmission problem.\n\nThe discussion also covers Guillain–Barré syndrome and Miller–Fisher syndrome as post-infectious neurological complications. Gundogdu describes molecular mimicry between bacterial surface structures and human gangliosides, and cites an approximate one-in-a-thousand risk of post-infectious neuropathy. He does not claim expertise in human vaccine development. He argues for a combined, One Health-style approach: laboratory research, potential vaccines, government policy and consumer education, rather than relying on any single intervention."
+  }
+ ],
+ "highlights": [
+  {
+   "time": "00:01:45",
+   "topic": "Gundogdu’s research background and shift from laboratory work towards applied bioinformatics."
+  },
+  {
+   "time": "00:03:24",
+   "topic": "Under-reported disease burden and contrasting infection profiles in high- and low-resource countries."
+  },
+  {
+   "time": "00:07:00",
+   "topic": "High bacterial numbers in chickens and the unresolved question of commensal carriage."
+  },
+  {
+   "time": "00:08:06",
+   "topic": "Stocking density, poultry welfare and changes to the chicken gut microbiome."
+  },
+  {
+   "time": "00:09:26",
+   "topic": "How Campylobacter appears in chicken flocks despite stringent farm biosecurity."
+  },
+  {
+   "time": "00:13:57",
+   "topic": "Why the discussion focuses mainly on Campylobacter jejuni."
+  },
+  {
+   "time": "00:14:26",
+   "topic": "Poultry vaccine costs and why reducing bacterial carriage may not remove human risk."
+  },
+  {
+   "time": "00:16:08",
+   "topic": "Wild birds as environmental carriers and transmission beyond controlled poultry production."
+  },
+  {
+   "time": "00:18:43",
+   "topic": "Uncertainty about progress towards human vaccines for low-resource countries."
+  },
+  {
+   "time": "00:18:52",
+   "topic": "Vaccine safety concerns, Guillain–Barré syndrome and post-infectious neuropathy."
+  }
+ ],
+ "quotes": [
+  {
+   "text": "Now, Campylobacter, one of its most interesting attributes is it is omnipresent. It is present throughout the environment.",
+   "time": "00:09:26",
+   "speaker": "Ozan Gundogdu"
+  }
+ ],
+ "tools": [],
+ "topics": [
+  "campylobacter jejuni",
+  "foodborne infection",
+  "poultry",
+  "microbial genomics",
+  "pathogenesis",
+  "environmental transmission",
+  "glycosylation",
+  "vaccines",
+  "guillain–barré syndrome",
+  "one health"
+ ],
+ "faq": [
+  {
+   "q": "Which Campylobacter species does the episode focus on?",
+   "a": "The discussion mainly concerns Campylobacter jejuni, which Gundogdu says causes about 80–85% of human Campylobacter infections. Campylobacter coli and Campylobacter fetus are also mentioned."
+  },
+  {
+   "q": "Why is Campylobacter considered difficult to study?",
+   "a": "Gundogdu describes it as difficult to grow, microaerophilic and lacking a convenient animal model. Its ability to survive widely in the environment despite its demanding laboratory growth requirements is a central puzzle."
+  },
+  {
+   "q": "Why might vaccinating chickens not eliminate Campylobacter infection?",
+   "a": "Gundogdu explains that chickens can carry very large bacterial populations while relatively small numbers can cause human infection. Even a substantial reduction could leave a risk, and vaccination must also be economically justified for birds raised for a short production cycle."
+  }
+ ]
+}

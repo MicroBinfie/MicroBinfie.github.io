@@ -1,0 +1,162 @@
+{
+ "episode": "152",
+ "headline": "Deacon: fast host-read removal, benchmarking and privacy",
+ "description": "Bede Constantinides explains Deacon's minimizer-based host-read removal, its Rust implementation and the trade-offs between accuracy and privacy.",
+ "summary": "Dr Bede Constantinides of the University of Birmingham returns to discuss how Deacon removes host reads using minimizer set membership rather than alignment. The conversation covers its Rust implementation, benchmark design and the difficulty of preserving microbial reads while removing human sequences. It also asks whether counting removed reads adequately measures protection of sensitive genetic information.",
+ "people": [
+  {
+   "name": "Bede Constantinides",
+   "role": "guest",
+   "affiliation": "University of Birmingham"
+  },
+  {
+   "name": "Lee Katz",
+   "role": "host",
+   "affiliation": ""
+  },
+  {
+   "name": "Andrew Page",
+   "role": "host",
+   "affiliation": "Origin Sciences; University of East Anglia"
+  },
+  {
+   "name": "Nabil-Fareed Alikhan",
+   "role": "host",
+   "affiliation": "Center for Genomic Pathogen Surveillance, University of Oxford"
+  }
+ ],
+ "sections": [
+  {
+   "heading": "Counting minimizer matches instead of aligning reads",
+   "body": "Deacon compares a subset of k-mers, selected as minimizers, from each read with a reference set. It counts matches rather than constructing an alignment. Bede illustrates the scale with a large human pangenome index containing roughly half a billion minimizers and a read containing perhaps 50. The decision depends on how many of those read minimizers match the reference.\n\nThis solves a smaller problem than read mapping. minimap2 uses minimizers to seed candidate alignments, then performs additional work to extend them; Deacon avoids that work. Bede reports that careful tuning and indexing multiple human genomes produced surprisingly good balanced accuracy, not just higher speed. Kraken2 uses minimizers too, but its lowest common ancestor classification can be disadvantageous for host depletion. He does not claim to have fully explained Kraken2's lower accuracy in his comparisons, and distinguishes a dedicated host filter from a broader taxonomic classifier."
+  },
+  {
+   "heading": "Tuning the balance and masking microbial k-mers",
+   "body": "The main controls are k-mer length, minimizer window size, an absolute minimum number of matches and a relative matching threshold. Bede emphasises the balance between sensitivity and specificity: he describes alignment-based approaches as more sensitive, while Deacon offers ways to tune the trade-off for a particular application.\n\nShared sequence makes that trade-off biological as well as computational. The discussion includes human endogenous retroviruses and the difficulty of deciding what to retain. To reduce false positives—microbial reads wrongly discarded—Bede subtracts k-mers from the FDA Argos bacterial collection from Deacon's default human pangenome index. He describes this masking as useful but imperfect. It also complicates evaluation: bacteria used to construct the mask should not simply be reused as an independent test of microbial preservation."
+  },
+  {
+   "heading": "Rust, SIMD and a small installation",
+   "body": "Deacon was Bede's first Rust project. A vectorised SIMD library for minimizer computation helped motivate the language choice, and subsequent optimisation covered the wider pipeline, including parsing. He reports throughput on the order of gigabases per second. The installation comparison is also striking: Deacon's binary is around two or three megabytes, whereas one unnamed Python-based competitor has a Conda environment exceeding a gigabyte before its index is downloaded. These are software sizes, not reference-index sizes.\n\nSmall binaries still require attention to compatibility. Deacon uses AVX2 instructions on relevant x86 machines and a different SIMD implementation on ARM64. One release accidentally included AVX512 instructions because a GitHub build machine supported them, making it unsuitable for some older CPUs. Bede says compiling locally might sometimes help performance, but he does not expect a measurable benefit for Deacon and favours builds that run on ordinary computers."
+  },
+  {
+   "heading": "Benchmarking diverse viruses and bacteria",
+   "body": "Bede argues that benchmarks based on a handful of familiar organisms can miss important losses. He contrasts his approach with a host-depletion benchmarking paper using only three viral taxa. His benchmark material includes simulated viral RefSeq sequences and 1,000 clinically relevant bacterial genomes from FDA Argos, with Illumina-like paired reads and nanopore-like read lengths and error profiles. The mock metagenomic datasets are deposited on Zenodo.\n\nSpecies matter. In earlier work on naive filtering approaches, Neisseria gonorrhoeae and Clostridioides difficile were among the worse-affected bacteria, whereas TB was comparatively unaffected. One host also asks about E. coli and mycoplasma, without receiving species-specific performance figures. Bede acknowledges that his benchmark framing places relatively strong weight on specificity. Comparisons include Kraken2-based approaches and NCBI Scrubber, but a human–mycobacterial mixture could make Deacon's default settings look less favourable."
+  },
+  {
+   "heading": "Host-heavy samples and the limits of privacy metrics",
+   "body": "One host describes a vaginal dataset that is 99% human, where small bacterial signals are important for a typing scheme and contamination noise can approach the sample signal. Bede suggests that such host-heavy samples may warrant higher host-removal sensitivity, accepting the loss of more microbial reads. There is no single parameter setting presented as best for every sample.\n\nHe also separates two objectives: removing human reads that confound microbial classification, and removing sensitive human genetic information. For privacy, the number of reads or bases removed is only a proxy. He argues that evaluation should ask whether remaining data still permit inference of gender, ethnicity or genetic disorders. A host adds the problem of future methods: information that cannot be recovered today might become recoverable later. The discussion raises this concern rather than offering a legal or technical guarantee."
+  },
+  {
+   "heading": "What remains to improve",
+   "body": "Bede has tested read-to-reference graph mappers to some extent, but found their performance overheads unattractive for this task. His next steps for Deacon include expanded benchmarks, completing the paper and improving index design, including deciding which k-mers to retain and exploring fungal host depletion with an undergraduate collaborator.\n\nHe considers the core approach broadly complete, while wanting to make it easier for people unfamiliar with the command line. He is also investigating other bioinformatics uses for the minimizer-filtering pipeline, without announcing a specific additional application."
+  }
+ ],
+ "highlights": [
+  {
+   "time": "00:01:40",
+   "topic": "Deacon's minimizer set-membership approach and the surprise of its balanced accuracy"
+  },
+  {
+   "time": "00:03:56",
+   "topic": "Tuning k-mer length, window size and matching thresholds"
+  },
+  {
+   "time": "00:05:03",
+   "topic": "Why Kraken2's classification design is not necessarily ideal for host depletion"
+  },
+  {
+   "time": "00:06:40",
+   "topic": "How minimap2's alignment work differs from Deacon's filtering task"
+  },
+  {
+   "time": "00:09:39",
+   "topic": "Rust, SIMD minimizer computation and a two-to-three-megabyte binary"
+  },
+  {
+   "time": "00:11:21",
+   "topic": "CPU compatibility and an accidental AVX512 build"
+  },
+  {
+   "time": "00:15:15",
+   "topic": "Diverse viral and bacterial benchmarks and species-specific read losses"
+  },
+  {
+   "time": "00:17:27",
+   "topic": "Shared human–viral sequence and masking bacterial k-mers from the host index"
+  },
+  {
+   "time": "00:18:55",
+   "topic": "Simulated mock metagenomes on Zenodo and the limits of benchmark comparisons"
+  },
+  {
+   "time": "00:20:20",
+   "topic": "A 99% human vaginal dataset illustrates the challenge of preserving small microbial signals"
+  },
+  {
+   "time": "00:22:10",
+   "topic": "Graph-mapping overheads and measuring privacy rather than only removed bases"
+  },
+  {
+   "time": "00:25:06",
+   "topic": "Expanded benchmarks, better indexes and easier access beyond the command line"
+  }
+ ],
+ "quotes": [
+  {
+   "text": "So read mapping is a much bigger problem than what Deacon solves.",
+   "time": "00:06:40",
+   "speaker": "Bede Constantinides"
+  },
+  {
+   "text": "It's about the amount of sensitive information you've removed.",
+   "time": "00:22:10",
+   "speaker": "Bede Constantinides"
+  }
+ ],
+ "tools": [
+  "Deacon",
+  "Hostile",
+  "Kraken2",
+  "minimap2",
+  "Mash",
+  "FastANI",
+  "STAT",
+  "NCBI Scrubber",
+  "RAxML",
+  "Conda",
+  "RefSeq",
+  "FDA Argos",
+  "simd-minimizers",
+  "minimizers",
+  "lowest common ancestor classification"
+ ],
+ "topics": [
+  "host-read removal",
+  "metagenomics",
+  "minimizers",
+  "human pangenomes",
+  "sensitivity and specificity",
+  "benchmarking",
+  "rust",
+  "genetic privacy",
+  "public health"
+ ],
+ "faq": [
+  {
+   "q": "How does Deacon remove host reads without alignment?",
+   "a": "It queries minimizers from each read against a reference minimizer set and applies matching thresholds. Unlike minimap2, it does not extend minimizer matches into alignments, so it performs substantially less work."
+  },
+  {
+   "q": "How does Deacon try to preserve microbial reads?",
+   "a": "Bede tunes minimizer parameters and matching thresholds, and masks the default human pangenome index by subtracting k-mers from the FDA Argos bacterial collection. This reduces microbial false positives, but he stresses that it is not a perfect solution."
+  },
+  {
+   "q": "Which datasets were used to benchmark Deacon?",
+   "a": "Bede describes simulations based on viral RefSeq and 1,000 clinically relevant FDA Argos bacterial genomes. They include Illumina-like paired reads and nanopore-like lengths and error profiles, with mock metagenomic datasets deposited on Zenodo."
+  },
+  {
+   "q": "Does removing most human reads guarantee genetic privacy?",
+   "a": "The episode does not establish such a guarantee. Bede argues that privacy should be assessed by whether sensitive characteristics remain inferable, rather than just by the number of bases removed; a host also raises the possibility of future methods recovering information."
+  }
+ ]
+}

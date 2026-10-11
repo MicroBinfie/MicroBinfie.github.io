@@ -1,0 +1,157 @@
+{
+  "episode": "139",
+  "headline": "Lassa virus genomics and wastewater surveillance in Liberia",
+  "description": "Sara Zufan discusses Lassa virus diversity, wastewater surveillance in Liberia, and combining laboratory work with bioinformatics.",
+  "summary": "Sara Zufan discusses her PhD at the University of Melbourne and her new work developing wastewater surveillance in Liberia through a USDA–NIH collaboration. The conversation focuses on Lassa virus diversity, questions about PCR detection, and the practical limitations of genome capture and primer design. It also covers hepatitis A research, overseas PhDs and careers combining laboratory work with bioinformatics.",
+  "people": [
+    {
+      "name": "Sara Zufan",
+      "role": "guest",
+      "affiliation": "United States Department of Agriculture; National Institutes of Health"
+    },
+    {
+      "name": "Andrew Page",
+      "role": "host",
+      "affiliation": "Origin Sciences; University of East Anglia"
+    },
+    {
+      "name": "Lee Katz",
+      "role": "host",
+      "affiliation": ""
+    },
+    {
+      "name": "Josh Quick",
+      "role": "mentioned",
+      "affiliation": ""
+    },
+    {
+      "name": "Christopher Kent",
+      "role": "mentioned",
+      "affiliation": ""
+    }
+  ],
+  "sections": [
+    {
+      "heading": "A PhD spanning AMR, COVID-19 and hepatitis A",
+      "body": "Sara Zufan began her PhD at the University of Melbourne in 2019, working at the intersection of public health and genomics. Early work involved rapid detection of antimicrobial resistance using Nanopore sequencing. COVID-19 then changed the balance of the doctorate, with several projects and a couple of thesis chapters devoted to the pandemic.\n\nHepatitis A remained a project she had wanted to pursue from the beginning. She reports that there were no hepatitis A outbreaks during the Australian lockdown period, limiting the material available for that work. The project initially used spiked berries and cereals; clinical cases arriving after lockdown subsequently provided material for investigation."
+    },
+    {
+      "heading": "Developing Lassa virus surveillance in Liberia",
+      "body": "Zufan's current postdoctoral work is a One Health collaboration between the United States Department of Agriculture and the National Institutes of Health. She explains that USDA provides the funding while she physically works at NIH, with a mentor in each organisation. The project aims to develop wastewater surveillance in Liberia, with Lassa virus identified as a priority.\n\nShe describes Lassa as an RNA virus associated with haemorrhagic fever and classified as BSL-4. Transmission is primarily from rodents to humans, with evidence of human-to-human transmission particularly in clinical settings. She also points to serological evidence suggesting that the virus is more widespread than generally recognised."
+    },
+    {
+      "heading": "Diversity, hybrid capture and an untested primer scheme",
+      "body": "A panellist raises Lassa virus's genetic diversity as a challenge for vaccine control and asks whether wastewater surveillance needs special adaptations. Zufan says uncertainty about the extent of West African Lassa diversity helped motivate the project. One question is whether existing PCR assays detect all cases.\n\nShe describes hybrid capture as an established route to recovering Lassa genomes, but one requiring substantial laboratory equipment and expertise for in-country use. Designing primers across the diversity has been difficult. Hybrid-capture conditions can also be adjusted to make capture more or less specific.\n\nZufan has been working with Josh Quick and Christopher Kent on a new primal scheme algorithm. A West African Lassa virus scheme had been developed but not yet tested: she still needed to take the primers into Liberia. The 1,000-base-pair design discussed was not expected to suit wastewater."
+    },
+    {
+      "heading": "Reagents, procurement and fellowship logistics",
+      "body": "Andrew Page describes reagent procurement difficulties from his work with collaborators in The Gambia. Visiting researchers can end up transporting supplies themselves, and he says flying someone over can sometimes be quicker than navigating procurement. Zufan's team has a longstanding clinical research relationship with West Africa and a procurement team, although she anticipates potentially carrying lyophilised primers herself.\n\nThe discussion also turns to ORISE fellowships. Lee Katz describes a requirement to have completed the most recent degree within five years. He says non-US citizens can be appointed, but visa logistics may make an otherwise possible appointment impractical. His example is a one-year contract where arranging the visa would also have taken about a year."
+    },
+    {
+      "heading": "Learning wet-lab work and bioinformatics together",
+      "body": "Asked whether laboratory or computational work came first, Zufan says she started both together. Her early research involved 16S sequencing of ants and their bacteria: she generated the data in the laboratory and then had to analyse it.\n\nThat combination continued through an APHL bioinformatics fellowship, where a small team shared laboratory and computational responsibilities, and through her PhD. Her current role also includes both. A panellist praises the ability to use bioinformatics while understanding its caveats, rather than treating software development as the only valuable computational contribution. The discussion presents laboratory experience and informed data analysis as complementary skills for a molecular microbiologist."
+    },
+    {
+      "heading": "An Australian PhD after professional experience",
+      "body": "Zufan recommends considering an overseas PhD on the basis of her own experience, while explaining why the Australian structure suited her. She already held a master's degree and had two years of experience before starting, so optional coursework appealed to her: she wanted to begin research rather than repeat classroom training.\n\nA panellist describes the Australian PhD as normally a three-year research programme, often taking three and a half years, without coursework. Zufan particularly valued the independence and the sense of continuing as a professional. She says that starting research immediately and building confidence in working independently helped prepare her for the next stage of her career."
+    }
+  ],
+  "highlights": [
+    {
+      "time": "00:01:10",
+      "topic": "Sara Zufan introduces her recently completed PhD and supervisors."
+    },
+    {
+      "time": "00:02:10",
+      "topic": "Hepatitis A work moves from spiked berries and cereals to clinical cases."
+    },
+    {
+      "time": "00:05:24",
+      "topic": "USDA funding, an NIH workplace and two mentors."
+    },
+    {
+      "time": "00:06:16",
+      "topic": "Lassa virus biology, BSL-4 classification and transmission."
+    },
+    {
+      "time": "00:07:23",
+      "topic": "ORISE eligibility and visa complications for non-US citizens."
+    },
+    {
+      "time": "00:08:26",
+      "topic": "A panellist asks how Lassa virus diversity affects surveillance."
+    },
+    {
+      "time": "00:09:00",
+      "topic": "Questions about PCR detection and the demands of hybrid capture."
+    },
+    {
+      "time": "00:09:54",
+      "topic": "Adjusting hybrid-capture specificity and developing an untested primer scheme."
+    },
+    {
+      "time": "00:11:00",
+      "topic": "Combining wet-lab work and bioinformatics, starting with ants and 16S sequencing."
+    },
+    {
+      "time": "00:11:57",
+      "topic": "Reagent costs and procurement difficulties in West African research."
+    },
+    {
+      "time": "00:13:13",
+      "topic": "Why optional coursework suited a PhD student with prior experience."
+    },
+    {
+      "time": "00:13:37",
+      "topic": "The length and research-focused structure of Australian PhDs."
+    }
+  ],
+  "quotes": [
+    {
+      "text": "I started doing 16S sequencing on ants and their bacteria in the lab and then I had to analyze the data too.",
+      "time": "00:11:00",
+      "speaker": "Sara Zufan"
+    }
+  ],
+  "tools": [
+    "Nanopore sequencing",
+    "PCR",
+    "hybrid capture",
+    "primal scheme",
+    "16S sequencing"
+  ],
+  "topics": [
+    "lassa virus",
+    "wastewater surveillance",
+    "viral genomic diversity",
+    "hybrid capture",
+    "primer design",
+    "hepatitis a",
+    "antimicrobial resistance",
+    "liberia",
+    "wet-lab bioinformatics",
+    "overseas phd"
+  ],
+  "faq": [
+    {
+      "q": "Why does Lassa virus diversity matter for genomic surveillance?",
+      "a": "Zufan says the project was motivated partly by uncertainty about how much West African Lassa diversity is known and whether PCR assays detect all cases. She also describes difficulty designing primers across that diversity."
+    },
+    {
+      "q": "Had the West African Lassa primer scheme been tested?",
+      "a": "Not at the time of the discussion. Zufan still needed to bring the primers into Liberia for testing, and she did not expect the 1,000-base-pair design discussed to work well for wastewater."
+    },
+    {
+      "q": "What are the practical limitations of hybrid capture for Lassa virus?",
+      "a": "Zufan describes hybrid capture as a working approach to recovering Lassa genomes, but an intensive one. Using it in-country requires laboratory equipment and expertise."
+    },
+    {
+      "q": "How did lockdown affect the hepatitis A project?",
+      "a": "Zufan reports that there were no hepatitis A outbreaks during the Australian lockdown period. The project initially used spiked berries and cereals, then incorporated clinical cases after lockdown."
+    },
+    {
+      "q": "Why did an Australian PhD suit Sara Zufan?",
+      "a": "She already had a master's degree and prior experience, so she valued optional coursework and being able to begin research immediately. She also appreciated the independence and the sense of continuing her professional development."
+    }
+  ]
+}

@@ -1,0 +1,137 @@
+{
+  "episode": "135",
+  "headline": "Assembling ATCC genomes and tracing strain provenance",
+  "description": "Andrew Page and Nikhita Puthuveetil discuss ATCC genome assembly, repetitive viral genomes, strain provenance and changing taxonomy.",
+  "summary": "Andrew Page talks with Nikhita Puthuveetil, Senior Bioinformatician at the American Type Culture Collection (ATCC), about sequencing and assembling organisms from its collection. They discuss repetitive viral genomes, bacterial genome circularisation, assembly checks and the difficulty of applying one pipeline to many organisms. They also explain why strain provenance and changing taxonomy matter when researchers choose reference sequences.",
+  "people": [
+    {
+      "name": "Andrew Page",
+      "role": "host",
+      "affiliation": ""
+    },
+    {
+      "name": "Nikhita Puthuveetil",
+      "role": "guest",
+      "affiliation": "American Type Culture Collection (ATCC)"
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Sequencing the ATCC collection",
+      "body": "Puthuveetil describes her role as lead bioinformatician for the ATCC Genome Portal, after a little over four years at ATCC. The team is working towards sequencing everything in the collection, beginning with bacteria and extending into viruses, fungi and protists. Its laboratory team generates both short- and long-read sequencing data.\n\nThe collection's diversity makes a common assembly workflow difficult: organisms span different genome sizes, GC contents and other extremes. Puthuveetil mentions an ASMNGS poster describing the team's assembly approach, but stresses the practical difficulty of custom-assembling every organism. With much of the easier bacterial work completed, the team has been tackling harder organisms, including extremophiles and larger viruses."
+    },
+    {
+      "heading": "Repetitive genomes, circularisation and assembly checks",
+      "body": "Herpesviruses are a particular challenge in Puthuveetil's work. She describes GC-rich genomes with extensive repetitive regions, including repeats at the flanks. These are difficult to sequence with Illumina, so the team uses long reads to address limitations in the short-read data. Some genomes still require manual assembly work and investigation of what is preventing a satisfactory result.\n\nThat investigation includes searching the literature for organism-specific problems and examining how other researchers have curated assemblies. Puthuveetil notes the difficulty of finding subject-matter expertise for every organism. Each month, the team reviews pipeline-produced genomes using measures such as N50 and agreement between assembled and expected genome lengths.\n\nFor bacterial assemblies, circularity is the publication gold standard she describes. Unicycler can circularise assemblies automatically. The team has also been examining assembly start sites and the need to reposition sequences rather than simply retaining the starting point produced by an assembler."
+    },
+    {
+      "heading": "Customer feedback and strain provenance",
+      "body": "Genome Portal users provide another route into assembly review. A customer may report that a particular gene appears to be missing, prompting the team to revisit a genome and check how it should look. That feedback is useful when a shared pipeline is being applied across such a varied collection.\n\nPuthuveetil recalls a paper from about two years earlier comparing publicly available sequences labelled as ATCC strains with ATCC's own assemblies. Some differed substantially. One example involved a mutated strain whose status was not apparent to people using the sequence. Her point is not that public sequences are necessarily bad, but that supporting metadata may be insufficient to judge their suitability.\n\nATCC's internal records help it explain the history behind its published genomes. By contrast, reconstructing provenance from public records can require contacting an old submitter or tracing material held in a laboratory for decades. Page describes following strain histories back to papers that identify a source only by a first name."
+    },
+    {
+      "heading": "Type strains and changing taxonomy",
+      "body": "Page asks about the NCTC sequencing project in the UK. Puthuveetil explains that ATCC and NCTC share some type strains and communicate when changes involving those strains arise. Taxonomy is a recurring issue during publication, and the team uses resources including LPSN to check bacterial names.\n\nA deposited strain may retain a name from the 1990s even though its classification has since changed. ATCC checks deposited identities through classification, but a name mismatch can initially flag a sample as contaminated. Further investigation is needed to distinguish a genuine contamination problem from a taxonomic change.\n\nPage contrasts GTDB's ANI-based taxonomy with the submitter-supplied names in NCBI, drawing on work with NCBI and RefSeq classification databases. Species complexes make these comparisons particularly difficult: classification software may stop at the complex rather than resolve its members. Both speakers emphasise the value of subject-matter expertise and phenotypic evidence when closely related genomes are hard to distinguish."
+    },
+    {
+      "heading": "Beyond whole-genome sequences",
+      "body": "Puthuveetil describes exploratory work on other ways to use ATCC's collection data. The current focus has been whole-genome sequences, but possibilities include RNA-seq using cell-line data and work in proteomics. These are directions the team would like to explore, rather than established services described in the interview.\n\nThe question is what additional data customers would find useful. Puthuveetil also values the variety of the work: moving between different organisms means continual learning rather than repeating the same analysis every day."
+    }
+  ],
+  "highlights": [
+    {
+      "time": "00:00:28",
+      "topic": "The ATCC Genome Portal and sequencing bacteria, viruses, fungi and protists"
+    },
+    {
+      "time": "00:01:13",
+      "topic": "Finding an assembly approach that works across a diverse collection"
+    },
+    {
+      "time": "00:02:15",
+      "topic": "Repetitive viral regions, long reads and manual assembly investigation"
+    },
+    {
+      "time": "00:03:54",
+      "topic": "Unicycler and circularity as a bacterial assembly gold standard"
+    },
+    {
+      "time": "00:04:16",
+      "topic": "Repositioning assembly start sites"
+    },
+    {
+      "time": "00:04:34",
+      "topic": "Customer reports of missing genes prompt genome checks"
+    },
+    {
+      "time": "00:05:38",
+      "topic": "Comparing public sequences labelled as ATCC strains with ATCC assemblies"
+    },
+    {
+      "time": "00:06:24",
+      "topic": "Data provenance and the limits of public sequence metadata"
+    },
+    {
+      "time": "00:08:27",
+      "topic": "Shared type strains with NCTC and checking changing taxonomic names"
+    },
+    {
+      "time": "00:09:45",
+      "topic": "Distinguishing contamination flags from taxonomic name changes"
+    },
+    {
+      "time": "00:10:22",
+      "topic": "Comparing GTDB, NCBI and strain identities in classification databases"
+    },
+    {
+      "time": "00:12:01",
+      "topic": "Exploring RNA-seq, cell-line data and proteomics"
+    }
+  ],
+  "quotes": [
+    {
+      "text": "It's kind of difficult to try to custom assemble every single thing that we have.",
+      "time": "00:01:13",
+      "speaker": "Nikhita Puthuveetil"
+    }
+  ],
+  "tools": [
+    "ATCC Genome Portal",
+    "Unicycler",
+    "Illumina",
+    "LPSN",
+    "NCBI",
+    "RefSeq",
+    "GTDB",
+    "ANI",
+    "RNA-seq"
+  ],
+  "topics": [
+    "genome assembly",
+    "bacterial genomes",
+    "herpesviruses",
+    "long-read sequencing",
+    "genome circularisation",
+    "strain provenance",
+    "metadata",
+    "type strains",
+    "microbial taxonomy"
+  ],
+  "faq": [
+    {
+      "q": "How does ATCC check its genome assemblies?",
+      "a": "Puthuveetil describes monthly reviews using measures including N50 and agreement with expected genome lengths. Difficult assemblies may also require manual investigation, literature searches and organism-specific expertise."
+    },
+    {
+      "q": "Why are herpesvirus genomes difficult to assemble?",
+      "a": "The herpesviruses discussed have GC-rich genomes and extensive repetitive regions, including at their flanks. ATCC uses long reads to help address short-read limitations, although some genomes still need manual assembly work."
+    },
+    {
+      "q": "Why might a public ATCC-labelled sequence differ from ATCC's assembly?",
+      "a": "The comparison described in the episode found substantial differences in some sequences, including an example involving a mutated strain. Missing strain-history metadata can make it difficult to determine whether a public sequence represents the material a researcher expects."
+    },
+    {
+      "q": "Can a taxonomic name change look like contamination?",
+      "a": "Yes. Puthuveetil explains that a mismatch between a deposited name and a current classification can initially trigger a contamination flag. The team investigates whether the discrepancy reflects contamination or a change in taxonomy."
+    }
+  ]
+}

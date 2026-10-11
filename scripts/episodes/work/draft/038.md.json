@@ -1,0 +1,143 @@
+{
+  "episode": "038",
+  "headline": "Ontologies for effective data sharing: standards and pitfalls",
+  "description": "Emma Griffiths and João Carriço discuss metadata standards, free-text mapping and the practical limits of ontologies for sharing microbial genomics data.",
+  "summary": "Nabil-Fareed Alikhan hosts Emma Griffiths and João Carriço for the second part of a discussion about ontologies, this time focused on effective data sharing. They explain how shared definitions and relationships can make metadata interoperable, with examples from foodborne-pathogen surveillance and antimicrobial resistance. They also examine free-text clean-up, incompatible ontology designs and why data standards deserve attention before sample collection begins.",
+  "people": [
+    {
+      "name": "Nabil-Fareed Alikhan",
+      "role": "host",
+      "affiliation": "Quadram Institute, Norwich, UK"
+    },
+    {
+      "name": "Emma Griffiths",
+      "role": "guest",
+      "affiliation": "University of British Columbia; her lab is embedded at the BC Centre for Disease Control"
+    },
+    {
+      "name": "João Carriço",
+      "role": "guest",
+      "affiliation": "Formerly a tenured professor at the University of Lisbon"
+    },
+    {
+      "name": "Lee Katz",
+      "role": "host",
+      "affiliation": "Centers for Disease Control and Prevention; adjunct member at the University of Georgia"
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Shared terms need shared meanings",
+      "body": "Ontologies help people standardise information so that it can be combined and interpreted across systems. João stresses that exchanging a field such as location or susceptibility is not enough: both contributors must understand what that field means.\n\nEmma distinguishes an ontology from a database containing a standard vocabulary. Definitions and identifiers distinguish meanings, synonyms connect different lexicons, and relationships connect terms. Those relationships support more complex queries and knowledge bases. The discussion of drug discovery illustrates the broader aim: connecting information about drugs, their chemistry and their effects, rather than simply agreeing on labels."
+    },
+    {
+      "heading": "Examples from microbial genomics",
+      "body": "Emma describes work to introduce standardised ontology terms into Genome Tracker, the FDA-led network of laboratories studying foodborne pathogens. At the time of recording, at least two fields provided standardised terms for food sources and environments. Analyses were being explored to understand how that information could enrich subsequent work.\n\nJoão describes using a typing ontology to define schemas, alleles and loci, supporting more interoperable sharing of gene-by-gene schemas. Emma also highlights the Antimicrobial Resistance Ontology, or ARO, which underpins CARD and the Resistance Gene Identifier, RGI. It connects antibiotic information, mechanisms of action and genomic information to support resistance analysis."
+    },
+    {
+      "heading": "Choose standards around the question",
+      "body": "The recommended starting point is to standardise metadata using community resources. Emma introduces the OBO Foundry as a community following shared ontology-building principles, with resources covering anatomy, environments, diseases and food. João recommends starting with the question a project needs to answer, building something achievable and then connecting it to relevant existing ontologies.\n\nFor metadata specifications, Emma points to the Genomic Standards Consortium, including MIxS, MIMS and MIGS, and attribute packages from INSDC repositories. These standards provide formats, suggested values and examples. She also describes a tool for selecting ontology fields and creating data-entry forms. More elaborate implementations, such as graph databases, require additional resources; the intended questions should determine the level of effort."
+    },
+    {
+      "heading": "Converting free text is not automatic",
+      "body": "Nabil asks how to turn existing free text into structured categories. Emma describes an EMBL-EBI website tool that highlights ontology terms in passages of text, alongside a tool from her group that tokenises short metadata entries and maps them to standardised terms. The latter is available through the command line or as a service.\n\nJoão warns that typos and partial sentences make automation difficult. Resolving 70–80% of records would already be useful, but he presents this as a practical possibility, not a benchmark result. Manual work remains necessary. Collecting clearer information helps: a sample described only as chicken leaves unanswered whether it came from a live animal, a retail product or an abattoir swab."
+    },
+    {
+      "heading": "Ontologies can still disagree",
+      "body": "Shared terminology does not guarantee seamless interoperability. João warns that overlapping ontologies may define apparently similar terms differently. Validation rules may also depend on context: sequencing thresholds appropriate to human data need not suit microbial data.\n\nEmma explains that OBO Foundry practices encourage term reuse, but ontologies reflect their creators’ research needs and worldviews. Differences in axioms and relationships can cause clashes when reasoning across them. She gives a direct example: her group’s genomic epidemiology ontology, GenEpiO, and João’s typing and NGS ontologies were not interoperable because they had been designed differently. Harmonisation was still needed to avoid reproducing the same information silos."
+    },
+    {
+      "heading": "Plan for the next project",
+      "body": "Nabil’s explanation for not using ontologies is familiar: he needed to understand the data and write the paper immediately. The guests argue that agreeing on structures before collecting samples can reduce the later effort of fitting information together. Nabil sees particular value when planning the next project on the back of completed work.\n\nEmma argues that data management belongs in grant applications. Nabil notes UK requirements for management and dissemination, while questioning whether promising a repository upload adequately addresses interoperability. João frames standardisation as a long-term responsibility for group leaders: data should remain understandable after individual students leave. The closing advice is to standardise early, consider future reuse and adopt international community standards wherever possible."
+    }
+  ],
+  "highlights": [
+    {
+      "time": "00:01:39",
+      "topic": "Why ontologies help standardise information for interoperability"
+    },
+    {
+      "time": "00:02:37",
+      "topic": "Standardised food-source and environmental terms in Genome Tracker"
+    },
+    {
+      "time": "00:03:34",
+      "topic": "A typing ontology for sharing gene-by-gene schemas"
+    },
+    {
+      "time": "00:04:28",
+      "topic": "Building knowledge bases through ontology relationships"
+    },
+    {
+      "time": "00:06:42",
+      "topic": "Starting with metadata standards and the OBO Foundry"
+    },
+    {
+      "time": "00:10:50",
+      "topic": "Tools for mapping paragraphs and short free-text metadata to ontology terms"
+    },
+    {
+      "time": "00:15:06",
+      "topic": "Genomic Standards Consortium packages and building metadata specifications"
+    },
+    {
+      "time": "00:17:19",
+      "topic": "Overlapping ontologies, differing meanings and context-dependent validation"
+    },
+    {
+      "time": "00:24:28",
+      "topic": "Why separately designed genomic ontologies may not work together"
+    },
+    {
+      "time": "00:25:50",
+      "topic": "Paper deadlines and the time needed to understand and structure data"
+    },
+    {
+      "time": "00:27:58",
+      "topic": "Making data management part of grant applications"
+    }
+  ],
+  "quotes": [
+    {
+      "text": "But rest assured that you'll have to dig in manually in some cases.",
+      "time": "00:11:43",
+      "speaker": "João Carriço"
+    }
+  ],
+  "tools": [
+    "Antimicrobial Resistance Ontology (ARO)",
+    "CARD",
+    "Resistance Gene Identifier (RGI)",
+    "OBO Foundry",
+    "Uberon",
+    "GenEpiO",
+    "MIxS",
+    "MIMS",
+    "MIGS"
+  ],
+  "topics": [
+    "ontologies",
+    "data sharing",
+    "metadata standardisation",
+    "interoperability",
+    "microbial genomics",
+    "antimicrobial resistance",
+    "free-text mapping",
+    "data management",
+    "data reuse"
+  ],
+  "faq": [
+    {
+      "q": "How do ontologies improve microbial genomics data sharing?",
+      "a": "They provide definitions, identifiers, synonyms and relationships that help different groups interpret and connect information consistently. The episode discusses food-source metadata, gene-by-gene schemas and antimicrobial resistance as examples."
+    },
+    {
+      "q": "Can free-text metadata be mapped automatically to ontology terms?",
+      "a": "The guests describe tools that recognise ontology terms or map short metadata entries to standardised terms. Typos, incomplete descriptions and ambiguous wording still require manual review."
+    },
+    {
+      "q": "Where should a project start when choosing metadata standards?",
+      "a": "Start with the questions the project needs to answer, then examine community resources such as the OBO Foundry, Genomic Standards Consortium packages and repository attribute packages. The guests recommend choosing structures before sample collection and considering uses beyond the immediate project."
+    }
+  ]
+}

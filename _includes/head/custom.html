@@ -1,3 +1,57 @@
 <!-- start custom head snippets -->
-
+{%- if page.description -%}
+<meta property="og:title" content="{{ page.title | escape }}">
+<meta property="og:description" content="{{ page.description | strip_html | escape }}">
+<meta property="og:url" content="{{ page.url | absolute_url }}">
+<meta property="og:site_name" content="{{ site.title | escape }}">
+{%- endif -%}
+{%- if page.episode -%}
+<meta property="og:type" content="article">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "PodcastEpisode",
+  "name": {{ page.title | jsonify }},
+  "headline": {{ page.headline | default: page.title | jsonify }},
+  "description": {{ page.description | default: page.excerpt | strip_html | jsonify }},
+  "url": {{ page.url | absolute_url | jsonify }},
+  "datePublished": {{ page.date | date: "%Y-%m-%d" | jsonify }},
+  {%- unless page.episode contains "encore" %}
+  "episodeNumber": {{ page.episode | jsonify }},
+  {%- endunless %}
+  "associatedMedia": {"@type": "MediaObject", "contentUrl": {{ page.link | jsonify }}},
+  "partOfSeries": {"@type": "PodcastSeries", "name": "MicroBinfie Podcast", "url": {{ site.url | jsonify }}}
+  {%- if page.guests and page.guests.size > 0 -%},
+  "actor": [{%- for g in page.guests -%}{"@type": "Person", "name": {{ g | jsonify }}}{%- unless forloop.last -%},{%- endunless -%}{%- endfor -%}]
+  {%- endif %}
+}
+</script>
+{%- if page.faq and page.faq.size > 0 -%}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [{%- for f in page.faq -%}{"@type": "Question", "name": {{ f.q | jsonify }}, "acceptedAnswer": {"@type": "Answer", "text": {{ f.a | jsonify }}}}{%- unless forloop.last -%},{%- endunless -%}{%- endfor -%}]
+}
+</script>
+{%- endif -%}
+{%- endif -%}
+{%- if page.book -%}
+<meta property="og:type" content="book">
+<meta property="og:image" content="{{ page.book.cover | absolute_url }}">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Book",
+  "name": {{ page.book.name | jsonify }},
+  "alternativeHeadline": {{ page.book.subtitle | jsonify }},
+  "author": [{%- for a in page.book.authors -%}{"@type": "Person", "name": {{ a | jsonify }}}{%- unless forloop.last -%},{%- endunless -%}{%- endfor -%}],
+  "datePublished": {{ page.book.year | jsonify }},
+  "inLanguage": "en-GB",
+  "image": {{ page.book.cover | absolute_url | jsonify }},
+  "url": {{ page.url | absolute_url | jsonify }},
+  "description": {{ page.description | jsonify }}
+}
+</script>
+{%- endif -%}
 <!-- end custom head snippets -->

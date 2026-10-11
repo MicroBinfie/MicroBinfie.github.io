@@ -1,0 +1,179 @@
+{
+ "episode": "073",
+ "headline": "Bactopia, reproducible workflows and life beyond Bash",
+ "description": "Robert Petit discusses workflow managers, Prokka and containers, and when custom bioinformatics scripts should become reproducible workflows.",
+ "summary": "Robert Petit of the Wyoming Public Health Laboratory returns for a discussion of Bactopia and the shift from custom scripts to workflow managers. The conversation covers restarting failed analyses, managing software dependencies, moving between computing environments and reusing other people's work. The panel also considers when a simple script is enough, and how existing workflows can help newcomers without removing the need to understand failures.",
+ "people": [
+  {
+   "name": "Robert Petit",
+   "role": "guest",
+   "affiliation": "Wyoming Public Health Laboratory"
+  },
+  {
+   "name": "Lee Katz",
+   "role": "host",
+   "affiliation": "Centers for Disease Control and Prevention; University of Georgia (adjunct member)"
+  },
+  {
+   "name": "Andrew Page",
+   "role": "host",
+   "affiliation": "Quadram Institute, Norwich, UK"
+  },
+  {
+   "name": "Nabil-Fareed Alikhan",
+   "role": "host",
+   "affiliation": "Quadram Institute, Norwich, UK"
+  }
+ ],
+ "sections": [
+  {
+   "heading": "Why move beyond Bash scripts?",
+   "body": "Bactopia, a workflow designed for bacterial genomes, provides the starting point for this wider discussion. Robert Petit is introduced as developing bioinformatics infrastructure at the Wyoming Public Health Laboratory to support its SARS-CoV-2 sequencing response. His earlier work includes Staphopia and a typing scheme for identifying Bacillus anthracis in metagenomic sequences. The show notes identify the Bactopia paper by DOI: 10.1128/mSystems.00190-20.\n\nThe central question is why routine tasks—quality control, genotyping, metrics and species-specific typing—have moved from custom Bash scripts towards workflow managers. Restarting failed analyses is an immediate advantage: checking that a file exists does not necessarily establish that a step finished successfully. Reproducibility and portability are equally important. Rather than rebuilding the same machinery, developers can use frameworks that manage inputs, outputs and execution across a laptop, a Slurm cluster or Google Cloud."
+  },
+  {
+   "heading": "The cost of building everything yourself",
+   "body": "Lee Katz describes learning to use completion-marker files and then repeatedly implementing similar checks in his own pipelines. His SNP pipeline and SneakerNet illustrate the problem: useful analyses also required custom logic to decide which work had already been done. He reflects that adopting a workflow manager earlier could have avoided some of that repeated development.\n\nAnother host recalls spending months writing Python scripts around Fabric to transfer reads, create PBS batch scripts and submit jobs to an HPC system. Despite that effort, the pipeline remained fragile and needed manual checking between stages. It was tied to its scheduler: on a different cluster the scripts would break, and running a small batch on a laptop was not possible."
+  },
+  {
+   "heading": "Dependencies and reusable building blocks",
+   "body": "Workflow managers also reduce the work involved in preparing software environments. The panel discusses giving Nextflow a YAML description of a Conda environment, or using Docker and Singularity containers. These approaches make tool versions explicit and reduce the need to reinstall and reconfigure everything on each machine. They are not presented as infallible: one host estimates that the Conda approach works 95% of the time, with exceptions.\n\nShared code matters alongside shared environments. GitHub and GitLab make reporting problems and contributing fixes more direct than trying to reach a tool's author by email. The discussion points to nf-core and Nextflow Patterns as useful examples, and to Nextflow DSL 2 as a way to organise work into reusable modules rather than one large workflow."
+  },
+  {
+   "heading": "Prokka and the annotation workload",
+   "body": "Prokka is used as an example of the field converging on a practical solution. Robert recalls a class exercise in which groups had to assemble an annotation workflow from multiple programs, followed by the discovery that Prokka already brought bacterial annotation together. The point is not that every successful pipeline must use a workflow language: Prokka's Perl implementation had been doing its job well for almost ten years.\n\nLee contrasts this with a more extensive genome annotation pipeline he helped develop, which was harder to install and run. The discussion includes TMHMM, SignalP and InterProScan, illustrating the dependency burden of a broader analysis. A host also highlights Prokka's trimmed Swiss-Prot database, contrasting it with searching every gene against all of nr. Defining the useful first-pass result can be as important as adding more analyses."
+  },
+  {
+   "heading": "When a small script is enough",
+   "body": "The panel does not recommend turning every command into a managed workflow. A quick, one-off analysis or some file manipulation may take less effort in a Bash script. The case becomes stronger when an analysis will be repeated, shared or reused as part of another workflow.\n\nWorkflow managers are not reserved for large computing systems. Robert describes testing a small dataset locally before changing the execution configuration to submit work to Slurm. They can also handle queue submission without requiring a fresh set of batch scripts. Another host finds them increasingly useful when moving analyses between virtual machines, where consistent dependencies and configuration matter even without a large HPC workload."
+  },
+  {
+   "heading": "Making analysis accessible without hiding every problem",
+   "body": "Existing workflows can help people with little command-line experience obtain results because dependency installation and file handling happen behind the scenes. That is different from asking a beginner to write a workflow. When something breaks, users still need to investigate or ask for help, and regular bioinformatics practitioners are encouraged to invest time in learning a workflow language.\n\nThe panel also questions how much system administration bioinformaticians should have to do. Galaxy offers a graphical abstraction, while command-line workflows can retain configurable control. Bioconda, BioContainers and automatically generated Singularity images are presented as ways to share installation effort. The closing message is that the particular language matters less than introducing structure, reproducibility and portability into workflow design."
+  }
+ ],
+ "highlights": [
+  {
+   "time": "00:03:12",
+   "topic": "Resuming failed analyses, reproducibility and portability beyond custom Bash scripts"
+  },
+  {
+   "time": "00:06:19",
+   "topic": "Lee Katz reflects on completion markers and repeatedly building custom pipelines"
+  },
+  {
+   "time": "00:07:52",
+   "topic": "A Fabric-based HPC pipeline illustrates months of development and fragile automation"
+  },
+  {
+   "time": "00:11:50",
+   "topic": "Shared best practices and Prokka as a milestone in bacterial annotation"
+  },
+  {
+   "time": "00:13:25",
+   "topic": "Lee describes building a more extensive but harder-to-install annotation pipeline"
+  },
+  {
+   "time": "00:16:07",
+   "topic": "Why a quick Bash script can still be appropriate for a one-off analysis"
+  },
+  {
+   "time": "00:19:27",
+   "topic": "Prototyping locally with a small test set before running on a cluster"
+  },
+  {
+   "time": "00:21:13",
+   "topic": "How existing workflows help beginners, and what happens when an analysis breaks"
+  },
+  {
+   "time": "00:24:48",
+   "topic": "Breaking large workflows into modules and reusing other people's code"
+  },
+  {
+   "time": "00:26:29",
+   "topic": "Bioconda and container builds reduce repeated software installation work"
+  },
+  {
+   "time": "00:27:19",
+   "topic": "The closing advice: focus on workflow structure rather than language choice"
+  }
+ ],
+ "quotes": [
+  {
+   "text": "I don't think there's been a day in my bioinformatics career where I haven't also acted as a sys administrator for some server that we're processing on.",
+   "time": "00:23:56",
+   "speaker": "Robert Petit"
+  },
+  {
+   "text": "It doesn't matter what language you pick, just start playing around with it and getting used to thinking of it that way.",
+   "time": "00:27:19",
+   "speaker": "one of the hosts"
+  }
+ ],
+ "tools": [
+  "Bactopia",
+  "Staphopia",
+  "Nextflow",
+  "Snakemake",
+  "WDL",
+  "CWL",
+  "Galaxy",
+  "Airflow",
+  "Swift",
+  "Bash",
+  "Fabric",
+  "PBS",
+  "Slurm",
+  "Google Cloud",
+  "Conda",
+  "Bioconda",
+  "Docker",
+  "Singularity",
+  "BioContainers",
+  "nf-core",
+  "Nextflow Patterns",
+  "GitHub",
+  "GitLab",
+  "Prokka",
+  "TMHMM",
+  "SignalP",
+  "InterProScan",
+  "Swiss-Prot",
+  "nr",
+  "SneakerNet",
+  "BLAST",
+  "Velvet"
+ ],
+ "topics": [
+  "workflow managers",
+  "bacterial genomics",
+  "reproducibility",
+  "pipeline portability",
+  "genome annotation",
+  "dependency management",
+  "software containers",
+  "high-performance computing",
+  "system administration"
+ ],
+ "faq": [
+  {
+   "q": "Why use a workflow manager instead of a Bash script for bioinformatics?",
+   "a": "The panel emphasises restarting failed analyses, tracking inputs and outputs, managing dependencies and moving between computing environments. These features avoid repeatedly implementing fragile checks and scheduler-specific scripts."
+  },
+  {
+   "q": "When is a workflow manager unnecessary?",
+   "a": "A quick, one-off analysis or simple file manipulation may not justify the setup effort. The panel sees more value when an analysis will be repeated, shared or reused in another workflow."
+  },
+  {
+   "q": "Can workflow managers be useful on a laptop?",
+   "a": "Yes. Robert describes testing a small dataset locally and then changing the execution configuration to run on Slurm. The discussion also highlights consistent environments when moving between machines."
+  },
+  {
+   "q": "How do Conda and containers help bioinformatics workflows?",
+   "a": "A workflow can specify a Conda environment or use a Docker or Singularity container, reducing manual installation and making software versions explicit. The panel also discusses how Bioconda recipes and container builds let users share that setup work."
+  },
+  {
+   "q": "Do beginners need to write workflows before using them?",
+   "a": "No: the episode distinguishes running an existing workflow from developing one. Existing workflows can handle dependencies and file movement for beginners, although failures still require investigation or support."
+  }
+ ]
+}

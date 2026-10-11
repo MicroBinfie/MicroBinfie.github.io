@@ -1,0 +1,164 @@
+{
+  "episode": "153",
+  "headline": "Seebot: checking the reliability of bioinformatics software",
+  "description": "Nabil-Fareed Alikhan explains Seebot's checks for bioinformatics software, from help text and testing to maintenance and security.",
+  "summary": "Lee Katz, Andrew Page and Nabil-Fareed Alikhan discuss Seebot, Nabil-Fareed’s prototype for assessing bioinformatics software and its repositories. They explore basic command-line expectations, testing, maintenance and security, asking how developers can make tools less fragile without mistaking every warning or quiet repository for poor software.",
+  "people": [
+    {
+      "name": "Lee Katz",
+      "role": "host",
+      "affiliation": ""
+    },
+    {
+      "name": "Andrew Page",
+      "role": "host",
+      "affiliation": "Origin Sciences; University of East Anglia"
+    },
+    {
+      "name": "Nabil-Fareed Alikhan",
+      "role": "host",
+      "affiliation": "Center for Genomic Pathogen Surveillance, University of Oxford"
+    },
+    {
+      "name": "Torsten",
+      "role": "mentioned",
+      "affiliation": ""
+    },
+    {
+      "name": "Stephen Turner",
+      "role": "mentioned",
+      "affiliation": ""
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Fix fragile tools upstream",
+      "body": "Nabil-Fareed Alikhan presents Seebot as a prototype for assessing bioinformatics tools and their repositories. Its name comes from Torsten’s habit of opening issues about usability and code improvements, particularly requests to package tools in Bioconda. The show notes link the related paper, *Ten recommendations for creating usable bioinformatics command line software*.\n\nThe immediate motivation was a phage working-group discussion about building pipelines around fragile software. Nabil-Fareed questions why pipeline authors should keep compensating for problems in publicly available, open-source code rather than fixing them upstream. Seebot uses Conda and Bioconda to help obtain software, then examines its behaviour, source code, repository information, dependencies and security issues."
+    },
+    {
+      "heading": "Basic expectations for command-line software",
+      "body": "The intended audience is developers and aspiring developers. Rather than criticising individual authors, Nabil-Fareed wants to identify common gaps and turn the results into practical guidance. Users might also use those expectations when asking developers for improvements.\n\nThe initial checks are deliberately basic: a README, working **--help**, an accessible version number, a licence and citation information. Reliable version reporting matters for recording what ran in a pipeline. Testing adds another layer: a Bash script running a toy dataset is better than nothing, but Nabil-Fareed argues for standard automated test frameworks, such as pytest for Python, with checks of lower-level functions. He also sees a need to bring security checks, already familiar to software engineers, into routine bioinformatics development."
+    },
+    {
+      "heading": "Maintenance needs context",
+      "body": "Lee introduces *Ten quick tips to SNIFF out sustainable and secure scientific software*, which he encountered through Stephen Turner on Bluesky. He explicitly says he has not yet read the paper in full. Its SNIFF framework covers Source, Network, Interaction, Fit and Fragility: questions about origins, ecosystems, maintainer communication, suitability and dependencies.\n\nNabil-Fareed questions how activity-based expectations should apply to bioinformatics. Seebot collects days since the last release and non-bot commit, commits in the previous 12 months, files over 500 lines, and linting errors per thousand lines. His early observations include tools with up to a year since their last commit, and popular tools with around 1,000 days since their last commit that still work. He has not processed all of Bioconda.\n\nThe diagnostic-testing discussion adds a regulatory concern: academic software can be software of unknown provenance. Citation counts offer an indirect proxy for quality, but even 10,000 citations cannot establish exactly how a tool was developed or checked."
+    },
+    {
+      "heading": "What uv, the Makefile and Ruff do",
+      "body": "Lee asks whether Seebot’s Makefile drives the assessment. Nabil-Fareed explains that it mainly provides convenient shortcuts for commands run through uv, which handles Python dependencies and the virtual environment. A test shortcut runs **uv run pytest**; the Makefile itself is not the assessment engine.\n\nRuff checks Python code. Nabil-Fareed contrasts it with Black, which he finds more opinionated, and describes common findings: unsorted imports, older string-formatting styles rather than f-strings, long lines, unused imports and unused variables. These are distinct from findings that may affect execution or security."
+    },
+    {
+      "heading": "Silent failures and security warnings",
+      "body": "More concerning findings include subprocess calls that open shells and **try/except/pass** patterns that suppress exceptions. Nabil-Fareed describes how ignoring an upstream failure can let a tool continue until it produces garbled output much later, obscuring the original problem.\n\nBandit provides security checks, including warnings about apparent hard-coded passwords. A frequent warning concerns MD5. Nabil-Fareed explains that the concern is using MD5 to hash passwords, while bioinformatics tools may instead be hashing allele sequences or k-mers. The warning therefore needs interpretation in the context of what the code actually does. He describes Bandit as conventional software performing checks, not an AI system."
+    },
+    {
+      "heading": "Could AI help apply the guidance?",
+      "body": "The hosts discuss packaging agreed bioinformatics conventions as skills for Claude or ChatGPT, so an assistant could inspect a repository and potentially fix routine issues. Nabil-Fareed supports the idea once the metrics and best-practice guidance have been settled and written up; it is a proposed extension, not a demonstrated Seebot capability.\n\nLanguage choices also get a lighter discussion. Nabil-Fareed reports seeing more Rust alongside plenty of C and C++, while the hosts joke about using AI to rewrite popular tools as Perl one-liners."
+    }
+  ],
+  "highlights": [
+    {
+      "time": "00:01:33",
+      "topic": "Seebot’s name, Torsten’s influence and the scope of its assessments"
+    },
+    {
+      "time": "00:03:35",
+      "topic": "Why the phage working-group discussion prompted a focus on upstream fixes"
+    },
+    {
+      "time": "00:07:53",
+      "topic": "Turning common software gaps into guidance for developers"
+    },
+    {
+      "time": "00:08:55",
+      "topic": "Checking help text, version numbers, licences, citations and tests"
+    },
+    {
+      "time": "00:10:16",
+      "topic": "A proposal for Claude or ChatGPT skills tailored to bioinformatics"
+    },
+    {
+      "time": "00:11:06",
+      "topic": "Lee introduces the SNIFF framework for assessing scientific software"
+    },
+    {
+      "time": "00:12:47",
+      "topic": "Why maintenance and commit activity need bioinformatics-specific context"
+    },
+    {
+      "time": "00:15:48",
+      "topic": "Software of unknown provenance in diagnostic testing and citation proxies"
+    },
+    {
+      "time": "00:17:18",
+      "topic": "The Makefile as a shortcut layer for uv commands"
+    },
+    {
+      "time": "00:19:05",
+      "topic": "Ruff versus Black and common Python lint findings"
+    },
+    {
+      "time": "00:20:37",
+      "topic": "How silently ignored exceptions can lead to downstream failures"
+    },
+    {
+      "time": "00:21:43",
+      "topic": "Bandit security checks, hard-coded passwords and MD5 warnings"
+    }
+  ],
+  "quotes": [
+    {
+      "text": "Why don't we just fix it upstream in the first place",
+      "time": "00:03:35",
+      "speaker": "Nabil-Fareed Alikhan"
+    },
+    {
+      "text": "We need version numbers for pipelines.",
+      "time": "00:08:55",
+      "speaker": "Nabil-Fareed Alikhan"
+    }
+  ],
+  "tools": [
+    "Seebot",
+    "Conda",
+    "Bioconda",
+    "Snakemake",
+    "uv",
+    "pytest",
+    "Ruff",
+    "Black",
+    "Bandit",
+    "Claude",
+    "ChatGPT",
+    "MD5",
+    "SNIFF framework"
+  ],
+  "topics": [
+    "bioinformatics software",
+    "software reliability",
+    "command-line tools",
+    "software testing",
+    "reproducibility",
+    "software maintenance",
+    "security checks",
+    "ai-assisted coding"
+  ],
+  "faq": [
+    {
+      "q": "What is Seebot?",
+      "a": "Seebot is Nabil-Fareed Alikhan’s prototype for assessing bioinformatics software. It examines tool behaviour, source code, repository information, dependencies and security issues, with the aim of turning common gaps into developer guidance."
+    },
+    {
+      "q": "Which basic checks does Seebot look for?",
+      "a": "Examples include a README, working --help, version reporting, licence and citation information, and evidence of testing. The discussion also covers linting and security checks."
+    },
+    {
+      "q": "Does an inactive repository mean a bioinformatics tool is unusable?",
+      "a": "Not necessarily. Nabil-Fareed describes popular tools with around 1,000 days since their last commit that still work, and argues that maintenance indicators need context rather than an automatic rejection rule."
+    },
+    {
+      "q": "Why might Bandit flag MD5 in bioinformatics software?",
+      "a": "The warning concerns MD5’s suitability for cryptographic uses such as password hashing. The episode notes that bioinformatics code may instead use it to hash allele sequences or k-mers, so the purpose of the code matters when interpreting the warning."
+    }
+  ]
+}

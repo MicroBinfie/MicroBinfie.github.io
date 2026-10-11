@@ -1,0 +1,187 @@
+{
+ "episode": "103",
+ "headline": "Kraken: databases, read classification and pathogen detection",
+ "description": "Jennifer Lu and Natalia Rincon explain Kraken classification, database choices, memory needs, abundance estimation and low-read pathogen detection.",
+ "summary": "Jennifer Lu and Natalia Rincon join the hosts to discuss Kraken, its taxonomic classification algorithm and the wider software suite. They explain database choices, memory requirements, abundance estimation and diversity analysis, then explore how to interpret small numbers of pathogen reads and handle Nanopore data.",
+ "people": [
+  {
+   "name": "Lee Katz",
+   "role": "host",
+   "affiliation": "Centers for Disease Control and Prevention; University of Georgia (adjunct member)"
+  },
+  {
+   "name": "Andrew Page",
+   "role": "host",
+   "affiliation": "Quadram Institute, Norwich, UK"
+  },
+  {
+   "name": "Nabil-Fareed Alikhan",
+   "role": "host",
+   "affiliation": "Quadram Institute, Norwich, UK"
+  },
+  {
+   "name": "Jennifer Lu",
+   "role": "guest",
+   "affiliation": "Johns Hopkins University Center for Computational Biology, Steven Salzberg's lab"
+  },
+  {
+   "name": "Natalia Rincon",
+   "role": "guest",
+   "affiliation": "Johns Hopkins University Center for Computational Biology, Steven Salzberg's lab"
+  },
+  {
+   "name": "Derek Wood",
+   "role": "mentioned",
+   "affiliation": ""
+  },
+  {
+   "name": "Steven Salzberg",
+   "role": "mentioned",
+   "affiliation": "Johns Hopkins University Center for Computational Biology"
+  },
+  {
+   "name": "Florian Breitweiser",
+   "role": "mentioned",
+   "affiliation": ""
+  },
+  {
+   "name": "Ben Langmead",
+   "role": "mentioned",
+   "affiliation": ""
+  },
+  {
+   "name": "Martin Steinegger",
+   "role": "mentioned",
+   "affiliation": ""
+  }
+ ],
+ "sections": [
+  {
+   "heading": "What Kraken classifies",
+   "body": "Developed in 2013–2014, Kraken assigns sequencing reads to taxonomic groups as specifically as the evidence allows. A read may be assigned to a species, a genus or a broader bacterial group when its sequence is shared across genomes. The guests describe exact k-mer matching as central to its speed, particularly when processing millions or billions of reads rather than searching reads with BLAST.\n\nComparison tools discussed include MetaPhlAn, megablast and Centrifuge. The guests caution that comparison papers reach different conclusions. They also identify Emu as a useful approach for 16S classification, while stressing that database structure makes 16S a distinct problem."
+  },
+  {
+   "heading": "Database choices and memory requirements",
+   "body": "The standard database described uses complete bacterial, archaeal and viral genomes from NCBI RefSeq, plus the human reference GRCh38. Its size changes as more genomes become available. The guests report that Kraken 1 databases had reached around 300 GB, whereas Kraken2 brought requirements down to roughly 30–50 GB of RAM at the time of recording.\n\nFor smaller machines, mini Kraken databases can be built to a specified size, such as 8 or 16 GB. This sacrifices sensitivity: less reference information means more unclassified reads. The guests generally use NCBI RefSeq, while one host uses GTDB taxonomy. Pre-built databases, including those provided through Ben Langmead's lab and available GTDB Kraken databases, let users avoid downloading genomes and building everything themselves."
+  },
+  {
+   "heading": "The wider Kraken software family",
+   "body": "Derek Wood and Steven Salzberg created the original Kraken. Florian Breitweiser developed KrakenUniq to provide additional information, while Ben Langmead and Derek worked together on Kraken2. Jennifer Lu developed Bracken for abundance estimation. Natalia Rincon contributes diversity tools: alpha diversity describes richness within a community, while beta diversity compares communities.\n\nA recent Nature Protocols paper describes metagenomic analysis using the Kraken software suite. Jennifer, Natalia and Martin Steinegger are among its co-authors. The conversation also covers a 2021 paper by Derek and Steven about developing Kraken.\n\nThe name is not presented as an acronym. According to the account shared by the guest, Kraken followed the sea-creature theme of Jellyfish, the k-mer counting tool used to build the original databases."
+  },
+  {
+   "heading": "Reading the outputs",
+   "body": "Kraken produces a per-read text file containing the read identifier, classification status, taxonomy ID and a breakdown of k-mer matches. Its summary report gives counts for each taxonomic group, distinguishing reads assigned directly to that group from reads assigned anywhere in its subtree.\n\nThe example is a genus with 100 reads assigned directly to it and another 50 assigned to species within it: the subtree total is 150. Those columns answer different questions and should not be confused.\n\nUnclassified reads have no database hits. Reads assigned to the root have matches that do not support a more specific placement. Unclassified reads may warrant further investigation because the standard database described does not cover all possible sources, such as plant or other vertebrate DNA."
+  },
+  {
+   "heading": "When a few reads matter",
+   "body": "There is no universal minimum read count for a meaningful finding. In a brain-sample investigation, roughly a dozen reads assigned to a species absent from the other samples prompted further investigation. The guests report that this proved to be a genuine pathogen. Brain and corneal samples illustrate why filtering out every low-count result can lose useful candidates.\n\nKrakenUniq adds evidence by counting unique k-mers. The guests also describe unique-count reporting in Kraken2, which uses minimisers. Many reads supported by very few distinct k-mers or minimisers can indicate contamination in the sample or database. These counts help validate a result rather than making the read total alone decisive. For broader diversity analysis, the guests highlight Kraken2's speed."
+  },
+  {
+   "heading": "Nanopore reads and implementation",
+   "body": "Kraken was designed with Illumina reads and their error rate in mind. The guests say Nanopore reads can be classified, but higher error rates can reduce classification accuracy. Smaller k-mers might help when building a database for Nanopore data, although they do not offer a settled optimal size. Longer reads also provide more k-mers, creating a trade-off.\n\nRapidly changing Nanopore chemistries make parameter tuning difficult. Using the same database for Illumina and Nanopore is described as acceptable, provided users recognise possible differences in classification.\n\nVector sequences are included in the databases and assigned a synthetic-sequences taxonomy ID. Kraken combines Perl for some input processing with C++ for database construction, compact storage, memory management and classification. The guests say newer tools are increasingly written in Python."
+  }
+ ],
+ "highlights": [
+  {
+   "time": "00:01:41",
+   "topic": "What Kraken does: assigning sequencing reads to species, genera or broader taxonomic groups."
+  },
+  {
+   "time": "00:06:33",
+   "topic": "Database growth, Kraken2 memory requirements and smaller mini Kraken databases."
+  },
+  {
+   "time": "00:08:53",
+   "topic": "NCBI RefSeq, GTDB taxonomy and pre-built Kraken databases."
+  },
+  {
+   "time": "00:09:41",
+   "topic": "The developers behind Kraken, KrakenUniq and Kraken2."
+  },
+  {
+   "time": "00:11:27",
+   "topic": "Bracken abundance estimation and Natalia Rincon's diversity tools."
+  },
+  {
+   "time": "00:12:46",
+   "topic": "The Kraken name, its Jellyfish connection and the paper about its development."
+  },
+  {
+   "time": "00:14:02",
+   "topic": "Per-read output and the distinction between direct and subtree counts in Kraken reports."
+  },
+  {
+   "time": "00:16:10",
+   "topic": "Why roughly a dozen pathogen reads in a brain sample were worth investigating."
+  },
+  {
+   "time": "00:18:24",
+   "topic": "Unique k-mer and minimiser counts as supporting evidence for classifications."
+  },
+  {
+   "time": "00:19:29",
+   "topic": "Using Kraken with Nanopore reads and the trade-offs around errors and k-mer size."
+  },
+  {
+   "time": "00:21:35",
+   "topic": "The difference between unclassified reads and reads assigned to the root."
+  },
+  {
+   "time": "00:23:33",
+   "topic": "Synthetic-sequence taxonomy IDs, followed by Kraken's Perl and C++ implementation."
+  }
+ ],
+ "quotes": [
+  {
+   "text": "So if you're really doing like an in-depth analysis, you'll probably need some external compute resources, but you can potentially run it like on your laptop or with limited resources.",
+   "time": "00:08:17",
+   "speaker": "Natalia Rincon"
+  }
+ ],
+ "tools": [
+  "Kraken",
+  "Kraken 1",
+  "Kraken2",
+  "KrakenUniq",
+  "mini Kraken",
+  "Bracken",
+  "BLAST",
+  "MetaPhlAn",
+  "megablast",
+  "Centrifuge",
+  "Emu",
+  "Jellyfish",
+  "NCBI RefSeq",
+  "GTDB",
+  "GRCh38"
+ ],
+ "topics": [
+  "taxonomic classification",
+  "metagenomics",
+  "reference databases",
+  "k-mer matching",
+  "abundance estimation",
+  "microbial diversity",
+  "pathogen detection",
+  "nanopore sequencing",
+  "contamination"
+ ],
+ "faq": [
+  {
+   "q": "What is the difference between Kraken and Bracken?",
+   "a": "Kraken classifies sequencing reads into taxonomic groups. Bracken, developed by Jennifer Lu, uses Kraken output for abundance estimation."
+  },
+  {
+   "q": "How much RAM does Kraken need?",
+   "a": "The guests describe Kraken2 databases requiring roughly 30–50 GB of RAM at the time of recording, with requirements changing as reference collections grow. Mini Kraken databases can target sizes such as 8 or 16 GB, at the cost of sensitivity and more unclassified reads."
+  },
+  {
+   "q": "How many Kraken reads are enough to identify a pathogen?",
+   "a": "The guests do not give a universal threshold. They describe a brain-sample investigation where roughly a dozen reads led to a genuine pathogen finding, and recommend considering sample context and unique k-mer or minimiser support."
+  },
+  {
+   "q": "Can Kraken classify Nanopore reads?",
+   "a": "Yes, although the guests warn that higher error rates can affect accuracy because Kraken was developed with Illumina reads in mind. They describe using the same database as acceptable with that caveat, while noting that an optimal Nanopore-specific k-mer size had not been established."
+  }
+ ]
+}

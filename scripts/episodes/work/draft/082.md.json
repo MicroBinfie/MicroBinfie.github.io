@@ -1,0 +1,186 @@
+{
+  "episode": "082",
+  "headline": "Mark Pallen’s bioinformatics before the millennium",
+  "description": "Mark Pallen recalls manual protein assembly, H. pylori urease, early PCR experiments and analysing the first Campylobacter jejuni genome.",
+  "summary": "Professor Mark Pallen joins Lee Katz, Andrew Page and Nabil-Fareed Alikhan to trace his move from medical microbiology to bioinformatics. His recollections span a 1977 entrance exam, sequence searches in the late 1980s and early access to bacterial genome data in the 1990s. The discussion shows how computational comparisons could guide experiments long before automated annotation pipelines.",
+  "people": [
+    {
+      "name": "Mark Pallen",
+      "role": "guest",
+      "affiliation": "University of East Anglia; Quadram Institute"
+    },
+    {
+      "name": "Lee Katz",
+      "role": "host",
+      "affiliation": "Centers for Disease Control and Prevention; University of Georgia"
+    },
+    {
+      "name": "Andrew Page",
+      "role": "host",
+      "affiliation": "Quadram Institute"
+    },
+    {
+      "name": "Nabil-Fareed Alikhan",
+      "role": "host",
+      "affiliation": "Quadram Institute"
+    },
+    {
+      "name": "Fred Sanger",
+      "role": "mentioned",
+      "affiliation": ""
+    },
+    {
+      "name": "Brendan Wren",
+      "role": "mentioned",
+      "affiliation": "Barts Hospital, London, during the period discussed"
+    },
+    {
+      "name": "Chris Clayton",
+      "role": "mentioned",
+      "affiliation": "Barts Hospital, London, during the period discussed"
+    },
+    {
+      "name": "Gordon Dougan",
+      "role": "mentioned",
+      "affiliation": ""
+    },
+    {
+      "name": "Nick Loman",
+      "role": "mentioned",
+      "affiliation": ""
+    },
+    {
+      "name": "Chaim Weizmann",
+      "role": "mentioned",
+      "affiliation": ""
+    },
+    {
+      "name": "Craig Venter",
+      "role": "mentioned",
+      "affiliation": ""
+    },
+    {
+      "name": "Ham Smith",
+      "role": "mentioned",
+      "affiliation": ""
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Assembling proteins before bioinformatics had a name",
+      "body": "Pallen dates his first bioinformatics experience to a Cambridge entrance examination in 1977, the year Fred Sanger described his sequencing method. Given peptide sequences, he had to assemble them into a larger protein sequence by hand. He remembers looking for overlaps and joining matching fragments, much like a jigsaw. Protein sequences made this simpler than DNA assembly because there was no reverse-complement problem to consider.\n\nHe connects that aptitude with an interest in languages, including Latin, French and Esperanto. Later collaborations extended sequence-analysis thinking to texts: comparing editions of Darwin’s *On the Origin of Species* for additions, deletions and edits, and discussing alignment and textual changes with a theologian studying Gospel of Luke manuscripts."
+    },
+    {
+      "heading": "An Apple Mac, urease and a decisive sequence match",
+      "body": "At Barts Hospital, Pallen joined a molecular biology group that included Brendan Wren and Chris Clayton. Clayton had a possible *Helicobacter pylori* urease clone, but its weak antibody signal and lack of urease activity left its identity uncertain. The pair digitised sequencing results by having Clayton read bases from autoradiographs while Pallen entered them into an Apple Mac.\n\nOn 15 September 1989, Pallen compared the translated sequences with jack bean urease. He recalls using FASTA, or possibly fastp, with the PIR protein database—not BLAST, which came later. Around 50% amino acid identity convinced him that Clayton had cloned the urease genes. Matches switching between reading frames also helped them locate base-counting errors and correct the sequence. The work appeared in *Nucleic Acids Research* after rejection by *Nature*.\n\nOther discoveries included a group II intron containing a reverse transcriptase and *Clostridium difficile* genes homologous to a butanol-fermentation pathway in *Clostridium acetobutylicum*. Pallen links the latter pathway to Chaim Weizmann’s First World War fermentation work and the Balfour Declaration."
+    },
+    {
+      "heading": "A PCR typing opportunity that slipped away",
+      "body": "Pallen recalls proposing bacterial typing with arbitrary PCR primers and a low annealing temperature. Experiments produced different banding patterns from different *E. coli* strains, suggesting a useful typing method. However, a journal declined the manuscript, and inconsistent profiles in subsequent experiments led the researchers to put the work aside.\n\nAbout 18 months later, he saw a paper describing the approach now called RAPD. Looking back, he suspects carry-over amplicon contamination could have explained their extra bands, rather than treating that explanation as established. He keeps an image of one of the gels as a reminder about missed opportunities. His MD research also used PCR to detect the diphtheria toxin gene."
+    },
+    {
+      "heading": "A PhD, medical internet guides and University Challenge",
+      "body": "Gordon Dougan encouraged Pallen to undertake a PhD through a Wellcome Trust scheme for medical microbiologists. Moving from consultant status to being an inexperienced laboratory researcher was uncomfortable, but the three years strengthened both his molecular biology and computational skills. Pallen remembers Dougan using the term bioinformatics around 1995–1996; previously, he had called his work sequence analysis.\n\nDuring the PhD, Pallen wrote three articles introducing the medical profession to the internet for the *British Medical Journal*. Their optimism included the observation that email lacked junk mail—something his daughter later found amusing. He also captained a winning University Challenge team. Afterwards, he recalls submitting four proposals to the Wellcome Trust without success and four to the BBSRC, three of which secured project grants."
+    },
+    {
+      "heading": "Hearing that a bacterial genome had been sequenced",
+      "body": "Another memorable moment came when a colleague returned from an American conference with news of Craig Venter and Ham Smith’s bacterial genome sequencing. Pallen recalls hearing about *Haemophilus influenzae* and a second, mycoplasma genome.\n\nFor him, the breakthrough was methodological as well as biological: shotgun sequencing replaced a laborious, map-led workflow with many small fragments and computational assembly. The bioinformatics did the heavy lifting. He describes the Sanger adopting this approach and his subsequent involvement in the *Campylobacter jejuni* genome project."
+    },
+    {
+      "heading": "Nick Loman and early access to the C. jejuni genome",
+      "body": "Work on internet columns for the student *BMJ* brought Pallen into contact with Nick Loman, then still at school. They ran an internet workshop for medics, discovering that some participants needed help even with using a mouse. Pallen subsequently recruited Loman for a gap year at the age of 18.\n\nThe Sanger was releasing *C. jejuni* shotgun reads, but its workflow postponed biological interpretation until sequencing, assembly and annotation were complete. Pallen asked Loman to use the reads, BLAST comparisons against *E. coli* proteins and metabolic pathways to make the emerging genome accessible to researchers. Loman built a relational database and web front end in about three days, rather than the months Pallen had anticipated.\n\nPallen contrasts this early access with manual annotation, in which individual protein-coding genes were assessed one at a time. Their work let the research community investigate the data before the formal process finished and contributed to the eventual *Nature* genome paper."
+    }
+  ],
+  "highlights": [
+    {
+      "time": "00:01:39",
+      "topic": "Pallen’s 1977 entrance exam: assembling peptide sequences by hand"
+    },
+    {
+      "time": "00:14:15",
+      "topic": "Why sequence comparisons and homopolymer errors remain familiar problems"
+    },
+    {
+      "time": "00:15:10",
+      "topic": "Clarifying the use of FASTA rather than BLAST in early sequence searches"
+    },
+    {
+      "time": "00:16:19",
+      "topic": "Finding overlaps to assemble proteins, and the connection with languages"
+    },
+    {
+      "time": "00:17:37",
+      "topic": "Applying sequence-comparison ideas to Darwin’s books and gospel manuscripts"
+    },
+    {
+      "time": "00:20:27",
+      "topic": "Early PCR experiments and the bacterial typing approach Pallen set aside"
+    },
+    {
+      "time": "00:27:44",
+      "topic": "Captaining a winning University Challenge team during the PhD"
+    },
+    {
+      "time": "00:30:25",
+      "topic": "The Sanger’s sequencing projects and Pallen’s involvement with C. jejuni"
+    },
+    {
+      "time": "00:31:41",
+      "topic": "Hearing Gordon Dougan use the term bioinformatics in the mid-1990s"
+    },
+    {
+      "time": "00:37:27",
+      "topic": "Staged genome workflows, manual annotation and interpreting data earlier"
+    }
+  ],
+  "quotes": [
+    {
+      "text": "You just lined them up and look for the overlaps and where they overlap, you join them together until you got the whole thing.",
+      "time": "00:16:19",
+      "speaker": "Mark Pallen"
+    }
+  ],
+  "tools": [
+    "FASTA",
+    "fastp",
+    "BLAST",
+    "PIR protein database",
+    "PCR",
+    "RAPD",
+    "Western blotting",
+    "Shotgun sequencing",
+    "Perl",
+    "BBC BASIC",
+    "BBC Micro",
+    "Apple Mac"
+  ],
+  "topics": [
+    "bioinformatics history",
+    "protein sequence assembly",
+    "sequence homology",
+    "helicobacter pylori",
+    "pcr typing",
+    "bacterial genomics",
+    "campylobacter jejuni",
+    "genome annotation",
+    "internet in medicine"
+  ],
+  "faq": [
+    {
+      "q": "How did Mark Pallen identify the H. pylori urease genes?",
+      "a": "He compared translated sequences from Chris Clayton’s candidate clone with jack bean urease and found around 50% amino acid identity. Matches moving between reading frames then helped them identify and correct errors in the sequence readings."
+    },
+    {
+      "q": "Did Pallen use BLAST for his 1989 urease analysis?",
+      "a": "No. After a host points out the chronology, Pallen clarifies that he recalls using FASTA, with an earlier mention of fastp as another possibility, to search the PIR protein database."
+    },
+    {
+      "q": "What did Nick Loman contribute to the first C. jejuni genome project?",
+      "a": "As an 18-year-old gap-year recruit, Loman built a relational database and web front end for examining the emerging genome data. Pallen recalls that it took about three days and helped researchers investigate genes and pathways before the Sanger’s full annotation workflow was complete."
+    },
+    {
+      "q": "Why did Pallen stop developing his early PCR typing method?",
+      "a": "The researchers encountered inconsistent banding patterns after an initial journal rejection and decided not to continue. Pallen later suspected contamination by previous PCR products, and recalls seeing the approach published by others about 18 months later as the method now called RAPD."
+    }
+  ]
+}

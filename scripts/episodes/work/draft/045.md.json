@@ -1,0 +1,155 @@
+{
+  "episode": "045",
+  "headline": "EnteroBase: genome fishing, cgMLST and population structure",
+  "description": "How EnteroBase combines bacterial genomes, curated metadata and cgMLST, with lessons on Salmonella sampling bias and finding related isolates.",
+  "summary": "Lee Katz and Andrew Page talk with co-host Nabil-Fareed Alikhan about building EnteroBase, from legacy MLST catalogues to searchable bacterial genomes and cleaned metadata. They discuss how the Salmonella cgMLST scheme was developed and how users can find related isolates across public datasets. The conversation also covers sampling bias, errors in older records and uncertainty over the project's future.",
+  "people": [
+    {
+      "name": "Lee Katz",
+      "role": "host",
+      "affiliation": "Centers for Disease Control and Prevention; adjunct member at the University of Georgia"
+    },
+    {
+      "name": "Andrew Page",
+      "role": "host",
+      "affiliation": "Quadram Institute, Norwich, UK"
+    },
+    {
+      "name": "Nabil-Fareed Alikhan",
+      "role": "host",
+      "affiliation": "Quadram Institute, Norwich, UK"
+    },
+    {
+      "name": "Jay Hinton",
+      "role": "mentioned",
+      "affiliation": ""
+    }
+  ],
+  "sections": [
+    {
+      "heading": "From MLST catalogues to EnteroBase",
+      "body": "Nabil joined EnteroBase roughly a year after its grant was awarded. He describes the project as bringing together ideas from X-Base, a comparative-genomics website with precomputed analyses, and existing MLST databases for Escherichia, Salmonella, Moraxella and Yersinia. The aim was to combine genotyping, population structure, visualisation and genome comparisons through a web interface. Moraxella catarrhalis was an unusual inclusion: a respiratory pathogen in a database named for enteric organisms.\n\nThe old MLST sites held allele sequences, sequence-type profiles and sample information. EnteroBase retained those historical records as searchable legacy data, even where no whole-genome sequencing was available. Beyond that inheritance, the software was rebuilt from the ground up in Python, using Flask and Postgres."
+    },
+    {
+      "heading": "Public sequencing data and cleaned metadata",
+      "body": "Nabil recalls initially running an hourly scheduled job to retrieve newly released sequencing data from the SRA. Processing included quality control with Kraken, assembly through a workflow he compares with Shovill, annotation and typing with MLST, rMLST and cgMLST schemes. Users could then search the results and choose which information to display, rather than running those analyses themselves.\n\nMetadata cleaning was a substantial part of the work. Automated scripts interpreted free-text submissions and assigned more consistent categories, supplemented by manual curation. The team initially worked through around 30,000 Salmonella records, including looking up animal scientific names to classify hosts. The hosts explain why this is difficult: a live chicken, packaged chicken breast and chicken Kiev may all involve chicken, but represent different sampling contexts. Nabil notes that users also take the cleaned metadata and assemblies into machine-learning analyses."
+    },
+    {
+      "heading": "Building the Salmonella cgMLST scheme",
+      "body": "The initial gene set came from a Salmonella annotation curated by Jay Hinton's group, with transcriptional evidence used to refine gene starts and stops. Other hand-annotated genomes expanded the preliminary pangenome. The show notes correct the strain discussed here to **ST313 (D23580), not ST131**.\n\nThe team checked the gene panel against reference genomes, including PacBio NCTC genomes from Sanger and PHE, then assessed assembled Salmonella genomes selected one per ribosomal sequence type. They used a presence threshold of about 98%, rather than requiring every gene in every assembly: poor assemblies could otherwise make conserved genes appear absent. Genes with frequent truncations, pseudogenes, low complexity or alignment problems were excluded, producing the 3,002-gene scheme discussed in the episode.\n\nVersion two revisited the selection after the database grew from roughly 30,000 to more than 70,000 Salmonella genomes. Nabil connects this reassessment to Alikhan et al. (2018), *A genomic overview of the population structure of Salmonella*, in PLOS Genetics."
+    },
+    {
+      "heading": "Finding related isolates through genome fishing",
+      "body": "Andrew describes using EnteroBase while working at the Sanger Institute to find additional samples related to an isolate of interest. A cgMLST search could allow, for example, five or ten allelic mismatches, letting the user control how close a match needed to be. This made it possible to find extra public data for an analysis without already knowing which samples to request.\n\nThese genome-fishing exercises feature in Zhou et al. (2020), *The EnteroBase user's guide*, in Genome Research. Its case studies cover Salmonella transmissions, Yersinia pestis phylogeny and Escherichia core genomic diversity. Nabil specifically mentions the paper's investigation of Salmonella in badgers."
+    },
+    {
+      "heading": "Sampling bias and historical errors",
+      "body": "At the time of recording, Nabil reports 267,000 Salmonella genomes in EnteroBase. That scale does not make the collection random or representative. Clinical isolates and samples from food production are heavily represented, while other serovars and sources remain poorly covered. The hosts warn against treating an entire public database as an unbiased sample simply because it contains many records.\n\nHistorical MLST data present a different problem. Some legacy sequence types had still not appeared among sequenced genomes. Nabil suggests that genuinely rare historical or environmental isolates may explain some cases, while manual errors in Sanger-trace interpretation or submission may explain others. He presents those explanations as possibilities, not confirmed findings. EnteroBase therefore requires whole-genome sequencing for new sequence types rather than accepting Sanger traces, while retaining the useful historical records and nomenclature."
+    },
+    {
+      "heading": "Population interpretation and future support",
+      "body": "The discussion compares EnteroBase with PubMLST, BIGSdb and NCBI's pathogen browser. For Nabil, EnteroBase's distinctive contribution is not simply returning typing results: it offers a framework for describing bacterial populations. Thresholds help users discuss what constitutes a strain, sequence type, clonal complex or species, rather than leaving them with an unexplained collection of numbers.\n\nAsked about the project's future, Nabil says he does not know the plans and hopes someone will continue it. The hosts describe why continuity matters to existing users. Lee reports that PulseNet uses the Salmonella cgMLST scheme as its backbone, while Andrew emphasises the time saved when finding related samples. These are comments about use and support at the time of recording, not an announcement of future arrangements."
+    }
+  ],
+  "highlights": [
+    {
+      "time": "00:01:11",
+      "topic": "EnteroBase's origins in X-Base and legacy MLST databases"
+    },
+    {
+      "time": "00:03:12",
+      "topic": "Carrying over historical records and rebuilding with Flask and Postgres"
+    },
+    {
+      "time": "00:04:42",
+      "topic": "Retrieving public sequencing data and running automated processing"
+    },
+    {
+      "time": "00:06:14",
+      "topic": "Using cgMLST mismatch thresholds to find related samples"
+    },
+    {
+      "time": "00:07:17",
+      "topic": "Starting the Salmonella scheme from curated annotations"
+    },
+    {
+      "time": "00:08:15",
+      "topic": "Selecting conserved loci and reassessing the scheme as the database grew"
+    },
+    {
+      "time": "00:10:57",
+      "topic": "Why a large Salmonella collection is not necessarily representative"
+    },
+    {
+      "time": "00:12:41",
+      "topic": "Why EnteroBase requires whole-genome data for new sequence types"
+    },
+    {
+      "time": "00:14:50",
+      "topic": "Interpreting population structure rather than only returning typing results"
+    },
+    {
+      "time": "00:16:19",
+      "topic": "Classifying free-text metadata through automation and manual curation"
+    },
+    {
+      "time": "00:18:41",
+      "topic": "Uncertainty about future plans and the importance of continued support"
+    },
+    {
+      "time": "00:19:34",
+      "topic": "Genome-fishing case studies involving Salmonella in badgers"
+    }
+  ],
+  "quotes": [
+    {
+      "text": "Just because there's 100,000 data points doesn't mean it's random or there's no bias.",
+      "time": "00:10:57",
+      "speaker": "Nabil-Fareed Alikhan"
+    }
+  ],
+  "tools": [
+    "EnteroBase",
+    "X-Base",
+    "PubMLST",
+    "BIGSdb",
+    "SRA",
+    "Kraken",
+    "Shovill",
+    "Flask",
+    "Postgres",
+    "MLST",
+    "rMLST",
+    "cgMLST",
+    "PacBio",
+    "EToKi"
+  ],
+  "topics": [
+    "microbial bioinformatics",
+    "bacterial population structure",
+    "salmonella",
+    "cgmlst",
+    "metadata curation",
+    "sampling bias",
+    "genomic surveillance",
+    "public sequencing data"
+  ],
+  "faq": [
+    {
+      "q": "What does EnteroBase provide beyond a traditional MLST database?",
+      "a": "The episode describes EnteroBase as combining legacy typing records with processed public sequencing data, assemblies, multiple typing schemes, cleaned metadata and web-based analysis. It also provides a framework for interpreting bacterial population structure."
+    },
+    {
+      "q": "How can EnteroBase help find isolates related to a sample?",
+      "a": "Andrew describes searching by cgMLST similarity and choosing an allowed number of allelic mismatches, such as five or ten. These searches can identify additional public samples to include in an analysis."
+    },
+    {
+      "q": "How were genes selected for the Salmonella cgMLST scheme?",
+      "a": "The team began with curated annotations, expanded the pangenome panel and tested gene conservation across reference and assembled genomes. They used an approximately 98% presence threshold and removed problematic loci, arriving at the 3,002-gene scheme discussed in the episode."
+    },
+    {
+      "q": "Is the whole EnteroBase Salmonella collection a representative sample?",
+      "a": "Not automatically. Nabil warns that clinical and food-production sampling biases remain even in a collection containing hundreds of thousands of genomes, so users need to consider which isolates they select."
+    }
+  ]
+}

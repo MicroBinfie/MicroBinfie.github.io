@@ -1,0 +1,146 @@
+{
+ "episode": "111",
+ "headline": "GMI 13: microbial genomics, data sharing and One Health",
+ "description": "Finlay Maguire and Emma Griffiths join Andrew Page and Lee Katz at GMI 13 to discuss microbial data sharing, One Health and Tim Hortons.",
+ "summary": "Andrew Page and Lee Katz report from the first day of the Global Microbial Identifier conference in Vancouver, Canada. Finlay Maguire discusses using genomic data for clinical and public health decisions, and the difficulties of sharing it across sectors. Conference organiser Emma Griffiths joins a lighter closing exchange about Canadian food and a question she declines to answer: why ChatGPT cannot replace ontologies.",
+ "people": [
+  {
+   "name": "Andrew Page",
+   "role": "host",
+   "affiliation": ""
+  },
+  {
+   "name": "Lee Katz",
+   "role": "host",
+   "affiliation": "Centers for Disease Control and Prevention"
+  },
+  {
+   "name": "Finlay Maguire",
+   "role": "guest",
+   "affiliation": "Dalhousie University"
+  },
+  {
+   "name": "Emma Griffiths",
+   "role": "guest",
+   "affiliation": ""
+  }
+ ],
+ "sections": [
+  {
+   "heading": "From microbiology to clinical genomics",
+   "body": "Finlay Maguire introduces himself as an assistant professor at Dalhousie University, working across computer science and community health and epidemiology. His training was in microbiology: a PhD intended to combine wet-lab and computational work became entirely computational after he decided laboratory work was not for him. He also describes a pathogenomics bioinformatics lead role in a medical microbiology laboratory in Toronto.\n\nHis two roles grew out of separate job offers that he negotiated into a combined position. The common thread is making genomic data usable for decisions, from the care of individual patients to public health policy. Emma Griffiths, his co-chair in a data structures working group, invited him to GMI."
+  },
+  {
+   "heading": "Deer, humans and a broader One Health",
+   "body": "Finlay describes work that found SARS-CoV-2 moving into deer and then back into humans. The discussion mentions 76 new mutations and a highly divergent branch. The team identified the unusual human case before learning about the deer findings, because it was so different from other cases.\n\nThat example leads into a broader discussion of One Health. Finlay argues that plant pathogens also belong in the conversation: they have substantial health impacts and resistance mechanisms relevant to antimicrobial resistance. He is wary of One Health becoming a buzzword without practical implementation. The speakers also recognise the morning sessions' foodborne emphasis and discuss foodborne surveillance as an important driver of whole-genome sequencing, including the use of PulseNet protocols beyond the US."
+  },
+  {
+   "heading": "Open data, ownership and agricultural barriers",
+   "body": "The hosts contrast two approaches presented in the WHO data-sharing discussion: a GISAID-style model and a model of sharing everything without restrictions. Finlay says the concerns GISAID was created to address are important. He describes a tension between public health equity and data ownership, on one hand, and genomics' momentum towards unrestricted data, tools and resources on the other.\n\nHe also highlights a counterintuitive cross-sector problem: agricultural data can be harder to obtain and share than human clinical data. His explanation contrasts the greater number of laws governing human data with the greater number of lawyers involved in agri-food businesses. The practical challenge is not simply agreeing on principles, but making data exchange work between sectors with different constraints."
+  },
+  {
+   "heading": "Food contamination crosses laboratory boundaries",
+   "body": "A New Zealand baby-formula scare illustrates the consequences of limited testing resolution. The conversation describes suspected botulism, discarded product and a lack of positive controls. Andrew then recalls a conference talk about delays when sequencing data could not be analysed or moved. These are presented as recollections, rather than a detailed investigation of the incident.\n\nFinlay asks how microbial food-safety data connects with testing for other contaminants, such as mass spectrometry assays. Lee describes separate FDA and FSIS responsibilities, while Andrew notes the UK's separate arrangements for chemical and microbial contamination.\n\nThe hosts also revisit the 2012 tuna scrape outbreak, with Lee explicitly identifying his account of food preparation as third-hand. The well-travelled salad example makes a related point: ingredients from several countries complicate tracing contamination, even when sequencing is available."
+  },
+  {
+   "heading": "Useful technical work alongside global strategy",
+   "body": "The discussion turns to how GMI and other collaborations divide their work. Finlay describes discussion of a landscape evaluation to map the organisations operating in this space and clarify who covers which problems. He values specific technical outputs, including pipelines that contain more than one antimicrobial-resistance detection tool.\n\nAndrew emphasises practical metadata guidance: which fields to collect, how to put them into a database, spreadsheets that people can understand and lookup tables between different conventions. These are more immediately usable than a document that gets filed away. Lee challenges any suggestion that GMI cannot do such work, noting his own involvement in its standards, data and analytics group. Finlay acknowledges GMI's technical contributions alongside its broader strategic and political role."
+  },
+  {
+   "heading": "Tim Hortons and an unanswered ontology question",
+   "body": "The Canadian food discussion begins with Finlay's preference for a bagel with cream cheese at Tim Hortons. For visitors wanting something sweet, he recommends a mixed selection of Timbits as a way to sample different varieties. Lee's Boston cream doughnut becomes a recurring subject.\n\nEmma joins after the hosts thank her for organising the conference and feeding attendees. She discusses doughnut choices, Lee's Japadog meal and why he should try buying it from a cart rather than the shop. Andrew asks why ChatGPT cannot replace ontologies, and Lee later asks about using ChatGPT for GMI. Emma declines to give a technical answer, so the episode does not offer a comparison of language models and ontology methods."
+  }
+ ],
+ "highlights": [
+  {
+   "time": "00:00:50",
+   "topic": "Andrew introduces Finlay Maguire at the GMI conference in Vancouver."
+  },
+  {
+   "time": "00:01:48",
+   "topic": "Finlay explains his microbiology training and computational career."
+  },
+  {
+   "time": "00:03:47",
+   "topic": "Making genomic data useful for clinical decisions and public health policy."
+  },
+  {
+   "time": "00:04:12",
+   "topic": "SARS-CoV-2 transmission into deer and back into humans."
+  },
+  {
+   "time": "00:05:07",
+   "topic": "Putting data-sharing principles into practice and broadening One Health."
+  },
+  {
+   "time": "00:06:57",
+   "topic": "Comparing GISAID-style sharing with unrestricted access."
+  },
+  {
+   "time": "00:09:33",
+   "topic": "Connecting microbial food-safety data with other contamination testing."
+  },
+  {
+   "time": "00:13:34",
+   "topic": "Dividing responsibilities between collaborations and producing useful technical outputs."
+  },
+  {
+   "time": "00:15:33",
+   "topic": "Finlay's Tim Hortons preferences and advice for visiting hosts."
+  },
+  {
+   "time": "00:17:13",
+   "topic": "The hosts introduce conference organiser Emma Griffiths."
+  },
+  {
+   "time": "00:17:41",
+   "topic": "Andrew asks why ChatGPT cannot replace ontologies."
+  }
+ ],
+ "quotes": [
+  {
+   "text": "And it's basically because there's a lot more laws for the human side, but there's a lot more lawyers in the agri-food business.",
+   "time": "00:08:26",
+   "speaker": "Finlay Maguire"
+  },
+  {
+   "text": "Gentlemen, I am dropping this mic, taking no more questions at this time.",
+   "time": "00:20:32",
+   "speaker": "Emma Griffiths"
+  }
+ ],
+ "tools": [
+  "GISAID",
+  "PulseNet protocols",
+  "ChatGPT"
+ ],
+ "topics": [
+  "microbial genomics",
+  "public health",
+  "data sharing",
+  "one health",
+  "antimicrobial resistance",
+  "food safety",
+  "metadata standards",
+  "sars-cov-2",
+  "ontologies"
+ ],
+ "faq": [
+  {
+   "q": "What SARS-CoV-2 finding in deer is discussed?",
+   "a": "Finlay describes work finding SARS-CoV-2 transmission into deer and back into humans. The discussion mentions 76 new mutations, and he says the highly divergent human case was identified before the deer findings were known."
+  },
+  {
+   "q": "Why can agricultural data be harder to share than human clinical data?",
+   "a": "Finlay says agricultural data is often more tightly restricted. He points to legal pressures in agri-food businesses, contrasting more laws on the human side with more lawyers on the agricultural side."
+  },
+  {
+   "q": "What practical outputs do the speakers want from genomics collaborations?",
+   "a": "Examples include pipelines combining multiple antimicrobial-resistance detection tools, clear metadata fields, database guidance, usable spreadsheets and lookup tables between conventions. The speakers distinguish these concrete outputs from broader strategy documents."
+  },
+  {
+   "q": "Does the episode explain whether ChatGPT can replace ontologies?",
+   "a": "No. Andrew raises the question with Emma, but she declines to answer it substantively. The exchange is part of the closing banter, not a technical assessment."
+  }
+ ]
+}

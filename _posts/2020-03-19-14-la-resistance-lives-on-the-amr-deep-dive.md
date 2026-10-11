@@ -1,12 +1,143 @@
 ---
-date: 2020-03-19 00:00:00
-title: MicroBinfie Podcast, 14 La resistance lives on  The AMR deep dive
-link: https://soundcloud.com/microbinfie/14-la-resistance-lives-on-the-amr-deep-dive
 layout: page
+title: 'Episode 14: La resistance lives on: The AMR deep dive'
+date: '2020-03-19 00:00:00'
+link: https://soundcloud.com/microbinfie/14-la-resistance-lives-on-the-amr-deep-dive
+episode: '14'
+soundcloud_track: '719460367'
 tags:
-  - microbinfie
-  - podcast
+- microbinfie
+- podcast
+description: Kate Baker discusses Shigella resistance, ResFinder, plasmid context, long reads and why genomic predictions need more than gene detection.
+excerpt: Kate Baker discusses Shigella resistance, ResFinder, plasmid context, long reads and why genomic predictions need more than gene detection.
+headline: Shigella, AMR prediction and the limits of resistance databases
+guests:
+- Kate Baker
+topics:
+- antimicrobial resistance
+- shigella
+- genomic epidemiology
+- plasmids
+- mobile genetic elements
+- genotype–phenotype prediction
+- long-read sequencing
+- minimum inhibitory concentration
+- resistance databases
+faq:
+- q: Which tools does Kate Baker use to detect antimicrobial resistance?
+  a: Baker most commonly uses ResFinder and PointFinder for her work on Shigella. She generally wants assembled genomes alongside predictions so she can investigate resistance genes in their genomic context.
+- q: Why are short-read Shigella assemblies so fragmented?
+  a: Baker attributes the fragmentation to the many insertion sequences scattered through Shigella genomes. For the paired-end sequencing approach discussed, she gives approximate figures of 300–400 contigs for Shigella versus 50–100 for E. coli.
+- q: Can short reads show which plasmid carries a resistance gene?
+  a: 'Not reliably in every case: fragmentation can separate a resistance-containing region from the sequence needed to type its plasmid. Baker describes using statistical associations to prioritise long-read sequencing, then mapping short reads back to the resulting reference.'
+- q: Why might MIC agreement be an incomplete benchmark for AMR prediction?
+  a: Baker argues that matching laboratory MIC results is not necessarily the same as predicting treatment response or failure. She favours attention to clinical outcomes, while both speakers acknowledge that these are multifactorial and difficult to collect for validation.
 ---
-Kate Baker talks AMR
 
-<iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/719460367&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=false"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/microbinfie" title="Micro Binfie Podcast" target="_blank" style="color: #cccccc; text-decoration: none;">Micro Binfie Podcast</a> · <a href="https://soundcloud.com/microbinfie/40-a-crash-course-in-sars-cov-2-bioinformatics" title="14 La resistance lives on  The AMR deep dive" target="_blank" style="color: #cccccc; text-decoration: none;">40 A crash course in SARS-CoV-2 bioinformatics</a></div>
+*Shigella, AMR prediction and the limits of resistance databases*
+
+Nabil-Fareed Alikhan talks with Kate Baker about antimicrobial resistance, drawing on her work on Shigella and genomic epidemiology at the University of Liverpool. They discuss resistance-detection tools, fragmented assemblies, mobile genetic elements and the relationship between genotype and phenotype. Baker argues for understanding where resistance genes sit and how they spread, rather than treating gene detection as the whole answer.
+
+<iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" title="Episode 14: La resistance lives on: The AMR deep dive" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/719460367&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=false"></iframe>
+
+[Listen to Episode 14: La resistance lives on: The AMR deep dive on SoundCloud](https://soundcloud.com/microbinfie/14-la-resistance-lives-on-the-amr-deep-dive)
+
+## In this episode
+
+### Resistance as a population-level problem
+
+Baker approaches antimicrobial resistance through an interest in emerging infectious diseases and the forces shaping bacterial populations. She describes antimicrobial use as an artificial, measurable and changeable selection pressure: a global experiment whose effects researchers can now investigate. That does not make resistance the only driver of disease emergence, but it makes it a particularly visible one.
+
+In Shigella, she distinguishes ciprofloxacin resistance caused by accumulated chromosomal point mutations from resistance acquired through mobile genetic elements. These include integrated chromosomal islands and plasmids, with integrons and transposons providing smaller units to follow. The relevant genetic context therefore depends on the resistance phenotype being investigated.
+
+### Choosing tools and coping with fragmented assemblies
+
+Baker most commonly uses ResFinder and PointFinder, while stressing that tool choice should follow the pathogen, dataset and research question. Her projects usually need assembled genomes alongside resistance predictions because she wants the surrounding genomic context. Unlike bedside diagnostics, this work can accommodate waiting for assemblies before obtaining resistance results.
+
+Assembly does not necessarily recover that context. For paired-end libraries with fragments of several hundred base pairs, Baker gives approximate figures of 300–400 contigs for Shigella, compared with 50–100 for E. coli. Shigella's many insertion sequences make reconstruction particularly difficult. She points to a then-preprint by Jane Hawkey, Kat Holt and colleagues examining insertion-sequence diversity in Shigella, but does not name its title.
+
+### Connecting resistance genes to plasmids
+
+Baker uses PlasmidFinder, based on replicon and Inc typing, and describes extracting resistance-gene-containing contigs for analysis. Two limitations recur: databases cannot recognise everything, and fragmented assemblies can separate the resistance determinant from the sequence needed to identify its plasmid. Finding an integron alone may not reveal the larger element carrying it.
+
+Statistical associations between plasmid types and resistance genes can help prioritise samples for long-read sequencing. Once a reference scaffold is available, short reads can be mapped back to examine coverage across the region. This is a way to target additional sequencing, rather than a claim that association alone resolves physical linkage. At the time of recording, Baker describes datasets of hundreds of short-read genomes and says routine long-read analysis at that scale remains constrained by cost and available processing tools.
+
+### Why gene presence is not the whole phenotype
+
+Baker reports variation in gene content and resistance phenotype between colonies and between genomic preparations. Alikhan recognises a similar problem when different colony picks from the same plate produce different resistance patterns, despite being treated as clonal. Mobile genetic elements are part of the variation Baker's group is investigating.
+
+Some genomic predictions are straightforward: Baker gives the combination of mphA and ermB as a marker of high-level azithromycin resistance. Other effects are subtler. Beta-lactam resistance can involve chromosomal genes, promoter changes, acquired genes and efflux, making a simple presence-or-absence interpretation inadequate.
+
+Minimum inhibitory concentrations are continuous measurements that analyses often reduce to resistant or susceptible categories. Regulation and small expression changes can matter below the large shifts caused by familiar resistance determinants. Baker says prediction works fairly well for Shigella, but varies by antimicrobial class and benefits from extensive research on closely related E. coli. Less-studied environmental organisms may be much harder to interpret.
+
+### What should resistance predictions be measured against?
+
+Baker questions whether reproducing laboratory minimum inhibitory concentration, or MIC, breakpoints should be the ultimate benchmark for a genomic prediction tool. She argues that treatment response and treatment failure are more meaningful outcomes, while acknowledging that recovery depends on more than the antibiotic and the organism's resistance profile.
+
+Alikhan points out the practical difficulty of obtaining linked clinical outcome data for tool validation. They discuss the substantial work required to follow patients, record treatment and examine multiple samples, rather than presenting a ready-made solution.
+
+The same caution applies to estimating AMR's overall burden. Baker refers to the O'Neill report and figures from CDC and WHO, but questions how confidently additional costs and infections can be attributed specifically to resistance. She treats quantification as an unresolved problem, not a settled headline number.
+
+### Gene-transfer networks and a database warning
+
+Baker's wish list centres on connecting the ecology of mobile genetic elements with disease epidemiology. She wants tools that can systematically follow nested units of inheritance: an integron on a plasmid, in one bacterial background and then another. Long reads are part of the solution, but scalable bioinformatics is also needed to understand gene flow between Shigella, E. coli, other Enterobacteriaceae and the wider microbiota.
+
+She closes with an early research mistake. An analysis based on ARDB, which she knew was not curated, missed an important beta-lactamase gene. A collaborator caught the omission before publication. Her practical warning is that tool and database selection matter: researchers need to understand the biases and omissions of the resources they use.
+
+## Highlights
+
+- [00:00:47](https://soundcloud.com/microbinfie/14-la-resistance-lives-on-the-amr-deep-dive#t=0:47) — Nabil-Fareed Alikhan introduces Kate Baker and her work on Shigella and AMR.
+- [00:04:19](https://soundcloud.com/microbinfie/14-la-resistance-lives-on-the-amr-deep-dive#t=4:19) — Choosing ResFinder and PointFinder when assembled genomic context matters.
+- [00:06:10](https://soundcloud.com/microbinfie/14-la-resistance-lives-on-the-amr-deep-dive#t=6:10) — Insertion sequences and the contrast between Shigella and E. coli assembly fragmentation.
+- [00:07:15](https://soundcloud.com/microbinfie/14-la-resistance-lives-on-the-amr-deep-dive#t=7:15) — Ciprofloxacin resistance in Shigella and accumulated chromosomal point mutations.
+- [00:09:27](https://soundcloud.com/microbinfie/14-la-resistance-lives-on-the-amr-deep-dive#t=9:27) — Using PlasmidFinder on resistance-gene-containing contigs and confronting database limits.
+- [00:10:56](https://soundcloud.com/microbinfie/14-la-resistance-lives-on-the-amr-deep-dive#t=10:56) — Using statistical associations to target long-read sequencing.
+- [00:12:11](https://soundcloud.com/microbinfie/14-la-resistance-lives-on-the-amr-deep-dive#t=12:11) — Variation in resistance phenotype and gene content between colonies and preparations.
+- [00:14:18](https://soundcloud.com/microbinfie/14-la-resistance-lives-on-the-amr-deep-dive#t=14:18) — The complexity of beta-lactam resistance and clearer high-level azithromycin markers.
+- [00:18:20](https://soundcloud.com/microbinfie/14-la-resistance-lives-on-the-amr-deep-dive#t=18:20) — Why antimicrobial resistance is too complex for a one-size-fits-all prediction tool.
+- [00:22:21](https://soundcloud.com/microbinfie/14-la-resistance-lives-on-the-amr-deep-dive#t=22:21) — The difficulty of quantifying AMR's attributable costs and disease burden.
+- [00:23:58](https://soundcloud.com/microbinfie/14-la-resistance-lives-on-the-amr-deep-dive#t=23:58) — A wish list for tracking resistance-gene context and mobile-element networks.
+- [00:25:39](https://soundcloud.com/microbinfie/14-la-resistance-lives-on-the-amr-deep-dive#t=25:39) — An ARDB analysis that missed an important beta-lactamase gene.
+
+## In their own words
+
+> You know, this is actually continuous data which we forced to be discrete for the convenience of analysis.
+>
+> — Kate Baker, [00:12:57](https://soundcloud.com/microbinfie/14-la-resistance-lives-on-the-amr-deep-dive#t=12:57)
+
+## Who is talking
+
+- **Nabil-Fareed Alikhan** (host)
+- **Kate Baker** (guest, Department of Functional and Comparative Genomics, Institute of Integrative Biology, University of Liverpool)
+- **Lee Katz** (host)
+- **Andrew Page** (host)
+
+Also mentioned: Jane Hawkey, Kat Holt.
+
+## Tools and resources mentioned
+
+ResFinder, PointFinder, PlasmidFinder, ARDB, replicon typing, Inc typing.
+
+## Questions this episode answers
+
+### Which tools does Kate Baker use to detect antimicrobial resistance?
+
+Baker most commonly uses ResFinder and PointFinder for her work on Shigella. She generally wants assembled genomes alongside predictions so she can investigate resistance genes in their genomic context.
+
+### Why are short-read Shigella assemblies so fragmented?
+
+Baker attributes the fragmentation to the many insertion sequences scattered through Shigella genomes. For the paired-end sequencing approach discussed, she gives approximate figures of 300–400 contigs for Shigella versus 50–100 for E. coli.
+
+### Can short reads show which plasmid carries a resistance gene?
+
+Not reliably in every case: fragmentation can separate a resistance-containing region from the sequence needed to type its plasmid. Baker describes using statistical associations to prioritise long-read sequencing, then mapping short reads back to the resulting reference.
+
+### Why might MIC agreement be an incomplete benchmark for AMR prediction?
+
+Baker argues that matching laboratory MIC results is not necessarily the same as predicting treatment response or failure. She favours attention to clinical outcomes, while both speakers acknowledge that these are multifactorial and difficult to collect for validation.
+
+*This page was written from a machine transcript of the episode and checked against it. Listen to the episode for the whole conversation.*
+
+## Show notes
+
+Kate Baker talks AMR

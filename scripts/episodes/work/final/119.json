@@ -1,0 +1,156 @@
+{
+ "episode": "119",
+ "headline": "Sourmash, reference quality and the limits of microbial taxonomy",
+ "description": "Titus Brown joins Lee Katz and Andrew Page to discuss sourmash, reference quality and the limits of species assignment in public health.",
+ "summary": "Titus Brown joins hosts Lee Katz and Andrew Page to discuss reference databases, sourmash and the difficulty of assigning microbial species accurately. They contrast flexible research tools with the confidence required for public health decisions. Brown outlines a conditional argument for near-perfect species classification, while the hosts explain why biological definitions and regulatory requirements complicate that goal.",
+ "people": [
+  {
+   "name": "Lee Katz",
+   "role": "host",
+   "affiliation": "Centers for Disease Control and Prevention, Atlanta, United States"
+  },
+  {
+   "name": "Andrew Page",
+   "role": "host",
+   "affiliation": "Theiagen, Cambridge, UK"
+  },
+  {
+   "name": "Titus Brown",
+   "role": "guest",
+   "affiliation": ""
+  },
+  {
+   "name": "Nabil-Fareed Alikhan",
+   "role": "mentioned",
+   "affiliation": "Quadram Institute, Norwich, UK"
+  },
+  {
+   "name": "Leighton Pritchard",
+   "role": "mentioned",
+   "affiliation": ""
+  }
+ ],
+ "sections": [
+  {
+   "heading": "Searching references is not the same as curating them",
+   "body": "Andrew asks how sourmash handles poor-quality reference genomes. Brown distinguishes database searching from database curation: sourmash should search whatever references users want, rather than limit them to a selection dictated by software capacity. He puts GenBank's bacterial genome collection at around 1.3 million genomes at the time of the conversation.\n\nBrown's group takes GTDB releases as supplied, valuing their transparent quality metrics. Andrew asks about filtering using CheckM results, but Brown emphasises GTDB's balance between quality and representation. Much of the knowledge of about a dozen phyla comes from metagenome-assembled genomes (MAGs), including imperfect genomes worth retaining. Brown also describes Charcoal, a side effort using sourmash to identify suspiciously similar contigs across widely separated taxonomic groups in GenBank and GTDB."
+  },
+  {
+   "heading": "Filtering for research and public health",
+   "body": "Andrew would remove contamination early: an *E. coli* assembly with 3,000 contigs is his example of a questionable reference. Lee similarly prioritises removing potentially noisy SNPs to obtain a high-fidelity phylogeny, even at the cost of losing some genuine signal. For public health, the hosts want confidence that an organism is Salmonella and belongs to an outbreak.\n\nBrown favours retaining information in the initial search and filtering afterwards. Drawing on staged filtering in particle physics, he argues that discarded information cannot be recovered. Sourmash therefore supports custom databases, subsets of its distributed databases and access to broader matches. A messy reference might still contain something biologically interesting."
+  },
+  {
+   "heading": "Accuracy depends on software foundations",
+   "body": "Brown argues that most bacterial assignment tools for metagenomics perform poorly on either sensitivity or specificity at species level. He names sourmash, mOTUs and MEGAN among the few tools he considers comparatively strong on both measures, while noting that taxonomy was not sourmash's original purpose.\n\nAndrew points to three-year grants, departing postdocs and repeated reinvention as reasons the field struggles. Lee uses sourmash and SAMtools as examples of foundational software that others need to build upon. The tension is practical: public health needs working solutions now, even while developers continue improving the tools underneath them."
+  },
+  {
+   "heading": "Preserving what software development teaches",
+   "body": "Brown wants sourmash's eventual replacement to retain its useful lessons. Publishing and explaining those lessons matters more to him than ensuring everyone continues using sourmash. He describes the risk of a successor improving most aspects of a tool while losing capabilities that were never properly documented.\n\nHis examples include a hashing approach that can work well for some tasks despite discarding 99.9% of the data, and MINSET-COV, which distils highly redundant microbial genome matches into a short list covering the known matches. Brown describes discovering that the latter approach used an established algorithm already taught in computer science courses."
+  },
+  {
+   "heading": "A conditional case for perfect species classification",
+   "body": "Brown argues that a virtually perfect species classifier is possible given a fixed taxonomy and reference database. That qualification matters: the taxonomy could be wrong and the database could be poor. He also acknowledges about a dozen genomes in his analysis that cannot be distinguished from one another using k-mers alone.\n\nHe credits Leighton Pritchard with suggesting the cryptographic concept of unicity distance. Applied here, it describes the smallest set of k-mers needed to distinguish a genome from the others. Brown reports that most GTDB genomes have a unicity distance of one: a single distinguishing k-mer. He says sourmash implicitly exploits this property, but frames high accuracy around the availability of distinguishing k-mers or combinations of them."
+  },
+  {
+   "heading": "Species names must also work biologically and legally",
+   "body": "Andrew raises *Mycobacterium tuberculosis* as an example where historical species definitions complicate genomic classification. Lee describes species that his reference laboratory distinguishes by one gene, and four lineages of *Listeria monocytogenes* that behave like different species but must retain the same species designation within the regulatory framework.\n\nThese examples explain why the hosts still care deeply about species-level calls, rather than only strain-level resolution. Brown closes by distinguishing what computers can resolve from what biology is saying. His remaining challenge is communicating the limits clearly: mathematical distinguishability within a reference collection does not, by itself, settle the biological and regulatory questions."
+  }
+ ],
+ "highlights": [
+  {
+   "time": "00:00:50",
+   "topic": "Andrew asks how sourmash handles poor-quality reference genomes."
+  },
+  {
+   "time": "00:01:20",
+   "topic": "Brown explains why database selection should not be dictated by software capacity."
+  },
+  {
+   "time": "00:02:58",
+   "topic": "Using GTDB releases as supplied and investigating contamination with Charcoal."
+  },
+  {
+   "time": "00:05:43",
+   "topic": "Lee explains why applied phylogenetic pipelines remove potentially noisy SNPs."
+  },
+  {
+   "time": "00:06:19",
+   "topic": "Sourmash's flexibility and the case for staged filtering rather than early exclusion."
+  },
+  {
+   "time": "00:08:43",
+   "topic": "Public health decisions require confidence in organism and outbreak assignments."
+  },
+  {
+   "time": "00:09:46",
+   "topic": "Brown challenges the sensitivity and specificity of metagenomic assignment tools."
+  },
+  {
+   "time": "00:11:23",
+   "topic": "Three-year grants and staff turnover contribute to repeated software reinvention."
+  },
+  {
+   "time": "00:14:23",
+   "topic": "Preserving sourmash's lessons so replacement software does not lose useful capabilities."
+  },
+  {
+   "time": "00:16:51",
+   "topic": "Brown qualifies his classification claim by fixing the taxonomy and reference database."
+  },
+  {
+   "time": "00:18:23",
+   "topic": "Unicity distance and distinguishing genomes through individual k-mers or combinations."
+  },
+  {
+   "time": "00:20:33",
+   "topic": "Lee discusses single-gene species differences and regulatory treatment of Listeria lineages."
+  }
+ ],
+ "quotes": [
+  {
+   "text": "And if you give it the wrong database, it's going to search the wrong database just fine.",
+   "time": "00:02:58",
+   "speaker": "Titus Brown"
+  }
+ ],
+ "tools": [
+  "sourmash",
+  "GTDB",
+  "GenBank",
+  "CheckM",
+  "Charcoal",
+  "SAMtools",
+  "mOTUs",
+  "MEGAN",
+  "MINSET-COV"
+ ],
+ "topics": [
+  "microbial taxonomy",
+  "metagenomics",
+  "reference databases",
+  "genome contamination",
+  "species classification",
+  "public health bioinformatics",
+  "k-mers",
+  "software sustainability",
+  "regulatory requirements"
+ ],
+ "faq": [
+  {
+   "q": "Does sourmash remove poor-quality reference genomes?",
+   "a": "Brown presents sourmash as a search tool, not a database curator. His group uses GTDB releases as supplied, while users can choose their own curated references or filter matches afterwards."
+  },
+  {
+   "q": "Can microbial species classification be 100% accurate?",
+   "a": "Brown argues that near-perfect classification is possible given a fixed taxonomy, a reference database and distinguishing k-mers. He acknowledges indistinguishable genomes, while the hosts raise biological definitions and regulatory requirements that complicate a broader claim."
+  },
+  {
+   "q": "What does unicity distance mean for genome classification?",
+   "a": "Brown uses it to describe the smallest set of k-mers that uniquely distinguishes a genome within a reference collection. He reports that most GTDB genomes can be distinguished by one k-mer."
+  },
+  {
+   "q": "Why does species identification matter in public health?",
+   "a": "The hosts need confident organism assignments for public health decisions, and species names can determine regulatory treatment. Lee's example is four Listeria monocytogenes lineages that behave differently but must be treated equally under the regulatory framework."
+  }
+ ]
+}
