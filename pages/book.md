@@ -15,7 +15,7 @@ amazon:
   asin: B0HG3VN36K
   url: https://www.amazon.com/dp/B0HG3VN36K
   # Set to true once the Amazon listing is live; until then the page says "coming soon".
-  live: false
+  live: true
 ---
 
 <img src="{{ '/assets/book/cover.jpg' | relative_url }}" alt="Cover of Nobody Wrote This Down: Seven years of the MicroBinfie podcast, by Nabil-Fareed Alikhan, Lee Katz and Andrew J. Page" width="300" style="float: right; margin: 0 0 1em 1.5em; max-width: 45%;">
