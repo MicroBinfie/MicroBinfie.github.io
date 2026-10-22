@@ -39,6 +39,7 @@ plugins:
 # The episode-page pipeline (scripts/episodes) and its working files are not part of the site.
 exclude:
   - scripts/
+  - assets/book/   # the book page is unpublished (pages/book.md); its web edition and covers go with it
   - requirements.txt
   - Gemfile.lock.bak
 text_skin: default

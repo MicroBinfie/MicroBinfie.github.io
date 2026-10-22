@@ -10,7 +10,6 @@ permalink: /llms.txt
 > quotes, the tools mentioned, and questions the episode answers. Audio is on SoundCloud.
 
 - [All episodes]({{ '/pages/Episodes.html' | absolute_url }}): the full list, newest first
-- [Nobody Wrote This Down]({{ '/pages/book.html' | absolute_url }}): the book of the podcast, free to read in EPUB, PDF, HTML and plain text
 
 ## Episodes
 {% for p in site.posts %}{% if p.episode %}

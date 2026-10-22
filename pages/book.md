@@ -1,6 +1,9 @@
 ---
 title: "Nobody Wrote This Down"
 layout: page
+# Jekyll does not build or serve a page with published: false. Set it to true (and restore the
+# header link, the home page section and the llms.txt line) to bring the book page back.
+published: false
 description: "Nobody Wrote This Down: seven years of the MicroBinfie podcast, by Nabil-Fareed Alikhan, Lee Katz and Andrew J. Page. Free to read as EPUB, PDF and more; paperback on Amazon."
 book:
   name: "Nobody Wrote This Down"
