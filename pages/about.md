@@ -27,4 +27,5 @@ Public health bioinformatics scientist.
 ### Andrew Page
 
 ![Image](/assets/images/AndrewPage.jpg){:.rounded.border.shadow.image--xs}
-Director of Technical Innovation, Theiagen Genomics
+Chief Technology Officer, Origin Sciences
+<https://www.originsciences.com/>
